@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Nonprofit Template Converter ~ Salesforce - Nonprofit Edition</title>
+
+<script src="/static/js/functions.js" type="text/javascript"></script>
+<script type="text/javascript" src="/dJS/en/library.js"></script>
+<script src="/static/desktop/desktopAjax.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" media="handheld,print,projection,screen,tty,tv" href="/sCSS/13.0/Theme2/default/elements.css"></link>
+<link type="text/css" rel="stylesheet" media="handheld,print,projection,screen,tty,tv" href="/sCSS/13.0/Theme2/default/common.css"></link>
+<link type="text/css" rel="stylesheet" media="handheld,print,projection,screen,tty,tv" href="/sCSS/13.0/Theme2/dStandard.css"></link>
+<link type="text/css" rel="stylesheet" media="handheld,print,projection,screen,tty,tv" href="/sCSS/13.0/Theme2/allCustom.css"></link>
+
+<script src="/soap/ajax/13.0/connection.js"></script>
+<script src="/soap/ajax/13.0/apex.js"></script>
+<script>
+
+//Add existing Account Broker and Brokerage values to top section with select 
+
+function submitenter(e,searchterm)
+{
+	if (null == e) e = window.event ;
+	if (e.keyCode == 13)
+	{
+		query(searchterm);
+	}
+}
+
+function query(queryterm)
+{
+	//Spinning Icon
+	//var working = '<img src="https://na1.salesforce.com/servlet/servlet.ImageServer?id=01530000000XOOm&oid=00D300000000Zhd" alt="Working" />';
+	//document.getElementById("resultslist").innerHTML = working;
+
+	var html = '<table class="list" cellspacing="0" cellpadding="0" border="0" ><tbody>';
+	html += '<tr class="headerRow">';
+	html += '<th class="actionColumn" scope="col">Action</th>';
+	html += '<th class="" scope="col"> Account Name </th>';
+
+	var query = sforce.connection.query("Select Id, Name From Account where Name LIKE '%" + queryterm + "%'");
+	var results = query.getArray("records");
+	html += '</tr>';
+	for (var i=0;i<results.length;i++)
+	{
+		var id = results[i].get("Id");
+		var name = results[i].get("Name");
+		if (i==0)
+		{
+			html += '<tr class="dataRow even first" ';
+		} else
+		if (i % 2)
+		{
+			html += '<tr class="dataRow even" ';
+		} else
+		{
+			html += '<tr class="dataRow odd" ';
+		}			
+		html += ' onblur="if (window.hiOff){hiOff(this);}" onfocus="if (window.hiOn){hiOn(this);}" onmouseout="if (window.hiOff){hiOff(this);}" onmouseover="if (window.hiOn){hiOn(this);}">';
+		html += '	<td class="actionColumn">';
+		html += '		<a class="actionLink" title="Select" href="javascript:;" onclick="select(\'' + id + '\')" >Select</a>';
+		html += ' 	</td>';
+		html += '	<td class="dataCell">';
+		html += ' 		<a target="_top" href="/' + id + '">' + name + '</a>';
+		html += '	</td>';
+		html += '</tr>';
+	}
+	html += '</tbody></table>';
+	document.getElementById("resultslist").innerHTML = html;
+}
+
+function select(accountid)
+{
+	//var working = '<img src="https://na1.salesforce.com/servlet/servlet.ImageServer?id=01530000000XOOm&oid=00D300000000Zhd" alt="Working" />';
+	//document.getElementById("resultslist").innerHTML = working;
+
+	var accounts = sforce.apex.execute("templateConversion_WebServices" , "createAccounts", {accountId:accountid} );
+
+	var html = '<table class="list" cellspacing="0" cellpadding="0" border="0" ><tbody>';
+	html += '<tr class="headerRow">';
+	html += '<th class="" scope="col"> Step </th>';
+	html += '<th class="" scope="col"> Description </th>';
+	html += '<th class="" scope="col"> Status </th>';
+	html += '<th class="" scope="col"> # of Records </th>';
+	html += '</tr>';
+	html += '<tr class="dataRow even first onblur="if (window.hiOff){hiOff(this);}" onfocus="if (window.hiOn){hiOn(this);}" onmouseout="if (window.hiOff){hiOff(this);}" onmouseover="if (window.hiOn){hiOn(this);}">';;
+	html += '<td class="dataCell">';
+	html += 'Step 1';
+	html += '</td>';
+	html += '<td class="dataCell">';
+	html += 'Create Individual Accounts for Contacts';
+	html += '</td>';
+	html += '<td class="dataCell">';
+	html += 'Complete';
+	html += '</td>';
+	html += '<td class="dataCell">';
+	html += accounts;
+	html += '</td>';
+	html += '</tr>';
+
+	document.getElementById("resultslist").innerHTML = html;
+
+	var contacts = sforce.apex.execute("templateConversion_WebServices" , "updateContacts", {accountId:accountid} );
+
+	html += '<tr class="dataRow odd" ';
+	html += '<td class="dataCell">';
+	html += 'Step 2';
+	html += '</td>';
+	html += '<td class="dataCell">';
+	html += 'Relate Contacts to new Individual Accounts';
+	html += '</td>';
+	html += '<td class="dataCell">';
+	html += 'Complete';
+	html += '</td>';
+	html += '<td class="dataCell">';
+	html += contacts;
+	html += '</td>';
+	html += '</tr>';
+
+	document.getElementById("resultslist").innerHTML = html;
+
+	var opptys = sforce.apex.execute("templateConversion_WebServices" , "updateOpportunities", {accountId:accountid} );
+
+	html += '<tr class="dataRow odd" ';
+	html += '<td class="dataCell">';
+	html += 'Step 3';
+	html += '</td>';
+	html += '<td class="dataCell">';
+	html += 'Relate Donations to new Individual Accounts';
+	html += '</td>';
+	html += '<td class="dataCell">';
+	html += 'Complete';
+	html += '</td>';
+	html += '<td class="dataCell">';
+	html += opptys;
+	html += '</td>';
+	html += '</tr>';
+	html += '</tbody>';
+	html += '</table>';
+
+	document.getElementById("resultslist").innerHTML = html;
+}
+
+function cancel()
+{
+	this.parent.location.href = "/{!$Request.eid}";
+}
+
+
+</script>
+</head>
+
+<body onload="javascript:pageload();" class="Custom67Tab  editPage">
+<iframe title="blank - ignore" name="div_submit" id="div_submit" src="/s.gif" style="display:none;visibility:hidden;width:0px;height:0px" frameborder="0"></iframe>
+
+<table id="bodyTable" class="outer" border="0" cellspacing="0" cellpadding="0" width="100%" >
+	<tbody>
+	<tr>
+		<td id="bodyCell"  class="oRight" style="padding-left: 1px;">
+			<a name="skiplink"><img src="/s.gif" height='1' width='1' alt="Content Starts Here" class="skiplink" title="Content Starts Here">
+			</a>
+			<div class="bPageTitle">
+				<div class="ptBody secondaryPalette">
+					<div class="content">
+						<img src="/s.gif" alt=Brokerage"  class="pageTitleIcon" title="Brokerage"/>
+						<h1 class="pageType">One-to-One Account Creation<span  class="titleSeparatingColon">:</span></h1>
+						<h2 class="pageDescription"> Select your Individual Account</h2>
+						<div class="blank">&nbsp;</div>
+					</div>
+					<div class="links">
+						<a title="Help for this Page (New Window)" href="javascript:openPopupFocusEscapePounds('/help/doc/user_ed.jsp?loc=help&target=co_edit.htm&section=CustomObjects&showSplash=true', 'Help', 700, 600, 'width=700,height=600,resizable=yes,toolbar=yes,status=no,scrollbars=yes,menubar=yes,directories=no,location=no,dependant=no', false, false);">
+							<span  class="helpLink">Help for this Page</span><img src="/s.gif" alt="Help"  class="helpIcon" title="Help"/>
+						</a>
+					</div>
+				</div>
+				<div class="ptBreadcrumb">&nbsp;</div>
+			</div>
+			<div class="bRelatedList">
+				<div class="listRelatedObject custom19Block">
+					<div class="bPageBlock secondaryPalette">
+						<div class="pbHeader">
+							<table  border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td class="pbTitle">
+										<img src="/s.gif" alt="" width="1" height="1" class="minWidth" title="" />
+										<h2 class="mainTitle">Individual Account/Organization Selection</h2>
+									</td>
+									<td class="pbButton">
+										<input type="button" tabindex="3" class="btn" value="Cancel" onclick="cancel();" />
+										&nbsp;
+										<input type="button" tabindex="2" class="btn" value="Save" onclick="save();" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="pbBody">
+							<div class="pbSubheader tertiaryPalette" id="head_5_ep">
+								<h3>Search<span  class="titleSeparatingColon">:</span></h3>
+							</div>
+							<div class="pbSubsection">
+								<table  class="detailList" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+										<input  id="queryterm" maxlength="255" name="queryterm" onchange="" size="30" tabindex="1" type="text" onKeyPress="return submitenter(event, getElementByIdCS('queryterm').value)"/>
+											&nbsp;
+										<input type="button" class="btn" tabindex="1" value="Search" onclick="query(getElementByIdCS('queryterm').value)" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Enter the name of your bucket Organization above (eg Individual) 
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="pbFooter secondaryPalette"><div class="bg">&nbsp;</div></div>
+					</div>
+				</div>
+			</div>
+			<div class="bRelatedList">
+				<div class="listRelatedObject custom19Block">
+					<div class="bPageBlock secondaryPalette">
+						<div class="pbHeader">
+							<table  border="0" cellpadding="0" cellspacing="0">
+								<tbody>
+									<tr>
+										<td class="pbTitle">
+											<img src="/s.gif" alt="" width="1" height="1" class="minWidth" title="" />
+											<h2 class="mainTitle">Account/Organization Selection</h2>
+										</td>
+										<td class="pbButton">
+											&nbsp;
+										</td>
+										<td class="pbHelp">&nbsp;</td>  
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pbBody">
+							<div id="resultslist"></div>
+						</div>
+						<div class="pbFooter secondaryPalette"><div class="bg">&nbsp;</div></div>
+					</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<!-- Body events -->
+<script>
+function pageload()
+{
+	query('Individual');
+}
+</script>
+</body>
+</html>

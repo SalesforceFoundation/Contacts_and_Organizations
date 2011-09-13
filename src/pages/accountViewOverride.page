@@ -1,0 +1,3 @@
+<apex:page action="{!if(account.One2OneContact__c == null, urlFor($Action.Account.View, account.Id, null, true), urlFor($Action.Contact.View, account.One2OneContact__c, null, true))}" standardController="Account" extensions="AccountViewOverride">
+
+</apex:page>

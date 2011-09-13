@@ -1,0 +1,3 @@
+<apex:page standardController="Contact" action="{!urlFor($Action.Contact.Delete, contact.id, null, true)}">
+
+</apex:page>

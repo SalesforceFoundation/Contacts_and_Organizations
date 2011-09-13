@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label>Fusionar Contactos puede resultar en la pérdida de datos. Asegúrese de que el Contacto que seleccione como ganador tenga todos los datos que desea. Quizás necesite copiar datos de un Contacto a otro, antes de fusionar los registros.</label>
+        <name>Contact_Merge_Error_Confirm_Message</name>
+    </customLabels>
+    <customLabels>
+        <label>Si usted tiene un Paquete de Casa, por favor, note que las Casas para los Contactos fusionados no se ven afectadas durante la fusión. Si usted desea fusionar Casas, debería hacerlo en forma manual, asegurándose de que el Contacto ganador esté conectado con la Casa correcta.</label>
+        <name>Contact_Merge_Error_Confirm_Message_Households</name>
+    </customLabels>
+    <customLabels>
+        <label>No se encontraron Contactos que coincidieran, por favor, busque nuevamente.</label>
+        <name>Contact_Merge_Error_Confirm_Message_Nothing_Found</name>
+    </customLabels>
+    <customLabels>
+        <label>Failed to query contact information.</label>
+        <name>Contact_Merge_Error_Contact_not_found</name>
+    </customLabels>
+    <customLabels>
+        <label>Failed to lock all the records for merging.</label>
+        <name>Contact_Merge_Error_Lock_failed</name>
+    </customLabels>
+    <customLabels>
+        <label>Failed to merge the contacts.</label>
+        <name>Contact_Merge_Error_Merge_Failed</name>
+    </customLabels>
+    <customLabels>
+        <label>Please select a master record for merging.</label>
+        <name>Contact_Merge_Error_No_Master</name>
+    </customLabels>
+    <customLabels>
+        <label>Failed to query all the selected contacts.</label>
+        <name>Contact_Merge_Error_Query_Failed</name>
+    </customLabels>
+    <customLabels>
+        <label>Por favor, seleccione al menos 2 contactos para fusionar.</label>
+        <name>Contact_Merge_Error_Too_Few_Contacts</name>
+    </customLabels>
+    <customLabels>
+        <label>Sólo puede fusionar hasta 3 contactos por vez.</label>
+        <name>Contact_Merge_Error_Too_Many_Contacts</name>
+    </customLabels>
+    <customLabels>
+        <label>Please retry from start.</label>
+        <name>Contact_Merge_Error_please_retry</name>
+    </customLabels>
+    <customLabels>
+        <label>Ingrese un hilo de búsqueda para encontrar Contactos duplicados.</label>
+        <name>Contact_Merge_Step1</name>
+    </customLabels>
+    <customLabels>
+        <label>Seleccione 3 Contactos para Fusionar.</label>
+        <name>Contact_Merge_Step2</name>
+    </customLabels>
+    <customLabels>
+        <label>Seleccione el Contacto ganador.</label>
+        <name>Contact_Merge_Step3</name>
+    </customLabels>
+    <customLabels>
+        <label>Fusione los Contactos.</label>
+        <name>Contact_Merge_Step4</name>
+    </customLabels>
+    <customLabels>
+        <label>The Account Model for the Nonprofit Starter Pack determines if each Contact has it&apos;s own &quot;One-to-One&quot; Account or if they all are related to a single &quot;Individual&quot; Account. This should be set at the begining of use and not changed unless you fully understand the changes. If you change your Account model when you have real data, you&apos;ll need to migrate that data to the new model.</label>
+        <name>Contacts_Settings_Account_Model_Help_Text</name>
+    </customLabels>
+    <customLabels>
+        <label>You can choose to have an Opportunity Contact Role automatically created when Opportunities are created. There is a field on Opportunity called &quot;Contact Id for Role&quot;. If you import Opportunities with a valid Contact Id in that field, a Contact Role will be created according to the defaults set below. You can also turn the functionality off completely.</label>
+        <name>Contacts_Settings_Contact_Roles_Help_Text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DefaultContactTransactionCurrency --></label>
+        <name>DefaultContactTransactionCurrency</name>
+    </customLabels>
+    <customLabels>
+        <label>The Contact Id supplied in the Contact Id for Role field was invalid. Please use a valid Contact Id.</label>
+        <name>Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Payments Settings Enable Help Text --></label>
+        <name>Payments_Settings_Enable_Help_Text</name>
+    </customLabels>
+    <customPageWebLinks>
+        <label>Reportes de la Edición Nonprofit</label>
+        <name>Nonprofit_Edition_Reports</name>
+    </customPageWebLinks>
+    <scontrols>
+        <label>SustituirVistaCuenta</label>
+        <name>AccountViewOverride</name>
+    </scontrols>
+    <scontrols>
+        <label>CreditosDonacionContacto</label>
+        <name>ContactDonationCredit</name>
+    </scontrols>
+    <scontrols>
+        <label>ConvertirCandidatos</label>
+        <name>LeadConvert</name>
+    </scontrols>
+    <scontrols>
+        <label>SustituirCreacionCandidato</label>
+        <name>LeadCreateOverride</name>
+    </scontrols>
+    <scontrols>
+        <label>NPO_ComponentesPaginaInicio</label>
+        <name>NPO_HomePageComponent</name>
+    </scontrols>
+    <scontrols>
+        <label>CrearOportunidadContrapartida</label>
+        <name>OpportunityCreateMatching</name>
+    </scontrols>
+    <scontrols>
+        <label>OportunidadCrearRecurrente</label>
+        <name>OpportunityCreateRecurring</name>
+    </scontrols>
+    <scontrols>
+        <label>ConversionPlantilla</label>
+        <name>TemplateConversion</name>
+    </scontrols>
+</Translations>
