@@ -1,4 +1,4 @@
-<apex:page controller="PaymentCreator" tabStyle="Opportunity" action="{!SetupPaymentWizard}">
+<apex:page controller="PaymentWizardController" tabStyle="Opportunity" action="{!SetupPaymentWizard}">
 <!--
 Opp Payment Creator VF Page
 Copyright (c) 2008 Evan Callahan, evanc@npowerseattle.org, NPower Seattle, 403 23rd Ave S, Seattle, WA 98144
