@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <description>Application settings for the Contacts and Organizations package of the Nonprofit Starter Pack</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Account_Processor__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Setting for the Account model. Should be &quot;One-to-one&quot; or &quot;Individual&quot;. Replaces the custom field Contact.SystemAccountProcessor__c</inlineHelpText>
+        <label>Account Processor</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Disable_Account_Model_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this to turn off the Account Model trigger. Accounts will no longer be automatically created for Contacts. Only use this if you understand the ramifications. Turning off the account model could get your data into an inconsistent state.</inlineHelpText>
+        <label>Disable Account Model Trigger</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Enable_Opportunity_Contact_Role_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this to turn on the automatic creation of Opportunity Contact Roles for newly created Opportunities in the One-to-One model.</inlineHelpText>
+        <label>Enable Opportunity Contact Role Trigger</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Enable_Update_Check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Controls if the package automatically checks for new updates and versions.</inlineHelpText>
+        <label>Enable Update Check</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Package_Update__c</fullName>
+        <externalId>false</externalId>
+        <label>Has Package Update</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Update_Check__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The date/time of the last callout to check for new versions of the NPSP packages.</inlineHelpText>
+        <label>Last Update Check</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Max_Package_Version__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Package Version</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Contact_Role_Default_role__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Default role for the primary Opportunity Contact Role</inlineHelpText>
+        <label>Opportunity Contact Role Default role</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Package_Update_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Package Update URL</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Payments_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enables automatic payments for new Opportunities/Donations.</inlineHelpText>
+        <label>Payments Enabled</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Update_Check_Interval__c</fullName>
+        <defaultValue>90</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of days between NPSP callouts to check for new versions of this package. The default value is 90 days.</inlineHelpText>
+        <label>Update Check Interval</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Contacts And Orgs Settings</label>
+</CustomObject>
