@@ -49,32 +49,8 @@ public with sharing class PaymentWizardController {
             oppPayment = new OppPayment__c();
         }
     }
-    
-    //Get Payments Settings
-    //public Payments_Settings__c getPaymentsSettings() {
-    public Contacts_And_Orgs_Settings__c getPaymentsSettings(){    
-        PaymentsSettings = Constants.getContactsSettings();
-        
-        /*
-        //if no settings exist, create defaults
-        if (PaymentsSettings == null) {
-            //first see if we already have settings
-            PaymentsSettings = Payments_Settings__c.getOrgDefaults();
-            system.debug(Payments_Settings__c.getOrgDefaults());
-            if (PaymentsSettings == null) {
-                
-                PaymentsSettings = new Payments_Settings__c();
-                //set the other settings to reasonable defaults
-                PaymentsSettings.Payments_Enabled__c = false;
-                PaymentsSettings.Setupownerid = UserInfo.getOrganizationId();
-                //this is not allowed...
-                insert PaymentsSettings;
-            }
-        }*/
-        return PaymentsSettings;
-    }   
-    
-    //user defined rollups in list settings
+
+    //values from payments mappings
     public static map<string, Payment_Field_Mapping_Settings__c> paymentMappings = new map<string, Payment_Field_Mapping_Settings__c>();
     public static map<string, Payment_Field_Mapping_Settings__c> paymentMappingsAll = new map<string, Payment_Field_Mapping_Settings__c>();
     public static map<string, Payment_Field_Mapping_Settings__c> paymentMappingsToRemove = new map<string, Payment_Field_Mapping_Settings__c>();
@@ -84,7 +60,6 @@ public with sharing class PaymentWizardController {
     list<payment> newPayments = new list<payment>();
 
     public oppPayment__c samplePayment { get; set; }
-    
     public oppPayment__c writeoffPayment { get; set; }
     
     //decimal for amount float
@@ -102,202 +77,8 @@ public with sharing class PaymentWizardController {
     //public Payments_Settings__c PaymentsSettings;
     public Contacts_and_Orgs_Settings__c PaymentsSettings;
 
-    /*
-    //constructor gets the opp from the passed in Id
-    public PaymentWizardController(Map<id, Opportunity> newOppsMap, Map<id, Opportunity> oldOppsMap, Constants.triggerAction ta) {
-        PaymentsSettings = getPaymentsSettings();
-                    
-        if (PaymentsSettings != null && PaymentsSettings.Payments_Enabled__c == true){
-            list<Opportunity> newOpps = newOppsMap.values();
-            list<OppPayment__c> paymentsToInsert = new list<OppPayment__c>();
-            list<OppPayment__c> paymentsToUpdate = new list<OppPayment__c>();
-            list<OppPayment__c> paymentsToDelete = new list<OppPayment__c>();
-            list<Opportunity> updatedOpps = new list<Opportunity>();
-            
-            //load custom field mapping settings - if they exist        
-            paymentMappingsAll = Payment_Field_Mapping_Settings__c.getAll().clone();
-            paymentMappings = Payment_Field_Mapping_Settings__c.getAll().clone();
-            
-            
-            for (string s : paymentMappingsAll.keySet()){
-                Payment_Field_Mapping_Settings__c pfms = paymentMappingsAll.get(s); 
-            
-                SobjectField opportunityField;
-                SobjectField paymentField;
-                boolean isValid = true;
-            
-                //check Opp fields
-                opportunityField = Schema.sObjectType.Opportunity.fields.getMap().get(pfms.Opportunity_Field__c);
-                if (opportunityField == null) isValid = false;
-                          
-                //check Payment fields            
-                paymentField = Schema.sObjectType.OppPayment__c.fields.getMap().get(pfms.Payment_Field__c);
-                if (paymentField == null) isValid = false;
-                
-                //check Field Types
-                Schema.DisplayType payF = paymentField.getDescribe().getType();
-                Schema.DisplayType oppF = opportunityField.getDescribe().getType();
-                if (payF != oppF) isValid = false;
-                
-                if (isValid == false) paymentMappings.keyset().remove(s);
-                                
-            }
-            
-            //SOQL for Updated Opps and Related Payments.  Queries for known fields and field in custom Payment Field Mappings.
-            if(ta == Constants.triggerAction.afterUpdate){
-                String soqlStatement = '';
-                soqlStatement += 'select id, CloseDate, Amount, isClosed, isWon, ';
-                for (string s : paymentMappings.keyset()){
-                       Payment_Field_Mapping_Settings__c pfms = paymentMappings.get(s);
-                       soqlStatement += pfms.Opportunity_Field__c + ', ';   
-                }
-                soqlStatement += 'payments_made__c, (SELECT id, Paid__c, Payment_Amount__c, Payment_Date__c, ';
-                for (string s : paymentMappings.keyset()){
-                       Payment_Field_Mapping_Settings__c pfms = paymentMappings.get(s);
-                       soqlStatement += pfms.Payment_Field__c + ', ';   
-                }
-                soqlStatement += 'scheduled_date__c ';
-                soqlStatement += 'from Opportunity.OppPayment__r) from Opportunity WHERE id in :newOpps';
-                updatedOpps = Database.query(soqlStatement);
-            }
-            
-            /*if(ta == TempPaymentsConstants.triggerAction.afterUpdate){
-                
-                updatedOpps = [select id, CloseDate, Amount, isClosed, isWon, payments_made__c, Check_Reference_Number__c, Payment_Method__c, (SELECT id, Paid__c, Payment_Amount__c, Payment_Date__c, scheduled_date__c, Check_Reference_Number__c, Payment_Method__c from Opportunity.OppPayment__r) from Opportunity WHERE id in :newOpps];
-            }
-            
-            //IF Trigger is Insert, Create a new Payment
-            if( ta == Constants.triggerAction.AfterInsert){
-                
-                for (Opportunity thisOpp : newOpps){
-                    // if opp is closed won with no payments scheduled or made, add an automatic payment
-                    if( ta == Constants.triggerAction.AfterInsert){
-                        if ( /*(thisOpp.IsClosed && thisOpp.IsWon) && 
-                                        thisOpp.amount > 0 && thisOpp.payments_made__c == 0 && thisOpp.Number_of_Payments__c == 0 && !thisOpp.Do_Not_Automatically_Create_Payment__c) {
-                                oppPayment__c op = new oppPayment__c(
-                                    opportunity__c = thisOpp.id,
-                                    payment_amount__c = thisOpp.amount
-                                );
-                            
-                            if (paymentMappings.size() > 0){
-                                for (string s : paymentMappings.keyset()){
-                                        Payment_Field_Mapping_Settings__c pfms = paymentMappings.get(s);
-                                        string x = pfms.Opportunity_Field__c;
-                                        if (thisOpp.get(x) != null)
-                                           op.put(pfms.Payment_Field__c, thisOpp.get(x));
-                                }
-                            }
-                            
-                            if (thisOpp.IsClosed && thisOpp.IsWon){
-                                op.paid__c = true;
-                                op.payment_date__c = thisOpp.closeDate;
-                            }
-                            
-                            if (!thisOpp.IsClosed){
-                                op.paid__c = false;
-                                op.scheduled_date__c = thisOpp.closeDate;
-                            }
-                            
-                            paymentsToInsert.add(op);
-                        }
-                        /*
-                        else if (!thisOpp.IsClosed && 
-                                        thisOpp.amount > 0 && thisOpp.payments_made__c == 0 && thisOpp.Number_of_Payments__c == 0 && !thisOpp.Do_Not_Automatically_Create_Payment__c) {
-                            paymentsToInsert.add(new oppPayment__c(
-                                opportunity__c = thisOpp.id,
-                                scheduled_date__c = thisOpp.closeDate,
-                                payment_amount__c = thisOpp.amount,
-                                paid__c = false
-                            ));
-                        }
-                        
-                    }   
-                }
-                try{
-                    // put in the payment for closed opps       
-                    if (!paymentsToInsert.isEmpty()) insert paymentsToInsert;
-                }
-                catch (DMLException e){
-                    for (OppPayment__c opay : paymentsToInsert) {
-                      opay.addError('There was a problem inserting a payment');
-                    }
-                }
-            }
-            
-            
-            //IF Trigger is Update, keep synced Payments in Sync or delete if Opp is lost
-            if( ta == Constants.triggerAction.AfterUpdate ){
-                list<Opportunity> oldOpps = oldOppsMap.values();
-                for (Opportunity thisOpp : updatedOpps){
-                    Opportunity oldOpp = oldOppsMap.get(thisOpp.id);
-                    
-                    boolean mappingsUpdated = false;
-                    
-                    //check to see if any of the custom mapped fields have been updated
-                    for (string s : paymentMappings.keyset()){
-                        if(thisOpp.get(paymentMappings.get(s).Opportunity_Field__c) != oldOpp.get(paymentMappings.get(s).Opportunity_Field__c)){
-                            mappingsUpdated = true;
-                        }
-                    }
-                    
-                    // if opp is updated, update the automatic payment
-                        if ( ((thisOpp.Amount != oldOpp.Amount) || (thisOpp.CloseDate != oldOpp.CloseDate) || mappingsUpdated == true) &&
-                                (thisOpp.OppPayment__r[0].Scheduled_Date__c == oldOpp.CloseDate || thisOpp.OppPayment__r[0].Scheduled_Date__c == thisOpp.CloseDate) &&
-                                (thisOpp.OppPayment__r[0].Payment_Amount__c == oldOpp.Amount || thisOpp.OppPayment__r[0].Payment_Amount__c == thisOpp.Amount) &&
-                                thisOpp.OppPayment__r.size() == 1 &&
-                                thisOpp.OppPayment__r[0].paid__c == False &&
-                                !thisOpp.isClosed && thisOpp.amount > 0 &&
-                                thisOpp.payments_made__c == 0) {
-                            thisOpp.OppPayment__r[0].scheduled_date__c = thisOpp.closeDate;
-                            thisOpp.OppPayment__r[0].payment_amount__c = thisOpp.amount;
-                            
-                            
-                            if (paymentMappings.size() > 0){
-                                for (string s : paymentMappings.keyset()){
-                                        Payment_Field_Mapping_Settings__c pfms = paymentMappings.get(s);
-                                        string x = pfms.Opportunity_Field__c;
-                                        if (thisOpp.get(x) != null)
-                                           thisOpp.OppPayment__r[0].put(pfms.Payment_Field__c, thisOpp.get(x));
-                                }
-                            }
-                            
-                            paymentsToUpdate.add(thisOpp.OppPayment__r[0]);
-                        }
-                        else if ( ((thisOpp.Amount != oldOpp.Amount) || (thisOpp.CloseDate != oldOpp.CloseDate) || (thisOpp.isWon != oldOpp.IsWon)) &&
-                                (thisOpp.OppPayment__r[0].scheduled_Date__c == oldOpp.CloseDate || thisOpp.OppPayment__r[0].scheduled_Date__c == thisOpp.CloseDate || thisOpp.OppPayment__r[0].Payment_Date__c == oldOpp.CloseDate || thisOpp.OppPayment__r[0].Payment_Date__c == thisOpp.CloseDate) &&
-                                (thisOpp.OppPayment__r[0].Payment_Amount__c == oldOpp.Amount || thisOpp.OppPayment__r[0].Payment_Amount__c == thisOpp.Amount) &&
-                                thisOpp.OppPayment__r.size() == 1 &&
-                                thisOpp.OppPayment__r[0].paid__c == False &&
-                                thisOpp.isClosed && thisOpp.isWon && thisOpp.amount > 0 &&
-                                thisOpp.payments_made__c == 0) {
-                            thisOpp.OppPayment__r[0].payment_date__c = thisOpp.closeDate;
-                            thisOpp.OppPayment__r[0].payment_amount__c = thisOpp.amount;
-                            thisOpp.OppPayment__r[0].paid__c = true;
-                            paymentsToUpdate.add(thisOpp.OppPayment__r[0]);
-                        }
-                        else if ( thisOpp.isClosed && !thisOpp.isWon) {
-                            
-                            for(OppPayment__c thisPayment : thisOpp.OppPayment__r){
-                                if(thisPayment.Paid__c == False){
-                                    paymentsToDelete.add(thisPayment);
-                                }
-                            }
-                        }
-                }
-                //try{
-                    // update or delete payments     
-                    if (!paymentsToUpdate.isEmpty()) update paymentsToUpdate;
-                    if (!paymentsToDelete.isEmpty()) delete paymentsToDelete;
-                //}
-                /*catch (DMLException e){
-                    for (OppPayment__c opay : paymentsToUpdate) {
-                      opay.addError('There was a problem updating a payment');
-                    }
-                }
-            }
-        }
-    }*/
-    
+  
+    //constructor
     public PaymentWizardController() {
     }
     
@@ -325,15 +106,10 @@ public with sharing class PaymentWizardController {
             haveAmount = (currentOpp.amount_outstanding__c > 0);
             writeoffPayment = new OppPayment__c();
             writeoffPayment.Payment_Amount__c = currentOpp.amount_outstanding__c;
-            writeoffPayment.Written_Off__c = True;
+            writeoffPayment.Written_Off__c = true;
             writeoffPayment.Opportunity__c = currentOpp.Id;
             writeoffPayment.Payment_Date__c = system.today();
         }
-    }
-    
-    public pageReference RemovePaidPayments() {
-        removePaidPayments = true;
-        return null;
     }
     
     public pageReference calculate() {
@@ -434,11 +210,6 @@ public with sharing class PaymentWizardController {
         return options;
     }
 
-    //get the payments
-    public List<payment> getPayments() {
-        return newPayments ;
-    }
-
     public PageReference createPayments() {
         // first delete unpaid payments
         oppPayment__c[] old = [select id from oppPayment__c where opportunity__c = :currentOpp.id and paid__c = false];
@@ -460,24 +231,24 @@ public with sharing class PaymentWizardController {
         oldOppPage.setRedirect(true);
         return oldOppPage;
     }
+   
+    /***  TEST METHODS ***/
+    @isTest
+    public static string closedWonStage(){    	
+    	string closedWonStage;
+        List<OpportunityStage> closedWonStages = [select masterlabel from opportunitystage where isActive = true and iswon = true];
+        if(closedWonStages.size()>0){
+            closedWonStage = closedWonStages[0].masterlabel;
+        } else {
+                closedWonStage = '';
+        }
+        return closedWonStage;    	
+    } 
     
-    public static Payments_Settings__c getPaymentsSettingsForTests(Payments_Settings__c mySettings) {
-        
-        //clear out whatever settings exist
-        delete [select id from Payments_Settings__c];
-        
-        //create our own based on what's passed in from the test
-        Payments_Settings__c TestPaymentsSettings = new Payments_Settings__c (
-            Payments_Enabled__c = mySettings.Payments_Enabled__c
-            );
-        insert TestPaymentsSettings;
-            
-        return TestPaymentsSettings;
-    }
     
-    public static testMethod void test_paymentsEnabled_ClosedOpp_Insert() {
+    public static testMethod void test_paymentsDisabled_ClosedOpp_Insert() {
         
-        Payments_Settings__c PaymentsSettingsForTests = getPaymentsSettingsForTests(new Payments_Settings__c (Payments_Enabled__c=True));
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= false));
         
         // create test data
         Account acct = new Account (
@@ -490,9 +261,36 @@ public with sharing class PaymentWizardController {
             AccountId = acct.id,
             Amount = 1300,
             closedate = date.newInstance(2001,12,12),
-            stagename = 'Posted'
+            stagename = closedWonStage()
         );
         insert opp;
+        
+        OppPayment__c[] opmt = [select id from OppPayment__c WHERE opportunity__c = :opp.Id];
+        system.assertEquals(0, opmt.size());
+    }
+    
+    public static testMethod void test_paymentsEnabled_ClosedOpp_Insert() {
+        
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
+      
+    
+        // create test data
+        Account acct = new Account (
+            Name='Test Account'
+        );
+        insert acct;
+        
+                
+        Opportunity opp = new Opportunity (
+            Name='Test Opp',
+            AccountId = acct.id,
+            Amount = 1300,
+            closedate = date.newInstance(2001,12,12),
+            stagename = closedWonStage()          
+        );
+        Test.startTest();
+        insert opp;
+        test.stopTest();
         
         OppPayment__c[] opmt = [select id, payment_amount__c, paid__c from OppPayment__c WHERE opportunity__c = :opp.Id];
         system.assertEquals(1, opmt.size());
@@ -502,7 +300,7 @@ public with sharing class PaymentWizardController {
     
     public static testMethod void test_paymentsEnabled_ClosedOpp_Insert_DoNotCreatePayment() {
         
-        Payments_Settings__c PaymentsSettingsForTests = getPaymentsSettingsForTests(new Payments_Settings__c (Payments_Enabled__c=True));
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
         
         // create test data
         Account acct = new Account (
@@ -515,7 +313,7 @@ public with sharing class PaymentWizardController {
             AccountId = acct.id,
             Amount = 1300,
             closedate = date.newInstance(2001,12,12),
-            stagename = 'Posted',
+            stagename = closedWonStage(),
             Do_Not_Automatically_Create_Payment__c = true
         );
         insert opp;
@@ -524,32 +322,9 @@ public with sharing class PaymentWizardController {
         system.assertEquals(0, opmt.size());
     }
     
-    public static testMethod void test_paymentsDisabled_ClosedOpp_Insert() {
-        
-        Payments_Settings__c PaymentsSettingsForTests = getPaymentsSettingsForTests(new Payments_Settings__c (Payments_Enabled__c=False));
-        
-        // create test data
-        Account acct = new Account (
-            Name='Test Account'
-        );
-        insert acct;
-        Test.startTest();
-        Opportunity opp = new Opportunity (
-            Name='Test Opp',
-            AccountId = acct.id,
-            Amount = 1300,
-            closedate = date.newInstance(2001,12,12),
-            stagename = 'Posted'
-        );
-        insert opp;
-        
-        OppPayment__c[] opmt = [select id from OppPayment__c WHERE opportunity__c = :opp.Id];
-        system.assertEquals(0, opmt.size());
-    }
-    
     public static testMethod void test_paymentsEnabled_OpenOpp_Insert() {
         
-        Payments_Settings__c PaymentsSettingsForTests = getPaymentsSettingsForTests(new Payments_Settings__c (Payments_Enabled__c=True));
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
         
         // create test data
         Account acct = new Account (
@@ -572,41 +347,9 @@ public with sharing class PaymentWizardController {
         system.assertEquals(False, opmt[0].paid__c);
     }
     
-    public static testMethod void test_paymentsEndabled_ClosedOpp_Insert() {
+    public static testMethod void test_paymentsEnabled_ClosedOpp_SyncPayment() {
         
-        Payments_Settings__c PaymentsSettingsForTests = getPaymentsSettingsForTests(new Payments_Settings__c (Payments_Enabled__c=True));
-        
-        // create test data
-        Account acct = new Account (
-            Name='Test Account'
-        );
-        insert acct;
-        Opportunity opp1 = new Opportunity (
-            Name='Test Opp',
-            AccountId = acct.id,
-            Amount = 1300,
-            closedate = date.newInstance(2001,12,12),
-            stagename = 'Not Posted'
-        );
-        insert opp1;
-        
-        OppPayment__c[] opmt = [select id,paid__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
-        system.assertEquals(1, opmt.size());
-        system.assertEquals(False, opmt[0].paid__c);
-        
-        Opportunity createdOpp = [select id, stagename from Opportunity where Id = :opp1.id];
-        
-        Test.startTest();
-        update opp1;
-        Test.stopTest();
-        opmt = [select id,paid__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
-        system.assertEquals(1, opmt.size());
-        system.assertEquals(False, opmt[0].paid__c);
-    }
-    
-    public static testMethod void test_paymentsEndabled_ClosedOpp_SyncPayment() {
-        
-        Payments_Settings__c PaymentsSettingsForTests = getPaymentsSettingsForTests(new Payments_Settings__c (Payments_Enabled__c=True));
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
         
         // create test data
         Account acct = new Account (
@@ -646,9 +389,9 @@ public with sharing class PaymentWizardController {
         
     }
     
-    public static testMethod void test_paymentsEndabled_LostOpp() {
+    public static testMethod void test_paymentsEnabled_LostOpp() {
         
-        Payments_Settings__c PaymentsSettingsForTests = getPaymentsSettingsForTests(new Payments_Settings__c (Payments_Enabled__c=True));
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
         
         // create test data
         Account acct = new Account (
@@ -681,9 +424,9 @@ public with sharing class PaymentWizardController {
         
     }
     
-    public static testMethod void test_paymentsEndabled_WriteOff() {
+    public static testMethod void test_paymentsEnabled_WriteOff() {
         
-        Payments_Settings__c PaymentsSettingsForTests = getPaymentsSettingsForTests(new Payments_Settings__c (Payments_Enabled__c=True));
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
         
         // create test data
         Account acct = new Account (
@@ -695,12 +438,13 @@ public with sharing class PaymentWizardController {
             AccountId = acct.id,
             Amount = 150,
             closedate = date.newInstance(2001,12,12),
-            stagename = 'Posted'
+            stagename = closedWonStage()
         );
         insert opp1;
         
         OppPayment__c[] opmtUpdate = [select id,paid__c, payment_amount__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
         opmtUpdate[0].payment_amount__c = 50;
+        system.assertEquals(true, opmtUpdate[0].paid__c);
         update opmtUpdate;
         
         OppPayment__c newOpmt = new OppPayment__c(
@@ -733,10 +477,14 @@ public with sharing class PaymentWizardController {
         // click calculate
         pagereference ref = controller.writeoff();
 
+        Test.stopTest();
+        
         // look for the data
+        //should be two, one paid, one written off for the balance 
         OppPayment__c[] opmtAll = [select id, payment_method__c, payment_amount__c, paid__c, written_off__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
         system.assertEquals(2, opmtAll.size());
         
+        //the single payment should be written off
         OppPayment__c[] opmtOpen = [select id, payment_method__c, payment_amount__c, paid__c, written_off__c from OppPayment__c WHERE opportunity__c = :opp1.Id and paid__c = false and written_off__c = false];
         system.assertEquals(0, opmtOpen.size());
         
@@ -748,11 +496,12 @@ public with sharing class PaymentWizardController {
         system.assertEquals(1, opmtWrittenOff.size());
         system.assertEquals(100, opmtWrittenOff[0].payment_amount__c);
             
-        Test.stopTest();
+        
         
     }
     
     public static testMethod void test_PageElementsMonthly() {
+        
         // create test data
         Account acct = new Account (
             Name='Test Account'
@@ -816,6 +565,7 @@ public with sharing class PaymentWizardController {
         System.assertEquals(nextPage, '/' + opp.id); 
     }
     public static testMethod void test_PageElementsWeekly() {
+               
         // create test data
         Account acct = new Account (
             Name='Test Account'
@@ -824,7 +574,7 @@ public with sharing class PaymentWizardController {
         Opportunity opp = new Opportunity (
             Name='Test Opp',
             AccountId = acct.id,
-            Amount = 400,
+            Amount = 400.01,
             closedate = date.newInstance(2001,12,12),
             stagename = 'Pledged'
         );
@@ -861,13 +611,14 @@ public with sharing class PaymentWizardController {
         string nextPage=controller.createPayments().getUrl(); 
 
         // look for the data
-        OppPayment__c[] opmt = [select id, payment_method__c, payment_amount__c, scheduled_date__c from OppPayment__c WHERE opportunity__c = :opp.Id and paid__c = false];
+        OppPayment__c[] opmt = [select id, payment_method__c, payment_amount__c, scheduled_date__c from OppPayment__c WHERE opportunity__c = :opp.Id and paid__c = false order by payment_amount__c asc];
         system.assertEquals(4, opmt.size());
         system.assertEquals('Stock', opmt[0].payment_method__c);
         system.assertEquals(100, opmt[0].payment_amount__c);
         system.assertEquals(opmt[1].scheduled_date__c, opmt[0].scheduled_date__c.addDays(7));
     }
     public static testMethod void test_PageElementsYearly() {
+        
         // create test data
         Account acct = new Account (
             Name='Test Account'
@@ -918,5 +669,24 @@ public with sharing class PaymentWizardController {
         system.assertEquals('Stock', opmt[0].payment_method__c);
         system.assertEquals(100, opmt[0].payment_amount__c);
         system.assertEquals(opmt[1].scheduled_date__c, opmt[0].scheduled_date__c.addDays(365));
+    }
+    
+    public static testMethod void test_nullOpps() {
+    
+        // create the page 
+        PageReference pageRef=Page.Payment_Creator; 
+        Test.setCurrentPage(pageRef);
+
+        // set a bad id
+        ApexPages.currentPage().getParameters().put('id', null);
+        
+        // instantiate the controller
+        PaymentWizardController controller=new PaymentWizardController();
+        
+        //test bad page code
+        Test.startTest();
+        controller.SetupPaymentWizard();	
+        controller.PaymentWriteoffWizard();            	
+        Test.stopTest();
     }
 }
