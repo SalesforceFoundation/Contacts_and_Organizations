@@ -33,8 +33,6 @@
 * @description Controller for payment creation wizard
 */
 public with sharing class PaymentWizardController {
-// Written by Evan Callahan, copyright (c) 2008 NPower Seattle
-// Portions written by Steve Andersen, copyright (c) 2007 ONE/Northwest
 
     //Opportunity for the opp we're coming from
     public Opportunity CurrentOpp { get; private set; }
@@ -51,8 +49,13 @@ public with sharing class PaymentWizardController {
             oppPayment = new OppPayment__c();
         }
     }
+    
     //Get Payments Settings
-    public Payments_Settings__c getPaymentsSettings() {
+    //public Payments_Settings__c getPaymentsSettings() {
+    public Contacts_And_Orgs_Settings__c getPaymentsSettings(){    
+        PaymentsSettings = Constants.getContactsSettings();
+        
+        /*
         //if no settings exist, create defaults
         if (PaymentsSettings == null) {
             //first see if we already have settings
@@ -67,7 +70,7 @@ public with sharing class PaymentWizardController {
                 //this is not allowed...
                 insert PaymentsSettings;
             }
-        }
+        }*/
         return PaymentsSettings;
     }   
     
@@ -96,8 +99,10 @@ public with sharing class PaymentWizardController {
     //boolean to remove paid payments and create a new schedule
     public boolean removePaidPayments { get; set; }
 
-    public Payments_Settings__c PaymentsSettings;
+    //public Payments_Settings__c PaymentsSettings;
+    public Contacts_and_Orgs_Settings__c PaymentsSettings;
 
+    /*
     //constructor gets the opp from the passed in Id
     public PaymentWizardController(Map<id, Opportunity> newOppsMap, Map<id, Opportunity> oldOppsMap, Constants.triggerAction ta) {
         PaymentsSettings = getPaymentsSettings();
@@ -159,7 +164,7 @@ public with sharing class PaymentWizardController {
             /*if(ta == TempPaymentsConstants.triggerAction.afterUpdate){
                 
                 updatedOpps = [select id, CloseDate, Amount, isClosed, isWon, payments_made__c, Check_Reference_Number__c, Payment_Method__c, (SELECT id, Paid__c, Payment_Amount__c, Payment_Date__c, scheduled_date__c, Check_Reference_Number__c, Payment_Method__c from Opportunity.OppPayment__r) from Opportunity WHERE id in :newOpps];
-            }*/
+            }
             
             //IF Trigger is Insert, Create a new Payment
             if( ta == Constants.triggerAction.AfterInsert){
@@ -167,7 +172,7 @@ public with sharing class PaymentWizardController {
                 for (Opportunity thisOpp : newOpps){
                     // if opp is closed won with no payments scheduled or made, add an automatic payment
                     if( ta == Constants.triggerAction.AfterInsert){
-                        if ( /*(thisOpp.IsClosed && thisOpp.IsWon) && */
+                        if ( /*(thisOpp.IsClosed && thisOpp.IsWon) && 
                                         thisOpp.amount > 0 && thisOpp.payments_made__c == 0 && thisOpp.Number_of_Payments__c == 0 && !thisOpp.Do_Not_Automatically_Create_Payment__c) {
                                 oppPayment__c op = new oppPayment__c(
                                     opportunity__c = thisOpp.id,
@@ -205,7 +210,7 @@ public with sharing class PaymentWizardController {
                                 paid__c = false
                             ));
                         }
-                        */
+                        
                     }   
                 }
                 try{
@@ -288,10 +293,10 @@ public with sharing class PaymentWizardController {
                     for (OppPayment__c opay : paymentsToUpdate) {
                       opay.addError('There was a problem updating a payment');
                     }
-                }*/
+                }
             }
         }
-    }
+    }*/
     
     public PaymentWizardController() {
     }
@@ -719,7 +724,7 @@ public with sharing class PaymentWizardController {
         ApexPages.currentPage().getParameters().put('id', opp1.id);
         
         // instantiate the controller
-        PaymentCreator controller=new PaymentCreator();
+        PaymentWizardcontroller controller=new PaymentWizardController();
         controller.PaymentWriteoffWizard();
         
         // set values
@@ -784,7 +789,7 @@ public with sharing class PaymentWizardController {
         ApexPages.currentPage().getParameters().put('id', opp.id);
         
         // instantiate the controller
-        PaymentCreator controller=new PaymentCreator();
+        PaymentWizardController controller=new PaymentWizardController();
         controller.SetupPaymentWizard();
         
         // get lists
@@ -835,7 +840,7 @@ public with sharing class PaymentWizardController {
         ApexPages.currentPage().getParameters().put('id', opp.id);      
         
         // instantiate the controller
-        PaymentCreator controller=new PaymentCreator();
+        PaymentWizardController controller=new PaymentWizardController();
         controller.SetupPaymentWizard();
         
         // get lists
@@ -887,7 +892,7 @@ public with sharing class PaymentWizardController {
         ApexPages.currentPage().getParameters().put('id', opp.id);      
         
         // instantiate the controller
-        PaymentCreator controller=new PaymentCreator();
+        PaymentWizardController controller=new PaymentWizardController();
         controller.SetupPaymentWizard();
         
         // get lists
