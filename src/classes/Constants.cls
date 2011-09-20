@@ -111,7 +111,8 @@ global with sharing class Constants {
             Account_Processor__c = mySettings.Account_Processor__c,
             Enable_Opportunity_Contact_Role_Trigger__c = mySettings.Enable_Opportunity_Contact_Role_Trigger__c,
             Opportunity_Contact_Role_Default_role__c = mySettings.Opportunity_Contact_Role_Default_role__c,
-            Disable_Account_Model_Trigger__c = mySettings.Disable_Account_Model_Trigger__c
+            Disable_Account_Model_Trigger__c = mySettings.Disable_Account_Model_Trigger__c,
+            Payments_Enabled__c = mySettings.Payments_Enabled__c
             );
         insert ContactsSettings;
             
