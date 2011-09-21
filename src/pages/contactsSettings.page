@@ -30,7 +30,7 @@
             </apex:pageBlockSection>
             
              <apex:pageBlockSection id="paymentssection" title="Payment Configuration" columns="2">
-            <apex:pageBlockSectionItem helpText="Enable Payments?">
+            <apex:pageBlockSectionItem helpText="Enables the automatic creation of Payments for Donations (Opportunities) and enables the Payments Wizard.">
                     <apex:outputLabel value="Enable Payments"/>
                     <apex:inputCheckBox value="{!settings.Payments_Enabled__c}"/>
                         
