@@ -32,21 +32,14 @@ Copyright (c) 2008 Evan Callahan, evanc@npowerseattle.org, NPower Seattle, 403 2
      
     <apex:form >
         <apex:pageBlock title="Warning" rendered="{!AND(NOT(ISNULL(CurrentOpp)),NOT(haveAmount))}">
-            <apex:pageBlockButtons >
-               <apex:commandButton action="{!RemovePaidPayments}" value="Remove Paid Payments"/>
-            </apex:pageBlockButtons>
-            
             NOTE: This opportunity has no unpaid amount. To create payments, 
             first&nbsp;<apex:outputLink value="{!'/' + currentOpp.id}">edit the opportunity record</apex:outputLink> and 
             enter an amount or click the button to delete existing payments. If the opportunity is closed, you may need to reopen it.
-        
+        <div style="text-align: center;">        
+        <apex:commandButton action="{!RemovePaidPayments}" value="Remove Paid Payments"/></div>
         </apex:pageBlock>
         
         <apex:pageBlock title="Create a Payment Schedule" rendered="{!OR(haveAmount, removePaidPayments)}">
-            <apex:pageBlockButtons >
-                <apex:commandButton action="{!calculate}" rerender="theTable" value="Calculate Payments"/>
-            </apex:pageBlockButtons>
-        
             <apex:pageBlockSection id="pmtGrid" columns="1">
                 <apex:pageBlockSectionItem >       
                     <apex:outputLabel value="# of Payments" />
@@ -78,15 +71,13 @@ Copyright (c) 2008 Evan Callahan, evanc@npowerseattle.org, NPower Seattle, 403 2
                     <apex:inputField value="{!samplePayment.Payment_Method__c}"/>
                 </apex:pageBlockSectionItem>
             </apex:pageblocksection>
+            <div style="text-align: center;">
+            <apex:commandButton action="{!calculate}" rerender="theTable" value="Calculate Payments"/></div>
         </apex:pageBlock>
     </apex:form>
 
     <apex:form >
         <apex:pageBlock title="Payments to be Created" mode="edit" rendered="{!haveAmount}">
-            <apex:pageBlockButtons >
-                <apex:commandButton action="{!createPayments}" value="Create Payments"/>
-            </apex:pageBlockButtons>
-    
             <apex:pageBlockTable id="theTable" value="{!payments}" var="p" style="margin-bottom:12px;"> 
                 <apex:column >
                     <apex:facet name="header">Payment #</apex:facet>
@@ -109,6 +100,8 @@ Copyright (c) 2008 Evan Callahan, evanc@npowerseattle.org, NPower Seattle, 403 2
                     <apex:inputField value="{!p.OppPayment.Paid__c}"/>
                 </apex:column>
             </apex:pageBlockTable>
+            <div style="text-align: center;">
+            <apex:commandButton action="{!createPayments}" value="Create Payments"/></div>
         </apex:pageBlock>
     </apex:form>    
     </apex:outputPanel>
@@ -136,9 +129,6 @@ Copyright (c) 2008 Evan Callahan, evanc@npowerseattle.org, NPower Seattle, 403 2
     enter an amount or delete existing payments.
     </apex:outputPanel>
     <apex:pageBlock title="Writeoff Payments" rendered="{!AND(NOT(ISNULL(CurrentOpp)), haveAmount, NOT(ISNULL(PaymentsSettings)), PaymentsSettings.Payments_Enabled__c == true)}">
-        <apex:pageBlockButtons >
-        <apex:commandButton action="{!writeoff}" value="Writeoff Payments"/>
-        </apex:pageBlockButtons>
         <apex:OutputPanel >
         You are preparing to writeoff&nbsp;
             <apex:outputField value="{!currentOpp.Number_of_Payments__c}" />
@@ -147,6 +137,8 @@ Copyright (c) 2008 Evan Callahan, evanc@npowerseattle.org, NPower Seattle, 403 2
         .<br /><br/>
         Which date would you like to use?&nbsp;<apex:inputField value="{!writeoffPayment.Payment_Date__c}" />
         </apex:OutputPanel>
+        <div style="text-align: center;">
+        <apex:commandButton action="{!writeoff}" value="Writeoff Payments"/></div>
     </apex:pageBlock>
     </apex:form>
 
