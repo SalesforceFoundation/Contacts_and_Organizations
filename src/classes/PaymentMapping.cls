@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2009, Salesforce.com Foundation
+    Copyright (c) 2011, Salesforce.com Foundation
     All rights reserved.
     
     Redistribution and use in source and binary forms, with or without
@@ -26,6 +26,11 @@
     LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN 
     ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
     POSSIBILITY OF SUCH DAMAGE.
+*/
+/**
+* @author Nick Bailey 
+* @date 2011 (2.1)
+* @description Controller for the payment mapping wizard
 */
 public with sharing class PaymentMapping {
     
@@ -190,10 +195,13 @@ public with sharing class PaymentMapping {
             paymentField = Schema.sObjectType.OppPayment__c.fields.getMap().get(pfms.Payment_Field__c);
             if (paymentField == null) isValid = false;
             
-            //check Field Types
-            Schema.DisplayType payF = paymentField.getDescribe().getType();
-            Schema.DisplayType oppF = opportunityField.getDescribe().getType();
-            if (payF != oppF) isValid = false;
+            //only if the other checks succeed, get the describe type
+            if (isValid == true){
+                //check Field Types
+                Schema.DisplayType payF = paymentField.getDescribe().getType();
+                Schema.DisplayType oppF = opportunityField.getDescribe().getType();
+                if (payF != oppF) isValid = false;
+            }                
         }    
     
     return isValid;
@@ -224,13 +232,13 @@ public with sharing class PaymentMapping {
     	return ApexPages.currentPage().setRedirect(true);
     }   
     
-    /*    
-    public static testMethod void TEST_userRollupSettings() {
+      
+    public static testMethod void TEST_paymentMappingSettings() {
         
-        Test.setCurrentPageReference(new PageReference('Page.userRollupSettings'));
+        Test.setCurrentPageReference(new PageReference('Page.PaymentMapping'));
         
         //pass the controller into the extension
-        userRollupSettings controller = new userRollupSettings();
+        PaymentMapping controller = new PaymentMapping();
         
         //exercise basic operations
         controller.next();
@@ -249,80 +257,37 @@ public with sharing class PaymentMapping {
         //call the major getter methods
         list<SelectOption> oppyList = controller.getSourceFields();
         controller.opptyfield = 'Amount';
-        list<SelectOption> operatorList = controller.getValidOperators();
         
-        controller.opptyfield = 'CloseDate';
-        operatorList = controller.getValidOperators();
-        controller.operator = 'MAX';
-        
-        list<SelectOption> targetObjectList = controller.getTargetObjects();
-        controller.targetobject = 'Account';
         list<SelectOption> targetFieldList = controller.getTargetFields();
-               
-        //change target object to test other options        
-        controller.targetobject = 'Household__c';
-        targetFieldList = controller.getTargetFields();
-        
-        controller.targetobject = 'Contact';
-        targetFieldList = controller.getTargetFields();
-        system.assertEquals(targetObjectList.size(), 3);
-        
         controller.targetfield = 'Birthdate';
         
         string operationdescription = controller.getOperationString();
-        controller.createRollup();
+        controller.createMapping();
         
         
-        //existing invalid rollups will cause test failure
-        boolean isValid = controller.userRollupsValid();
-        system.assertEquals(isValid, true);
-                
-        //insert invalid rollup to test error handling methods
-        User_Rollup_Field_Settings__c badurfs = new User_Rollup_Field_Settings__c(
+        controller.targetfield = 'Amount_Outstanding__c';
+        controller.createMapping();
+                        
+        controller.targetfield = null;
+        controller.createMapping();                         
+                        
+        //insert invalid payment map to test error handling methods
+        Payment_Field_Mapping_Settings__c badurfs = new Payment_Field_Mapping_Settings__c(
         Name = 'Invalid Test Rollup',
-        Target_Field__c = 'InvalidTargetField__test',
-        Source_Field__c = 'InvalidSourceField__test',
-        Object_Name__c = 'Account',
-        Field_Action__c = 'TEST'         
+        Opportunity_Field__c = 'InvalidTargetField__test',
+        Payment_Field__c = 'InvalidSourceField__test'                 
         );
-        
         insert badurfs;
+        boolean isValid = controller.paymentMappingsValid();
         
-        isValid = controller.userRollupsValid();
-        system.assertEquals(false, isValid);
-        PageReference pr = controller.checkSettings();        
+        //check mismatched types
+        badurfs.Opportunity_Field__c = 'Amount';
+        badurfs.Payment_Field__c = 'Paid__c';
+        update badurfs; 
+        isValid = controller.paymentMappingsValid();
         
-        //exercise household code
-        User_Rollup_Field_Settings__c HHurfs = new User_Rollup_Field_Settings__c(
-        Name = 'Household Test Rollup',
-        Target_Field__c = 'lastoppamount__c',
-        Source_Field__c = 'Amount',
-        Object_Name__c = 'Household__c',
-        Field_Action__c = 'MAX'         
-        );
-        
-        insert HHurfs; 
-                
-        isValid = controller.userRollupsValid();
-        system.assertEquals(false, isValid);
-        
-        //insert a bogus rollup using the createRollup() method
-        controller.operator = null;
-        pr = controller.createRollup();
-        
-        User_Rollup_Field_Settings__c badobject = new User_Rollup_Field_Settings__c(
-        Name = 'Invalid Object Rollup',
-        Target_Field__c = 'InvalidTargetField__test',
-        Source_Field__c = 'InvalidSourceField__test',
-        Object_Name__c = 'BadAccount',
-        Field_Action__c = 'TEST'
-        );
-        
-        insert badobject;
-        
-        isValid = controller.userRollupsValid();
-        system.assertEquals(false, isValid);
-        
+        PageReference pr = controller.checkSettings();       
+          
     }
-    */
+    
 }
