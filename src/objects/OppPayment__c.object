@@ -135,6 +135,18 @@
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
-        <url>/apex/Payment_Creator?id={!Opportunity.Id}</url>
+        <url>/apex/PaymentWizard?id={!Opportunity.Id}&amp;wtype=payment</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Writeoff_Payments</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Writeoff Payments</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/PaymentWizard?id={!Opportunity.Id}&amp;wtype=writeoff</url>
     </webLinks>
 </CustomObject>
