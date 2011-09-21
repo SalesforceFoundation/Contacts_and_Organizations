@@ -38,7 +38,7 @@ public with sharing class PaymentWizardController {
     public Opportunity CurrentOpp { get; private set; }
 
     public boolean haveAmount { get; private set; }
-
+    
     // Class that stores numbered payment
     public class payment {
         public integer paymentNumber { get; private set; }
@@ -54,11 +54,19 @@ public with sharing class PaymentWizardController {
     public static map<string, Payment_Field_Mapping_Settings__c> paymentMappings = new map<string, Payment_Field_Mapping_Settings__c>();
     public static map<string, Payment_Field_Mapping_Settings__c> paymentMappingsAll = new map<string, Payment_Field_Mapping_Settings__c>();
     public static map<string, Payment_Field_Mapping_Settings__c> paymentMappingsToRemove = new map<string, Payment_Field_Mapping_Settings__c>();
-
+    
+    //which wizard?
+    public boolean isWriteoffWizard{get; set;}
+    public boolean isScheduleWizard{get; set;}
+    
     
     //list of payments
     list<payment> newPayments = new list<payment>();
-
+    //get the payments
+    public List<payment> getPayments() {
+        return newPayments ;
+    }
+  
     public oppPayment__c samplePayment { get; set; }
     public oppPayment__c writeoffPayment { get; set; }
     
@@ -76,14 +84,35 @@ public with sharing class PaymentWizardController {
 
     //public Payments_Settings__c PaymentsSettings;
     public Contacts_and_Orgs_Settings__c PaymentsSettings;
-
+    
+    public Contacts_and_Orgs_Settings__c getPaymentsSettings(){
+    	if (PaymentsSettings == null)
+    	   PaymentsSettings = Constants.getContactsSettings();
+    	
+    	return PaymentsSettings;
+    }
   
     //constructor
     public PaymentWizardController() {
+    	
+    	if(ApexPages.currentPage().getParameters().get('wtype') == 'writeoff'){
+    		PaymentWriteoffWizard();
+    		isWriteoffWizard = true;
+    		isScheduleWizard = false;
+    		
+    	}
+    	else if (ApexPages.currentPage().getParameters().get('wtype') == 'payment'){
+    		SetupPaymentWizard();
+    		isWriteoffWizard = false;
+            isScheduleWizard = true;    		
+    	}
+    	else{    		
+    		//error?
+    	}    	
     }
     
     public void SetupPaymentWizard() {
-        opportunity[] o = [select name, amount, stagename, payments_made__c, amount_outstanding__c, description, closedate from Opportunity where id =:ApexPages.currentPage().getParameters().get('id')];
+        opportunity[] o = [select name, amount, stagename, payments_made__c, amount_outstanding__c, description, closedate, Number_of_Payments__c from Opportunity where id =:ApexPages.currentPage().getParameters().get('id')];
         if (o.isEmpty()) {
             haveAmount = false;
         } else {
@@ -231,6 +260,11 @@ public with sharing class PaymentWizardController {
         oldOppPage.setRedirect(true);
         return oldOppPage;
     }
+    
+    public pageReference RemovePaidPayments() {
+        removePaidPayments = true;
+        return null;
+    }
    
     /***  TEST METHODS ***/
     @isTest
@@ -243,8 +277,7 @@ public with sharing class PaymentWizardController {
                 closedWonStage = '';
         }
         return closedWonStage;    	
-    } 
-    
+    }     
     
     public static testMethod void test_paymentsDisabled_ClosedOpp_Insert() {
         
@@ -272,15 +305,13 @@ public with sharing class PaymentWizardController {
     public static testMethod void test_paymentsEnabled_ClosedOpp_Insert() {
         
         Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
-      
-    
+     
         // create test data
         Account acct = new Account (
             Name='Test Account'
         );
         insert acct;
-        
-                
+          
         Opportunity opp = new Opportunity (
             Name='Test Opp',
             AccountId = acct.id,
@@ -385,8 +416,7 @@ public with sharing class PaymentWizardController {
         
         system.assertEquals(date.newInstance(2002, 11, 11), opmt[0].Scheduled_Date__c);
         
-        Test.stopTest();
-        
+        Test.stopTest();        
     }
     
     public static testMethod void test_paymentsEnabled_LostOpp() {
@@ -420,8 +450,7 @@ public with sharing class PaymentWizardController {
         opmt = [select id,paid__c,Payment_Amount__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
         
         system.assertEquals(0, opmt.size());    
-        Test.stopTest();
-        
+        Test.stopTest();       
     }
     
     public static testMethod void test_paymentsEnabled_WriteOff() {
@@ -461,11 +490,12 @@ public with sharing class PaymentWizardController {
         system.assertEquals(2, opmtAllStart.size());
 
         // create the page 
-        PageReference pageRef=Page.Payment_Writeoff; 
+        PageReference pageRef=Page.PaymentWizard; 
         Test.setCurrentPage(pageRef);
 
         // set the parameter for the contact
         ApexPages.currentPage().getParameters().put('id', opp1.id);
+        ApexPages.currentPage().getParameters().put('wtype', 'writeoff');
         
         // instantiate the controller
         PaymentWizardcontroller controller=new PaymentWizardController();
@@ -494,10 +524,7 @@ public with sharing class PaymentWizardController {
         
         OppPayment__c[] opmtWrittenOff = [select id, payment_method__c, payment_amount__c, paid__c, written_off__c from OppPayment__c WHERE opportunity__c = :opp1.Id and paid__c = false and written_off__c = true];
         system.assertEquals(1, opmtWrittenOff.size());
-        system.assertEquals(100, opmtWrittenOff[0].payment_amount__c);
-            
-        
-        
+        system.assertEquals(100, opmtWrittenOff[0].payment_amount__c);       
     }
     
     public static testMethod void test_PageElementsMonthly() {
@@ -531,11 +558,12 @@ public with sharing class PaymentWizardController {
         Test.startTest();
 
         // create the page 
-        PageReference pageRef=Page.Payment_Creator; 
+        PageReference pageRef=Page.PaymentWizard; 
         Test.setCurrentPage(pageRef); 
 
         // set the parameter for the contact
         ApexPages.currentPage().getParameters().put('id', opp.id);
+        ApexPages.currentPage().getParameters().put('wtype', 'payment');
         
         // instantiate the controller
         PaymentWizardController controller=new PaymentWizardController();
@@ -564,6 +592,7 @@ public with sharing class PaymentWizardController {
         // verify that the right page displays 
         System.assertEquals(nextPage, '/' + opp.id); 
     }
+    
     public static testMethod void test_PageElementsWeekly() {
                
         // create test data
@@ -583,11 +612,12 @@ public with sharing class PaymentWizardController {
         Test.startTest();
 
         // create the page 
-        PageReference pageRef=Page.Payment_Creator; 
+        PageReference pageRef=Page.PaymentWizard; 
         Test.setCurrentPage(pageRef); 
 
         // set the parameter for the contact
-        ApexPages.currentPage().getParameters().put('id', opp.id);      
+        ApexPages.currentPage().getParameters().put('id', opp.id);
+        ApexPages.currentPage().getParameters().put('wtype', 'payment');      
         
         // instantiate the controller
         PaymentWizardController controller=new PaymentWizardController();
@@ -617,6 +647,7 @@ public with sharing class PaymentWizardController {
         system.assertEquals(100, opmt[0].payment_amount__c);
         system.assertEquals(opmt[1].scheduled_date__c, opmt[0].scheduled_date__c.addDays(7));
     }
+    
     public static testMethod void test_PageElementsYearly() {
         
         // create test data
@@ -636,12 +667,12 @@ public with sharing class PaymentWizardController {
         Test.startTest();
 
         // create the page 
-        PageReference pageRef=Page.Payment_Creator; 
+        PageReference pageRef=Page.PaymentWizard; 
         Test.setCurrentPage(pageRef); 
 
         // set the parameter for the contact
         ApexPages.currentPage().getParameters().put('id', opp.id);      
-        
+        ApexPages.currentPage().getParameters().put('wtype', 'payment');
         // instantiate the controller
         PaymentWizardController controller=new PaymentWizardController();
         controller.SetupPaymentWizard();
@@ -674,11 +705,12 @@ public with sharing class PaymentWizardController {
     public static testMethod void test_nullOpps() {
     
         // create the page 
-        PageReference pageRef=Page.Payment_Creator; 
+        PageReference pageRef=Page.PaymentWizard; 
         Test.setCurrentPage(pageRef);
 
         // set a bad id
         ApexPages.currentPage().getParameters().put('id', null);
+        ApexPages.currentPage().getParameters().put('wtype', 'garbage');
         
         // instantiate the controller
         PaymentWizardController controller=new PaymentWizardController();
@@ -689,4 +721,17 @@ public with sharing class PaymentWizardController {
         controller.PaymentWriteoffWizard();            	
         Test.stopTest();
     }
+    
+    public static testMethod void test_publicGetters() {
+        
+        // instantiate the controller
+        PaymentWizardController controller=new PaymentWizardController();
+        
+        //test public method code
+        Test.startTest();      
+        controller.getPaymentsSettings();
+        list<PaymentWizardController.payment> oplist = controller.getPayments();
+        ApexPages.Pagereference pr = controller.RemovePaidPayments();             
+        Test.stopTest();
+    }    
 }
