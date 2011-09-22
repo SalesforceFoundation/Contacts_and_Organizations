@@ -235,12 +235,6 @@ public without sharing class PaymentCreator{
         }
     }
 	
-	public PaymentCreator() {
-	}
-
-
-	
-
 	/*** Test Methods ***/ 
 	public static testMethod void test_paymentsDisabled_ClosedOpp_Insert() {
         
