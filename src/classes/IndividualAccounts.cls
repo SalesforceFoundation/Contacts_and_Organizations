@@ -45,9 +45,12 @@ global with sharing class IndividualAccounts
     /// <param name="contacts"> Contact objects that are being triggered </param>
     /// <param name="oldContacts"> Contact object values before trigger event </param>
     /// <param name="ta"> Trigger action that is occuring </param>
+    private static Contacts_and_Orgs_Settings__c ContactsSettings;
+    
     public IndividualAccounts(Contact[] contacts, Contact[] oldContacts, Constants.triggerAction ta)
     {
-        Contacts_and_Orgs_Settings__c ContactsSettings = Constants.getContactsSettings();
+            ContactsSettings = Constants.getContactsSettings();
+            
             if(!ContactsSettings.Disable_Account_Model_Trigger__c){
             List<Contact> individualInserts = new List<Contact>();
             List<Contact> individualUpdates = new List<Contact>();
@@ -96,8 +99,7 @@ global with sharing class IndividualAccounts
                             3. The Individual model is chosen in the SystemAccountProcessor__c
                         */
                         if (c.AccountId == null && c.Private__c != true && !Constants.isOneToOne())
-                        {
-        
+                        {        
                             bucketContacts.add(c);
                         }
                     }
@@ -321,6 +323,16 @@ global with sharing class IndividualAccounts
                 //flag the account as an individual account
                 //a.Type = Constants.ONE_TO_ONE_ORGANIZATION_TYPE;
                 a.SYSTEM_AccountType__c = Constants.ONE_TO_ONE_ORGANIZATION_TYPE;
+                
+                //check if recordtypes are enabled, and if it matches the existing setting
+                if (ContactsSettings.One_to_One_RecordTypeID__c != null){
+                    Schema.DescribeSObjectResult R = Account.SObjectType.getDescribe();
+                    Map<Id,Schema.RecordTypeInfo> rtMapById = r.getRecordTypeInfosById();
+                    Schema.RecordTypeInfo rtById =  rtMapById.get(ContactsSettings.One_to_One_RecordTypeID__c);
+			        if (rtById != null){                
+                	   a.put('RecordTypeID', rtByID.getRecordTypeID());
+			        }
+                }
                 
                 a.SYSTEMISINDIVIDUAL__c = true;
                 accountInserts.add(a);
