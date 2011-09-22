@@ -139,7 +139,13 @@ public with sharing class LeadConvertOverride {
             // get this contact's account
             lc.setContactId(con);
             lc.setAccountId(conMap.get(con).accountId);          
-        }       
+        }
+        else{
+        	if (!Constants.isOneToOne())
+        	   lc.setAccountID(Constants.getIndividualAccountID());
+        }
+        
+               
 
         // convert the lead
         PageReference pageRef;
@@ -149,7 +155,7 @@ public with sharing class LeadConvertOverride {
             
             
             // fix the account that lead conversion created
-            if (con == 'NEW_CONTACT') {     
+            if (con == 'NEW_CONTACT' && Constants.isOneToOne()) {     
                 //
                 Contact[] myconvertedContact = [select id,firstname, lastname from contact where id=:lcr.getContactId()];
                 
