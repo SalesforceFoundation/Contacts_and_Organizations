@@ -106,8 +106,9 @@ global with sharing class Constants {
         //clear out whatever settings exist
         delete [select id from Contacts_and_Orgs_Settings__c];
         
-        //create our own based on what's passed in from the test
+        //create our own based on what's passed in from the test 
         ContactsSettings = new Contacts_and_Orgs_Settings__c (
+            One_to_One_RecordTypeID__c = mySettings.One_to_One_RecordTypeID__c, 
             Account_Processor__c = mySettings.Account_Processor__c,
             Enable_Opportunity_Contact_Role_Trigger__c = mySettings.Enable_Opportunity_Contact_Role_Trigger__c,
             Opportunity_Contact_Role_Default_role__c = mySettings.Opportunity_Contact_Role_Default_role__c,
