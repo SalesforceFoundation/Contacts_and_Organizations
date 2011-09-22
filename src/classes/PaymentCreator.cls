@@ -28,9 +28,9 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
-* @author Salesforce.com Foundation
+* @author Nick Bailey 
 * @date 2011 (2.1)
-* @description  
+* @description Controls the creation of payment objects from Opportunity trigger
 */
 public without sharing class PaymentCreator{
 
@@ -241,210 +241,206 @@ public without sharing class PaymentCreator{
 
 	
 
-	
-	public static testMethod void test_paymentsEnabled_ClosedOpp_Insert() {
-		
-        Contacts_and_Orgs_Settings__c ContactsSettings = Constants.getContactsSettingsForTests(new Contacts_and_Orgs_Settings__c (Payments_Enabled__c=True));
-    
-		// create test data
-		Account acct = new Account (
-			Name='Test Account'
-		);
-		insert acct;
-		Test.startTest();
-		Opportunity opp = new Opportunity (
-			Name='Test Opp',
-			AccountId = acct.id,
-			Amount = 1300,
-			closedate = date.newInstance(2001,12,12),
-			stagename = 'Posted'
-		);
-		insert opp;
-		
-		OppPayment__c[] opmt = [select id, payment_amount__c, paid__c from OppPayment__c WHERE opportunity__c = :opp.Id];
-		system.assertEquals(1, opmt.size());
-		system.assertEquals(True, opmt[0].paid__c);
-		system.assertEquals(1300, opmt[0].payment_amount__c);
-	}
-	
-	public static testMethod void test_paymentsEnabled_ClosedOpp_Insert_DoNotCreatePayment() {
-		
-		Contacts_and_Orgs_Settings__c ContactsSettings = Constants.getContactsSettingsForTests(new Contacts_and_Orgs_Settings__c (Payments_Enabled__c=True));
-		
-		// create test data
-		Account acct = new Account (
-			Name='Test Account'
-		);
-		insert acct;
-		Test.startTest();
-		Opportunity opp = new Opportunity (
-			Name='Test Opp',
-			AccountId = acct.id,
-			Amount = 1300,
-			closedate = date.newInstance(2001,12,12),
-			stagename = 'Posted',
-			Do_Not_Automatically_Create_Payment__c = true
-		);
-		insert opp;
-		
-		OppPayment__c[] opmt = [select id, payment_amount__c, paid__c from OppPayment__c WHERE opportunity__c = :opp.Id];
-		system.assertEquals(0, opmt.size());
-	}
-	
+	/*** Test Methods ***/ 
 	public static testMethod void test_paymentsDisabled_ClosedOpp_Insert() {
-		
-		Contacts_and_Orgs_Settings__c ContactsSettings = Constants.getContactsSettingsForTests(new Contacts_and_Orgs_Settings__c (Payments_Enabled__c=True));
-		
-		// create test data
-		Account acct = new Account (
-			Name='Test Account'
-		);
-		insert acct;
-		Test.startTest();
-		Opportunity opp = new Opportunity (
-			Name='Test Opp',
-			AccountId = acct.id,
-			Amount = 1300,
-			closedate = date.newInstance(2001,12,12),
-			stagename = 'Posted'
-		);
-		insert opp;
-		
-		OppPayment__c[] opmt = [select id from OppPayment__c WHERE opportunity__c = :opp.Id];
-		system.assertEquals(0, opmt.size());
-	}
-	
-	public static testMethod void test_paymentsEnabled_OpenOpp_Insert() {
-		
-		Contacts_and_Orgs_Settings__c ContactsSettings = Constants.getContactsSettingsForTests(new Contacts_and_Orgs_Settings__c (Payments_Enabled__c=True));
-		
-		// create test data
-		Account acct = new Account (
-			Name='Test Account'
-		);
-		insert acct;
-		
-		Test.startTest();
-		Opportunity opp = new Opportunity (
-			Name='Test Opp',
-			AccountId = acct.id,
-			Amount = 1300,
-			closedate = date.newInstance(2001,12,12),
-			stagename = 'Not Posted'
-		);
-		insert opp;
-		
-		OppPayment__c[] opmt = [select id,paid__c from OppPayment__c WHERE opportunity__c = :opp.Id];
-		system.assertEquals(1, opmt.size());
-		system.assertEquals(False, opmt[0].paid__c);
-	}
-	
-	public static testMethod void test_paymentsEndabled_ClosedOpp_Insert() {
-		
-		Contacts_and_Orgs_Settings__c ContactsSettings = Constants.getContactsSettingsForTests(new Contacts_and_Orgs_Settings__c (Payments_Enabled__c=True));
-		
-		// create test data
-		Account acct = new Account (
-			Name='Test Account'
-		);
-		insert acct;
-		Opportunity opp1 = new Opportunity (
-			Name='Test Opp',
-			AccountId = acct.id,
-			Amount = 1300,
-			closedate = date.newInstance(2001,12,12),
-			stagename = 'Not Posted'
-		);
-		insert opp1;
-		
-		OppPayment__c[] opmt = [select id,paid__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
-		system.assertEquals(1, opmt.size());
-		system.assertEquals(False, opmt[0].paid__c);
-		
-		Opportunity createdOpp = [select id, stagename from Opportunity where Id = :opp1.id];
-		
-		Test.startTest();
-		update opp1;
-		Test.stopTest();
-		opmt = [select id,paid__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
-		system.assertEquals(1, opmt.size());
-		system.assertEquals(False, opmt[0].paid__c);
-	}
-	
-	public static testMethod void test_paymentsEndabled_ClosedOpp_SyncPayment() {
-		
-		Contacts_and_Orgs_Settings__c ContactsSettings = Constants.getContactsSettingsForTests(new Contacts_and_Orgs_Settings__c (Payments_Enabled__c=True));
-		
-		// create test data
-		Account acct = new Account (
-			Name='Test Account'
-		);
-		insert acct;
-		Opportunity opp1 = new Opportunity (
-			Name='Test Opp',
-			AccountId = acct.id,
-			Amount = 1300,
-			closedate = date.newInstance(2001,12,12),
-			stagename = 'Not Posted'
-		);
-		insert opp1;
-		
-		OppPayment__c[] opmt = [select id,paid__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
-		system.assertEquals(1, opmt.size());
-		system.assertEquals(False, opmt[0].paid__c);
-		
-		Opportunity createdOpp = [select id, stagename, Amount, CloseDate from Opportunity where Id = :opp1.id];
-		
-		createdOpp.Amount = 1500;
-		Test.startTest();
-		update createdOpp;
-		
-		opmt = [select id,paid__c,Payment_Amount__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
-		
-		system.assertEquals(1500, opmt[0].Payment_Amount__c);
-		
-		createdOpp.CloseDate = date.newInstance(2002, 11, 11);
-		update createdOpp;
-		opmt = [select id,paid__c,Payment_Amount__c,Payment_Date__c, scheduled_date__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
-		
-		system.assertEquals(date.newInstance(2002, 11, 11), opmt[0].Scheduled_Date__c);
-		
-		Test.stopTest();
-		
-	}
-	
-	public static testMethod void test_paymentsEndabled_LostOpp() {
-		
-		Contacts_and_Orgs_Settings__c ContactsSettings = Constants.getContactsSettingsForTests(new Contacts_and_Orgs_Settings__c (Payments_Enabled__c=True));
-		
-		// create test data
-		Account acct = new Account (
-			Name='Test Account'
-		);
-		insert acct;
-		Opportunity opp1 = new Opportunity (
-			Name='Test Opp',
-			AccountId = acct.id,
-			Amount = 1300,
-			closedate = date.newInstance(2001,12,12),
-			stagename = 'Not Posted'
-		);
-		insert opp1;
-		
-		OppPayment__c[] opmt = [select id,paid__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
-		system.assertEquals(1, opmt.size());
-		system.assertEquals(False, opmt[0].paid__c);
-		
-		Opportunity createdOpp = [select id, stagename, Amount, CloseDate from Opportunity where Id = :opp1.id];
-		
-		createdOpp.stagename = 'Closed Lost';
-		Test.startTest();
-		update createdOpp;
-		
-		opmt = [select id,paid__c,Payment_Amount__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
-		
-		system.assertEquals(0, opmt.size());	
-		Test.stopTest();
-		
-	}
+        
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= false));
+        
+        // create test data
+        Account acct = new Account (
+            Name='Test Account'
+        );
+        insert acct;
+        Test.startTest();
+        Opportunity opp = new Opportunity (
+            Name='Test Opp',
+            AccountId = acct.id,
+            Amount = 1300,
+            closedate = date.newInstance(2001,12,12),
+            stagename = PaymentWizardController.closedWonStage()
+        );
+        insert opp;
+        
+        OppPayment__c[] opmt = [select id from OppPayment__c WHERE opportunity__c = :opp.Id];
+        system.assertEquals(0, opmt.size());
+    }
+    
+    public static testMethod void test_paymentsEnabled_ClosedOpp_Insert() {
+        
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
+     
+        // create test data
+        Account acct = new Account (
+            Name='Test Account'
+        );
+        insert acct;
+          
+        Opportunity opp = new Opportunity (
+            Name='Test Opp',
+            AccountId = acct.id,
+            Amount = 1300,
+            closedate = date.newInstance(2001,12,12),
+            stagename = PaymentWizardController.closedWonStage()          
+        );
+        Test.startTest();
+        insert opp;
+        test.stopTest();
+        
+        OppPayment__c[] opmt = [select id, payment_amount__c, paid__c from OppPayment__c WHERE opportunity__c = :opp.Id];
+        system.assertEquals(1, opmt.size());
+        system.assertEquals(True, opmt[0].paid__c);
+        system.assertEquals(1300, opmt[0].payment_amount__c);
+    }
+    
+    public static testMethod void test_paymentsEnabled_ClosedOpp_Insert_DoNotCreatePayment() {
+        
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
+        
+        // create test data
+        Account acct = new Account (
+            Name='Test Account'
+        );
+        insert acct;
+        Test.startTest();
+        Opportunity opp = new Opportunity (
+            Name='Test Opp',
+            AccountId = acct.id,
+            Amount = 1300,
+            closedate = date.newInstance(2001,12,12),
+            stagename = PaymentWizardController.closedWonStage(),
+            Do_Not_Automatically_Create_Payment__c = true
+        );
+        insert opp;
+        
+        OppPayment__c[] opmt = [select id, payment_amount__c, paid__c from OppPayment__c WHERE opportunity__c = :opp.Id];
+        system.assertEquals(0, opmt.size());
+    }
+    
+    public static testMethod void test_paymentsEnabled_OpenOpp_Insert() {
+        
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
+        
+        // create test data
+        Account acct = new Account (
+            Name='Test Account'
+        );
+        insert acct;
+        
+        Test.startTest();
+        Opportunity opp = new Opportunity (
+            Name='Test Opp',
+            AccountId = acct.id,
+            Amount = 1300,
+            closedate = date.newInstance(2001,12,12),
+            stagename = 'Not Posted'
+        );
+        insert opp;
+        
+        OppPayment__c[] opmt = [select id,paid__c from OppPayment__c WHERE opportunity__c = :opp.Id];
+        system.assertEquals(1, opmt.size());
+        system.assertEquals(False, opmt[0].paid__c);
+    }
+    
+    public static testMethod void test_paymentsEnabled_ClosedOpp_SyncPayment() {
+        
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
+        
+        // create test data
+        Account acct = new Account (
+            Name='Test Account'
+        );
+        insert acct;
+        Opportunity opp1 = new Opportunity (
+            Name='Test Opp',
+            AccountId = acct.id,
+            Amount = 1300,
+            closedate = date.newInstance(2001,12,12),
+            stagename = 'Not Posted'
+        );
+        insert opp1;
+        
+        OppPayment__c[] opmt = [select id,paid__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
+        system.assertEquals(1, opmt.size());
+        system.assertEquals(False, opmt[0].paid__c);
+        
+        Opportunity createdOpp = [select id, stagename, Amount, CloseDate from Opportunity where Id = :opp1.id];
+        
+        createdOpp.Amount = 1500;
+        Test.startTest();
+        update createdOpp;
+        
+        opmt = [select id,paid__c,Payment_Amount__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
+        
+        system.assertEquals(1500, opmt[0].Payment_Amount__c);
+        
+        createdOpp.CloseDate = date.newInstance(2002, 11, 11);
+        update createdOpp;
+        opmt = [select id,paid__c,Payment_Amount__c,Payment_Date__c, scheduled_date__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
+        
+        system.assertEquals(date.newInstance(2002, 11, 11), opmt[0].Scheduled_Date__c);
+        
+        Test.stopTest();        
+    }
+    
+    public static testMethod void test_paymentsEnabled_LostOpp() {
+        
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
+        
+        // create test data
+        Account acct = new Account (
+            Name='Test Account'
+        );
+        insert acct;
+        Opportunity opp1 = new Opportunity (
+            Name='Test Opp',
+            AccountId = acct.id,
+            Amount = 1300,
+            closedate = date.newInstance(2001,12,12),
+            stagename = 'Not Posted'
+        );
+        insert opp1;
+        
+        OppPayment__c[] opmt = [select id,paid__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
+        system.assertEquals(1, opmt.size());
+        system.assertEquals(False, opmt[0].paid__c);
+        
+        Opportunity createdOpp = [select id, stagename, Amount, CloseDate from Opportunity where Id = :opp1.id];
+        
+        createdOpp.stagename = 'Closed Lost';
+        Test.startTest();
+        update createdOpp;
+        
+        opmt = [select id,paid__c,Payment_Amount__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
+        
+        system.assertEquals(0, opmt.size());    
+        Test.stopTest();       
+    }
+    
+    public static testMethod void test_PaymentMappings(){
+    	
+    	Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
+    	
+    	// create test data
+        Account acct = new Account (
+            Name='Test Account'
+        );
+        insert acct;
+    	Payment_Field_Mapping_Settings__c testmapping = new Payment_Field_Mapping_Settings__c(
+        Name = 'TestMapping',
+        Opportunity_Field__c = 'NextStep',
+        Payment_Field__c = 'Check_Reference_Number__c'                 
+        );
+        insert testmapping;        
+        Opportunity opp1 = new Opportunity (
+            Name='Test Opp',
+            AccountId = acct.id,
+            Amount = 1300,
+            closedate = date.newInstance(2001,12,12),
+            stagename = PaymentWizardController.closedWonStage()
+        );
+        insert opp1;
+        
+        opp1.Amount = 1200;
+        update opp1;        
+    }    
 }
