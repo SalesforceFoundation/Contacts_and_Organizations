@@ -176,8 +176,10 @@ public without sharing class PaymentCreator{
 							mappingsUpdated = true;
 						}
 					}
-		    		
-			        // if opp is updated, update the automatic payment
+		    	
+		    	     
+                    if (thisOpp.OppPayment__r.size() > 0){
+			             // if opp is updated, update the automatic payment
 				        if ( ((thisOpp.Amount != oldOpp.Amount) || (thisOpp.CloseDate != oldOpp.CloseDate) || mappingsUpdated == true) &&
 					        	(thisOpp.OppPayment__r[0].Scheduled_Date__c == oldOpp.CloseDate || thisOpp.OppPayment__r[0].Scheduled_Date__c == thisOpp.CloseDate) &&
 				        		(thisOpp.OppPayment__r[0].Payment_Amount__c == oldOpp.Amount || thisOpp.OppPayment__r[0].Payment_Amount__c == thisOpp.Amount) &&
@@ -197,8 +199,8 @@ public without sharing class PaymentCreator{
 					                	   thisOpp.OppPayment__r[0].put(pfms.Payment_Field__c, thisOpp.get(x));
 					            }
 					        }
-					        
-					    	paymentsToUpdate.add(thisOpp.OppPayment__r[0]);
+					     
+					  
 				        }
 				        else if ( ((thisOpp.Amount != oldOpp.Amount) || (thisOpp.CloseDate != oldOpp.CloseDate) || (thisOpp.isWon != oldOpp.IsWon)) &&
 				        		(thisOpp.OppPayment__r[0].scheduled_Date__c == oldOpp.CloseDate || thisOpp.OppPayment__r[0].scheduled_Date__c == thisOpp.CloseDate || thisOpp.OppPayment__r[0].Payment_Date__c == oldOpp.CloseDate || thisOpp.OppPayment__r[0].Payment_Date__c == thisOpp.CloseDate) &&
@@ -210,7 +212,7 @@ public without sharing class PaymentCreator{
 				           	thisOpp.OppPayment__r[0].payment_date__c = thisOpp.closeDate;
 				            thisOpp.OppPayment__r[0].payment_amount__c = thisOpp.amount;
 			                thisOpp.OppPayment__r[0].paid__c = true;
-				            paymentsToUpdate.add(thisOpp.OppPayment__r[0]);
+                      
 				        }
 				        else if ( thisOpp.isClosed && !thisOpp.isWon) {
 				            
@@ -220,6 +222,10 @@ public without sharing class PaymentCreator{
 				            	}
 				            }
 				        }
+                    }  
+				        
+				        
+				        
 	        	}
 	        	//try{
 		        	// update or delete payments     
