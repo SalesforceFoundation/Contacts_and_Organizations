@@ -136,6 +136,20 @@
         <value>$</value>
     </labels>
     <labels>
+        <fullName>Matching_Donation_Record_Suffix</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Suffix added to the name of the original donation to form matching donation name</shortDescription>
+        <value>{3} Matching Donation {1}</value>
+    </labels>
+    <labels>
+        <fullName>Matching_Donation_Record_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Record type for matching donation. Set to $Source to match the original donation</shortDescription>
+        <value>$Source</value>
+    </labels>
+    <labels>
         <fullName>Opportunity_Contact_Role_Error_Bad_Contact_Id</fullName>
         <language>en_US</language>
         <protected>true</protected>
