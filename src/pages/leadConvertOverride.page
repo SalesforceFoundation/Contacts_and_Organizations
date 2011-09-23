@@ -33,25 +33,25 @@
                     </apex:selectList>
                     
                     <apex:outputPanel id="viewlink">
-	                       <a href="javascript:viewLink();" title="View (New Window)">View</a>
-	                       <script type="text/javascript">
-	                           function viewLink() { 
-	                               var contactId = '{!HTMLENCODE(con)}';
-	                               if (contactId  == null || contactId  == "" ||  contactId  == 'NEW_CONTACT') { 
-	                                   alert("You can only view existing contacts."); 
-	                               }else{ 
-	                                   printWin('/'+contactId+'/p'); 
-	                               }  
-	                           } 
-	                        </script>
-	                   </apex:outputPanel> 
-                        </apex:outputPanel>
+                           <a href="javascript:viewLink();" title="View (New Window)">View</a>
+                           <script type="text/javascript">
+                               function viewLink() { 
+                                   var contactId = '{!HTMLENCODE(con)}';
+                                   if (contactId  == null || contactId  == "" ||  contactId  == 'NEW_CONTACT') { 
+                                       alert("You can only view existing contacts."); 
+                                   }else{ 
+                                       printWin('/'+contactId+'/p'); 
+                                   }  
+                               } 
+                            </script>
+                       </apex:outputPanel> 
+                        </apex:outputPanel> 
                 </apex:pageBlockSectionItem>
                 <apex:pageBlockSectionItem >
                     <apex:outputLabel value="Opportunity Name"/>
                     <apex:outputPanel >
                         <apex:inputText value="{!oppName}"/><br/>
-                        <apex:inputcheckBox value="{!doNotCreateOpp}" selected="{!CreateOppOnConvertDefault}"/>
+                        <apex:inputcheckBox value="{!doNotCreateOpp}" />  
                         Do not create a new opportunity upon conversion.
                     </apex:outputPanel>
                 </apex:pageBlockSectionItem>
