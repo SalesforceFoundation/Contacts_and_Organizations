@@ -29,13 +29,19 @@
                 </apex:pageBlockSectionItem>
             </apex:pageBlockSection>
             
-             <apex:pageBlockSection id="paymentssection" title="Payment Configuration" columns="2">
-            <apex:pageBlockSectionItem helpText="Enables the automatic creation of Payments for Donations (Opportunities) and enables the Payments Wizard.">
+            <apex:pageBlockSection id="paymentssection" title="Payment Configuration" columns="2">
+                <apex:pageBlockSectionItem helpText="Enables the automatic creation of Payments for Donations (Opportunities) and enables the Payments Wizard.">
                     <apex:outputLabel value="Enable Payments"/>
                     <apex:inputCheckBox value="{!settings.Payments_Enabled__c}"/>
-                        
                 </apex:pageBlockSectionItem>
             </apex:pageBlockSection>
+            
+            <apex:pageBlockSection id="leadssection" title="Lead Conversion Configuration" columns="2">
+                <apex:pageBlockSectionItem helpText="Sets the default option to create an Opportunity when converting a lead.  Behavior can be overriden on a case-by-case basis in the conversion wizard.">
+                    <apex:outputLabel value="Create Default Opportunity On Convert"/>
+                    <apex:inputCheckBox value="{!settings.Default_Opp_on_Convert__c}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection> 
             
             <apex:pageBlockSection id="pkgupdatesection" title="Package Update Information & Configuration" columns="2">
                 <apex:outputPanel layout="inline">
