@@ -45,10 +45,9 @@ global without sharing class NPSPPkgVersionCheck {
                 pagesettings.Update_Check_Interval__c = 90;   
         }
         
-        
         if (!System.Test.isRunningTest()){
             NAMESPACE_TO_CHECK = namespace;
-            ENDPOINT = 'http://foundation.kbromer.cs0.force.com/packages/NPSPVersionCheck?orgid=' + UserInfo.getOrganizationId().substring(0, 15) + '&pkgname=' + namespace;   
+            ENDPOINT = 'http://foundation.force.com/packages/NPSPVersionCheck?orgid=' + UserInfo.getOrganizationId().substring(0, 15) + '&pkgname=' + namespace;   
         }
             
         else{    
@@ -57,7 +56,7 @@ global without sharing class NPSPPkgVersionCheck {
             NAMESPACE_TO_CHECK = 'test';
             ENDPOINT = 'http://foundation.kbromer.cs0.force.com/packages/NPSPVersionCheck?orgid=' + UserInfo.getOrganizationId().substring(0, 15) + '&pkgname=test';    
         }
-    }
+    } 
     
     public void NPSPCheckVersion(boolean useSyncCallOut){        
         
@@ -65,8 +64,6 @@ global without sharing class NPSPPkgVersionCheck {
         if(useSyncCallOut){
             initiateCallout();
         }    
-        /*WHAT DO WE DO ABOUT THE SETTINGS INTERVAL? IT WILL DIE ON INTEGER.VALUEOF WITHOUT PROVIDING A VALUE */
-               
         
         //if we're due for a checkup, call out async 
         else if (pageSettings.Enable_Update_Check__c && (pageSettings.Last_Update_Check__c == null || pageSettings.Last_Update_Check__c.addDays(integer.valueof(pageSettings.Update_Check_Interval__c.round())) > system.today())){
@@ -210,7 +207,8 @@ global without sharing class NPSPPkgVersionCheck {
         pagesettings.Max_Package_Version__c = epr.maxversion;
         pagesettings.Package_Update_URL__c = epr.updateURL;
         
-        update pagesettings;
+        Database.Update(pagesettings);
+        
     }
     
     /*******************TEST METHODS****************************/
