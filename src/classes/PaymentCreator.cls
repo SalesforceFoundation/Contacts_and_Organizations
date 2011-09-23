@@ -200,7 +200,7 @@ public without sharing class PaymentCreator{
 					            }
 					        }
 					     
-					  
+                            paymentsToUpdate.add(thisOpp.OppPayment__r[0]);
 				        }
 				        else if ( ((thisOpp.Amount != oldOpp.Amount) || (thisOpp.CloseDate != oldOpp.CloseDate) || (thisOpp.isWon != oldOpp.IsWon)) &&
 				        		(thisOpp.OppPayment__r[0].scheduled_Date__c == oldOpp.CloseDate || thisOpp.OppPayment__r[0].scheduled_Date__c == thisOpp.CloseDate || thisOpp.OppPayment__r[0].Payment_Date__c == oldOpp.CloseDate || thisOpp.OppPayment__r[0].Payment_Date__c == thisOpp.CloseDate) &&
@@ -212,6 +212,7 @@ public without sharing class PaymentCreator{
 				           	thisOpp.OppPayment__r[0].payment_date__c = thisOpp.closeDate;
 				            thisOpp.OppPayment__r[0].payment_amount__c = thisOpp.amount;
 			                thisOpp.OppPayment__r[0].paid__c = true;
+			                paymentsToUpdate.add(thisOpp.OppPayment__r[0]);
                       
 				        }
 				        else if ( thisOpp.isClosed && !thisOpp.isWon) {
@@ -251,7 +252,7 @@ public without sharing class PaymentCreator{
             Name='Test Account'
         );
         insert acct;
-        Test.startTest();
+        
         Opportunity opp = new Opportunity (
             Name='Test Opp',
             AccountId = acct.id,
@@ -259,8 +260,9 @@ public without sharing class PaymentCreator{
             closedate = date.newInstance(2001,12,12),
             stagename = PaymentWizardController.closedWonStage()
         );
+        Test.startTest();
         insert opp;
-        
+        Test.stopTest();
         OppPayment__c[] opmt = [select id from OppPayment__c WHERE opportunity__c = :opp.Id];
         system.assertEquals(0, opmt.size());
     }
@@ -268,7 +270,7 @@ public without sharing class PaymentCreator{
     public static testMethod void test_paymentsEnabled_ClosedOpp_Insert() {
         
         Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
-     
+        
         // create test data
         Account acct = new Account (
             Name='Test Account'
@@ -301,7 +303,7 @@ public without sharing class PaymentCreator{
             Name='Test Account'
         );
         insert acct;
-        Test.startTest();
+        
         Opportunity opp = new Opportunity (
             Name='Test Opp',
             AccountId = acct.id,
@@ -310,8 +312,9 @@ public without sharing class PaymentCreator{
             stagename = PaymentWizardController.closedWonStage(),
             Do_Not_Automatically_Create_Payment__c = true
         );
+        Test.startTest();
         insert opp;
-        
+        test.stopTest();
         OppPayment__c[] opmt = [select id, payment_amount__c, paid__c from OppPayment__c WHERE opportunity__c = :opp.Id];
         system.assertEquals(0, opmt.size());
     }
@@ -326,7 +329,7 @@ public without sharing class PaymentCreator{
         );
         insert acct;
         
-        Test.startTest();
+        
         Opportunity opp = new Opportunity (
             Name='Test Opp',
             AccountId = acct.id,
@@ -334,7 +337,9 @@ public without sharing class PaymentCreator{
             closedate = date.newInstance(2001,12,12),
             stagename = 'Not Posted'
         );
+        Test.startTest();
         insert opp;
+        test.stopTest();
         
         OppPayment__c[] opmt = [select id,paid__c from OppPayment__c WHERE opportunity__c = :opp.Id];
         system.assertEquals(1, opmt.size());
@@ -357,6 +362,8 @@ public without sharing class PaymentCreator{
             closedate = date.newInstance(2001,12,12),
             stagename = 'Not Posted'
         );
+        
+        Test.startTest();
         insert opp1;
         
         OppPayment__c[] opmt = [select id,paid__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
@@ -366,7 +373,7 @@ public without sharing class PaymentCreator{
         Opportunity createdOpp = [select id, stagename, Amount, CloseDate from Opportunity where Id = :opp1.id];
         
         createdOpp.Amount = 1500;
-        Test.startTest();
+        
         update createdOpp;
         
         opmt = [select id,paid__c,Payment_Amount__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
@@ -375,11 +382,12 @@ public without sharing class PaymentCreator{
         
         createdOpp.CloseDate = date.newInstance(2002, 11, 11);
         update createdOpp;
-        opmt = [select id,paid__c,Payment_Amount__c,Payment_Date__c, scheduled_date__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
+        Test.stopTest(); 
         
+        opmt = [select id,paid__c,Payment_Amount__c,Payment_Date__c, scheduled_date__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
         system.assertEquals(date.newInstance(2002, 11, 11), opmt[0].Scheduled_Date__c);
         
-        Test.stopTest();        
+               
     }
     
     public static testMethod void test_paymentsEnabled_LostOpp() {
@@ -398,6 +406,7 @@ public without sharing class PaymentCreator{
             closedate = date.newInstance(2001,12,12),
             stagename = 'Not Posted'
         );
+        Test.startTest();
         insert opp1;
         
         OppPayment__c[] opmt = [select id,paid__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
@@ -407,13 +416,15 @@ public without sharing class PaymentCreator{
         Opportunity createdOpp = [select id, stagename, Amount, CloseDate from Opportunity where Id = :opp1.id];
         
         createdOpp.stagename = 'Closed Lost';
-        Test.startTest();
+        
+        
         update createdOpp;
+        Test.stopTest();       
         
         opmt = [select id,paid__c,Payment_Amount__c from OppPayment__c WHERE opportunity__c = :opp1.Id];
         
         system.assertEquals(0, opmt.size());    
-        Test.stopTest();       
+        
     }
     
     public static testMethod void test_PaymentMappings(){
@@ -436,11 +447,16 @@ public without sharing class PaymentCreator{
             AccountId = acct.id,
             Amount = 1300,
             closedate = date.newInstance(2001,12,12),
-            stagename = PaymentWizardController.closedWonStage()
+            stagename = 'whatever'
         );
+        test.startTest();
         insert opp1;
         
         opp1.Amount = 1200;
-        update opp1;        
+        update opp1;
+        opp1.StageName = PaymentWizardController.closedWonStage();
+        opp1.Amount = 1;
+        update opp1;     
+        test.stopTest();   
     }    
 }
