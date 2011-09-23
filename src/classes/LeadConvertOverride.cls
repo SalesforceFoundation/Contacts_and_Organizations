@@ -54,8 +54,12 @@ public with sharing class LeadConvertOverride {
     map<id, contact> conMap = new map<id, contact>(); 
     public list<selectOption> lcStatuses; 
     
+    private Contacts_And_Orgs_Settings__c ContactsSettings; 
+    
     public LeadConvertOverride(ApexPages.StandardController controller) {
-                
+        
+        ContactsSettings = Constants.getContactsSettings();
+                    
         // get the lead
         l = [select id, name, firstname, lastname, company, email, ownerId from lead
             where id = : controller.getId()];
@@ -166,6 +170,36 @@ public with sharing class LeadConvertOverride {
                 myAccount.SYSTEMISINDIVIDUAL__c = true;
                 update myAccount;
             }   
+            
+            
+            //clean up the extra OCR Issue #214
+            // if we create an opp, its a 1x1, and its merged into an existing contact
+            if (!doNotCreateOpp && Constants.isOneToOne() && con != 'NEW_CONTACT'){
+                
+                //get the new OCRs
+                list<OpportunityContactRole> ocrList = [select id, isPrimary, Role from OpportunityContactRole where OpportunityID = :lcr.getOpportunityId() and ContactID = :lcr.getContactId()];
+            	
+            	//if there are more than one, find the primary with the right role, and delete 
+            	//the extraneous ones
+            	if (ocrList != null && ocrList.size() > 1){
+                    list<OpportunityContactRole> dlist = new list<OpportunityContactRole>();
+                    for (OpportunityContactRole ocr : ocrList){
+                        if (!ocr.IsPrimary && dlist.size()+1 != ocrList.size()){
+                            dlist.add(ocr);    	
+                        }
+                        else if (ocr.Role != ContactsSettings.Opportunity_Contact_Role_Default_role__c && dlist.size()+1 != ocrList.size()){
+                        	dlist.add(ocr);
+                        }
+                    }
+                    delete dlist;
+                    
+                    //on delete of one ocr, the other 'isPrimary' is set to false
+                    //so we need to issue an udpate to correct it. 
+                    OpportunityContactRole ocr = ocrList[0];
+                    ocr.IsPrimary = true;
+                    update ocr;
+            	} 
+            }
             
             
             
