@@ -51,7 +51,7 @@
                     <apex:outputLabel value="Opportunity Name"/>
                     <apex:outputPanel >
                         <apex:inputText value="{!oppName}"/><br/>
-                        <apex:inputcheckBox value="{!doNotCreateOpp}"/>
+                        <apex:inputcheckBox value="{!doNotCreateOpp}" selected="{!CreateOppOnConvertDefault}"/>
                         Do not create a new opportunity upon conversion.
                     </apex:outputPanel>
                 </apex:pageBlockSectionItem>

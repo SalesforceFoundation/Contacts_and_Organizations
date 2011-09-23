@@ -59,7 +59,7 @@ public with sharing class LeadConvertOverride {
     public LeadConvertOverride(ApexPages.StandardController controller) {
         
         ContactsSettings = Constants.getContactsSettings();
-                    
+                            
         // get the lead
         l = [select id, name, firstname, lastname, company, email, ownerId from lead
             where id = : controller.getId()];
@@ -71,7 +71,7 @@ public with sharing class LeadConvertOverride {
         
         // set a default opp name
         oppName = l.name;
-        doNotCreateOpp = false;
+        doNotCreateOpp = !ContactsSettings.Default_Opp_on_Convert__c;
         
     }    
     
