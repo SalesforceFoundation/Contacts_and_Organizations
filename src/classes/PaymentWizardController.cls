@@ -70,6 +70,9 @@ public with sharing class PaymentWizardController {
     public oppPayment__c samplePayment { get; set; }
     public oppPayment__c writeoffPayment { get; set; }
     
+    //number of outstanding payments for the opp
+    public integer outstanding_payments {get; set;}
+    
     //decimal for amount float
     public Decimal OppAmountFloat { get; set; }
 
@@ -132,6 +135,10 @@ public with sharing class PaymentWizardController {
             haveAmount = false;
         } else {
             currentOpp = o[0];
+            integer paymentcount = 0;
+            paymentcount = [select count() from OppPayment__c where Opportunity__c = :o[0].id and Paid__c != true];
+            
+            outstanding_payments = paymentcount;
             haveAmount = (currentOpp.amount_outstanding__c > 0);
             writeoffPayment = new OppPayment__c();
             writeoffPayment.Payment_Amount__c = currentOpp.amount_outstanding__c;
