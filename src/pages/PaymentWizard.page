@@ -131,10 +131,10 @@ Copyright (c) 2008 Evan Callahan, evanc@npowerseattle.org, NPower Seattle, 403 2
     <apex:pageBlock title="Writeoff Payments" rendered="{!AND(NOT(ISNULL(CurrentOpp)), haveAmount, NOT(ISNULL(PaymentsSettings)), PaymentsSettings.Payments_Enabled__c == true)}">
         <apex:OutputPanel >
         You are preparing to writeoff&nbsp;
-            <apex:outputField value="{!currentOpp.Number_of_Payments__c}" />
+            <apex:outputText value="{!outstanding_payments}" />
         Payment(s) totaling&nbsp;
             <apex:outputField value="{!currentOpp.Amount_Outstanding__c}" />
-        .<br /><br/>
+        .<br /><br/> 
         Which date would you like to use?&nbsp;<apex:inputField value="{!writeoffPayment.Payment_Date__c}" />
         </apex:OutputPanel>
         <div style="text-align: center;">
