@@ -42,8 +42,10 @@ public with sharing class contactsSettings {
     public string getMaxVersion(){return pageSettings.Max_Package_Version__c;}
     public string getLastUpdate(){    	
     	DateTime d = pageSettings.Last_Update_Check__c;
-        string datestring = d.format('MMMMM dd, yyyy hh:mm:ss a');
-    	return datestring;
+        string datestring = '';
+        if (d != null)
+            datestring = d.format('MMMMM dd, yyyy hh:mm:ss a');
+        return datestring;
     }
     public string getpkgupdatestatus(){
     	string status = pageSettings.Has_Package_Update__c;
