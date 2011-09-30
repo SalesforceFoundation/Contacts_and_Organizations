@@ -137,7 +137,7 @@ public with sharing class LeadConvertOverride {
         if (!doNotCreateOpp) lc.setOpportunityName(oppName);
         lc.setDoNotCreateOpportunity(doNotCreateOpp);
         lc.setConvertedStatus(leadConvStatus);
-
+        
         // is this a merge to existing?
         if (con != 'NEW_CONTACT') { 
             // get this contact's account
@@ -145,7 +145,9 @@ public with sharing class LeadConvertOverride {
             lc.setAccountId(conMap.get(con).accountId);          
         }
         else{
-        	if (!Constants.isOneToOne())
+        	if (!Constants.isOneToOne() && 
+        	(l.Company == Constants.BUCKET_ACCOUNT_NAME || l.Company == 'self' 
+        	|| l.Company == '' || l.Company == null))
         	   lc.setAccountID(Constants.getIndividualAccountID());
         }
         
