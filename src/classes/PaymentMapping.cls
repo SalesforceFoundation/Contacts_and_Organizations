@@ -56,6 +56,8 @@ public with sharing class PaymentMapping {
     //controls wizard steps
     public integer step{get; set;}
     
+    private boolean hasPaymentInsert = false;
+    
     //constructor
     public PaymentMapping(){
        step = 0;
@@ -215,20 +217,24 @@ public with sharing class PaymentMapping {
     
     //save and commit rollup
     public PageReference createMapping(){
-    	try{
-    		map<string, Payment_Field_Mapping_Settings__c> paymentMappings = Payment_Field_Mapping_Settings__c.getAll();
-            integer nameNumber = paymentMappings.size();
-    		Payment_Field_Mapping_Settings__c newPFMS = new Payment_Field_Mapping_Settings__c(Name = 'CustomMapping' + nameNumber, 
-    		Payment_Field__c = targetfield, Opportunity_Field__c = opptyfield
-    		);    		
-    		insert newPFMS;    		
-    	}
     	
-    	catch(Exception e){
-    		 showMsg('An unhandled exception has occurred. Please try again.',ApexPages.Severity.FATAL);
-    		 showMsg('Exception type' + e, ApexPages.Severity.INFO);    		 
-    	}
+    	//fix for possible race condition
+    	if (!hasPaymentInsert){
+            try{
+                map<string, Payment_Field_Mapping_Settings__c> paymentMappings = Payment_Field_Mapping_Settings__c.getAll();
+                integer nameNumber = paymentMappings.size();
+    	   	    Payment_Field_Mapping_Settings__c newPFMS = new Payment_Field_Mapping_Settings__c(Name = 'CustomMapping' + nameNumber, 
+        		Payment_Field__c = targetfield, Opportunity_Field__c = opptyfield
+        		);    		
+        		insert newPFMS;
+    	       	hasPaymentInsert = true;    		
+            }
     	
+    	   catch(Exception e){
+    		  showMsg('An unhandled exception has occurred. Please try again.',ApexPages.Severity.FATAL);
+    		  showMsg('Exception type' + e, ApexPages.Severity.INFO);    		 
+    	   }
+    	}
     	return ApexPages.currentPage().setRedirect(true);
     }   
     
