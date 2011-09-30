@@ -172,6 +172,8 @@ private class TEST_LeadConvertOverride {
         l.FirstName = Constants.CONTACT_FIRSTNAME_FOR_TESTS;
         l.LastName = Constants.CONTACT_LASTNAME_FOR_TESTS;
         l.Company = companyName;
+        l.Status = 'Open';
+        
         insert l;
         
         system.currentPageReference().getParameters().put('id', l.id);
@@ -240,5 +242,81 @@ private class TEST_LeadConvertOverride {
         PageReference landingPage = ext.convertLead();
         
     }
+    
+    //make sure the lead conversion respects the bucket model
+    public static testMethod void newLeadBucketModelWithCompany(){
+        Contacts_and_Orgs_Settings__c contactSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_and_Orgs_Settings__c (Account_Processor__c = Constants.BUCKET_PROCESSOR));
+        Constants.setIndividualAccountForTests(Constants.INDIVIDUAL_ACCOUNT_NAME_FOR_TESTS);
+        
+        Test.setCurrentPageReference(new PageReference('Page.LeadConvertOverride'));
+        
+        String companyName = 'FunkyTown USA';
+        
+        Lead l = new Lead();
+        l.FirstName = Constants.CONTACT_FIRSTNAME_FOR_TESTS;
+        l.LastName = Constants.CONTACT_LASTNAME_FOR_TESTS;
+        l.Company = companyName;
+        
+        insert l;
+        
+        system.currentPageReference().getParameters().put('id', l.id);
+        
+        //pass contact into the controller
+        ApexPages.StandardController sc = new ApexPages.standardController(l);
+        
+        //pass the controller into the extension
+        LeadConvertOverride ext = new LeadConvertOverride(sc); 
+        //set the toggle
+        ext.con = 'NEW_CONTACT';
+        
+        ext.leadConvStatus = [select MasterLabel from LeadStatus where IsConverted = true limit 1].MasterLabel; 
+        test.startTest();
+        PageReference landingPage = ext.convertOnetoOne();
+        test.stopTest();
+        
+        Contact c = [select id, Account.Name from Contact where FirstName = :Constants.CONTACT_FIRSTNAME_FOR_TESTS and LastName = :Constants.CONTACT_LASTNAME_FOR_TESTS];
+        
+        //bucket model should forward the company account name
+        //and not attach the individual unless no name is provided 
+        system.assertEquals('FunkyTown USA', c.Account.Name);	
+    }
+    
+    public static testMethod void newLeadBucketModelWithOutCompany(){
+        Contacts_and_Orgs_Settings__c contactSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_and_Orgs_Settings__c (Account_Processor__c = Constants.BUCKET_PROCESSOR));
+        Constants.setIndividualAccountForTests(Constants.INDIVIDUAL_ACCOUNT_NAME_FOR_TESTS);
+        
+        Test.setCurrentPageReference(new PageReference('Page.LeadConvertOverride'));
+        
+        String companyName = 'self';
+        
+        Lead l = new Lead();
+        l.FirstName = Constants.CONTACT_FIRSTNAME_FOR_TESTS;
+        l.LastName = Constants.CONTACT_LASTNAME_FOR_TESTS;
+        l.Company = companyName;
+        
+        insert l;
+        
+        system.currentPageReference().getParameters().put('id', l.id);
+        
+        //pass contact into the controller
+        ApexPages.StandardController sc = new ApexPages.standardController(l);
+        
+        //pass the controller into the extension
+        LeadConvertOverride ext = new LeadConvertOverride(sc); 
+        //set the toggle
+        ext.con = 'NEW_CONTACT';
+        
+        ext.leadConvStatus = [select MasterLabel from LeadStatus where IsConverted = true limit 1].MasterLabel; 
+        test.startTest();
+        PageReference landingPage = ext.convertOnetoOne();
+        test.stopTest();
+        
+        Contact c = [select id, Account.Name from Contact where FirstName = :Constants.CONTACT_FIRSTNAME_FOR_TESTS and LastName = :Constants.CONTACT_LASTNAME_FOR_TESTS];
+        
+        //bucket model should forward the company account name
+        //and not attach the individual unless no name is provided 
+        system.assertEquals(Constants.INDIVIDUAL_ACCOUNT_NAME_FOR_TESTS, c.Account.Name);   
+    }
+    
     
 }
