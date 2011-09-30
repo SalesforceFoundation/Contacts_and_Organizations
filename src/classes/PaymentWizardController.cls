@@ -162,6 +162,12 @@ public with sharing class PaymentWizardController {
             // get the start date
             date nextDate = samplePayment.Scheduled_Date__c;
             
+            // Multicurrency support
+            // James Melville 05/03/2011 Added to support multi-currency sfdc.  */
+            // CurrencyIsoCode doesn't exist in non-multi-currency orgs
+            SObjectField OppCurrencyField = Schema.sObjectType.Opportunity.fields.getMap().get('CurrencyIsoCode');
+            SObjectField PaymentCurrencyField = Schema.sObjectType.OppPayment__c.fields.getMap().get('CurrencyIsoCode');
+            
             for(Integer i=1; i <= numberOfPayments; i++){
 
                 // create the payment record    
@@ -178,6 +184,10 @@ public with sharing class PaymentWizardController {
                 } else {
                     thisPayment.oppPayment.Payment_Amount__c = paymentAmount;
                 }
+                
+                //in multicurrency SFDC set the payment currency field to equal the opp currency
+                if(PaymentCurrencyField != null && OppCurrencyField != null)
+                    thisPayment.oppPayment.put(PaymentCurrencyField,CurrentOpp.get(OppCurrencyField));
                 
                 //put the payment in the list
                 newPayments.add(thisPayment);
