@@ -112,9 +112,19 @@ public without sharing class PaymentCreator{
 				        if ( /*(thisOpp.IsClosed && thisOpp.IsWon) && */
 				                        thisOpp.amount > 0 && thisOpp.payments_made__c == 0 && thisOpp.Number_of_Payments__c == 0 && !thisOpp.Do_Not_Automatically_Create_Payment__c) {
 				            	oppPayment__c op = new oppPayment__c(
-					            	opportunity__c = thisOpp.id,
-					                payment_amount__c = thisOpp.amount
+					            	opportunity__c = thisOpp.id
 				            	);
+				            	
+				            	// James Melville Added to support multi-currency sfdc.  */
+                                // CurrencyIsoCode doesn't exist in non-multi-currency orgs
+                                SObjectField OppCurrencyField = Schema.sObjectType.Opportunity.fields.getMap().get('CurrencyIsoCode');
+                                SObjectField PaymentCurrencyField = Schema.sObjectType.OppPayment__c.fields.getMap().get('CurrencyIsoCode');
+				            	
+				            	//in multicurrency SFDC set the payment currency field to equal to the opp currency
+                                if(PaymentCurrencyField != null && OppCurrencyField != null)
+                                    op.put(PaymentCurrencyField, thisOpp.get(OppCurrencyField));
+				            	
+				            	op.payment_amount__c = thisOpp.amount;
 				            
 				            if (paymentMappings.size() > 0){
 					            for (string s : paymentMappings.keyset()){
