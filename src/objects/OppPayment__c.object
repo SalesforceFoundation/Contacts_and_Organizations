@@ -33,6 +33,7 @@
         <type>Default</type>
     </actionOverrides>
     <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
@@ -40,6 +41,7 @@
     <enableReports>true</enableReports>
     <fields>
         <fullName>Check_Reference_Number__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Check/Reference Number</label>
         <length>255</length>
@@ -48,7 +50,18 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Custom_Payment_Field__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Custom Payment Field</label>
+        <length>15</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Opportunity__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Opportunity</label>
         <referenceTo>Opportunity</referenceTo>
@@ -61,12 +74,14 @@
     <fields>
         <fullName>Paid__c</fullName>
         <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Paid</label>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Payment_Amount__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Payment Amount</label>
         <precision>14</precision>
@@ -76,6 +91,7 @@
     </fields>
     <fields>
         <fullName>Payment_Date__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Payment Date</label>
         <required>false</required>
@@ -83,6 +99,7 @@
     </fields>
     <fields>
         <fullName>Payment_Method__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Payment Method</label>
         <picklist>
@@ -104,6 +121,7 @@
     </fields>
     <fields>
         <fullName>Scheduled_Date__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Scheduled Date</label>
         <required>false</required>
@@ -112,6 +130,7 @@
     <fields>
         <fullName>Written_Off__c</fullName>
         <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Written Off</label>
         <type>Checkbox</type>
@@ -135,7 +154,7 @@
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
-        <url>/apex/PaymentWizard?id={!Opportunity.Id}&amp;wtype=payment</url>
+        <url>/apex/npe01__PaymentWizard?id={!Opportunity.Id}&amp;wtype=payment</url>
     </webLinks>
     <webLinks>
         <fullName>Writeoff_Payments</fullName>
@@ -147,6 +166,6 @@
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
-        <url>/apex/PaymentWizard?id={!Opportunity.Id}&amp;wtype=writeoff</url>
+        <url>/apex/npe01__PaymentWizard?id={!Opportunity.Id}&amp;wtype=writeoff</url>
     </webLinks>
 </CustomObject>

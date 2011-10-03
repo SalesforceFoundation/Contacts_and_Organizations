@@ -16,6 +16,58 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>DISABLE_IndividualAccounts_trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>!!WARNING!!
+DISABLES the IndividualAccounts.trigger (Contact, before i/u, after i/u/d)
+- checking this box will disable a trigger. This can cause erratic and unpredictable behavior in your NPSP. FOR ADVANCED CONSULTANTS AND DEVELOPERS ONLY.</inlineHelpText>
+        <label>DISABLE_IndividualAccounts_trigger</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DISABLE_OpportunityAccount_trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>!!WARNING!!
+DISABLES the OpportunityAccount.trigger (Opportunity, before insert)
+- checking this box will disable a trigger. This can cause erratic and unpredictable behavior in your NPSP. FOR ADVANCED CONSULTANTS AND DEVELOPERS ONLY.</inlineHelpText>
+        <label>DISABLE_OpportunityAccount_trigger</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DISABLE_OpportunityContactRoles_trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>!!WARNING!!
+DISABLES the OpportunityContactRoles.trigger (Opportunity, after insert)
+- checking this box will disable a trigger. This can cause erratic and unpredictable behavior in your NPSP. FOR ADVANCED CONSULTANTS AND DEVELOPERS ONLY.</inlineHelpText>
+        <label>DISABLE_OpportunityContactRoles_trigger</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DISABLE_OpportunityPayments_trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>!!WARNING!!
+DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after update)
+- checking this box will disable a trigger. This can cause erratic and unpredictable behavior in your NPSP. FOR ADVANCED CONSULTANTS AND DEVELOPERS ONLY.</inlineHelpText>
+        <label>DISABLE_OpportunityPayments_trigger</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Default_Opp_on_Convert__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Opp on Convert</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Disable_Account_Model_Trigger__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
@@ -36,6 +88,7 @@
     <fields>
         <fullName>Enable_Update_Check__c</fullName>
         <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Controls if the package automatically checks for new updates and versions.</inlineHelpText>
         <label>Enable Update Check</label>
@@ -43,6 +96,7 @@
     </fields>
     <fields>
         <fullName>Has_Package_Update__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Has Package Update</label>
         <length>40</length>
@@ -52,6 +106,7 @@
     </fields>
     <fields>
         <fullName>Last_Update_Check__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The date/time of the last callout to check for new versions of the NPSP packages.</inlineHelpText>
         <label>Last Update Check</label>
@@ -60,9 +115,21 @@
     </fields>
     <fields>
         <fullName>Max_Package_Version__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Max Package Version</label>
         <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>One_to_One_RecordTypeID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The ID of the record type to be used for 1x1 accounts. If none is selected, the account will default to the user&apos;s default account selection.</inlineHelpText>
+        <label>One-to-One RecordTypeID</label>
+        <length>18</length>
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>
@@ -80,6 +147,7 @@
     </fields>
     <fields>
         <fullName>Package_Update_URL__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Package Update URL</label>
         <required>false</required>
@@ -88,6 +156,7 @@
     <fields>
         <fullName>Payments_Enabled__c</fullName>
         <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Enables automatic payments for new Opportunities/Donations.</inlineHelpText>
         <label>Payments Enabled</label>
@@ -96,6 +165,7 @@
     <fields>
         <fullName>Update_Check_Interval__c</fullName>
         <defaultValue>90</defaultValue>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The number of days between NPSP callouts to check for new versions of this package. The default value is 90 days.</inlineHelpText>
         <label>Update Check Interval</label>
