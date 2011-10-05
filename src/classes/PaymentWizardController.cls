@@ -115,7 +115,15 @@ public with sharing class PaymentWizardController {
     }
     
     public void SetupPaymentWizard() {
-        opportunity[] o = [select name, amount, stagename, payments_made__c, amount_outstanding__c, description, closedate, Number_of_Payments__c from Opportunity where id =:ApexPages.currentPage().getParameters().get('id')];
+        String id = ApexPages.currentPage().getParameters().get('id');
+        String query = 'select name, amount, stagename, payments_made__c, amount_outstanding__c, description, closedate, Number_of_Payments__c';
+       
+        //if currencyiso field exists add it to query for use later
+        if(Schema.sObjectType.Opportunity.fields.getMap().get('CurrencyIsoCode') != null)
+            query = query + ',CurrencyIsoCode';
+            
+        query += ' from Opportunity where id = :id';
+        opportunity[] o = Database.query(query);
         if (o.isEmpty()) {
             haveAmount = false;
         } else {
