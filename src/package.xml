@@ -22,39 +22,21 @@
     </types>
     <types>
         <members>Account</members>
-        <members>AccountContactRole</members>
-        <members>Activity</members>
-        <members>Asset</members>
-        <members>Campaign</members>
-        <members>CampaignMember</members>
-        <members>Case</members>
-        <members>CaseContactRole</members>
         <members>Contact</members>
         <members>Contacts_And_Orgs_Settings__c</members>
-        <members>ContentVersion</members>
-        <members>Contract</members>
-        <members>ContractContactRole</members>
-        <members>Event</members>
-        <members>Idea</members>
         <members>Lead</members>
         <members>OppPayment__c</members>
         <members>Opportunity</members>
-        <members>OpportunityContactRole</members>
-        <members>OpportunityLineItem</members>
-        <members>PartnerRole</members>
         <members>Payment_Field_Mapping_Settings__c</members>
-        <members>Product2</members>
-        <members>SfoMatchHistoryItem</members>
-        <members>Site</members>
-        <members>Solution</members>
-        <members>Task</members>
-        <members>User</members>
-        <members>UserLicense</members>
         <name>CustomObject</name>
     </types>
     <types>
         <members>*</members>
         <name>CustomPageWebLink</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
     </types>
     <types>
         <members>Nonprofit_Edition_Reports</members>

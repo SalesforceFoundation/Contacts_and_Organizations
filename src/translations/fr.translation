@@ -73,17 +73,37 @@
         <name>DefaultContactTransactionCurrency</name>
     </customLabels>
     <customLabels>
-        <label>The Contact Id supplied in the Contact Id for Role field was invalid. Please use a valid Contact Id.</label>
-        <name>Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
+        <label><!-- Suffix added to the name of the original donation to form matching donation name --></label>
+        <name>Matching_Donation_Record_Suffix</name>
     </customLabels>
     <customLabels>
-        <label><!-- Payments Settings Enable Help Text --></label>
-        <name>Payments_Settings_Enable_Help_Text</name>
+        <label><!-- Record type for matching donation. Set to $Source to match the original donation --></label>
+        <name>Matching_Donation_Record_Type</name>
+    </customLabels>
+    <customLabels>
+        <label>The Contact Id supplied in the Contact Id for Role field was invalid. Please use a valid Contact Id.</label>
+        <name>Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
     </customLabels>
     <customPageWebLinks>
         <label>Rapports de l&apos;Edition Nonprofit</label>
         <name>Nonprofit_Edition_Reports</name>
     </customPageWebLinks>
+    <customTabs>
+        <label>A propos des Nonprofit Starter Pack</label>
+        <name>About_Nonprofit_Edition</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Contact Merge --></label>
+        <name>Contact_Merge</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Contacts Settings --></label>
+        <name>Contacts_Settings</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Payment Mapping --></label>
+        <name>Payment_Mapping</name>
+    </customTabs>
     <scontrols>
         <label>SubstituerVueCompte</label>
         <name>AccountViewOverride</name>
@@ -93,27 +113,7 @@
         <name>ContactDonationCredit</name>
     </scontrols>
     <scontrols>
-        <label>ConvertirPiste</label>
-        <name>LeadConvert</name>
-    </scontrols>
-    <scontrols>
-        <label>SubstituerCréationPiste</label>
-        <name>LeadCreateOverride</name>
-    </scontrols>
-    <scontrols>
-        <label>NPO_PageAccueil</label>
-        <name>NPO_HomePageComponent</name>
-    </scontrols>
-    <scontrols>
         <label>CréerOpportunitéMatching</label>
         <name>OpportunityCreateMatching</name>
-    </scontrols>
-    <scontrols>
-        <label>CréerOpportunitéRécurrent</label>
-        <name>OpportunityCreateRecurring</name>
-    </scontrols>
-    <scontrols>
-        <label>ConversionModèle</label>
-        <name>TemplateConversion</name>
     </scontrols>
 </Translations>

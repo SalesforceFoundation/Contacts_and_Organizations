@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <businessProcesses>
-        <fullName>Donation</fullName>
+        <fullName>dummyBP</fullName>
+        <description>Dummy business process created for patch org.</description>
         <isActive>true</isActive>
-        <values>
-            <fullName>Closed Lost</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Closed Won</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Prospecting</fullName>
-            <default>false</default>
-        </values>
     </businessProcesses>
     <enableFeeds>true</enableFeeds>
     <fields>
         <fullName>Amount_Outstanding__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <formula>Amount - NULLVALUE(Payments_Made__c, 0) - NULLVALUE(Amount_Written_Off__c, 0)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -30,6 +20,7 @@
     </fields>
     <fields>
         <fullName>Amount_Written_Off__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Value of the payments marked as written-off or noncollectable.</inlineHelpText>
         <label>Payment Writeoff Amount</label>
@@ -58,6 +49,7 @@
     <fields>
         <fullName>Do_Not_Automatically_Create_Payment__c</fullName>
         <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>If payments are active, and if checked, a new payment will not be automatically created for this Opportunity.</inlineHelpText>
         <label>Do Not Automatically Create Payment</label>
@@ -171,6 +163,7 @@
     </fields>
     <fields>
         <fullName>Number_of_Payments__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Total number of payments for this Opportunity (Donation)</inlineHelpText>
         <label>Number of Payments</label>
@@ -180,6 +173,7 @@
     </fields>
     <fields>
         <fullName>Payments_Made__c</fullName>
+        <deprecated>false</deprecated>
         <description>The sum of all payments marked as paid for this Opportunity.</description>
         <externalId>false</externalId>
         <inlineHelpText>The sum of all payments marked as paid for this Opportunity.</inlineHelpText>
@@ -391,220 +385,11 @@
     </listViews>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypes>
-        <fullName>Donation</fullName>
+        <fullName>dummyRT</fullName>
         <active>true</active>
-        <businessProcess>Donation</businessProcess>
-        <label>Donation</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone Inquiry</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Existing Customer - Downgrade</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Existing Customer - Replacement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Existing Customer - Upgrade</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Customer</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Grant</fullName>
-        <active>true</active>
-        <label>Grant</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone Inquiry</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Existing Customer - Downgrade</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Existing Customer - Replacement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Existing Customer - Upgrade</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Customer</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Major_Gift</fullName>
-        <active>true</active>
-        <label>Major Gift</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone Inquiry</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Existing Customer - Downgrade</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Existing Customer - Replacement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Existing Customer - Upgrade</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Customer</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Matching_Donation</fullName>
-        <active>true</active>
-        <label>Matching Donation</label>
+        <businessProcess>dummyBP</businessProcess>
+        <description>Dummy Record Type created for patch org.</description>
+        <label>dummyRT</label>
         <picklistValues>
             <picklist>ForecastCategoryName</picklist>
             <values>
@@ -676,20 +461,21 @@
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>sControl</linkType>
-        <masterLabel>Add Matching Donation</masterLabel>
+        <masterLabel>Add Matching Donation_DEPRECATED</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
         <scontrol>OpportunityCreateMatching</scontrol>
     </webLinks>
     <webLinks>
-        <fullName>Create_Recurring_Donation</fullName>
+        <fullName>Matching_Donation</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
-        <linkType>sControl</linkType>
-        <masterLabel>Create Recurring Donation</masterLabel>
-        <openType>replace</openType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Matching Donation</masterLabel>
+        <openType>sidebar</openType>
+        <page>BTN_MatchingDonation</page>
         <protected>false</protected>
-        <scontrol>OpportunityCreateRecurring</scontrol>
     </webLinks>
     <webLinks>
         <fullName>New_Contact_Donation</fullName>

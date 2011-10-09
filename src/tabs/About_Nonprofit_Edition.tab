@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>About the Nonprofit Edition of Salesforce.com.</description>
+    <frameHeight>600</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>About Nonprofit Starter Packages</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom85: Real Estate Sign</motif>
+    <url>http://salesforcefoundation.org/nonprofitstarterpack</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>
