@@ -259,42 +259,6 @@
         </picklist>
         <type>Picklist</type>
     </fields>
-    <fields>
-        <fullName>SystemAccountProcessor__c</fullName>
-        <externalId>false</externalId>
-        <label>_SYSTEM: ACCOUNT PROCESSOR</label>
-        <picklist>
-            <picklistValues>
-                <fullName>One-to-One</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Individual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>SystemOpportunityProcessor__c</fullName>
-        <externalId>false</externalId>
-        <label>_SYSTEM: OPPORTUNITY PROCESSOR</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Never Create</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Always Create</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-    </fields>
     <listViews>
         <fullName>AllOpenLeads</fullName>
         <filterScope>Everything</filterScope>

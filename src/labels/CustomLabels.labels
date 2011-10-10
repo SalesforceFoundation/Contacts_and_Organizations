@@ -156,12 +156,4 @@
         <shortDescription>Opportunity Contact Role Error - Bad Contact Id</shortDescription>
         <value>The Contact Id supplied in the Contact Id for Role field was invalid. Please use a valid Contact Id.</value>
     </labels>
-    <labels>
-        <fullName>Payments_Settings_Enable_Help_Text</fullName>
-        <categories>Contacts &amp; Organizations, Payments</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Payments Settings Enable Help Text</shortDescription>
-        <value>Turn Payments on and off.</value>
-    </labels>
 </CustomLabels>

@@ -218,6 +218,7 @@
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Account</relationshipLabel>
         <relationshipName>Organizations</relationshipName>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
     </fields>
@@ -315,14 +316,6 @@
                 <fullName>Other</fullName>
                 <default>false</default>
             </picklistValues>
-            <picklistValues>
-                <fullName>One-to-One Individual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Bucket Individual</fullName>
-                <default>false</default>
-            </picklistValues>
             <sorted>false</sorted>
         </picklist>
         <type>Picklist</type>
@@ -366,20 +359,5 @@
         <columns>CORE.USERS.ALIAS</columns>
         <filterScope>Everything</filterScope>
         <label>Platinum and Gold SLA Customers</label>
-    </listViews>
-    <listViews>
-        <fullName>larry</fullName>
-        <columns>ACCOUNT.NAME</columns>
-        <columns>SYSTEM_AccountType__c</columns>
-        <columns>SYSTEMIsIndividual__c</columns>
-        <columns>One2OneContact__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>ACCOUNT.NAME</field>
-            <operation>contains</operation>
-            <value>larry</value>
-        </filters>
-        <label>larry</label>
-        <language>en_US</language>
     </listViews>
 </CustomObject>
