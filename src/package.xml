@@ -26,11 +26,7 @@
         <members>Contacts_And_Orgs_Settings__c</members>
         <members>Lead</members>
         <members>OppPayment__c</members>
-<<<<<<< HEAD
-        <members>Opportunity</members>        
-=======
         <members>Opportunity</members>
->>>>>>> refs/remotes/choose_remote_name/master
         <members>Payment_Field_Mapping_Settings__c</members>
         <name>CustomObject</name>
     </types>

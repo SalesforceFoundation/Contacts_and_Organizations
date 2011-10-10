@@ -376,4 +376,79 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Work&quot;),
         </filters>
         <label>New This Week</label>
     </listViews>
+    <validationRules>
+        <fullName>Populated_Email_Field_Warning</fullName>
+        <active>true</active>
+        <description>This validation rule is only necessary for organizations that have data in the Email field before installing this package.  You don&apos;t need for this validation rule if you move all of the data from the Email field in to the NEW Work Email field.</description>
+        <errorConditionFormula>AND(
+NOT(ISCHANGED(Email)),
+LEN(PRIORVALUE(Email))&gt;0,
+ISCHANGED(Preferred_Email__c),
+NOT(OR(
+PRIORVALUE( Email) = PRIORVALUE( WorkEmail__c),
+PRIORVALUE( Email) = PRIORVALUE( HomeEmail__c),
+PRIORVALUE( Email) = PRIORVALUE( AlternateEmail__c),
+PRIORVALUE( Email) = WorkEmail__c,
+PRIORVALUE( Email) = HomeEmail__c,
+PRIORVALUE( Email) = AlternateEmail__c
+)
+)
+)</errorConditionFormula>
+        <errorDisplayField>Email</errorDisplayField>
+        <errorMessage>The Email field MUST match the field that is designated by the Preferred Email picklist. To correct this, you must copy the existing value in the Email field to a new field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Populated_Phone_Field_Warning</fullName>
+        <active>true</active>
+        <description>This validation rule is only necessary for organizations that have data in the Phone field before installing this package.  You don&apos;t need this validation rule if move all of the data from the Phone field in to the NEW Work Phone field.</description>
+        <errorConditionFormula>AND(
+NOT(ISCHANGED(Phone)),
+LEN(PRIORVALUE(Phone ))&gt;0,
+ISCHANGED( PreferredPhone__c ),
+NOT(OR( 
+PRIORVALUE( Phone) = PRIORVALUE( WorkPhone__c ), 
+PRIORVALUE( Phone) = PRIORVALUE( HomePhone), 
+PRIORVALUE( Phone) = PRIORVALUE( MobilePhone ), 
+PRIORVALUE( Phone) = PRIORVALUE( OtherPhone), 
+PRIORVALUE( Phone) = WorkPhone__c, 
+PRIORVALUE( Phone) = HomePhone, 
+PRIORVALUE( Phone) = MobilePhone, 
+PRIORVALUE( Phone) = OtherPhone 
+) 
+) 
+)</errorConditionFormula>
+        <errorDisplayField>Phone</errorDisplayField>
+        <errorMessage>The Phone field MUST match the filed that is designated by the Preferred Phone picklist. To correct this, you must copy the existing value in the Phone field to the designated preferred phone field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Preferred_Email</fullName>
+        <active>true</active>
+        <description>Requires the user to select a value in the Preferred Email picklist when email addresses are entered into the email fields.</description>
+        <errorConditionFormula>AND(
+ISPICKVAL(  Preferred_Email__c ,&quot;&quot;),
+OR(
+LEN(  HomeEmail__c  )&gt;0,
+LEN(  WorkEmail__c  )&gt;0,
+LEN(  AlternateEmail__c  )&gt;0
+)
+)</errorConditionFormula>
+        <errorDisplayField>Preferred_Email__c</errorDisplayField>
+        <errorMessage>You must select a Preferred Email</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Preferred_Phone</fullName>
+        <active>true</active>
+        <description>Requires the user to select a value in the Preferred Phone picklist when phone numbers are entered into the phone number fields.</description>
+        <errorConditionFormula>AND(
+ISPICKVAL( PreferredPhone__c ,&quot;&quot;),
+OR(
+LEN( HomePhone )&gt;0,
+LEN( MobilePhone )&gt;0,
+LEN( OtherPhone )&gt;0,
+LEN( WorkPhone__c )&gt;0
+)
+)</errorConditionFormula>
+        <errorDisplayField>PreferredPhone__c</errorDisplayField>
+        <errorMessage>You must select a Preferred Phone</errorMessage>
+    </validationRules>
 </CustomObject>

@@ -73,6 +73,14 @@
         <name>DefaultContactTransactionCurrency</name>
     </customLabels>
     <customLabels>
+        <label><!-- Suffix added to the name of the original donation to form matching donation name --></label>
+        <name>Matching_Donation_Record_Suffix</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Record type for matching donation. Set to $Source to match the original donation --></label>
+        <name>Matching_Donation_Record_Type</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Opportunity Contact Role Error - Bad Contact Id --></label>
         <name>Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
     </customLabels>
@@ -84,6 +92,26 @@
         <label>Dernekler Paketi Raporları</label>
         <name>Nonprofit_Edition_Reports</name>
     </customPageWebLinks>
+    <customTabs>
+        <label>Dernek Paketi Hakkında</label>
+        <name>About_Nonprofit_Edition</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Contact Merge --></label>
+        <name>Contact_Merge</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Contacts Settings --></label>
+        <name>Contacts_Settings</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Payment Mapping --></label>
+        <name>Payment_Mapping</name>
+    </customTabs>
+    <customTabs>
+        <label>Model Dönüştürücüsü</label>
+        <name>Template_Converter</name>
+    </customTabs>
     <scontrols>
         <label>HesapSayfasıAlternativi</label>
         <name>AccountViewOverride</name>

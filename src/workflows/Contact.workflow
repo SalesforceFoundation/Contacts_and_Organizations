@@ -150,6 +150,24 @@ OtherPhone
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>UpdatePrefPhonePicktoWork</fullName>
+        <field>PreferredPhone__c</field>
+        <literalValue>Work</literalValue>
+        <name>Update Pref Phone Pick to Work</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateWorkPhonewithPhone</fullName>
+        <field>WorkPhone__c</field>
+        <formula>Phone</formula>
+        <name>Update Work Phone with Phone</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>WorkPhonetoPhone</fullName>
         <field>WorkPhone__c</field>
         <formula>Phone</formula>
@@ -164,8 +182,17 @@ OtherPhone
             <name>ContactAlternateEmailUpdate</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
-        <formula>AND(      ISPICKVAL( Preferred_Email__c ,&quot;Alternate&quot;),      OR(           AND(                ISNEW(),                LEN(Email)&gt;0           ),           ISCHANGED( Email )      ) )</formula>
+        <active>true</active>
+        <formula>AND(
+     ISPICKVAL( Preferred_Email__c ,&quot;Alternate&quot;),
+     OR(
+          AND(
+               ISNEW(),
+               LEN(Email)&gt;0
+          ),
+          ISCHANGED( Email )
+     )
+)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -174,8 +201,17 @@ OtherPhone
             <name>ContactPersonalEmailUpdate</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
-        <formula>AND(     OR( ISPICKVAL( Preferred_Email__c ,&quot;Personal&quot;),ISPICKVAL( Preferred_Email__c ,&quot;Home&quot;)),      OR(           AND(                ISNEW(),                LEN(Email)&gt;0           ),           ISCHANGED( Email )      ) )</formula>
+        <active>true</active>
+        <formula>AND(
+    OR( ISPICKVAL( Preferred_Email__c ,&quot;Personal&quot;),ISPICKVAL( Preferred_Email__c ,&quot;Home&quot;)),
+     OR(
+          AND(
+               ISNEW(),
+               LEN(Email)&gt;0
+          ),
+          ISCHANGED( Email )
+     )
+)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -184,8 +220,17 @@ OtherPhone
             <name>ContactWorkEmailUpdate</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
-        <formula>AND(      ISPICKVAL( Preferred_Email__c ,&quot;Work&quot;),      OR(           AND(                ISNEW(),                LEN(Email)&gt;0           ),           ISCHANGED( Email )      ) )</formula>
+        <active>true</active>
+        <formula>AND(
+     ISPICKVAL( Preferred_Email__c ,&quot;Work&quot;),
+     OR(
+          AND(
+               ISNEW(),
+               LEN(Email)&gt;0
+          ),
+          ISCHANGED( Email )
+     )
+)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -194,8 +239,17 @@ OtherPhone
             <name>ContactHomePhoneUpdate</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
-        <formula>AND(      ISPICKVAL( PreferredPhone__c ,&quot;Home&quot;),      OR(           AND(                ISNEW(),                LEN(Phone)&gt;0           ),           ISCHANGED( Phone )      ) )</formula>
+        <active>true</active>
+        <formula>AND(
+     ISPICKVAL( PreferredPhone__c ,&quot;Home&quot;),
+     OR(
+          AND(
+               ISNEW(),
+               LEN(Phone)&gt;0
+          ),
+          ISCHANGED( Phone )
+     )
+)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -204,8 +258,17 @@ OtherPhone
             <name>ContactMobilePhoneUpdate</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
-        <formula>AND(      ISPICKVAL( PreferredPhone__c ,&quot;Mobile&quot;),      OR(           AND(                ISNEW(),                LEN(Phone)&gt;0           ),           ISCHANGED( Phone )      ) )</formula>
+        <active>true</active>
+        <formula>AND(
+     ISPICKVAL( PreferredPhone__c ,&quot;Mobile&quot;),
+     OR(
+          AND(
+               ISNEW(),
+               LEN(Phone)&gt;0
+          ),
+          ISCHANGED( Phone )
+     )
+)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -214,8 +277,17 @@ OtherPhone
             <name>ContactOtherEmailUpdate</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
-        <formula>AND(      ISPICKVAL( PreferredPhone__c ,&quot;Other&quot;),      OR(           AND(                ISNEW(),                LEN(Phone)&gt;0           ),           ISCHANGED( Phone )      ) )</formula>
+        <active>true</active>
+        <formula>AND(
+     ISPICKVAL( PreferredPhone__c ,&quot;Other&quot;),
+     OR(
+          AND(
+               ISNEW(),
+               LEN(Phone)&gt;0
+          ),
+          ISCHANGED( Phone )
+     )
+)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -224,8 +296,17 @@ OtherPhone
             <name>ContactWorkPhoneUpdate</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
-        <formula>AND(      ISPICKVAL( PreferredPhone__c ,&quot;Work&quot;),      OR(           AND(                ISNEW(),                LEN(Phone)&gt;0           ),           ISCHANGED( Phone )      ) )</formula>
+        <active>true</active>
+        <formula>AND(
+     ISPICKVAL( PreferredPhone__c ,&quot;Work&quot;),
+     OR(
+          AND(
+               ISNEW(),
+               LEN(Phone)&gt;0
+          ),
+          ISCHANGED( Phone )
+     )
+)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -234,9 +315,15 @@ OtherPhone
             <name>ContactPreferredEmail</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
+        <active>true</active>
         <description>This workflow OVERWRITES the existing value in the standard Email field based on the Preferred Email field value.  This rule needs to be turned on manually after an Upgrade to this package.</description>
-        <formula>OR( LEN(Email)=0, ISCHANGED(Preferred_Email__c) , ISCHANGED(WorkEmail__c) , ISCHANGED(HomeEmail__c) , ISCHANGED(AlternateEmail__c)  )</formula>
+        <formula>OR(
+LEN(Email)=0,
+ISCHANGED(Preferred_Email__c) ,
+ISCHANGED(WorkEmail__c) ,
+ISCHANGED(HomeEmail__c) ,
+ISCHANGED(AlternateEmail__c) 
+)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -245,9 +332,16 @@ OtherPhone
             <name>ContactPreferredPhone</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
+        <active>true</active>
         <description>This workflow OVERWRITES the existing value in the standard Phone field based on the Preferred Phone field value.  This rule needs to be turned on manually after an Upgrade to this package.</description>
-        <formula>OR(  LEN(Phone)=0, ISCHANGED(PreferredPhone__c) ,  ISCHANGED(WorkPhone__c) ,  ISCHANGED(HomePhone) ,  ISCHANGED(MobilePhone) , ISCHANGED(OtherPhone)  )</formula>
+        <formula>OR( 
+LEN(Phone)=0,
+ISCHANGED(PreferredPhone__c) , 
+ISCHANGED(WorkPhone__c) , 
+ISCHANGED(HomePhone) , 
+ISCHANGED(MobilePhone) ,
+ISCHANGED(OtherPhone) 
+)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -260,7 +354,7 @@ OtherPhone
             <name>SetWorkEmailtoEmail</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
+        <active>true</active>
         <criteriaItems>
             <field>Contact.Email</field>
             <operation>notEqual</operation>
@@ -294,7 +388,7 @@ OtherPhone
             <name>WorkPhonetoPhone</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
+        <active>true</active>
         <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
         <criteriaItems>
             <field>Contact.Phone</field>
