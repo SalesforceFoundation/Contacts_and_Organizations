@@ -101,7 +101,7 @@ public with sharing class PaymentWizardController {
     	if(ApexPages.currentPage().getParameters().get('wtype') == 'writeoff'){
     		PaymentWriteoffWizard();
     		isWriteoffWizard = true;
-    		isScheduleWizard = false;
+    		isScheduleWizard = false; 
     		
     	}
     	else if (ApexPages.currentPage().getParameters().get('wtype') == 'payment'){
