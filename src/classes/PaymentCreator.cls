@@ -106,6 +106,11 @@ public without sharing class PaymentCreator{
  			//IF Trigger is Insert, Create a new Payment
 		    if( ta == Constants.triggerAction.AfterInsert){
 		    	
+		    	// James Melville Added to support multi-currency sfdc.  */
+                // CurrencyIsoCode doesn't exist in non-multi-currency orgs
+                SObjectField OppCurrencyField = Schema.sObjectType.Opportunity.fields.getMap().get('CurrencyIsoCode');
+                SObjectField PaymentCurrencyField = Schema.sObjectType.OppPayment__c.fields.getMap().get('CurrencyIsoCode');
+		    	
 		    	for (Opportunity thisOpp : newOpps){
 			        // if opp is closed won with no payments scheduled or made, add an automatic payment
 			        if( ta == Constants.triggerAction.AfterInsert){
@@ -115,10 +120,6 @@ public without sharing class PaymentCreator{
 					            	opportunity__c = thisOpp.id
 				            	);
 				            	
-				            	// James Melville Added to support multi-currency sfdc.  */
-                                // CurrencyIsoCode doesn't exist in non-multi-currency orgs
-                                SObjectField OppCurrencyField = Schema.sObjectType.Opportunity.fields.getMap().get('CurrencyIsoCode');
-                                SObjectField PaymentCurrencyField = Schema.sObjectType.OppPayment__c.fields.getMap().get('CurrencyIsoCode');
 				            	
 				            	//in multicurrency SFDC set the payment currency field to equal to the opp currency
                                 if(PaymentCurrencyField != null && OppCurrencyField != null)
