@@ -20,13 +20,17 @@ trigger OpportunityPayments on Opportunity (after insert, after update) {
     }
     
     */
-
-    if (trigger.isAfter && trigger.isInsert){
-        PaymentCreator pc = new PaymentCreator(Trigger.newMap, Trigger.oldMap, Constants.triggerAction.afterInsert);    	
+    
+    
+    Contacts_and_Orgs_Settings__c cos = Constants.getContactsSettings();
+    
+    if (!cos.npe01__DISABLE_OpportunityPayments_trigger__c){
+        if (trigger.isAfter && trigger.isInsert){
+            PaymentCreator pc = new PaymentCreator(Trigger.newMap, Trigger.oldMap, Constants.triggerAction.afterInsert);    	
+        }
+        else if (trigger.isAfter && trigger.isUpdate){
+    	   PaymentCreator pc = new PaymentCreator(Trigger.newMap, Trigger.oldMap, Constants.triggerAction.afterUpdate);
+        }
     }
-    else if (trigger.isAfter && trigger.isUpdate){
-    	PaymentCreator pc = new PaymentCreator(Trigger.newMap, Trigger.oldMap, Constants.triggerAction.afterUpdate);
-    }
-
 
 }
