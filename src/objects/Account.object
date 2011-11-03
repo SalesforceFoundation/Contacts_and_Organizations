@@ -212,6 +212,7 @@
     </fields>
     <fields>
         <fullName>One2OneContact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>_SYSTEM: One2OneContact</label>

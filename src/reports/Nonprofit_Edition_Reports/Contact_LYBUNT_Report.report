@@ -47,6 +47,7 @@
             <operator>equals</operator>
             <value>LAST_YEAR</value>
         </criteriaItems>
+        <language>en_US</language>
     </filter>
     <format>Summary</format>
     <name>Contact LYBUNT Report</name>
