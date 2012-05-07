@@ -31,7 +31,7 @@ trigger IndividualAccounts on Contact (before insert, before update, after inser
 
 	Contacts_and_Orgs_Settings__c cos = Constants.getContactsSettings();
     
-    if (!cos.npe01__DISABLE_IndividualAccounts_trigger__c){
+    if (!cos.DISABLE_IndividualAccounts_trigger__c){
         if(Trigger.isInsert && Trigger.isBefore){
             IndividualAccounts process = new IndividualAccounts(Trigger.new, Trigger.old, Constants.triggerAction.beforeInsert);
         }
