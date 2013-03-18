@@ -460,8 +460,9 @@ public with sharing class ContactMergeController {
             
             System.SavePoint sp = Database.setSavepoint();
             try {
-                update master; // Update the master with the selected values before calling merge.
+                // Update the master with the selected values before calling merge.
                 if(merger.mergeContacts()) {
+                    update master; 
                     return new PageReference('/' + master.id);
                 } else {
                     Database.rollback(sp);
