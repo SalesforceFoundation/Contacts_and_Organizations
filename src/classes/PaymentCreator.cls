@@ -59,7 +59,11 @@ public without sharing class PaymentCreator{
  			//load custom field mapping settings - if they exist        
         	paymentMappingsAll = Payment_Field_Mapping_Settings__c.getAll().clone();
         	paymentMappings = Payment_Field_Mapping_Settings__c.getAll().clone();
-        	
+            
+            // James Melville Added to support multi-currency sfdc.  */
+            // CurrencyIsoCode doesn't exist in non-multi-currency orgs
+            SObjectField OppCurrencyField = Schema.sObjectType.Opportunity.fields.getMap().get('CurrencyIsoCode');
+            SObjectField PaymentCurrencyField = Schema.sObjectType.OppPayment__c.fields.getMap().get('CurrencyIsoCode');	
         	
         	for (string s : paymentMappingsAll.keySet()){
 	        	Payment_Field_Mapping_Settings__c pfms = paymentMappingsAll.get(s); 
@@ -105,12 +109,6 @@ public without sharing class PaymentCreator{
  	
  			//IF Trigger is Insert, Create a new Payment
 		    if( ta == Constants.triggerAction.AfterInsert){
-		    	
-		    	// James Melville Added to support multi-currency sfdc.  */
-                // CurrencyIsoCode doesn't exist in non-multi-currency orgs
-                SObjectField OppCurrencyField = Schema.sObjectType.Opportunity.fields.getMap().get('CurrencyIsoCode');
-                SObjectField PaymentCurrencyField = Schema.sObjectType.OppPayment__c.fields.getMap().get('CurrencyIsoCode');
-		    	
 		    	for (Opportunity thisOpp : newOpps){
 			        // if opp is closed won with no payments scheduled or made, add an automatic payment
 			        if( ta == Constants.triggerAction.AfterInsert){
@@ -234,15 +232,37 @@ public without sharing class PaymentCreator{
 				            	}
 				            }
 				        }
-                    }  
-				        
-				        
-				        
+                    }
+                    
+                    // we may need to add payments if the open opp amount has been changed from $0
+                    else if (thisOpp.Amount != 0 && oldOpp.Amount == 0 && !thisOpp.isClosed){
+                        oppPayment__c op = new oppPayment__c(
+                            opportunity__c = thisOpp.id,
+                            Paid__c = false,
+                            Scheduled_Date__c = thisOpp.CloseDate,
+                            Payment_Amount__c = thisOpp.Amount
+                        );                                
+                                
+                        //in multicurrency SFDC set the payment currency field to equal to the opp currency
+                        if(PaymentCurrencyField != null && OppCurrencyField != null)
+                            op.put(PaymentCurrencyField, thisOpp.get(OppCurrencyField));
+                            
+                        if (paymentMappings.size() > 0){
+                            for (string s : paymentMappings.keyset()){
+                                Payment_Field_Mapping_Settings__c pfms = paymentMappings.get(s);
+                                string x = pfms.Opportunity_Field__c;
+                                if (thisOpp.get(x) != null)
+                                    op.put(pfms.Payment_Field__c, thisOpp.get(x));
+                            }
+                        }   
+                        paymentsToInsert.add(op);                    	                    	
+                    }   
 	        	}
 	        	//try{
 		        	// update or delete payments     
 	    			if (!paymentsToUpdate.isEmpty()) update paymentsToUpdate;
 	    			if (!paymentsToDelete.isEmpty()) delete paymentsToDelete;
+	    			if (!paymentsToInsert.isEmpty()) insert paymentsToInsert;
 	        	//}
 	        	/*catch (DMLException e){
 			    	for (OppPayment__c opay : paymentsToUpdate) {
@@ -469,5 +489,33 @@ public without sharing class PaymentCreator{
         opp1.Amount = 1;
         update opp1;     
         test.stopTest();   
+    }    
+    
+    public static testMethod void ghIssue12(){
+        Contacts_And_Orgs_Settings__c PaymentsSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_And_Orgs_Settings__c (Payments_Enabled__c= true));
+        
+        // create test data
+        Account acct = new Account (
+            Name='Test Account'
+        );
+        insert acct;
+          
+        Opportunity opp = new Opportunity (
+            Name='Test Opp',
+            AccountId = acct.id,
+            Amount = 0,
+            closedate = date.newInstance(2001,12,12),
+            stagename = 'Open Stage'          
+        );
+        insert opp;
+        OppPayment__c[] opmt = [select id, payment_amount__c, paid__c from OppPayment__c WHERE opportunity__c = :opp.Id];
+        system.assertEquals(0, opmt.size());
+        opp.Amount = 20;
+                
+        Test.startTest();
+        update opp;
+        test.stopTest();                
+        opmt = [select id, payment_amount__c, paid__c from OppPayment__c WHERE opportunity__c = :opp.Id];        
+        system.assertEquals(1, opmt.size());
     }    
 }
