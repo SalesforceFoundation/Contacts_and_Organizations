@@ -1153,7 +1153,36 @@ private class TEST_IndividualAccounts {
         //pass the controller into the extension
         ContactDonationCredit_EXT ext = new ContactDonationCredit_EXT(sc);
 
-        system.assertEquals(String.valueOf(day) + '/' + String.valueOf(month) + '/' + String.valueOf(year),ext.getContactLastDonation());
+        system.assertEquals(String.valueOf(day) + '/' + String.valueOf(month) + '/' + String.valueOf(year),ext.getContactLastDonation());        
+    }   
+     
+    static testMethod void ghIssue16(){
+        /* Set value of Account name to blank when first name is blank, not null */	
+    	
+    	Contacts_and_Orgs_Settings__c contactSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_and_Orgs_Settings__c (Account_Processor__c = Constants.ONE_TO_ONE_PROCESSOR));
         
+        Contact con = new Contact(
+            FirstName=Constants.CONTACT_FIRSTNAME_FOR_TESTS,
+            LastName=Constants.CONTACT_LASTNAME_FOR_TESTS,
+            WorkEmail__c = Constants.CONTACT_EMAIL_FOR_TESTS,
+            Preferred_Email__c = Constants.CONTACT_PREFERRED_EMAIL_FOR_TESTS,
+            WorkPhone__c = Constants.CONTACT_PHONE_FOR_TESTS,
+            PreferredPhone__c = Constants.CONTACT_PREFERRED_PHONE_FOR_TESTS
+        );
+        insert con;
+    	
+    	con = [select AccountId from Contact where id = :con.Id];
+    	Account newAcc = [select id,Name from Account where id = :con.AccountId limit 1];
+    	system.assertEquals(newAcc.Name, Constants.Contact_FIRSTNAME_FOR_TESTS + ' ' + Constants.Contact_LASTNAME_FOR_TESTS);
+    	
+    	//set name to null
+    	con.FirstName = null;
+    	
+    	Test.startTest();
+    	update con;
+    	Test.stopTest();
+    	
+    	newAcc = [select id,Name from Account where id = :con.AccountId limit 1];
+    	system.assertEquals(newAcc.Name, Constants.Contact_LASTNAME_FOR_TESTS);
     }
 }

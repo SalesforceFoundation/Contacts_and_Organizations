@@ -402,8 +402,11 @@ global with sharing class IndividualAccounts
                 a.ShippingState = c.OtherState;
                 a.ShippingPostalCode = c.OtherPostalCode;
                 a.ShippingCountry = c.OtherCountry;
-                a.Name = c.FirstName + ' ' + c.LastName;
-                
+                if (c.FirstName != null)
+                    a.Name = c.FirstName + ' ' + c.LastName;
+                else
+                    a.Name = c.LastName;
+                    
                 accountUpdates.add(a);
             }
            
