@@ -166,9 +166,8 @@ global with sharing class Constants {
 				if(acct[0].SYSTEMISINDIVIDUAL__c==false || acct[0].SYSTEM_AccountType__c<>Constants.BUCKET_ORGANIZATION_TYPE){
 					acct[0].SYSTEMISINDIVIDUAL__c = true;
 					acct[0].SYSTEM_AccountType__c = Constants.BUCKET_ORGANIZATION_TYPE;
+				    update acct[0];
 				}
-				update acct[0];
-				
 				IndividualAccountId = acct[0].id;	
 			}			
 		}
