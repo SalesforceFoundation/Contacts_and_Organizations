@@ -285,6 +285,14 @@ global with sharing class IndividualAccounts
         List<Contact> contactUpdates = new List<Contact>();
         List<Account> accountInserts = new List<Account>();
 
+        Schema.Recordtypeinfo rtById;
+        //check if recordtypes are enabled, and if it matches the existing setting
+        if (ContactsSettings.One_to_One_RecordTypeID__c != null){
+            Schema.DescribeSObjectResult R = Account.SObjectType.getDescribe();
+            Map<Id,Schema.RecordTypeInfo> rtMapById = r.getRecordTypeInfosById();
+            rtById =  rtMapById.get(ContactsSettings.One_to_One_RecordTypeID__c);            
+        }
+
         for(Contact c : contacts)
         {
             //if we found an Account already connected to this Contact, connect the Contact to that Account
@@ -323,21 +331,14 @@ global with sharing class IndividualAccounts
                 //flag the account as an individual account
                 //a.Type = Constants.ONE_TO_ONE_ORGANIZATION_TYPE;
                 a.SYSTEM_AccountType__c = Constants.ONE_TO_ONE_ORGANIZATION_TYPE;
-                
-                //check if recordtypes are enabled, and if it matches the existing setting
-                if (ContactsSettings.One_to_One_RecordTypeID__c != null){
-                    Schema.DescribeSObjectResult R = Account.SObjectType.getDescribe();
-                    Map<Id,Schema.RecordTypeInfo> rtMapById = r.getRecordTypeInfosById();
-                    Schema.RecordTypeInfo rtById =  rtMapById.get(ContactsSettings.One_to_One_RecordTypeID__c);
-			        if (rtById != null){                
-                	   a.put('RecordTypeID', rtByID.getRecordTypeID());
-			        }
+                if (rtById != null){                
+                    a.put('RecordTypeID', rtByID.getRecordTypeID());
                 }
-                
                 a.SYSTEMISINDIVIDUAL__c = true;
                 accountInserts.add(a);
             }
         }
+        
         if (accountInserts.size() > 0) {
             Database.SaveResult[] lsr = Database.insert(accountInserts, false);
             Integer i = 0;
