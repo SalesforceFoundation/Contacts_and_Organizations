@@ -31,13 +31,15 @@
     <fields>
         <fullName>FirstDonationDate__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The oldest Close Date of a won Opportunity with amount greater than zero related to this Account.  REPLACED by First Close Date.</inlineHelpText>
         <label>First Donation Date</label>
         <summarizedField>Opportunity.CloseDate</summarizedField>
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
             <operation>equals</operation>
-            <value>TRUE</value>
+            <value>True</value>
         </summaryFilterItems>
         <summaryFilterItems>
             <field>Opportunity.Amount</field>
@@ -186,13 +188,15 @@
     <fields>
         <fullName>LastDonationDate__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The most recent Close Date of a won Opportunity related to this Account with amount greater than zero.  REPLACED by Last Close Date.</inlineHelpText>
         <label>Last Donation Date</label>
         <summarizedField>Opportunity.CloseDate</summarizedField>
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
             <operation>equals</operation>
-            <value>TRUE</value>
+            <value>True</value>
         </summaryFilterItems>
         <summaryFilterItems>
             <field>Opportunity.Amount</field>
@@ -206,13 +210,15 @@
     <fields>
         <fullName>LifetimeDonationHistory_Amount__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not manually update. Updated by automatic processes.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The total amount of won Opportunities related to this Account.  REPLACED by Households package.</inlineHelpText>
         <label>Lifetime Donation History (Amount)</label>
         <summarizedField>Opportunity.Amount</summarizedField>
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
             <operation>equals</operation>
-            <value>TRUE</value>
+            <value>True</value>
         </summaryFilterItems>
         <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
         <summaryOperation>sum</summaryOperation>
@@ -221,12 +227,14 @@
     <fields>
         <fullName>LifetimeDonationHistory_Number__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not manually update. Updated by automatic processes.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The total number of won Opportunities related to this Account.  REPLACED by Households package.</inlineHelpText>
         <label>Lifetime Donation History (Number)</label>
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
             <operation>equals</operation>
-            <value>TRUE</value>
+            <value>True</value>
         </summaryFilterItems>
         <summaryFilterItems>
             <field>Opportunity.Amount</field>
@@ -296,7 +304,9 @@
         <fullName>SYSTEMIsIndividual__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
+        <description>Hidden system field: do not change.  Updated by automatic processes.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Indicates whether or not this Account is an Individual (true) or Organization (false).</inlineHelpText>
         <label>_SYSTEM: IsIndividual</label>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Checkbox</type>
@@ -304,8 +314,9 @@
     <fields>
         <fullName>SYSTEM_AccountType__c</fullName>
         <deprecated>false</deprecated>
+        <description>Hidden system field: do not change.  Updated by automatic processes.</description>
         <externalId>false</externalId>
-        <inlineHelpText>System field: do not use or change.</inlineHelpText>
+        <inlineHelpText>Indicates which model drives Contact relationship behavior: Individual (Bucket) or One-to-One</inlineHelpText>
         <label>_SYSTEM: AccountType</label>
         <length>100</length>
         <required>false</required>
