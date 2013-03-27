@@ -57,7 +57,6 @@ public with sharing class LeadConvertOverride {
     private Contacts_And_Orgs_Settings__c ContactsSettings; 
     
     public LeadConvertOverride(ApexPages.StandardController controller) {
-        
         ContactsSettings = Constants.getContactsSettings();
                             
         // get the lead
@@ -71,8 +70,7 @@ public with sharing class LeadConvertOverride {
         
         // set a default opp name
         oppName = l.name;
-        doNotCreateOpp = !Schema.SObjectType.Opportunity.isCreateable() || !ContactsSettings.Default_Opp_on_Convert__c;
-        
+        doNotCreateOpp = !Schema.SObjectType.Opportunity.isCreateable() || !ContactsSettings.Default_Opp_on_Convert__c;        
     }    
     
     public list<selectOption> getConList() {
