@@ -32,13 +32,10 @@
 * @date 2011 (1.x)
 * @description Implements one of two account models, 1x1 or bucket - controls syncing within the model 
 */
-global with sharing class IndividualAccounts
-{
-
+global with sharing class IndividualAccounts{
     /// <name> IndividualAccounts </name>
     /// <summary> Default Constructor </summary>
     public IndividualAccounts(){}
-    
 
     /// <name> IndividualAccounts </name>
     /// <summary> Overloads the IndividualAccounts object constructor to handle Contact processing </summary>
@@ -46,6 +43,16 @@ global with sharing class IndividualAccounts
     /// <param name="oldContacts"> Contact object values before trigger event </param>
     /// <param name="ta"> Trigger action that is occuring </param>
     private static Contacts_and_Orgs_Settings__c ContactsSettings;
+    
+    private static Set<String> EasternOrderLanguages = new Set<String>{
+    	'ja','ko','vi','hu','ro','zh_CN','zh_TW'
+    };
+              
+    private static String OrgLanguage{get{
+        if(OrgLanguage == null)
+            OrgLanguage = [Select LanguageLocaleKey From Organization].LanguageLocaleKey;
+        return OrgLanguage;             
+    }set;}       
     
     public IndividualAccounts(Contact[] contacts, Contact[] oldContacts, Constants.triggerAction ta)
     {
@@ -267,7 +274,8 @@ global with sharing class IndividualAccounts
     public static void insertIndividualAccount(Contact[] contacts)
     {
         List<Id> contactIds = new List<Id>();
-        Map<Id,Id> conAccMap = new Map<Id,Id>();
+        Map<Id,Id> conAccMap = new Map<Id,Id>();       
+        
         for (Contact c : contacts)
         {
             //make sure we're only working with Contacts that have already been inserted
@@ -306,12 +314,17 @@ global with sharing class IndividualAccounts
                 //construct the individul account for the Contact
                 Account a = new Account();
                 String aName = '';
-                if (c.FirstName != null)
-                {
+                
+                if (c.FirstName != null){
                     aName += c.FirstName;
                     aName += ' ' ;
                 }
-                aName += c.LastName; 
+                
+                if(EasternOrderLanguages.contains(OrgLanguage))
+                    aName = c.LastName + ' ' + aName;
+                else
+                    aName += c.LastName;
+                                         
                 a.Name = aName;
                 //connect the Account to the Contact
                 if (c.Id != null) {
@@ -390,7 +403,8 @@ global with sharing class IndividualAccounts
                 c.OtherState != a.ShippingState ||
                 c.OtherPostalCode != a.ShippingPostalCode ||
                 c.OtherCountry != a.ShippingCountry ||
-                c.FirstName + ' ' + c.LastName != a.Name)
+                EasternOrderLanguages.contains(OrgLanguage) ? c.LastName + ' ' + c.FirstName != a.Name : c.FirstName + ' ' + c.LastName != a.Name                               
+                )
             ) {
                 // Update Account fields
                 a.BillingStreet = c.MailingStreet;
@@ -402,25 +416,28 @@ global with sharing class IndividualAccounts
                 a.ShippingCity = c.OtherCity;
                 a.ShippingState = c.OtherState;
                 a.ShippingPostalCode = c.OtherPostalCode;
-                a.ShippingCountry = c.OtherCountry;
-                if (c.FirstName != null)
-                    a.Name = c.FirstName + ' ' + c.LastName;
+                a.ShippingCountry = c.OtherCountry;                
+                String aName = '';
+                if (c.FirstName != null){
+                    aName += c.FirstName;
+                    aName += ' ' ;
+                }                
+                if(EasternOrderLanguages.contains(OrgLanguage))
+                    aName = c.LastName + ' ' + aName;
                 else
-                    a.Name = c.LastName;
-                    
+                    aName += c.LastName;                
+                a.Name = aName;                    
                 accountUpdates.add(a);
-            }
-           
+            }           
         }   
 
-        if ( accountUpdates.size() > 0 )
-        {
+        if ( accountUpdates.size() > 0){
             Database.SaveResult[] lsr = Database.update(accountUpdates, false);
         }
     }
+    
     //delete the accounts for contacts that have been deleted
-    public void deleteContactAccounts(Contact[] contacts)
-    {
+    public void deleteContactAccounts(Contact[] contacts){
         List<Id> accountIds = new List<Id>();
         List<Account> accountsOnContacts = new List<Account>();
         List<Account> accountsForDeletion = new List<Account>();
