@@ -40,7 +40,7 @@ public with sharing class LeadConvertOverride {
 
     // properties for page
     public lead l { get; set; }
-    public opportunity dummyOpp { get; set; }
+    public Contact dummyCon { get; set; }
     public boolean sendEmailToOwner { get; set; }
     //public string acct { get; set; }  
     public string con { get; set; }
@@ -64,14 +64,14 @@ public with sharing class LeadConvertOverride {
         l = [select id, name, firstname, lastname, company, email, ownerId from lead
             where id = : controller.getId()];
         
-        // dummy opp allows owner selection
-        dummyOpp = new Opportunity( 
-            ownerid = ((((string)(l.ownerid)).startsWith('005')) ? l.ownerid : userInfo.getUserId())
+        // dummy contact allows owner selection - use contact as always accessible if user has lead conversion rights
+        dummyCon = new Contact(
+            OwnerId = ((((string)(l.ownerid)).startsWith('005')) ? l.ownerid : userInfo.getUserId())
         );
         
         // set a default opp name
         oppName = l.name;
-        doNotCreateOpp = !ContactsSettings.Default_Opp_on_Convert__c;
+        doNotCreateOpp = !Schema.SObjectType.Opportunity.isCreateable() || !ContactsSettings.Default_Opp_on_Convert__c;
         
     }    
     
@@ -134,9 +134,10 @@ public with sharing class LeadConvertOverride {
         // set up the conversion
         Database.LeadConvert lc = new database.LeadConvert();
         lc.setLeadId(l.Id);
-        if (!doNotCreateOpp) lc.setOpportunityName(oppName);
-        lc.setDoNotCreateOpportunity(doNotCreateOpp);
+        if (!doNotCreateOpp && Schema.SObjectType.Opportunity.isCreateable()) lc.setOpportunityName(oppName);
+        lc.setDoNotCreateOpportunity(!Schema.SObjectType.Opportunity.isCreateable() || doNotCreateOpp);
         lc.setConvertedStatus(leadConvStatus);
+        lc.setOwnerId(dummyCon.OwnerId);
         
         // is this a merge to existing?
         if (con != 'NEW_CONTACT') { 
@@ -176,7 +177,7 @@ public with sharing class LeadConvertOverride {
             
             //clean up the extra OCR Issue #214
             // if we create an opp, its a 1x1, and its merged into an existing contact
-            if (!doNotCreateOpp && Constants.isOneToOne() && con != 'NEW_CONTACT'){
+            if (!lc.isDoNotCreateOpportunity() && Constants.isOneToOne() && con != 'NEW_CONTACT'){
                 
                 //get the new OCRs
                 list<OpportunityContactRole> ocrList = [select id, isPrimary, Role from OpportunityContactRole where OpportunityID = :lcr.getOpportunityId() and ContactID = :lcr.getContactId()];
