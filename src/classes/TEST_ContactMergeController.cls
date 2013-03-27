@@ -1146,5 +1146,71 @@ private class TEST_ContactMergeController {
         //First contact's account id should not have changed
         system.assertEquals(con.AccountId,[select AccountId from Contact where id=:con.id].AccountId);
     }
+    
+    
+    static testMethod void ghIssue6(){
+    	
+    	Contacts_and_Orgs_Settings__c contactSettingsForTests = Constants.getContactsSettingsForTests(new Contacts_and_Orgs_Settings__c (Account_Processor__c = Constants.ONE_TO_ONE_PROCESSOR));
+        
+        String newContactMailingStreet = '123 Elm St';
+
+        Contact con = new Contact(
+            FirstName=Constants.CONTACT_FIRSTNAME_FOR_TESTS,
+            LastName='O\'Sullivan',
+            MailingStreet = newContactMailingStreet,
+            WorkEmail__c = Constants.CONTACT_EMAIL_FOR_TESTS, 
+            Preferred_Email__c = Constants.CONTACT_PREFERRED_EMAIL_FOR_TESTS,
+            WorkPhone__c = Constants.CONTACT_PHONE_FOR_TESTS,
+            PreferredPhone__c = Constants.CONTACT_PREFERRED_PHONE_FOR_TESTS
+        );        
+        Contact con2 = new Contact(
+            FirstName=Constants.CONTACT_FIRSTNAME_FOR_TESTS,
+            LastName='O\'Sullivan',
+            MailingStreet = newContactMailingStreet,
+            WorkEmail__c = Constants.CONTACT_EMAIL_FOR_TESTS, 
+            Preferred_Email__c = Constants.CONTACT_PREFERRED_EMAIL_FOR_TESTS,
+            WorkPhone__c = Constants.CONTACT_PHONE_FOR_TESTS,
+            PreferredPhone__c = Constants.CONTACT_PREFERRED_PHONE_FOR_TESTS
+        );        
+        insert new Contact[]{con, con2};
+        
+        con = [Select id, accountId, FirstName, LastName, MailingStreet from Contact where Id = :con.id];
+        system.assertEquals(con.LastName, 'O\'Sullivan');
+                
+        Test.setCurrentPageReference(new PageReference('Page.ContactMerge'));
+        ContactMergeController controller = new ContactMergeController();
+        
+        controller.searchText = 'O\'Sullivan';
+        //SOSL always returns nothing in tests, unless you use the setFixedSearchResults value
+        List<Id> fixedSearchResults=new List<Id>(); 
+        fixedSearchResults.add(con.Id);
+        fixedSearchResults.add(con2.Id);  
+        Test.setFixedSearchResults(fixedSearchResults); 
+        controller.search();
+        
+        //select the two contacts and grab them
+        controller.searchResults[0].selected = true;
+        controller.searchResults[1].selected = true;        
+        
+        controller.nextStep();
+        
+        selectMasterRecord(controller, con2.id);
+        
+        //merge them
+        controller.mergeContacts();
+    /*    
+        //first and second contact should be deleted
+        system.assertEquals(1,[select count() from Contact where id=:con3.id]);
+        system.assertEquals(0,[select count() from Contact where id=:con2.id]);
+        system.assertEquals(0,[select count() from Contact where id=:con.id]);
+        //first and second contact's account should be deleted
+        system.assertEquals(1,[select count() from Account where id=:con3.AccountId]);
+        system.assertEquals(0,[select count() from Account where id=:con2.AccountId]);
+        system.assertEquals(0,[select count() from Account where id=:con.AccountId]);
+        //Third contact's account id should not have changed
+        system.assertEquals(con3.AccountId,[select AccountId from Contact where id=:con3.id].AccountId);*/
+    	
+    	
+    }
   
 }

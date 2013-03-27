@@ -371,7 +371,7 @@ public with sharing class ContactMergeController {
         searchResults.clear();    
         
         //build the SOSL query and execute
-        String searchquery = 'FIND \'' + searchText + '\' IN ALL FIELDS RETURNING Contact(id, name, accountId, account.name, title, email, phone, ownerId, owner.name ORDER BY LastName LIMIT ' + SOSL_LIMIT + ')';
+        String searchquery = 'FIND \'' + String.escapeSingleQuotes(searchText) + '\' IN ALL FIELDS RETURNING Contact(id, name, accountId, account.name, title, email, phone, ownerId, owner.name ORDER BY LastName LIMIT ' + SOSL_LIMIT + ')';
         System.debug('Search Query: ' + searchquery);
         
         return search.query(searchquery);
