@@ -18,7 +18,7 @@
             <apex:pageBlockSection title="Convert Lead" columns="1" collapsible="false">
                 <apex:pageBlockSectionItem >
                     <apex:outputLabel value="Record Owner"/>
-                    <apex:inputField value="{!dummyOpp.OwnerId}"/>
+                    <apex:inputField value="{!dummyCon.OwnerId}"/>
                 </apex:pageBlockSectionItem>
                 <apex:pageBlockSectionItem >
                     <apex:outputLabel value="Send Email to the Owner"/>
@@ -47,7 +47,7 @@
                        </apex:outputPanel> 
                         </apex:outputPanel> 
                 </apex:pageBlockSectionItem>
-                <apex:pageBlockSectionItem >
+                <apex:pageBlockSectionItem rendered="{!$ObjectType.Opportunity.Createable}">
                     <apex:outputLabel value="Opportunity Name"/>
                     <apex:outputPanel >
                         <apex:inputText value="{!oppName}"/><br/>
