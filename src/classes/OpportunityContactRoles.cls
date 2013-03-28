@@ -42,14 +42,16 @@ public without sharing class OpportunityContactRoles {
     /// <summary> Overloads the ContactRoles object constructor to handle ContactRoles processing </summary>
     public OpportunityContactRoles(Map<Id, Opportunity> oppList){
         List<Opportunity> triggerOpps = oppList.values();
-        Set<Id> triggerOppIDs = oppList.keySet();
+ //       Set<Id> triggerOppIDs = oppList.keySet();
        // Boolean haveCheckedOpportunityRoles = false;
                 
-        List<Opportunity> oppsToProcess = new List<Opportunity>();
+//        List<Opportunity> oppsToProcess = new List<Opportunity>();
         List<OpportunityContactRole> CRUpdates = new List<OpportunityContactRole>();
 
+        Map<Id, Opportunity> oppsInsertCR = oppList.clone();
+
         //Get existing contact roles for the trigger opps. 
-        List<OpportunityContactRole> CRs = [select OpportunityId, ContactId, Role, IsPrimary from OpportunityContactRole where IsPrimary = true and OpportunityId in :triggerOppIDs];
+        List<OpportunityContactRole> CRs = [select OpportunityId, ContactId, Role, IsPrimary from OpportunityContactRole where IsPrimary = true and OpportunityId in :oppsInsertCR.keySet()];
 
         //Check for primary CR with no role value; save those for updates.
         if(CRs.size() > 0){
@@ -57,18 +59,20 @@ public without sharing class OpportunityContactRoles {
                 if(cr.Role == null){
                     CRUpdates.add(cr);
                 }
+                oppsInsertCR.remove(cr.OpportunityId);
             }
         }
+        /*
         //No existing primary, so add the trigger opps for contact role creation.
         else {
             for(Opportunity o : triggerOpps){
                 oppsToProcess.add(o);
             }
-        }
+        }*/
 
         //Create CRs.
-        if (oppsToProcess.size() > 0){
-            insertCR(oppsToProcess);
+        if (oppsInsertCR.size() > 0){
+            insertCR(oppsInsertCR.values());
         }
 
         //Update existing CRs.
