@@ -50,7 +50,7 @@ global with sharing class IndividualAccounts{
               
     private static String OrgLanguage{get{
         if(OrgLanguage == null)
-            OrgLanguage = [Select LanguageLocaleKey From Organization].LanguageLocaleKey;
+            OrgLanguage = UserInfo.getLocale();// [Select LanguageLocaleKey From Organization].LanguageLocaleKey;
         return OrgLanguage;             
     }set;}       
     
