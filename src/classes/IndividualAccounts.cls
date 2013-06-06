@@ -32,7 +32,13 @@
 * @date 2011 (1.x)
 * @description Implements one of two account models, 1x1 or bucket - controls syncing within the model 
 */
-global with sharing class IndividualAccounts
+
+/****************************************************************************************************
+/*	Author: 	Passage Technology (www.passagetech.com)											*
+/*  Issue: 		https://github.com/SalesforceFoundation/Contacts_and_Organizations/issues/24		*
+/*	Comment:	Removed 'with sharing' declaration on class used by trigger.						*
+/****************************************************************************************************/ 
+global class IndividualAccounts
 {
 
     /// <name> IndividualAccounts </name>
