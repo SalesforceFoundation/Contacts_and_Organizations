@@ -406,4 +406,16 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Work&quot;),
         </filters>
         <label>New This Week</label>
     </listViews>
+    <webLinks>
+        <fullName>Merge_Contacts</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Merge Contacts</masterLabel>
+        <openType>sidebar</openType>
+        <page>ContactMerge</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
 </CustomObject>
