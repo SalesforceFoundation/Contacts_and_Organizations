@@ -596,18 +596,20 @@
         <fullName>Matching_Donation</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
         <height>600</height>
-        <linkType>page</linkType>
+        <linkType>url</linkType>
         <masterLabel>Matching Donation</masterLabel>
         <openType>sidebar</openType>
-        <page>BTN_MatchingDonation</page>
         <protected>false</protected>
+        <url>/apex/npsp__OPP_MatchingDonationsBTN?id={!Opportunity.Id}</url>
     </webLinks>
     <webLinks>
         <fullName>New_Contact_Donation</fullName>
         <availability>online</availability>
         <description>Replaces the standard New Donation button on the Donations related list on the Contact Page Layout if you have Donation Record Types.</description>
         <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
         <linkType>url</linkType>
         <masterLabel>New Contact Donation</masterLabel>
         <openType>replace</openType>
