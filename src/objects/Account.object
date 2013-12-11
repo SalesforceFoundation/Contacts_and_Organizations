@@ -250,7 +250,8 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>_SYSTEM: One2OneContact</label>
+        <inlineHelpText>The primary contact for a Household Account, or the One2One contact for a One2One account.</inlineHelpText>
+        <label>Primary Contact</label>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Account</relationshipLabel>
         <relationshipName>Organizations</relationshipName>
