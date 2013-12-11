@@ -32,6 +32,7 @@
 * @date 2011 (2.1)
 * @description Provides callout information and package data for version checking 
 */
+@deprecated
 global without sharing class NPSPPkgVersionCheck {
 
 }

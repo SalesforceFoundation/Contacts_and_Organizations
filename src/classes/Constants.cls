@@ -32,6 +32,7 @@
 * @date 2011 (1.x)
 * @description Constants for use in IndividualAccounts.cls 
 */
+@deprecated
 global with sharing class Constants {
     //One-to-One value for system processor field
     global static final String ONE_TO_ONE_PROCESSOR = 'One-to-One';
