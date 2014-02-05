@@ -34,19 +34,48 @@
 */
 public with sharing class ContactMergeController {
     
-    public ContactMergeController(){
+    //constructor for StandardSetController to allow invocation from list views
+    public ContactMergeController(ApexPages.StandardSetController controller){
         searchText='';
         searchResults = new List<contactWrapper>();
         selectedRecords = new Map<String, Contact>();
-        displaySearchResults = false;
         step = 1;
         fieldRows = new List<FieldRow>();
+        
+        set<Id> mergeIds = new set<Id>();
+        
+    	//if any selected records were passed the standard set controller show the merge page with those records
+    	for(Contact c : (list<Contact>)controller.getSelected()) {
+    		mergeIds.add(c.Id);
+    	}
+    	
+    	if(!mergeIds.isEmpty()) {
+    		loadMergeCandidates(mergeIds);
+    	}
+    	
+    	//otherwise, check for a search parameter for the SOSL query and use that
+    	else if(ApexPages.CurrentPage().getParameters().containsKey('srch')) {
+    		searchText = ApexPages.CurrentPage().getParameters().get('srch');
+    		search();
+    	}
+    	//otherwise, check for a mergeIds parameter, which should contain a comma separated list of Ids to merge
+    	else if(ApexPages.CurrentPage().getParameters().containsKey('mergeIds') && ApexPages.CurrentPage().getParameters().get('mergeIds') != '') {
+    		try {
+    			//attempt to deserialise the comma separated Ids into a list and then a set
+    			mergeIds = new set<Id>((list<Id>)ApexPages.CurrentPage().getParameters().get('mergeIds').split(','));
+    			//if we got any ids, use to try and enter the merge selected records page
+				if (mergeIds != null) {
+					loadMergeCandidates(mergeIds);
+				}
+    		}
+    		catch(StringException e){
+    			ApexPages.addMessages(e);
+    		}
+    	}
     }
     
     private static final String MASTER_KEY = '$MASTER$';
-    
-    public boolean displaySearchResults {get; set;} 
-     
+         
     //string of search text entered by user
     public String searchText { get { return searchText; } set { searchText = value; } }
     
@@ -131,27 +160,31 @@ public with sharing class ContactMergeController {
     // Action method to show the next step of the wizard where user can see the diff of the records before merge
     public void nextStep() {
         
-        String contactIdFilter = ''; // String to create a list of contact Ids to query
-        this.selectedRecordsCount = 0;
+        set<Id> mergeIds = new set<Id>(); 
         for (ContactWrapper c : searchResults) {
             if (c.selected) {
-                contactIdFilter += ('\'' + c.con.Id + '\',');
-                this.selectedRecordsCount++;
+            	mergeIds.add(c.con.Id);
             }
         }
-        contactIdFilter = contactIdFilter.substring(0, contactIdFilter.length() - 1);
+        loadMergeCandidates(mergeIds);
+    }
+    
+    // Action method to show the next step of the wizard where user can see the diff of the records before merge
+	private void loadMergeCandidates(set<Id> mergeCandidates) {
         
         // Check we have atleast 2 and not more than 3 records selected for merge. If not throw an error. 
-        if (this.selectedRecordsCount <=1) {
+        if (mergeCandidates.size() <=1) {
 			ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.Error, Label.Contact_Merge_Error_Too_Few_Contacts));
 			return;
 		}
 		
-		if (this.selectedRecordsCount >3 ) {
+		if (mergeCandidates.size() >3 ) {
 			ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.Error, Label.Contact_Merge_Error_Too_Many_Contacts));
 			return;
 		}
-        
+		
+		selectedRecordsCount = mergeCandidates.size();
+		
         Map<String, Schema.SObjectField> contactFields = Schema.SObjectType.Contact.fields.getMap();
         Map<String, Schema.DescribeFieldResult> standardFieldMap = new Map<String, Schema.DescribeFieldResult>();
         Map<String, Schema.DescribeFieldResult> customFieldMap = new Map<String, Schema.DescribeFieldResult>();
@@ -181,7 +214,7 @@ public with sharing class ContactMergeController {
         // Adding some non-updateable system fields which we need to add to the record diff table.
         query +=  'createdby.name, createddate, LastModifiedBy.name, LastModifiedDate';
         // Finally completing the query by appending the table name and the filter clause
-        query += ' from Contact where id IN (' + contactIdFilter + ')';
+        query += ' from Contact where id IN :mergeCandidates';
         
         System.debug('The contact query is: ' + query);
         
@@ -189,7 +222,7 @@ public with sharing class ContactMergeController {
         try {
             contacts = Database.query(query); // Query the records
             // Ensure we got back the same number of records as expected. In case any record got deleted/moved since last search.
-            if (contacts == null || contacts.size() != this.selectedRecordsCount) {
+            if (contacts == null || contacts.size() != mergeCandidates.size()) {
                 ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.Error, Label.Contact_Merge_Error_Query_Failed + ' ' + Label.Contact_Merge_Error_please_retry));
                 return;
             }
@@ -357,11 +390,7 @@ public with sharing class ContactMergeController {
     public void search() {
         
         if(searchText != null && searchText.length()>0){
-                        
             this.searchResults = wrapSOSLResults(mySOSL());
-            if (searchResults.size() > 0) {
-                displaySearchResults = true;
-            }
         }
     }
     
