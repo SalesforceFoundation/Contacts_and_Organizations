@@ -6,12 +6,14 @@
     <enableFeeds>false</enableFeeds>
     <fields>
         <fullName>Account_Processor__c</fullName>
+        <defaultValue>&quot;HH Account&quot;</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Setting for the Account model. Should be &quot;One-to-one&quot; or &quot;Individual&quot;. Replaces the custom field Contact.SystemAccountProcessor__c</inlineHelpText>
-        <label>Account Processor</label>
+        <inlineHelpText>Setting for the Account model. Should be &quot;HH Account&quot;, &quot;One-to-One&quot;, or &quot;Individual&quot;. Replaces the custom field Contact.SystemAccountProcessor__c.</inlineHelpText>
+        <label>Account Model</label>
         <length>255</length>
         <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -24,6 +26,7 @@
 DISABLES the IndividualAccounts.trigger (Contact, before i/u, after i/u/d)
 - checking this box will disable a trigger. This can cause erratic and unpredictable behavior in your NPSP. FOR ADVANCED CONSULTANTS AND DEVELOPERS ONLY.</inlineHelpText>
         <label>DISABLE_IndividualAccounts_trigger</label>
+        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -35,6 +38,7 @@ DISABLES the IndividualAccounts.trigger (Contact, before i/u, after i/u/d)
 DISABLES the OpportunityAccount.trigger (Opportunity, before insert)
 - checking this box will disable a trigger. This can cause erratic and unpredictable behavior in your NPSP. FOR ADVANCED CONSULTANTS AND DEVELOPERS ONLY.</inlineHelpText>
         <label>DISABLE_OpportunityAccount_trigger</label>
+        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -46,6 +50,7 @@ DISABLES the OpportunityAccount.trigger (Opportunity, before insert)
 DISABLES the OpportunityContactRoles.trigger (Opportunity, after insert)
 - checking this box will disable a trigger. This can cause erratic and unpredictable behavior in your NPSP. FOR ADVANCED CONSULTANTS AND DEVELOPERS ONLY.</inlineHelpText>
         <label>DISABLE_OpportunityContactRoles_trigger</label>
+        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -57,6 +62,7 @@ DISABLES the OpportunityContactRoles.trigger (Opportunity, after insert)
 DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after update)
 - checking this box will disable a trigger. This can cause erratic and unpredictable behavior in your NPSP. FOR ADVANCED CONSULTANTS AND DEVELOPERS ONLY.</inlineHelpText>
         <label>DISABLE_OpportunityPayments_trigger</label>
+        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -64,7 +70,9 @@ DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after updat
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Default Opp on Convert</label>
+        <inlineHelpText>Specifies whether to create an opportunity during lead conversion.</inlineHelpText>
+        <label>Create Opportunity on Lead Convert</label>
+        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -74,6 +82,7 @@ DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after updat
         <externalId>false</externalId>
         <inlineHelpText>Check this to turn off the Account Model trigger. Accounts will no longer be automatically created for Contacts. Only use this if you understand the ramifications. Turning off the account model could get your data into an inconsistent state.</inlineHelpText>
         <label>Disable Account Model Trigger</label>
+        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -83,6 +92,7 @@ DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after updat
         <externalId>false</externalId>
         <inlineHelpText>Check this to turn on the automatic creation of Opportunity Contact Roles for newly created Opportunities in the One-to-One model.</inlineHelpText>
         <label>Enable Opportunity Contact Role Trigger</label>
+        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -92,16 +102,18 @@ DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after updat
         <externalId>false</externalId>
         <inlineHelpText>Controls if the package automatically checks for new updates and versions.</inlineHelpText>
         <label>Enable Update Check</label>
+        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>HH_Account_RecordTypeID__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The ID of the record type to be used for Household accounts. If none is selected, the account will default to the user&apos;s default account selection.</inlineHelpText>
+        <inlineHelpText>The ID of the record type to be used for Household accounts. If none is selected, the account will default to the user&apos;s default account record type.</inlineHelpText>
         <label>HH Account RecordTypeID</label>
         <length>18</length>
         <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -112,6 +124,7 @@ DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after updat
         <label>Has Package Update</label>
         <length>40</length>
         <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -122,6 +135,7 @@ DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after updat
         <inlineHelpText>The date/time of the last callout to check for new versions of the NPSP packages.</inlineHelpText>
         <label>Last Update Check</label>
         <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
     <fields>
@@ -131,6 +145,7 @@ DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after updat
         <label>Max Package Version</label>
         <length>10</length>
         <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -138,10 +153,11 @@ DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after updat
         <fullName>One_to_One_RecordTypeID__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The ID of the record type to be used for 1x1 accounts. If none is selected, the account will default to the user&apos;s default account selection.</inlineHelpText>
+        <inlineHelpText>The ID of the record type to be used for One-to-One accounts.  If none is selected, the account will default to the user&apos;s default account record type.</inlineHelpText>
         <label>One-to-One RecordTypeID</label>
         <length>18</length>
         <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -149,10 +165,11 @@ DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after updat
         <fullName>Opportunity_Contact_Role_Default_role__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Default role for the primary Opportunity Contact Role</inlineHelpText>
-        <label>Opportunity Contact Role Default role</label>
+        <inlineHelpText>The default role for the primary Opportunity Contact Role that gets automatically created.</inlineHelpText>
+        <label>Opportunity Contact Role Default Role</label>
         <length>255</length>
         <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -162,6 +179,7 @@ DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after updat
         <externalId>false</externalId>
         <label>Package Update URL</label>
         <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Url</type>
     </fields>
     <fields>
@@ -169,8 +187,9 @@ DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after updat
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Enables automatic payments for new Opportunities/Donations.</inlineHelpText>
+        <inlineHelpText>Enables automatic Payments created for new Opportunities/Donations.</inlineHelpText>
         <label>Payments Enabled</label>
+        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -183,6 +202,7 @@ DISABLES the OpportunityPayments.trigger (Opportunity, after insert, after updat
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
