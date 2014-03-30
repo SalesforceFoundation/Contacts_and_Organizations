@@ -84,10 +84,6 @@
         <label>The Contact Id supplied in the Contact Id for Role field was invalid. Please use a valid Contact Id.</label>
         <name>Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
     </customLabels>
-    <customLabels>
-        <label><!-- Payments Settings Enable Help Text --></label>
-        <name>Payments_Settings_Enable_Help_Text</name>
-    </customLabels>
     <customPageWebLinks>
         <label>Reportes de la Edición Nonprofit</label>
         <name>Nonprofit_Edition_Reports</name>
@@ -108,8 +104,16 @@
         <label><!-- Payment Mapping --></label>
         <name>Payment_Mapping</name>
     </customTabs>
-    <customTabs>
-        <label>Conversor de plantillas</label>
-        <name>Template_Converter</name>
-    </customTabs>
+    <scontrols>
+        <label>SustituirVistaCuenta</label>
+        <name>AccountViewOverride</name>
+    </scontrols>
+    <scontrols>
+        <label>CreditosDonacionContacto</label>
+        <name>ContactDonationCredit</name>
+    </scontrols>
+    <scontrols>
+        <label>CrearOportunidadContrapartida</label>
+        <name>OpportunityCreateMatching</name>
+    </scontrols>
 </Translations>
