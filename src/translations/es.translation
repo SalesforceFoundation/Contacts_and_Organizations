@@ -89,10 +89,6 @@
         <name>Nonprofit_Edition_Reports</name>
     </customPageWebLinks>
     <customTabs>
-        <label>Sobre Nonprofit Starter Pack</label>
-        <name>About_Nonprofit_Edition</name>
-    </customTabs>
-    <customTabs>
         <label><!-- Contact Merge --></label>
         <name>Contact_Merge</name>
     </customTabs>
