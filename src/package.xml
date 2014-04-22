@@ -120,20 +120,12 @@
   </types>
   <types>
     <members>Account</members>
-    <members>Account.object</members>
     <members>Contact</members>
-    <members>Contact.object</members>
     <members>Contacts_And_Orgs_Settings__c</members>
-    <members>Contacts_And_Orgs_Settings__c.object</members>
-    <members>CustomField</members>
     <members>Lead</members>
-    <members>Lead.object</members>
     <members>OppPayment__c</members>
-    <members>OppPayment__c.object</members>
     <members>Opportunity</members>
-    <members>Opportunity.object</members>
     <members>Payment_Field_Mapping_Settings__c</members>
-    <members>Payment_Field_Mapping_Settings__c.object</members>
     <name>CustomObject</name>
   </types>
   <types>
