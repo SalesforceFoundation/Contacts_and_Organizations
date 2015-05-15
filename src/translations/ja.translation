@@ -100,16 +100,4 @@
         <label><!-- Payment Mapping --></label>
         <name>Payment_Mapping</name>
     </customTabs>
-    <scontrols>
-        <label><!-- AccountViewOverride --></label>
-        <name>AccountViewOverride</name>
-    </scontrols>
-    <scontrols>
-        <label><!-- ContactDonationCredit --></label>
-        <name>ContactDonationCredit</name>
-    </scontrols>
-    <scontrols>
-        <label><!-- OpportunityCreateMatching --></label>
-        <name>OpportunityCreateMatching</name>
-    </scontrols>
 </Translations>

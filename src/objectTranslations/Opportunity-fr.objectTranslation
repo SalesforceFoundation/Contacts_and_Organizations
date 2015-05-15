@@ -80,10 +80,6 @@
         <name>Payments_Made__c</name>
     </fields>
     <webLinks>
-        <label>Ajouter un &quot;matching&quot; don</label>
-        <name>Add_Matching_Donation</name>
-    </webLinks>
-    <webLinks>
         <label><!-- Matching_Donation --></label>
         <name>Matching_Donation</name>
     </webLinks>

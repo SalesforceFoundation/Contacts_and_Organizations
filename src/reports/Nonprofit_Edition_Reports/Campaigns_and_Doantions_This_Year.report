@@ -11,11 +11,6 @@
         <field>AMOUNT</field>
     </columns>
     <format>Summary</format>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>CAMPAIGN_NAME</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
     <name>Campaigns and Doantions This Year</name>
     <params>
         <name>open</name>

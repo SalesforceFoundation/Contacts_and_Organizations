@@ -16,11 +16,6 @@
         <field>TITLE</field>
     </columns>
     <format>Summary</format>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>ACCOUNT.NAME</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
     <name>All Organizations with Contacts</name>
     <params>
         <name>co</name>

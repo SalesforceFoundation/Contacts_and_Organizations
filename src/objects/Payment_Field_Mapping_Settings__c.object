@@ -12,7 +12,6 @@
         <label>Opportunity Field</label>
         <length>255</length>
         <required>true</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -24,7 +23,6 @@
         <label>Payment Field</label>
         <length>255</length>
         <required>true</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>

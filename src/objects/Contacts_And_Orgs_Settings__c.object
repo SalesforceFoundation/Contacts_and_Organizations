@@ -14,7 +14,6 @@
         <label>Account Model</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -26,7 +25,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
         <label>DEPRECATED-Disable_IndividualAcc_trigger</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -37,7 +35,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
         <label>DEPRECATED-Disable_OppAccount_trigger</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -48,7 +45,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
         <label>DEPRECATED-Disable_OCR_trigger</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -59,7 +55,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
         <label>DEPRECATED-Disable_OppPayments_trigger</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -70,7 +65,6 @@
         <externalId>false</externalId>
         <inlineHelpText>Specifies whether to create an Opportunity during Lead conversion.</inlineHelpText>
         <label>Create Opportunity on Lead Convert</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -81,7 +75,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
         <label>DEPRECATED-Disable Account Model Trigger</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -92,7 +85,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
         <label>DEPRECATED-Enable OppContactRole Trigger</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -103,7 +95,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED.  New versions of the Nonprofit Starter Pack will be automatically installed.</inlineHelpText>
         <label>DEPRECATED-Enable Update Check</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -115,7 +106,6 @@
         <label>Household Account Record Type</label>
         <length>18</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -128,7 +118,6 @@
         <label>DEPRECATED-Has Package Update</label>
         <length>40</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -140,7 +129,6 @@
         <inlineHelpText>DEPRECATED.  New versions of the Nonprofit Starter Pack will be automatically installed.</inlineHelpText>
         <label>DEPRECATED-Last Update Check</label>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
     <fields>
@@ -152,7 +140,6 @@
         <label>DEPRECATED-Max Package Version</label>
         <length>10</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -165,7 +152,6 @@
         <label>One-to-One Record Type</label>
         <length>18</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -178,7 +164,6 @@
         <label>Opportunity Contact Role Default Role</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -190,7 +175,6 @@
         <inlineHelpText>DEPRECATED.  New versions of the Nonprofit Starter Pack will be automatically installed.</inlineHelpText>
         <label>DEPRECATED-Package Update URL</label>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Url</type>
     </fields>
     <fields>
@@ -201,7 +185,6 @@
         <externalId>false</externalId>
         <inlineHelpText>Enables automatic Payments created for new Opportunities/Donations.</inlineHelpText>
         <label>Payments Enabled</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -215,7 +198,6 @@
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
-        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>

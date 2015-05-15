@@ -5,10 +5,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>CancelEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>Clone</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -18,10 +14,6 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>Edit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Follow</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -44,7 +36,6 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>InDevelopment</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
@@ -59,7 +50,6 @@
         <label>Check/Reference Number</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -70,7 +60,6 @@
         <label>Custom Payment Field</label>
         <length>15</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -84,7 +73,6 @@
         <relationshipName>OppPayment</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
-        <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
@@ -94,7 +82,6 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Paid</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -105,7 +92,6 @@
         <precision>14</precision>
         <required>false</required>
         <scale>2</scale>
-        <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
     <fields>
@@ -114,7 +100,6 @@
         <externalId>false</externalId>
         <label>Payment Date</label>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
     <fields>
@@ -137,7 +122,6 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
-        <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
     <fields>
@@ -146,7 +130,6 @@
         <externalId>false</externalId>
         <label>Scheduled Date</label>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
     <fields>
@@ -155,7 +138,6 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Written Off</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <label>Payment</label>
