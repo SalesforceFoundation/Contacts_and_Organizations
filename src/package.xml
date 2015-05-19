@@ -160,7 +160,6 @@
         <name>CustomPageWebLink</name>
     </types>
     <types>
-        <members>About_Nonprofit_Edition</members>
         <members>Contact_Merge</members>
         <members>Contacts_Settings</members>
         <members>Payment_Mapping</members>
