@@ -67,8 +67,8 @@ global with sharing class Constants {
         if (ContactsSettings == null) {
             //first see if we already have settings
             ContactsSettings = Contacts_and_Orgs_Settings__c.getOrgDefaults();
-            system.debug(Contacts_and_Orgs_Settings__c.getOrgDefaults());
-            if (ContactsSettings == null) { 
+            system.debug(ContactsSettings);
+            if (ContactsSettings == null || ContactsSettings.id == null) { 
                 //get the model they used to be in 
                 Schema.DescribeFieldResult F = Schema.sObjectType.Contact.fields.SystemAccountProcessor__c; 
                 List<Schema.PicklistEntry> P = F.getPicklistValues();
