@@ -89,10 +89,6 @@
         <name>Nonprofit_Edition_Reports</name>
     </customPageWebLinks>
     <customTabs>
-        <label>Nonprofit Starter Packについて</label>
-        <name>About_Nonprofit_Edition</name>
-    </customTabs>
-    <customTabs>
         <label>個人のマージ</label>
         <name>Contact_Merge</name>
     </customTabs>
@@ -104,16 +100,4 @@
         <label><!-- Payment Mapping --></label>
         <name>Payment_Mapping</name>
     </customTabs>
-    <scontrols>
-        <label><!-- AccountViewOverride --></label>
-        <name>AccountViewOverride</name>
-    </scontrols>
-    <scontrols>
-        <label><!-- ContactDonationCredit --></label>
-        <name>ContactDonationCredit</name>
-    </scontrols>
-    <scontrols>
-        <label><!-- OpportunityCreateMatching --></label>
-        <name>OpportunityCreateMatching</name>
-    </scontrols>
 </Translations>

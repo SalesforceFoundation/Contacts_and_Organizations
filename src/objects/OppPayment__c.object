@@ -25,6 +25,10 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>Tab</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -35,6 +39,7 @@
     <deploymentStatus>InDevelopment</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -148,24 +153,26 @@
         <fullName>Schedule_Payments</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
         <height>600</height>
         <linkType>url</linkType>
         <masterLabel>Schedule Payments</masterLabel>
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
-        <url>/apex/npe01__PaymentWizard?id={!Opportunity.Id}&amp;wtype=payment</url>
+        <url>/apex/npsp__PMT_PaymentWizard?id={!Opportunity.Id}&amp;wtype=payment</url>
     </webLinks>
     <webLinks>
         <fullName>Writeoff_Payments</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
         <height>600</height>
         <linkType>url</linkType>
         <masterLabel>Writeoff Payments</masterLabel>
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
-        <url>/apex/npe01__PaymentWizard?id={!Opportunity.Id}&amp;wtype=writeoff</url>
+        <url>/apex/npsp__PMT_PaymentWizard?id={!Opportunity.Id}&amp;wtype=writeoff</url>
     </webLinks>
 </CustomObject>

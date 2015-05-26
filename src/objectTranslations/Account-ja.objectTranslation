@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- The oldest Close Date of a won Opportunity with amount greater than zero related to this Account.  REPLACED by First Close Date. --></help>
+        <label>最初の支援日</label>
+        <name>FirstDonationDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- The most recent Close Date of a won Opportunity related to this Account with amount greater than zero.  REPLACED by Last Close Date. --></help>
+        <label>最終支援日</label>
+        <name>LastDonationDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- The total amount of won Opportunities related to this Account.  REPLACED by Households package. --></help>
+        <label>これまでの支援金額</label>
+        <name>LifetimeDonationHistory_Amount__c</name>
+    </fields>
+    <fields>
+        <help><!-- The total number of won Opportunities related to this Account.  REPLACED by Households package. --></help>
+        <label>これまでの支援回数</label>
+        <name>LifetimeDonationHistory_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- The primary contact for a Household Account, or the One2One contact for a One2One account. --></help>
+        <label><!-- Primary Contact --></label>
+        <name>One2OneContact__c</name>
+        <relationshipLabel>団体</relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether or not this Account is an Individual (true) or Organization (false). --></help>
+        <label><!-- _SYSTEM: IsIndividual --></label>
+        <name>SYSTEMIsIndividual__c</name>
+    </fields>
+    <fields>
+        <help>システムフィールド：利用または変更することは禁止</help>
+        <label><!-- _SYSTEM: AccountType --></label>
+        <name>SYSTEM_AccountType__c</name>
+    </fields>
+</CustomObjectTranslation>

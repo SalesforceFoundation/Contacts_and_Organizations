@@ -32,6 +32,7 @@
 * @date 2011 (1.x)
 * @description Constants for use in IndividualAccounts.cls 
 */
+//cumulusci-managed@deprecated
 global with sharing class Constants {
     //One-to-One value for system processor field
     global static final String ONE_TO_ONE_PROCESSOR = 'One-to-One';
@@ -66,8 +67,8 @@ global with sharing class Constants {
         if (ContactsSettings == null) {
             //first see if we already have settings
             ContactsSettings = Contacts_and_Orgs_Settings__c.getOrgDefaults();
-            system.debug(Contacts_and_Orgs_Settings__c.getOrgDefaults());
-            if (ContactsSettings == null) { 
+            system.debug(ContactsSettings);
+            if (ContactsSettings == null || ContactsSettings.id == null) { 
                 //get the model they used to be in 
                 Schema.DescribeFieldResult F = Schema.sObjectType.Contact.fields.SystemAccountProcessor__c; 
                 List<Schema.PicklistEntry> P = F.getPicklistValues();
