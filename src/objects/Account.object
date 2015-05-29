@@ -87,7 +87,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The primary contact for a Household Account, or the One2One contact for a One2One account.</inlineHelpText>
+        <inlineHelpText>The primary contact for the Account, or the One2One contact for a One2One account.</inlineHelpText>
         <label>Primary Contact</label>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Account</relationshipLabel>
