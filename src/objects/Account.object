@@ -5,7 +5,7 @@
         <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
-        <inlineHelpText>The oldest Close Date of a won Opportunity with amount greater than zero related to this Account.  REPLACED by First Close Date.</inlineHelpText>
+        <inlineHelpText>The oldest Close Date of a won Opportunity with amount greater than zero related to this Account.  REPLACED by First Gift Date.</inlineHelpText>
         <label>First Donation Date</label>
         <summarizedField>Opportunity.CloseDate</summarizedField>
         <summaryFilterItems>
@@ -27,7 +27,7 @@
         <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
-        <inlineHelpText>The most recent Close Date of a won Opportunity related to this Account with amount greater than zero.  REPLACED by Last Close Date.</inlineHelpText>
+        <inlineHelpText>The most recent Close Date of a won Opportunity related to this Account with amount greater than zero.  REPLACED by Last Gift Date.</inlineHelpText>
         <label>Last Donation Date</label>
         <summarizedField>Opportunity.CloseDate</summarizedField>
         <summaryFilterItems>
@@ -86,8 +86,9 @@
         <fullName>One2OneContact__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>The primary contact for the Account, or the One2One contact for a One2One account.</description>
         <externalId>false</externalId>
-        <inlineHelpText>The primary contact for a Household Account, or the One2One contact for a One2One account.</inlineHelpText>
+        <inlineHelpText>The primary contact for the Account, or the One2One contact for a One2One account.</inlineHelpText>
         <label>Primary Contact</label>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Account</relationshipLabel>
@@ -102,7 +103,7 @@
         <deprecated>false</deprecated>
         <description>Hidden system field: do not change.  Updated by automatic processes.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Indicates whether or not this Account is an Individual (true) or Organization (false).</inlineHelpText>
+        <inlineHelpText>Indicates whether or not this Account is special for Contacts (Household, One-to-One, Individual) vs a normal Account.</inlineHelpText>
         <label>_SYSTEM: IsIndividual</label>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Checkbox</type>
@@ -112,7 +113,7 @@
         <deprecated>false</deprecated>
         <description>Hidden system field: do not change.  Updated by automatic processes.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Indicates which model drives Contact relationship behavior: Individual (Bucket) or One-to-One</inlineHelpText>
+        <inlineHelpText>Indicates which Account Model this account is for: Household Account, One-to-One, or Individual (bucket).</inlineHelpText>
         <label>_SYSTEM: AccountType</label>
         <length>100</length>
         <required>false</required>
