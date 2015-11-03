@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+<?xml version="1.0" encoding="UTF-8"?><Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Contacts+%26+Organizations</fullName>
     <types>
         <members>Constants</members>
@@ -179,21 +178,10 @@
     </types>
     <types>
         <members>Nonprofit_Edition_Reports</members>
-        <members>Nonprofit_Edition_Reports/All_Contacts</members>
-        <members>Nonprofit_Edition_Reports/All_Donations_Last_Year</members>
-        <members>Nonprofit_Edition_Reports/All_Donations_This_Year</members>
-        <members>Nonprofit_Edition_Reports/All_Organizations</members>
-        <members>Nonprofit_Edition_Reports/All_Organizations_with_Contacts</members>
-        <members>Nonprofit_Edition_Reports/Campaigns_and_Doantions_This_Year</members>
-        <members>Nonprofit_Edition_Reports/Contact_LYBUNT_Report</members>
-        <members>Nonprofit_Edition_Reports/Contact_SYBUNT_Report</members>
         <members>Nonprofit_Edition_Reports/Individual_Organization_LYBUNT_Report</members>
         <members>Nonprofit_Edition_Reports/Individual_Organization_SYBUNT_Report</members>
-        <members>Nonprofit_Edition_Reports/Organization_Donations_Closed_Lost</members>
-        <members>Nonprofit_Edition_Reports/Organization_Donations_Prospecting</members>
         <members>Nonprofit_Edition_Reports/Organization_LYBUNT_Report</members>
         <members>Nonprofit_Edition_Reports/Organization_SYBUNT_Report</members>
-        <members>Nonprofit_Edition_Reports/Organziation_Donations_Closed_Won</members>
         <name>Report</name>
     </types>
     <types>
