@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Package xmlns="http://soap.sforce.com/2006/04/metadata">
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Contacts+%26+Organizations</fullName>
     <types>
         <members>Constants</members>
@@ -21,17 +22,12 @@
         <name>ApexPage</name>
     </types>
     <types>
-        <members>Account.FirstDonationDate__c</members>
-        <members>Account.LastDonationDate__c</members>
-        <members>Account.LifetimeDonationHistory_Amount__c</members>
-        <members>Account.LifetimeDonationHistory_Number__c</members>
         <members>Account.One2OneContact__c</members>
         <members>Account.SYSTEMIsIndividual__c</members>
         <members>Account.SYSTEM_AccountType__c</members>
         <members>Contact.AlternateEmail__c</members>
         <members>Contact.HomeEmail__c</members>
         <members>Contact.Home_Address__c</members>
-        <members>Contact.Last_Donation_Date__c</members>
         <members>Contact.Lifetime_Giving_History_Amount__c</members>
         <members>Contact.Organization_Type__c</members>
         <members>Contact.Other_Address__c</members>
