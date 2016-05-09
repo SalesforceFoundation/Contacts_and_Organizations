@@ -158,10 +158,10 @@
     <fields>
         <fullName>Opportunity_Contact_Role_Default_role__c</fullName>
         <deprecated>false</deprecated>
-        <description>The default role for the primary Opportunity Contact Role that gets automatically created.</description>
+        <description>The default Contact Role automatically assigned to the Primary Contact for the Opportunity.</description>
         <externalId>false</externalId>
-        <inlineHelpText>The default role for the primary Opportunity Contact Role that gets automatically created.</inlineHelpText>
-        <label>Opportunity Contact Role Default Role</label>
+        <inlineHelpText>The default Contact Role automatically assigned to the Primary Contact for the Opportunity.</inlineHelpText>
+        <label>Default Opportunity Contact Role</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
@@ -181,10 +181,10 @@
         <fullName>Payments_Enabled__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>Enables automatic Payments created for new Opportunities/Donations.</description>
+        <description>If enabled, Salesforce automatically creates Payments for new Opportunities (Donations).</description>
         <externalId>false</externalId>
-        <inlineHelpText>Enables automatic Payments created for new Opportunities/Donations.</inlineHelpText>
-        <label>Payments Enabled</label>
+        <inlineHelpText>If enabled, Salesforce automatically creates Payments for new Opportunities (Donations).</inlineHelpText>
+        <label>Automatic Payment Creation</label>
         <type>Checkbox</type>
     </fields>
     <fields>

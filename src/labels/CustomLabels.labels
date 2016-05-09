@@ -119,7 +119,9 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Contacts Settings Account Model Help Text</shortDescription>
-        <value>The Account Model for the Nonprofit Starter Pack determines if each Contact has it&apos;s own &quot;One-to-One&quot; Account, &quot;Household&quot; Account, or if they all are related to a single &quot;Individual&quot; Account. This should be set at the begining of use and not changed unless you fully understand the changes. If you change your Account model when you have real data, you&apos;ll need to migrate that data to the new model.  For new organizations, the &quot;Household&quot; Account model is recommended.</value>
+        <value>The Nonprofit Starter Pack supports three different Account models: the Household Account model, the One-to-One Account model, and the Individual (or &quot;Bucket&quot;) Account model. For more information on any of these models, see the &lt;a href=&quot;https://powerofus.force.com/NPSP_Account_Model&quot; target=&quot;_blank&quot;&gt;NPSP Documentation&lt;/a&gt;.
+&lt;br/&gt;&lt;br&gt; 
+For those using NPSP3 and later, the Household Account model is recommended.</value>
     </labels>
     <labels>
         <fullName>Contacts_Settings_Contact_Roles_Help_Text</fullName>

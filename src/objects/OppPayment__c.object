@@ -169,7 +169,7 @@
         <encodingKey>UTF-8</encodingKey>
         <height>600</height>
         <linkType>url</linkType>
-        <masterLabel>Writeoff Payments</masterLabel>
+        <masterLabel>Write Off Payments</masterLabel>
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
