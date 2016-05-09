@@ -9,11 +9,11 @@
         <value><!-- Payment Field Mapping Settings --></value>
     </caseValues>
     <fields>
-        <label><!-- Opportunity Field --></label>
+        <label>Campo de la oportunidad</label>
         <name>Opportunity_Field__c</name>
     </fields>
     <fields>
-        <label><!-- Payment Field --></label>
+        <label>Campo del pago</label>
         <name>Payment_Field__c</name>
     </fields>
     <gender><!-- Feminine --></gender>

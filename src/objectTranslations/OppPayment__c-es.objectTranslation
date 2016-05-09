@@ -9,69 +9,69 @@
         <value><!-- Payment --></value>
     </caseValues>
     <fields>
-        <label><!-- Check/Reference Number --></label>
+        <label>N° de comprobante/referencia</label>
         <name>Check_Reference_Number__c</name>
     </fields>
     <fields>
-        <label><!-- Custom Payment Field --></label>
+        <label>Campo de pagos personalizado</label>
         <name>Custom_Payment_Field__c</name>
     </fields>
     <fields>
-        <label><!-- Opportunity --></label>
+        <label>Oportunidad</label>
         <name>Opportunity__c</name>
-        <relationshipLabel><!-- Payments --></relationshipLabel>
+        <relationshipLabel>Pagos</relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Paid --></label>
+        <label>Pagado</label>
         <name>Paid__c</name>
     </fields>
     <fields>
-        <label><!-- Payment Amount --></label>
+        <label>Monto del pago</label>
         <name>Payment_Amount__c</name>
     </fields>
     <fields>
-        <label><!-- Payment Date --></label>
+        <label>Fecha del pago</label>
         <name>Payment_Date__c</name>
     </fields>
     <fields>
-        <label><!-- Payment Method --></label>
+        <label>Método de pago</label>
         <name>Payment_Method__c</name>
         <picklistValues>
             <masterLabel>Cash</masterLabel>
-            <translation><!-- Cash --></translation>
+            <translation>Efectivo</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Check</masterLabel>
-            <translation><!-- Check --></translation>
+            <translation>Cheque</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Credit Card</masterLabel>
-            <translation><!-- Credit Card --></translation>
+            <translation>Tarjeta de crédito</translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Scheduled Date --></label>
+        <label>Fecha programada</label>
         <name>Scheduled_Date__c</name>
     </fields>
     <fields>
-        <label><!-- Written Off --></label>
+        <label>Cancelada</label>
         <name>Written_Off__c</name>
     </fields>
     <gender><!-- Feminine --></gender>
     <layouts>
         <layout>Payment Layout</layout>
         <sections>
-            <label><!-- Custom Links --></label>
+            <label>Vínculos personalizados</label>
             <section>Custom Links</section>
         </sections>
     </layouts>
     <nameFieldLabel><!-- Payment Number --></nameFieldLabel>
     <webLinks>
-        <label><!-- Schedule_Payments --></label>
+        <label>Programar pagos</label>
         <name>Schedule_Payments</name>
     </webLinks>
     <webLinks>
-        <label><!-- Writeoff_Payments --></label>
+        <label>Cancelar pagos</label>
         <name>Writeoff_Payments</name>
     </webLinks>
 </CustomObjectTranslation>
