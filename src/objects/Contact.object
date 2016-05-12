@@ -63,7 +63,7 @@ Account.LastDonationDate__c,
 null
 )</formula>
         <inlineHelpText>WARNING - This field may not accurately reflect the donation history. Please use the Last Gift Date field instead.</inlineHelpText>
-        <label>Last Transaction Date</label>
+        <label>DEPRECATED - Last Transaction Date</label>
         <required>false</required>
         <type>Date</type>
     </fields>
