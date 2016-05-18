@@ -161,7 +161,7 @@ global with sharing class Constants {
 	
 		// look up the ID if we haven't already done it
 		if ( IndividualAccountId == null ) {
-			List<Account> acct = [select id,SYSTEMISINDIVIDUAL__c,SYSTEM_AccountType__c from account where Name =:IndividualAccountName LIMIT 1];
+			List<Account> acct = database.query('select id,SYSTEMISINDIVIDUAL__c,SYSTEM_AccountType__c from account where Name =:IndividualAccountName LIMIT 1');
 			if(acct.size()>0){
 				
 				if(acct[0].SYSTEMISINDIVIDUAL__c==false || acct[0].SYSTEM_AccountType__c<>Constants.BUCKET_ORGANIZATION_TYPE){

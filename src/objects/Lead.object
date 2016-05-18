@@ -2,7 +2,6 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <fullName>Preferred_Email__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Preferred Email</label>
         <picklist>
@@ -25,7 +24,6 @@
     </fields>
     <fields>
         <fullName>Preferred_Phone__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Preferred Phone</label>
         <picklist>
