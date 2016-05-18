@@ -14,7 +14,6 @@
         <members>ContactDonationCredit</members>
         <members>ContactMerge</members>
         <members>ContactNewOverride</members>
-        <members>CustomLabels</members>
         <members>PaymentMapping</members>
         <members>PaymentWizard</members>
         <members>accountViewOverride</members>
@@ -118,7 +117,6 @@
         <name>CustomLabel</name>
     </types>
     <types>
-        <members>CustomLabels</members>
         <name>CustomLabels</name>
     </types>
     <types>
