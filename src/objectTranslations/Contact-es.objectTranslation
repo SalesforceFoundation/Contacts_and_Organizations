@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help><!-- Alternate Email is an optional fourth email: Not personal, preferred, or work email. --></help>
+        <help>Correo electrónico alternativo es un correo opcional: No es el correo personal, elegido o laboral.</help>
         <label>Correo electrónico alternativo</label>
         <name>AlternateEmail__c</name>
     </fields>
     <fields>
-        <help><!-- See Preferred Email field. --></help>
+        <help>Ver Correo electrónico elegido.</help>
         <label>Correo electrónico particular</label>
         <name>HomeEmail__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: Uses primary address type field to determine Home Address from Mailing or Other address. --></help>
+        <help>Fórmula: Utiliza el campo tipo de dirección para determinar la dirección del hogar desde Dirección de correo o Otra dirección</help>
         <label>Dirección particular</label>
         <name>Home_Address__c</name>
     </fields>
     <fields>
-        <help><!-- WARNING - This field may not accurately reflect the donation history. Please use the Last Gift Date field instead. --></help>
+        <help>ATENCIÓN - Este campo puede no reflejar correctamente la historia de donación. Por favor usar Fecha de última donación.</help>
         <label>Fecha de la última transacción</label>
         <name>Last_Donation_Date__c</name>
     </fields>
     <fields>
-        <help><!-- WARNING- This field may not accurately reflect donation histories. Please use the Total Amount field on the Contact record instead. --></help>
+        <help>ATENCIÓN - Este campos puede no reflejar correctamente la historia de donación. Por favor, usar el campo Total donado.</help>
         <label>Monto total de transacciones</label>
         <name>Lifetime_Giving_History_Amount__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: In order of preference, the SYSTEM_AccountType field, the Account Type field, and &quot;Organization&quot;. --></help>
+        <help>Fórmula: En orden de preferencia, el campo SYSTEM_AccountType, el campo de Tipo en la cuenta y &quot;Organización&quot;.</help>
         <label>Tipo de organización</label>
         <name>Organization_Type__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: If the Primary Address Type is Other, the Mailing Address.  If the Secondary Address Type is Other, the Other Address. --></help>
+        <help>Fórmula: Si Tipo de dirección principal es Otra, Dirección de correo. Si el Tipo de dirección secundaria es Otra, Otra dirección.</help>
         <label>Otra dirección</label>
         <name>Other_Address__c</name>
     </fields>
     <fields>
-        <help><!-- Which phone number should be used for most communications involving this Contact? --></help>
+        <help>¿Cuál teléfono debe ser el usado para la mayoría de las comunicaciones con este contacto?</help>
         <label>Teléfono elegido</label>
         <name>PreferredPhone__c</name>
         <picklistValues>
             <masterLabel>Home</masterLabel>
-            <translation>Particular</translation>
+            <translation><!-- Home --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mobile</masterLabel>
-            <translation>Móvil</translation>
+            <translation><!-- Mobile --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other</masterLabel>
-            <translation>Otro</translation>
+            <translation><!-- Other --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Work</masterLabel>
-            <translation>Laboral</translation>
+            <translation><!-- Work --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Which email should be used for most communications involving this Contact? --></help>
+        <help>¿Cuál correo electrónico debe ser el usado para la mayoría de las comunicaciones con este contacto?</help>
         <label>Correo electrónico elegido</label>
         <name>Preferred_Email__c</name>
         <picklistValues>
             <masterLabel>Alternate</masterLabel>
-            <translation>Alternativo</translation>
+            <translation><!-- Alternate --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Personal</masterLabel>
-            <translation>Particular</translation>
+            <translation><!-- Personal --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Work</masterLabel>
-            <translation>Laboral</translation>
+            <translation><!-- Work --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Which type of address is the mailing address? --></help>
+        <help>¿Qué tipo de dirección es la dirección de correo?</help>
         <label>Tipo de dirección de correo</label>
         <name>Primary_Address_Type__c</name>
         <picklistValues>
@@ -91,12 +91,12 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Excludes this Contact from One to One or Bucket account processing. --></help>
+        <help>Excluye al contacto de la asignación de cuentas Uno-a-Uno o Individual</help>
         <label>Privado</label>
         <name>Private__c</name>
     </fields>
     <fields>
-        <help><!-- What type of address is the other address? --></help>
+        <help>¿Qué tipo de dirección es la Otra dirección?</help>
         <label>Tipo de otra dirección</label>
         <name>Secondary_Address_Type__c</name>
         <picklistValues>
@@ -113,7 +113,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Indicates which model drives Account relationship behavior: Individual (Bucket) or One-to-One --></help>
+        <help>Indica que modelo define la relación con la cuenta: Individual o Uno-a-Uno</help>
         <label><!-- _SYSTEM: ACCOUNT PROCESSOR --></label>
         <name>SystemAccountProcessor__c</name>
         <picklistValues>
@@ -126,27 +126,27 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- This field is no longer used and should not be referenced. It has been replaced by Type_of_Account__c --></help>
+        <help>Este campo ya no se usa. Debe reemplazarse con Tipo de cuenta.</help>
         <label><!-- _SYSTEM: IsIndividual - DEPRECATED --></label>
         <name>SystemIsIndividual__c</name>
     </fields>
     <fields>
-        <help>Muestra el tipo de Organización con el que este Contacto está relacionado</help>
+        <help>Muestra el tipo de Cuenta con el que este Contacto está relacionado</help>
         <label>Tipo de cuenta</label>
         <name>Type_of_Account__c</name>
     </fields>
     <fields>
-        <help><!-- See Preferred Email field. --></help>
+        <help>Ver Correo electrónico elegido.</help>
         <label>Correo electrónico laboral</label>
         <name>WorkEmail__c</name>
     </fields>
     <fields>
-        <help><!-- See &apos;Preferred Phone&apos; field. --></help>
+        <help>Ver Teléfono elegido.</help>
         <label>Teléfono laboral</label>
         <name>WorkPhone__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: If the Primary Address Type is Work, the Mailing Address.  If the Secondary Address Type is Work, the Other Address. --></help>
+        <help>Fórmula: Si Tipo de dirección principal es Laboral, Dirección de correo. Si el Tipo de dirección secundaria es Laboral, Otra dirección.</help>
         <label>Dirección laboral</label>
         <name>Work_Address__c</name>
     </fields>

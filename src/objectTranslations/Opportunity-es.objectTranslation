@@ -1,86 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help><!-- Formula: The Amount of this Opportunity minus the Payment Writeoff Amount and Payment Amount Received. --></help>
-        <label><!-- Remaining Balance --></label>
+        <help>Fórmula: El importe de esta oportunidad menos el Monto de pagos cancelados y el Monto de pagos recibidos.</help>
+        <label>Balance restante</label>
         <name>Amount_Outstanding__c</name>
     </fields>
     <fields>
-        <help><!-- Total value of the Payments marked as written-off or noncollectable for this Opportunity. --></help>
-        <label><!-- Payment Writeoff Amount --></label>
+        <help>Valor total de los pagos marcados como cancelados o imposibles de cobrar para esta oportunidad.</help>
+        <label>Monto de pagos cancelados</label>
         <name>Amount_Written_Off__c</name>
     </fields>
     <fields>
-        <help><!-- Hidden field for passing a Contact Id for Contact Role creation. --></help>
-        <label><!-- Contact Id for Role --></label>
+        <help>Campo oculto para pasar el Id del contacto para la creación de una Función de Contacto</help>
+        <label>Id del contacto para la función</label>
         <name>Contact_Id_for_Role__c</name>
     </fields>
     <fields>
-        <help><!-- If payments are active, and if checked, a new payment will not be automatically created for this Opportunity. --></help>
-        <label><!-- Do Not Automatically Create Payment --></label>
+        <help>Si pagos esta activado, y este campo seleccionado, un nuevo pago NO será automáticamente creado para esta oportunidad.</help>
+        <label>No crear automáticamente pagos</label>
         <name>Do_Not_Automatically_Create_Payment__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: Whether or not the related Account is defined as an individual (SYSTEMIsIndividual__c) --></help>
-        <label><!-- Is Opp From Individual --></label>
+        <help>Fórmula: Si la cuenta relacionada esta o no definida como un individuo (SYSTEMIsIndividual__c)</help>
+        <label>Es una op. de un individuo</label>
         <name>Is_Opp_From_Individual__c</name>
     </fields>
     <fields>
-        <help><!-- Determines the value on the Contact or Account of the Last Membership Level field. --></help>
-        <label><!-- Member Level --></label>
+        <help>Determina el valor del nivel de la última membresía en un contacto o una cuenta</help>
+        <label>Nivel de miembro</label>
         <name>Member_Level__c</name>
         <picklistValues>
             <masterLabel>Bronze</masterLabel>
-            <translation><!-- Bronze --></translation>
+            <translation>Bronce</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gold</masterLabel>
-            <translation><!-- Gold --></translation>
+            <translation>Oro</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Silver</masterLabel>
-            <translation><!-- Silver --></translation>
+            <translation>Plata</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Date membership period ends. --></help>
-        <label><!-- Membership End Date --></label>
+        <help>Fecha en la que la membresía termina.</help>
+        <label>Fecha de fin de la membresía</label>
         <name>Membership_End_Date__c</name>
     </fields>
     <fields>
-        <help><!-- Is this a renewal, a new membership, or a membership with someone who lapsed and has returned. --></help>
-        <label><!-- Membership Origin --></label>
+        <help>Es esta una renovación, una nueva membresía o una membresía de alguien que se fue y ahora retorna.</help>
+        <label>Origen de la membresía</label>
         <name>Membership_Origin__c</name>
         <picklistValues>
             <masterLabel>New</masterLabel>
-            <translation><!-- New --></translation>
+            <translation>Nueva</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Reacquire</masterLabel>
-            <translation><!-- Reacquire --></translation>
+            <translation>Re-adquirida</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Renewal</masterLabel>
-            <translation><!-- Renewal --></translation>
+            <translation>Renovación</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Date when membership period starts --></help>
-        <label><!-- Membership Start Date --></label>
+        <help>Fecha en el que el período de la membresía inicia</help>
+        <label>Fecha de inicio de la membresía</label>
         <name>Membership_Start_Date__c</name>
     </fields>
     <fields>
-        <help><!-- Total number of payments for this Opportunity (Donation) --></help>
-        <label><!-- Number of Payments --></label>
+        <help>Cantidad total de pagos para esta oportunidad.</help>
+        <label>Cantidad de pagos</label>
         <name>Number_of_Payments__c</name>
     </fields>
     <fields>
-        <help><!-- The total value of Payments marked as paid for this Opportunity. --></help>
-        <label><!-- Payment Amount Received --></label>
+        <help>El valor total de los pagos marcados como recibidos para esta oportunidad.</help>
+        <label>Monto de pagos recibidos</label>
         <name>Payments_Made__c</name>
     </fields>
     <webLinks>
-        <label><!-- Matching_Donation --></label>
+        <label>Donación complementaria</label>
         <name>Matching_Donation</name>
     </webLinks>
     <webLinks>
