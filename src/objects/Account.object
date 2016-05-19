@@ -2,11 +2,10 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <fullName>FirstDonationDate__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The oldest Close Date of a won Opportunity with amount greater than zero related to this Account.  REPLACED by First Gift Date.</inlineHelpText>
-        <label>First Donation Date</label>
+        <label>DEPRECATED - First Donation Date</label>
         <summarizedField>Opportunity.CloseDate</summarizedField>
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
@@ -24,11 +23,10 @@
     </fields>
     <fields>
         <fullName>LastDonationDate__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The most recent Close Date of a won Opportunity related to this Account with amount greater than zero.  REPLACED by Last Gift Date.</inlineHelpText>
-        <label>Last Donation Date</label>
+        <label>DEPRECATED - Last Donation Date</label>
         <summarizedField>Opportunity.CloseDate</summarizedField>
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
@@ -46,11 +44,10 @@
     </fields>
     <fields>
         <fullName>LifetimeDonationHistory_Amount__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total amount of won Opportunities related to this Account.  REPLACED by Households package.</inlineHelpText>
-        <label>Lifetime Donation History (Amount)</label>
+        <label>DEPRECATED - Lifetime Donation Amount</label>
         <summarizedField>Opportunity.Amount</summarizedField>
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
@@ -63,11 +60,10 @@
     </fields>
     <fields>
         <fullName>LifetimeDonationHistory_Number__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total number of won Opportunities related to this Account.  REPLACED by Households package.</inlineHelpText>
-        <label>Lifetime Donation History (Number)</label>
+        <label>DEPRECATED - Lifetime Donation Number</label>
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
             <operation>equals</operation>
@@ -85,7 +81,6 @@
     <fields>
         <fullName>One2OneContact__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
         <description>The primary contact for the Account, or the One2One contact for a One2One account.</description>
         <externalId>false</externalId>
         <inlineHelpText>The primary contact for the Account, or the One2One contact for a One2One account.</inlineHelpText>
@@ -100,7 +95,6 @@
     <fields>
         <fullName>SYSTEMIsIndividual__c</fullName>
         <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
         <description>Hidden system field: do not change.  Updated by automatic processes.</description>
         <externalId>false</externalId>
         <inlineHelpText>Indicates whether or not this Account is special for Contacts (Household, One-to-One, Individual) vs a normal Account.</inlineHelpText>
@@ -110,8 +104,8 @@
     </fields>
     <fields>
         <fullName>SYSTEM_AccountType__c</fullName>
-        <deprecated>false</deprecated>
         <description>Hidden system field: do not change.  Updated by automatic processes.</description>
+        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>Indicates which Account Model this account is for: Household Account, One-to-One, or Individual (bucket).</inlineHelpText>
         <label>_SYSTEM: AccountType</label>
