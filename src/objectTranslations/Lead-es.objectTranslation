@@ -5,15 +5,15 @@
         <name>Preferred_Email__c</name>
         <picklistValues>
             <masterLabel>Alternate</masterLabel>
-            <translation>Alternativo</translation>
+            <translation><!-- Alternate --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Personal</masterLabel>
-            <translation>Particular</translation>
+            <translation><!-- Personal --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Work</masterLabel>
-            <translation>Laboral</translation>
+            <translation><!-- Work --></translation>
         </picklistValues>
     </fields>
     <fields>
@@ -21,19 +21,19 @@
         <name>Preferred_Phone__c</name>
         <picklistValues>
             <masterLabel>Home</masterLabel>
-            <translation>Particular</translation>
+            <translation><!-- Home --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mobile</masterLabel>
-            <translation>Móvil</translation>
+            <translation><!-- Mobile --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other</masterLabel>
-            <translation>Otro</translation>
+            <translation><!-- Other --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Work</masterLabel>
-            <translation>Laboral</translation>
+            <translation><!-- Work --></translation>
         </picklistValues>
     </fields>
 </CustomObjectTranslation>
