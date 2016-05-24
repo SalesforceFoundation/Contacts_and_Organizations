@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Contacts %26 Organizations</fullName>
-    <packageType>UNMANAGED</packageType>
+    <fullName>Contacts+%26+Organizations</fullName>
     <types>
         <members>Constants</members>
         <members>IndividualAccounts</members>
@@ -117,11 +116,15 @@
         <name>CustomLabel</name>
     </types>
     <types>
-        <name>CustomLabels</name>
+        <name>CustomLabel</name>
     </types>
     <types>
+        <members>Account</members>
+        <members>Contact</members>
         <members>Contacts_And_Orgs_Settings__c</members>
+        <members>Lead</members>
         <members>OppPayment__c</members>
+        <members>Opportunity</members>
         <members>Payment_Field_Mapping_Settings__c</members>
         <name>CustomObject</name>
     </types>
@@ -176,6 +179,7 @@
     </types>
     <types>
         <members>Nonprofit_Edition_Reports</members>
+        <members>Nonprofit_Edition_Reports/DO_NOT_DELETE</members>
         <name>Report</name>
     </types>
     <types>
@@ -191,6 +195,10 @@
         <members>Opportunity.New_Contact_Donation</members>
         <members>Opportunity.New_Organization_Donation</members>
         <name>WebLink</name>
+    </types>
+    <types>
+        <members>Contact</members>
+        <name>Workflow</name>
     </types>
     <types>
         <members>Contact.ContactAlternateEmailUpdate</members>
