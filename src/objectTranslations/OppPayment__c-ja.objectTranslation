@@ -5,68 +5,68 @@
         <value><!-- Payment --></value>
     </caseValues>
     <fields>
-        <label><!-- Check/Reference Number --></label>
+        <label>確認参照番号</label>
         <name>Check_Reference_Number__c</name>
     </fields>
     <fields>
-        <label><!-- Custom Payment Field --></label>
+        <label>カスタム支払項目</label>
         <name>Custom_Payment_Field__c</name>
     </fields>
     <fields>
-        <label><!-- Opportunity --></label>
+        <label>支援</label>
         <name>Opportunity__c</name>
-        <relationshipLabel><!-- Payments --></relationshipLabel>
+        <relationshipLabel>支払</relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Paid --></label>
+        <label>支払済</label>
         <name>Paid__c</name>
     </fields>
     <fields>
-        <label><!-- Payment Amount --></label>
+        <label>支払金額</label>
         <name>Payment_Amount__c</name>
     </fields>
     <fields>
-        <label><!-- Payment Date --></label>
+        <label>支払日</label>
         <name>Payment_Date__c</name>
     </fields>
     <fields>
-        <label><!-- Payment Method --></label>
+        <label>支払方法</label>
         <name>Payment_Method__c</name>
         <picklistValues>
             <masterLabel>Cash</masterLabel>
-            <translation><!-- Cash --></translation>
+            <translation>現金</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Check</masterLabel>
-            <translation><!-- Check --></translation>
+            <translation>小切手</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Credit Card</masterLabel>
-            <translation><!-- Credit Card --></translation>
+            <translation>クレジットカード</translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Scheduled Date --></label>
+        <label>支払予定日</label>
         <name>Scheduled_Date__c</name>
     </fields>
     <fields>
-        <label><!-- Written Off --></label>
+        <label>取消</label>
         <name>Written_Off__c</name>
     </fields>
     <layouts>
         <layout>Payment Layout</layout>
         <sections>
-            <label><!-- Custom Links --></label>
+            <label>カスタムリンク</label>
             <section>Custom Links</section>
         </sections>
     </layouts>
     <nameFieldLabel><!-- Payment Number --></nameFieldLabel>
     <webLinks>
-        <label><!-- Schedule_Payments --></label>
+        <label>支払のスケジュール</label>
         <name>Schedule_Payments</name>
     </webLinks>
     <webLinks>
-        <label><!-- Writeoff_Payments --></label>
+        <label>支払の取消</label>
         <name>Writeoff_Payments</name>
     </webLinks>
 </CustomObjectTranslation>
