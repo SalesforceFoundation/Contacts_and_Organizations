@@ -129,26 +129,33 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>Account-de</members>
         <members>Account-es</members>
         <members>Account-fr</members>
         <members>Account-ja</members>
+        <members>Contact-de</members>
         <members>Contact-es</members>
         <members>Contact-fr</members>
         <members>Contact-ja</members>
+        <members>Contacts_And_Orgs_Settings__c-de</members>
         <members>Contacts_And_Orgs_Settings__c-en_US</members>
         <members>Contacts_And_Orgs_Settings__c-es</members>
         <members>Contacts_And_Orgs_Settings__c-fr</members>
         <members>Contacts_And_Orgs_Settings__c-ja</members>
+        <members>Lead-de</members>
         <members>Lead-es</members>
         <members>Lead-fr</members>
         <members>Lead-ja</members>
+        <members>OppPayment__c-de</members>
         <members>OppPayment__c-en_US</members>
         <members>OppPayment__c-es</members>
         <members>OppPayment__c-fr</members>
         <members>OppPayment__c-ja</members>
+        <members>Opportunity-de</members>
         <members>Opportunity-es</members>
         <members>Opportunity-fr</members>
         <members>Opportunity-ja</members>
+        <members>Payment_Field_Mapping_Settings__c-de</members>
         <members>Payment_Field_Mapping_Settings__c-en_US</members>
         <members>Payment_Field_Mapping_Settings__c-es</members>
         <members>Payment_Field_Mapping_Settings__c-fr</members>
@@ -183,6 +190,7 @@
         <name>Report</name>
     </types>
     <types>
+        <members>de</members>
         <members>es</members>
         <members>fr</members>
         <members>ja</members>
