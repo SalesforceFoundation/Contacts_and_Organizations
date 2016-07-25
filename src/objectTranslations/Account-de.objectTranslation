@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help>Das früheste Schlussdatum einer gewonnenen Opportunity mit einem Betrag höher null bezogen auf diesen Account  ERSETZT durch erstes Schlussdatum</help>
+        <label>Erstes Spendendatum</label>
+        <name>FirstDonationDate__c</name>
+    </fields>
+    <fields>
+        <help>Das letzte Schlussdatum einer gewonnenen Opportunity in Bezug auf diesen Account mit einem Betrag größer Null.  ERSETZT durch letztes Schlussdatum</help>
+        <label>Letztes Spendendatum</label>
+        <name>LastDonationDate__c</name>
+    </fields>
+    <fields>
+        <help>Der Gesamtbetrag gewonnener Opportunities in Bezug auf diesen Account  ERSETZT durch Haushalte-Paket</help>
+        <label>Historie Spenden währ. Laufzeit (Betrag)</label>
+        <name>LifetimeDonationHistory_Amount__c</name>
+    </fields>
+    <fields>
+        <help>Die Gesamtanzahl gewonnener Opportunities in Bezug auf diesen Account  ERSETZT durch Haushalte-Paket.</help>
+        <label>Historie Spenden währ. Laufzeit (Anzahl)</label>
+        <name>LifetimeDonationHistory_Number__c</name>
+    </fields>
+    <fields>
+        <help>Der Hauptansprechpartner für einen Haushalt-Account, oder der Eins-zu-Eins-Kontakt für einen Eins-zu-Eins-Account</help>
+        <label>Hauptansprechpartner</label>
+        <name>One2OneContact__c</name>
+        <relationshipLabel><!-- Account --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Gibt an, ob dieser Account eine Einzelperson (wahr) oder eine Organisation (falsch) ist</help>
+        <label>_SYSTEM: IstEinzelperson</label>
+        <name>SYSTEMIsIndividual__c</name>
+    </fields>
+    <fields>
+        <help>Gibt an, welches Modell für das Verhalten der Kontaktbeziehung maßgeblich ist: Einzelperson (Bucket) oder Eins-zu-Eins</help>
+        <label>_SYSTEM: Account-Typ</label>
+        <name>SYSTEM_AccountType__c</name>
+    </fields>
+</CustomObjectTranslation>
