@@ -79,8 +79,8 @@
         <name>One_to_One_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help><!-- The default role for the primary Opportunity Contact Role that gets automatically created. --></help>
-        <label><!-- Opportunity Contact Role Default Role --></label>
+        <help><!-- The default Contact Role automatically assigned to the Primary Contact for the Opportunity. --></help>
+        <label><!-- Default Opportunity Contact Role --></label>
         <name>Opportunity_Contact_Role_Default_role__c</name>
     </fields>
     <fields>
@@ -89,8 +89,8 @@
         <name>Package_Update_URL__c</name>
     </fields>
     <fields>
-        <help><!-- Enables automatic Payments created for new Opportunities/Donations. --></help>
-        <label><!-- Payments Enabled --></label>
+        <help><!-- If enabled, Salesforce automatically creates Payments for new Opportunities (Donations). --></help>
+        <label><!-- Automatic Payment Creation --></label>
         <name>Payments_Enabled__c</name>
     </fields>
     <fields>

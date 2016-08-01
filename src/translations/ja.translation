@@ -73,7 +73,7 @@
         <name>DefaultContactTransactionCurrency</name>
     </customLabels>
     <customLabels>
-        <label><!-- Suffix added to the name of the original donation to form matching donation name --></label>
+        <label>{3} マッチングギフト {1}</label>
         <name>Matching_Donation_Record_Suffix</name>
     </customLabels>
     <customLabels>
@@ -93,11 +93,11 @@
         <name>Contact_Merge</name>
     </customTabs>
     <customTabs>
-        <label><!-- Contacts Settings --></label>
+        <label>個人設定</label>
         <name>Contacts_Settings</name>
     </customTabs>
     <customTabs>
-        <label><!-- Payment Mapping --></label>
+        <label>支払マッピング</label>
         <name>Payment_Mapping</name>
     </customTabs>
 </Translations>

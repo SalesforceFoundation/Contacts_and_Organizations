@@ -111,6 +111,7 @@
     </fields>
     <fields>
         <fullName>Payment_Date__c</fullName>
+        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <label>Payment Date</label>
         <required>false</required>
@@ -141,6 +142,7 @@
     </fields>
     <fields>
         <fullName>Scheduled_Date__c</fullName>
+        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <label>Scheduled Date</label>
         <required>false</required>
