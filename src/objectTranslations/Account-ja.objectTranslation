@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help>この団体に関連する 0 より大きい金額の成立支援の最も古い完了日。[最初の完了日] に置き換えられました。</help>
-        <label>最初の支援日</label>
-        <name>FirstDonationDate__c</name>
-    </fields>
-    <fields>
-        <help>この団体に関連する 0 より大きい金額の成立支援の最も新しい完了日。[前回の完了日] に置き換えられました。</help>
-        <label>最終支援日</label>
-        <name>LastDonationDate__c</name>
-    </fields>
-    <fields>
-        <help>この団体に関連する成立支援の総額。[世帯] パッケージに置き換えられました。</help>
-        <label>これまでの支援総額(英版)</label>
-        <name>LifetimeDonationHistory_Amount__c</name>
-    </fields>
-    <fields>
-        <help>この団体に関連する成立支援の合計数。[世帯] パッケージに置き換えられました。</help>
-        <label>これまでの支援回数</label>
-        <name>LifetimeDonationHistory_Number__c</name>
-    </fields>
-    <fields>
         <help>世帯団体の主個人、または 1 対 1 団体の 1 対 1 個人。</help>
         <label>主個人</label>
         <name>One2OneContact__c</name>

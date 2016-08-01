@@ -16,16 +16,6 @@
         <name>Home_Address__c</name>
     </fields>
     <fields>
-        <help>ATENCIÓN - Este campo puede no reflejar correctamente la historia de donación. Por favor usar Fecha de última donación.</help>
-        <label>Fecha de la última transacción</label>
-        <name>Last_Donation_Date__c</name>
-    </fields>
-    <fields>
-        <help>ATENCIÓN - Este campos puede no reflejar correctamente la historia de donación. Por favor, usar el campo Total donado.</help>
-        <label>Monto total de transacciones</label>
-        <name>Lifetime_Giving_History_Amount__c</name>
-    </fields>
-    <fields>
         <help>Fórmula: En orden de preferencia, el campo SYSTEM_AccountType, el campo de Tipo en la cuenta y &quot;Organización&quot;.</help>
         <label>Tipo de organización</label>
         <name>Organization_Type__c</name>
@@ -124,11 +114,6 @@
             <masterLabel>One-to-One</masterLabel>
             <translation><!-- One-to-One --></translation>
         </picklistValues>
-    </fields>
-    <fields>
-        <help>Este campo ya no se usa. Debe reemplazarse con Tipo de cuenta.</help>
-        <label><!-- _SYSTEM: IsIndividual - DEPRECATED --></label>
-        <name>SystemIsIndividual__c</name>
     </fields>
     <fields>
         <help>Muestra el tipo de Cuenta con el que este Contacto está relacionado</help>

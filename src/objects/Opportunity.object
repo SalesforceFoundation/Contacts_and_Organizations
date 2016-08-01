@@ -98,6 +98,7 @@
     <fields>
         <fullName>Membership_End_Date__c</fullName>
         <description>Used for Membership Opportunities (Record Type)</description>
+        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>Date membership period ends.</inlineHelpText>
         <label>Membership End Date</label>
@@ -134,6 +135,7 @@
     <fields>
         <fullName>Membership_Start_Date__c</fullName>
         <description>Used for Membership Opportunities (Record Type)</description>
+        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>Date when membership period starts</inlineHelpText>
         <label>Membership Start Date</label>

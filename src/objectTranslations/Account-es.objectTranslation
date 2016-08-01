@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help>La fecha más antigua de oportunidades ganadas relacionadas a esta cuenta con el monto mayor a cero. REEMPLAZAR por Fecha de primera donación.</help>
-        <label>Fecha Primera Donación</label>
-        <name>FirstDonationDate__c</name>
-    </fields>
-    <fields>
-        <help>La fecha más reciente de oportunidades ganadas relacionadas a esta cuenta con el monto mayor a cero. REEMPLAZAR por Fecha de última donación.</help>
-        <label>Fecha Última Donación</label>
-        <name>LastDonationDate__c</name>
-    </fields>
-    <fields>
-        <help>Suma total de las oportunidades ganadas relacionadas a esta cuenta. REEMPLAZADO en el nuevo NPSP.</help>
-        <label>Monto Total Donado</label>
-        <name>LifetimeDonationHistory_Amount__c</name>
-    </fields>
-    <fields>
-        <help>Cantidad total de las oportunidades ganadas relacionadas a esta cuenta. REEMPLAZADO en el nuevo NPSP.</help>
-        <label>Número Total de Donaciones</label>
-        <name>LifetimeDonationHistory_Number__c</name>
-    </fields>
-    <fields>
         <help>El contacto principal para esta cuenta, o el contacto Uno-a-Uno para la cuenta Uno-a-Uno.</help>
         <label>Contacto principal</label>
         <name>One2OneContact__c</name>

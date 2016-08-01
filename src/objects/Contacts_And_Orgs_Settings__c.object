@@ -126,6 +126,7 @@
     <fields>
         <fullName>Last_Update_Check__c</fullName>
         <description>DEPRECATED.  New versions of the Nonprofit Starter Pack will be automatically installed.</description>
+        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED.  New versions of the Nonprofit Starter Pack will be automatically installed.</inlineHelpText>
         <label>DEPRECATED-Last Update Check</label>

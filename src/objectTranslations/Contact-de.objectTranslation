@@ -16,16 +16,6 @@
         <name>Home_Address__c</name>
     </fields>
     <fields>
-        <help>WARNUNG – Dieses Feld gibt möglicherweise die Spendenhistorie nicht korrekt wieder. Verwenden Sie stattdessen das Feld &quot;Datum des letzten Geschenks&quot;.</help>
-        <label>Letztes Transaktionsdatum</label>
-        <name>Last_Donation_Date__c</name>
-    </fields>
-    <fields>
-        <help>WARNUNG – Dieses Feld gibt möglicherweise die Spendenhistorien nicht korrekt wieder. Verwenden Sie stattdessen das Feld &quot;Gesamtbetrag&quot; im Kontaktdatensatz.</help>
-        <label>Transaktion während der Laufzeit gesamt</label>
-        <name>Lifetime_Giving_History_Amount__c</name>
-    </fields>
-    <fields>
         <help>Formel: In der Reihenfolge der Einstellung: das Feld &quot;SYSTEM_AccountTyp&quot;, das Feld &quot;Account-Typ&quot; und &quot;Organisation&quot;</help>
         <label>Organisationstyp</label>
         <name>Organization_Type__c</name>
@@ -124,11 +114,6 @@
             <masterLabel>One-to-One</masterLabel>
             <translation><!-- One-to-One --></translation>
         </picklistValues>
-    </fields>
-    <fields>
-        <help>Dieses Feld wird nicht mehr verwendet und es sollte daher nicht darauf verwiesen werden. Es wurde ersetzt durch &quot;Typ_des_Accounts_c&quot;.</help>
-        <label><!-- _SYSTEM: IsIndividual - DEPRECATED --></label>
-        <name>SystemIsIndividual__c</name>
     </fields>
     <fields>
         <help>Formel: &quot;Einzelperson&quot; oder &quot;Organisation&quot; je nach Einstellung unter Account</help>

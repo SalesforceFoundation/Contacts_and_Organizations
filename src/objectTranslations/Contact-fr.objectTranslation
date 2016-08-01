@@ -16,16 +16,6 @@
         <name>Home_Address__c</name>
     </fields>
     <fields>
-        <help><!-- WARNING - This field may not accurately reflect the donation history. Please use the Last Gift Date field instead. --></help>
-        <label>Date de la dernière transaction</label>
-        <name>Last_Donation_Date__c</name>
-    </fields>
-    <fields>
-        <help><!-- WARNING- This field may not accurately reflect donation histories. Please use the Total Amount field on the Contact record instead. --></help>
-        <label>Durée totale de la transaction</label>
-        <name>Lifetime_Giving_History_Amount__c</name>
-    </fields>
-    <fields>
         <help><!-- Formula: In order of preference, the SYSTEM_AccountType field, the Account Type field, and &quot;Organization&quot;. --></help>
         <label>Type d&apos;organisation</label>
         <name>Organization_Type__c</name>
@@ -124,11 +114,6 @@
             <masterLabel>One-to-One</masterLabel>
             <translation><!-- One-to-One --></translation>
         </picklistValues>
-    </fields>
-    <fields>
-        <help>Ce champ n&apos;est plus utilisé et ne doit pas être référencé. Le champ &quot;Type du compte&quot; (Type_of_Account__c) le remplace.</help>
-        <label>_SYSTEME: EstIndividu - OBSOLETE</label>
-        <name>SystemIsIndividual__c</name>
     </fields>
     <fields>
         <help>Indique le type de compte dont ce contact dépend.</help>
