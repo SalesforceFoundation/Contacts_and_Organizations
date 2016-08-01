@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help><!-- Alternate Email is an optional fourth email: Not personal, preferred, or work email. --></help>
+        <help>[その他のメール] は、個人メール、メール連絡先、勤務先メールに続く 4 番目の任意のメールです。</help>
         <label>その他メール</label>
         <name>AlternateEmail__c</name>
     </fields>
     <fields>
-        <help><!-- See Preferred Email field. --></help>
+        <help>[メール連絡先] 項目を参照してください。</help>
         <label>個人メール</label>
         <name>HomeEmail__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: Uses primary address type field to determine Home Address from Mailing or Other address. --></help>
+        <help>数式: [連絡先] 項目を使用して、[住所(郵送先)] または [住所(その他)] から自宅住所を決定します。</help>
         <label>自宅住所</label>
         <name>Home_Address__c</name>
     </fields>
     <fields>
-        <help><!-- WARNING - This field may not accurately reflect the donation history. Please use the Last Gift Date field instead. --></help>
+        <help>警告 - この項目は支援履歴を正確に反映しない場合があります。代わりに [最終支援日] 項目を使用してください。</help>
         <label>最終支援日</label>
         <name>Last_Donation_Date__c</name>
     </fields>
     <fields>
-        <help><!-- WARNING- This field may not accurately reflect donation histories. Please use the Total Amount field on the Contact record instead. --></help>
-        <label>これまでの支援総額</label>
+        <help>警告 - この項目は支援履歴を正確に反映しない場合があります。代わりに個人レコードの [総額] 項目を使用してください。</help>
+        <label>これまでの支援総額(英版)</label>
         <name>Lifetime_Giving_History_Amount__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: In order of preference, the SYSTEM_AccountType field, the Account Type field, and &quot;Organization&quot;. --></help>
-        <label><!-- Organization Type --></label>
+        <help>数式: 設定の順序、[SYSTEM_AccountType] 項目、[団体種別] 項目、および「団体」。</help>
+        <label>団体種別</label>
         <name>Organization_Type__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: If the Primary Address Type is Other, the Mailing Address.  If the Secondary Address Type is Other, the Other Address. --></help>
-        <label>その他連絡先</label>
+        <help>数式: [連絡先] が [その他] の場合は [住所(郵送先)]。数式: [連絡先(その他)] が [その他] の場合は [住所(その他)]。</help>
+        <label>その他住所</label>
         <name>Other_Address__c</name>
     </fields>
     <fields>
-        <help><!-- Which phone number should be used for most communications involving this Contact? --></help>
+        <help>この個人に関連するほとんどのコミュニケーションで使用する電話番号は?</help>
         <label>電話連絡先</label>
         <name>PreferredPhone__c</name>
         <picklistValues>
@@ -57,7 +57,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Which email should be used for most communications involving this Contact? --></help>
+        <help>この個人に関連するほとんどのコミュニケーションで使用するメールは?</help>
         <label>メール連絡先</label>
         <name>Preferred_Email__c</name>
         <picklistValues>
@@ -74,7 +74,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Which type of address is the mailing address? --></help>
+        <help>郵送先住所の住所種別。</help>
         <label>連絡先</label>
         <name>Primary_Address_Type__c</name>
         <picklistValues>
@@ -91,12 +91,12 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Excludes this Contact from One to One or Bucket account processing. --></help>
-        <label><!-- Private --></label>
+        <help>1 対 1 またはバケット団体の処理から個人を除外します。</help>
+        <label>非公開</label>
         <name>Private__c</name>
     </fields>
     <fields>
-        <help><!-- What type of address is the other address? --></help>
+        <help>その他住所の住所種別は?</help>
         <label>連絡先（その他）</label>
         <name>Secondary_Address_Type__c</name>
         <picklistValues>
@@ -113,12 +113,12 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Indicates which model drives Account relationship behavior: Individual (Bucket) or One-to-One --></help>
+        <help>個人 (バケット) モデルと 1 対 1 モデルのどちらで団体リレーションが動作するかを示します</help>
         <label><!-- _SYSTEM: ACCOUNT PROCESSOR --></label>
         <name>SystemAccountProcessor__c</name>
         <picklistValues>
             <masterLabel>Individual</masterLabel>
-            <translation><!-- Individual --></translation>
+            <translation>個人</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>One-to-One</masterLabel>
@@ -131,22 +131,22 @@
         <name>SystemIsIndividual__c</name>
     </fields>
     <fields>
-        <help>この個人とつながっている「取引先」の種類を示します</help>
-        <label><!-- Type of Account --></label>
+        <help>この個人とつながっている「団体」の種類を示します。</help>
+        <label>団体種別</label>
         <name>Type_of_Account__c</name>
     </fields>
     <fields>
-        <help><!-- See Preferred Email field. --></help>
+        <help>[メール連絡先] 項目を参照してください。</help>
         <label>勤務先メール</label>
         <name>WorkEmail__c</name>
     </fields>
     <fields>
-        <help><!-- See &apos;Preferred Phone&apos; field. --></help>
+        <help>[電話連絡先] 項目を参照してください。</help>
         <label>勤務先電話</label>
         <name>WorkPhone__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: If the Primary Address Type is Work, the Mailing Address.  If the Secondary Address Type is Work, the Other Address. --></help>
+        <help>数式: [第 1 住所] の [種別] が [勤務先] の場合は [住所(郵送先)]。[第 2 住所] の [種別] が [勤務先] の場合は [住所(その他)]。</help>
         <label>勤務先住所</label>
         <name>Work_Address__c</name>
     </fields>
