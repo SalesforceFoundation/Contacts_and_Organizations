@@ -54,19 +54,6 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Home&quot;),
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Last_Donation_Date__c</fullName>
-        <description>Formula:  The Last Donation Date of the Account where this Contact is the One to One Contact.   This has been superseded by the &apos;Last Gift Date&apos; field in the Households package.</description>
-        <externalId>false</externalId>
-        <formula>if( Account.One2OneContact__c = Id ,
-Account.LastDonationDate__c,
-null
-)</formula>
-        <inlineHelpText>WARNING - This field may not accurately reflect the donation history. Please use the Last Gift Date field instead.</inlineHelpText>
-        <label>DEPRECATED - Last Transaction Date</label>
-        <required>false</required>
-        <type>Date</type>
-    </fields>
-    <fields>
         <fullName>Lifetime_Giving_History_Amount__c</fullName>
         <description>Formula:  The Lifetime Donation Amount of the Account where this Contact is the One to One Contact.  This field has been superseded by the &apos;Total Amount&apos; field in the Households package.</description>
         <externalId>false</externalId>
@@ -253,16 +240,6 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
         </picklist>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>SystemIsIndividual__c</fullName>
-        <defaultValue>false</defaultValue>
-        <description>Deprecated field.  Do not use.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>This field is no longer used and should not be referenced. It has been replaced by Type_of_Account__c</inlineHelpText>
-        <label>_SYSTEM: IsIndividual - DEPRECATED</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Type_of_Account__c</fullName>
