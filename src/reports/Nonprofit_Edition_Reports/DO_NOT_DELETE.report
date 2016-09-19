@@ -3,7 +3,7 @@
     <columns>
         <field>ACCOUNT.NAME</field>
     </columns>
-    <description>This report and its containing folder, &quot;Nonprofit Edition Reports&quot;, are needed by the Nonprofit Starter Pack and should not be deleted.</description>
+    <description>This report and its containing folder, &quot;Nonprofit Edition Reports&quot;, are needed by the Nonprofit Success Pack and should not be deleted.</description>
     <format>Tabular</format>
     <name>Do Not Delete</name>
     <params>

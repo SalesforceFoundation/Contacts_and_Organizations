@@ -61,7 +61,7 @@
         <name>Contact_Merge_Step4</name>
     </customLabels>
     <customLabels>
-        <label>Durch das Account-Modell für das Nonprofit Starter Pack (NPSP) wird festgelegt, ob jeder Kontakt einen eigenen &quot;Eins-zu-Eins&quot;-Account und &quot;Haushalt&quot;-Account hat oder ob sie alle zu einem einzelnen &quot;Einzelperson&quot;-Account gehören. Dies sollte vor der Nutzung festgelegt und nicht mehr geändert werden, es sei denn, Sie verstehen genau, was die Änderungen bewirken. Wenn Sie Ihr Account-Modell mit realen Daten ändern möchten, müssen sie diese Daten zu dem neuen Modell migrieren.  Für neue Organisationen empfehlen wir das &quot;Haushalt&quot;-Account-Modell.</label>
+        <label>Durch das Account-Modell für das Nonprofit Success Pack (NPSP) wird festgelegt, ob jeder Kontakt einen eigenen &quot;Eins-zu-Eins&quot;-Account und &quot;Haushalt&quot;-Account hat oder ob sie alle zu einem einzelnen &quot;Einzelperson&quot;-Account gehören. Dies sollte vor der Nutzung festgelegt und nicht mehr geändert werden, es sei denn, Sie verstehen genau, was die Änderungen bewirken. Wenn Sie Ihr Account-Modell mit realen Daten ändern möchten, müssen sie diese Daten zu dem neuen Modell migrieren.  Für neue Organisationen empfehlen wir das &quot;Haushalt&quot;-Account-Modell.</label>
         <name>Contacts_Settings_Account_Model_Help_Text</name>
     </customLabels>
     <customLabels>
