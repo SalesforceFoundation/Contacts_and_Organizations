@@ -61,7 +61,7 @@
         <name>Contact_Merge_Step4</name>
     </customLabels>
     <customLabels>
-        <label>The Account Model for the Nonprofit Starter Pack determines if each Contact has it&apos;s own &quot;One-to-One&quot; Account or if they all are related to a single &quot;Individual&quot; Account. This should be set at the begining of use and not changed unless you fully understand the changes. If you change your Account model when you have real data, you&apos;ll need to migrate that data to the new model.</label>
+        <label>The Account Model for the Nonprofit Success Pack determines if each Contact has it&apos;s own &quot;One-to-One&quot; Account or if they all are related to a single &quot;Individual&quot; Account. This should be set at the begining of use and not changed unless you fully understand the changes. If you change your Account model when you have real data, you&apos;ll need to migrate that data to the new model.</label>
         <name>Contacts_Settings_Account_Model_Help_Text</name>
     </customLabels>
     <customLabels>

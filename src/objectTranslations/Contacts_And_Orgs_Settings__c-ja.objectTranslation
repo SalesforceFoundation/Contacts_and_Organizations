@@ -45,7 +45,7 @@
         <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Starter Pack will be automatically installed. --></help>
+        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
         <label>更新確認の有効化</label>
         <name>Enable_Update_Check__c</name>
     </fields>
@@ -55,17 +55,17 @@
         <name>HH_Account_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Starter Pack will be automatically installed. --></help>
+        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
         <label><!-- DEPRECATED-Has Package Update --></label>
         <name>Has_Package_Update__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Starter Pack will be automatically installed. --></help>
+        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
         <label>最終更新確認日時</label>
         <name>Last_Update_Check__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Starter Pack will be automatically installed. --></help>
+        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
         <label><!-- DEPRECATED-Max Package Version --></label>
         <name>Max_Package_Version__c</name>
     </fields>
@@ -80,7 +80,7 @@
         <name>Opportunity_Contact_Role_Default_role__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Starter Pack will be automatically installed. --></help>
+        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
         <label><!-- DEPRECATED-Package Update URL --></label>
         <name>Package_Update_URL__c</name>
     </fields>
@@ -90,7 +90,7 @@
         <name>Payments_Enabled__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Starter Pack will be automatically installed. --></help>
+        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
         <label>更新確認間隔</label>
         <name>Update_Check_Interval__c</name>
     </fields>
