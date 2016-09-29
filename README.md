@@ -12,7 +12,7 @@ This is the Contacts and Organizations package.
 * Contact Merge and Lead Conversion functionality
 * Phone, Email and Address Enhancements
 
-For more information go to [http://nonprofitstarterpack.org](http://nonprofitstarterpack.org)
+For more information go to [http://www.salesforce.org/nonprofit/nonprofit-success-pack](http://www.salesforce.org/nonprofit/nonprofit-success-pack)
 
 How do I log an issue?
 ---
