@@ -1,7 +1,7 @@
 project:
     name: Contacts_and_Organizations
     package:
-        name: Contacts & Organizations
+        name: 'Contacts &amp; Organizations'
         namespace: npe01
         api_version: 36.0
     git:
