@@ -34,7 +34,6 @@
     <fields>
         <fullName>Contact_Id_for_Role__c</fullName>
         <description>System field updated automatically.  Do not use.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>Hidden field for passing a Contact Id for Contact Role creation.</inlineHelpText>
         <label>Contact Id for Role</label>
@@ -59,7 +58,6 @@
     <fields>
         <fullName>Is_Opp_From_Individual__c</fullName>
         <description>Formula: Whether or not the related Account is defined as an individual (SYSTEMIsIndividual__c)</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <formula>IF( Account.SYSTEMIsIndividual__c, &apos;true&apos;, &apos;false&apos; )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -91,6 +89,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -98,7 +97,6 @@
     <fields>
         <fullName>Membership_End_Date__c</fullName>
         <description>Used for Membership Opportunities (Record Type)</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>Date membership period ends.</inlineHelpText>
         <label>Membership End Date</label>
@@ -128,6 +126,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -135,7 +134,6 @@
     <fields>
         <fullName>Membership_Start_Date__c</fullName>
         <description>Used for Membership Opportunities (Record Type)</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>Date when membership period starts</inlineHelpText>
         <label>Membership Start Date</label>

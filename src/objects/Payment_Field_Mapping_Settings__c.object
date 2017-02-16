@@ -6,7 +6,6 @@
     <fields>
         <fullName>Opportunity_Field__c</fullName>
         <description>The Opportunity field to map to.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <label>Opportunity Field</label>
         <length>255</length>
@@ -18,7 +17,6 @@
     <fields>
         <fullName>Payment_Field__c</fullName>
         <description>The Payment field to copy from.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <label>Payment Field</label>
         <length>255</length>

@@ -27,7 +27,6 @@
     <fields>
         <fullName>SYSTEM_AccountType__c</fullName>
         <description>Hidden system field: do not change.  Updated by automatic processes.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>Indicates which Account Model this account is for: Household Account, One-to-One, or Individual (bucket).</inlineHelpText>
         <label>_SYSTEM: AccountType</label>
