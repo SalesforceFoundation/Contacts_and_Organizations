@@ -89,7 +89,7 @@
         <name>Nonprofit_Edition_Reports</name>
     </customPageWebLinks>
     <customTabs>
-        <label><!-- Contact Merge --></label>
+        <label><!-- Contact Merge (OLD) --></label>
         <name>Contact_Merge</name>
     </customTabs>
     <customTabs>
