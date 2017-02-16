@@ -9,7 +9,7 @@
         <value><!-- Payment --></value>
     </caseValues>
     <fields>
-        <label>N° de comprobante/referencia</label>
+        <label>Compruebe / Número de referencia</label>
         <name>Check_Reference_Number__c</name>
     </fields>
     <fields>
@@ -61,7 +61,7 @@
     <layouts>
         <layout>Payment Layout</layout>
         <sections>
-            <label>Vínculos personalizados</label>
+            <label>Links personalizados</label>
             <section>Custom Links</section>
         </sections>
     </layouts>
