@@ -58,7 +58,6 @@
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
         <fullName>Check_Reference_Number__c</fullName>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <label>Check/Reference Number</label>
         <length>255</length>
@@ -69,7 +68,6 @@
     </fields>
     <fields>
         <fullName>Custom_Payment_Field__c</fullName>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <label>Custom Payment Field</label>
         <length>15</length>
@@ -111,7 +109,6 @@
     </fields>
     <fields>
         <fullName>Payment_Date__c</fullName>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <label>Payment Date</label>
         <required>false</required>
@@ -137,12 +134,12 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Scheduled_Date__c</fullName>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <label>Scheduled Date</label>
         <required>false</required>
