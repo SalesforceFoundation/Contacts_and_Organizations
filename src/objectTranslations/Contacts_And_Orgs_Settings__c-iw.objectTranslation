@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
+        <article>None</article>
         <plural>false</plural>
         <value><!-- Contacts And Orgs Settings --></value>
     </caseValues>
     <caseValues>
+        <article>Definite</article>
+        <plural>false</plural>
+        <value><!-- הContacts And Orgs Settings --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
         <plural>true</plural>
         <value><!-- Contacts And Orgs Settings --></value>
     </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>true</plural>
+        <value><!-- הContacts And Orgs Settings --></value>
+    </caseValues>
     <fields>
-        <help>Paramètre pour le modèle de compte. Doit normalement être soit « Compte de foyer », soit « Compte autocréé », soit « Individus ». Remplace le champ personnalisé Contact.SystemAccountProcessor__c.  « Compte de foyer » est le modèle recommandé.</help>
-        <label>Modèle de compte</label>
+        <help>הגדרה עבור מודל החשבון. צריך להיות &apos;חשבון משק בית&apos;, &apos;אחד לאחד&apos; או &apos;אישי&apos;. מחליף את השדה המותאם אישית Contact.SystemAccountProcessor__c.  המודל המומלץ הוא &apos;חשבון משק בית&apos;.</help>
+        <label>מודל חשבון</label>
         <name>Account_Processor__c</name>
     </fields>
     <fields>
@@ -34,8 +46,8 @@
         <name>DISABLE_OpportunityPayments_trigger__c</name>
     </fields>
     <fields>
-        <help>Indique si une opportunité doit être créée lors de la conversion d’une piste.</help>
-        <label>Créer opportunité en conversion de piste</label>
+        <help>מציין אם ליצור הזדמנות במהלך המרת הפניה.</help>
+        <label>צור תרומה בהמרת הפניה</label>
         <name>Default_Opp_on_Convert__c</name>
     </fields>
     <fields>
@@ -54,8 +66,8 @@
         <name>Enable_Update_Check__c</name>
     </fields>
     <fields>
-        <help>L’ID du type d’enregistrement de compte à utiliser pour les comptes de foyers. Si aucun n’est sélectionné, le compte utilisera le type d’enregistrement de compte par défaut de l’utilisateur.</help>
-        <label>Type d’enregistrement de compte de foyer</label>
+        <help>מזהה סוג רשומת החשבון שישמש עבור חשבונות של משקי בית. אם לא נבחר ערך, החשבון יוגדר לפי ברירת המחדל לסוג רשומת החשבון של המשתמש.</help>
+        <label>סוג רשומת חשבון משק בית</label>
         <name>HH_Account_RecordTypeID__c</name>
     </fields>
     <fields>
@@ -74,13 +86,13 @@
         <name>Max_Package_Version__c</name>
     </fields>
     <fields>
-        <help>L’ID du type d’enregistrement de compte à utiliser pour les comptes autocréés.  Si aucun n’est sélectionné, le compte utilisera le type d’enregistrement de compte par défaut de l’utilisateur.</help>
-        <label>Type d’enregistrement de compte autocréé</label>
+        <help>מזהה סוג רשומת החשבון שישמש עבור חשבונות מסוג &apos;אחד לאחד&apos;.  אם לא נבחר ערך, החשבון יוגדר לפי ברירת המחדל לסוג רשומת החשבון של המשתמש.</help>
+        <label>סוג רשומה אחד לאחד</label>
         <name>One_to_One_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help>Le rôle par défaut pour le rôle de contact principal d’opportunité créé automatiquement.</help>
-        <label>Rôle par défaut de contact d’opportunité</label>
+        <help>ברירת המחדל לתפקיד של איש הקשר הראשי בהזדמנות, הנוצר באופן אוטומטי.</help>
+        <label>תפקיד ברירת מחדל של איש קשר בתרומה</label>
         <name>Opportunity_Contact_Role_Default_role__c</name>
     </fields>
     <fields>
@@ -89,8 +101,8 @@
         <name>Package_Update_URL__c</name>
     </fields>
     <fields>
-        <help>Active les paiements automatiques créés pour les nouvelles opportunités/dons.</help>
-        <label>Création automatique de paiement</label>
+        <help>מאפשר יצירת תשלומים אוטומטית עבור הזדמנויות/תרומות חדשות.</help>
+        <label>יצירת תשלומים אוטומטית</label>
         <name>Payments_Enabled__c</name>
     </fields>
     <fields>
@@ -99,5 +111,4 @@
         <name>Update_Check_Interval__c</name>
     </fields>
     <gender><!-- Masculine --></gender>
-    <startsWith><!-- Consonant --></startsWith>
 </CustomObjectTranslation>

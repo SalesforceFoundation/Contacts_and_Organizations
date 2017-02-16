@@ -1,60 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
+        <article>None</article>
         <plural>false</plural>
         <value><!-- Payment --></value>
     </caseValues>
     <caseValues>
+        <article>Definite</article>
+        <plural>false</plural>
+        <value><!-- הPayment --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
         <plural>true</plural>
         <value><!-- Payment --></value>
     </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>true</plural>
+        <value><!-- הPayment --></value>
+    </caseValues>
     <fields>
-        <label>Numéro de chèque / de référence</label>
+        <label>המחאה/מספר סימוכין</label>
         <name>Check_Reference_Number__c</name>
     </fields>
     <fields>
-        <label>Champ personnalisé de paiement</label>
+        <label>שדה תשלום מותאם אישית</label>
         <name>Custom_Payment_Field__c</name>
     </fields>
     <fields>
-        <label>Opportunité</label>
+        <label>תרומה</label>
         <name>Opportunity__c</name>
-        <relationshipLabel>Paiements</relationshipLabel>
+        <relationshipLabel>תשלומים</relationshipLabel>
     </fields>
     <fields>
-        <label>Payé</label>
+        <label>שולם</label>
         <name>Paid__c</name>
     </fields>
     <fields>
-        <label>Montant du paiement</label>
+        <label>סכום תשלום</label>
         <name>Payment_Amount__c</name>
     </fields>
     <fields>
-        <label>Date du paiement</label>
+        <label>תאריך תשלום</label>
         <name>Payment_Date__c</name>
     </fields>
     <fields>
-        <label>Mode de paiement</label>
+        <label>שיטת תשלום</label>
         <name>Payment_Method__c</name>
         <picklistValues>
             <masterLabel>Cash</masterLabel>
-            <translation>Espèces</translation>
+            <translation>מזומן</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Check</masterLabel>
-            <translation>Coche</translation>
+            <translation>המחאה</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Credit Card</masterLabel>
-            <translation>Carte de crédit</translation>
+            <translation>כרטיס אשראי</translation>
         </picklistValues>
     </fields>
     <fields>
-        <label>Date prévue</label>
+        <label>תאריך מתוזמן</label>
         <name>Scheduled_Date__c</name>
     </fields>
     <fields>
-        <label>Déduit</label>
+        <label>מקוזז</label>
         <name>Written_Off__c</name>
     </fields>
     <gender><!-- Masculine --></gender>
@@ -66,13 +78,12 @@
         </sections>
     </layouts>
     <nameFieldLabel><!-- Payment Number --></nameFieldLabel>
-    <startsWith><!-- Consonant --></startsWith>
     <webLinks>
-        <label>Planifier des paiements</label>
+        <label>תזמן תשלומים</label>
         <name>Schedule_Payments</name>
     </webLinks>
     <webLinks>
-        <label>Déduire des paiements</label>
+        <label>מחק תשלומים</label>
         <name>Writeoff_Payments</name>
     </webLinks>
 </CustomObjectTranslation>

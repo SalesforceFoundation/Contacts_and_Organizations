@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help><!-- Alternate Email is an optional fourth email: Not personal, preferred, or work email. --></help>
+        <help>L’e-mail secondaire est un quatrième e-mail optionnel : en plus du personnel, préféré ou professionnel.</help>
         <label>E-mail secondaire</label>
         <name>AlternateEmail__c</name>
     </fields>
     <fields>
-        <help><!-- See Preferred Email field. --></help>
+        <help>Voir le champ d’e-mail préféré.</help>
         <label>E-mail personnel</label>
         <name>HomeEmail__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: Uses primary address type field to determine Home Address from Mailing or Other address. --></help>
+        <help>Formule : Utilise le champ de type d’adresse principale pour déterminer l’adresse de domicile à partir de l’adresse postale ou d’une autre adresse.</help>
         <label>Adresse du domicile</label>
         <name>Home_Address__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: In order of preference, the SYSTEM_AccountType field, the Account Type field, and &quot;Organization&quot;. --></help>
+        <help>Formule : Par ordre de préférence, le champ SYSTEM_AccountType, le champ type de compte, et « Organisation ».</help>
         <label>Type d&apos;organisation</label>
         <name>Organization_Type__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: If the Primary Address Type is Other, the Mailing Address.  If the Secondary Address Type is Other, the Other Address. --></help>
+        <help>Formule : Si le type d’adresse principale est Autre, l’adresse postale.  Si le type d’adresse secondaire est Autre, l’autre adresse.</help>
         <label>Autre adresse</label>
         <name>Other_Address__c</name>
     </fields>
     <fields>
-        <help><!-- Which phone number should be used for most communications involving this Contact? --></help>
+        <help>Quel numéro de téléphone doit être utilisé pour la plupart des communications impliquant ce contact ?</help>
         <label>Téléphone préféré</label>
         <name>PreferredPhone__c</name>
         <picklistValues>
@@ -47,7 +47,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Which email should be used for most communications involving this Contact? --></help>
+        <help>Quel e-mail doit être utilisé pour la plupart des communications impliquant ce contact ?</help>
         <label>E-mail préféré</label>
         <name>Preferred_Email__c</name>
         <picklistValues>
@@ -64,51 +64,51 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Which type of address is the mailing address? --></help>
+        <help>Quel est le type de l’adresse postale ?</help>
         <label>Type d&apos;adresse principale</label>
         <name>Primary_Address_Type__c</name>
         <picklistValues>
             <masterLabel>Home</masterLabel>
-            <translation><!-- Home --></translation>
+            <translation>Domicile</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
+            <translation>Autre</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Work</masterLabel>
-            <translation><!-- Work --></translation>
+            <translation>Travail</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Excludes this Contact from One to One or Bucket account processing. --></help>
+        <help>Exclut ce contact du traitement de comptes autocréés ou de comptes de panier.</help>
         <label>Privé(e)</label>
         <name>Private__c</name>
     </fields>
     <fields>
-        <help><!-- What type of address is the other address? --></help>
+        <help>Quel est le type de l’autre adresse ?</help>
         <label>Type d&apos;adresse secondaire</label>
         <name>Secondary_Address_Type__c</name>
         <picklistValues>
             <masterLabel>Home</masterLabel>
-            <translation><!-- Home --></translation>
+            <translation>Domicile</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
+            <translation>Autre</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Work</masterLabel>
-            <translation><!-- Work --></translation>
+            <translation>Travail</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Indicates which model drives Account relationship behavior: Individual (Bucket) or One-to-One --></help>
+        <help>Indique le modèle qui définit la relation du compte : Individus (panier) ou autocréé</help>
         <label>_SYSTEME: PROCESSEUR COMPTE</label>
         <name>SystemAccountProcessor__c</name>
         <picklistValues>
             <masterLabel>Individual</masterLabel>
-            <translation><!-- Individual --></translation>
+            <translation>Individu</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>One-to-One</masterLabel>
@@ -121,17 +121,17 @@
         <name>Type_of_Account__c</name>
     </fields>
     <fields>
-        <help><!-- See Preferred Email field. --></help>
+        <help>Voir le champ d’e-mail préféré.</help>
         <label>E-mail professionnel</label>
         <name>WorkEmail__c</name>
     </fields>
     <fields>
-        <help><!-- See &apos;Preferred Phone&apos; field. --></help>
+        <help>Voir le champ de téléphone préféré.</help>
         <label>Téléphone profesionnel</label>
         <name>WorkPhone__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: If the Primary Address Type is Work, the Mailing Address.  If the Secondary Address Type is Work, the Other Address. --></help>
+        <help>Formule : Si le type d’adresse principale est Professionnel, l’adresse postale.  Si le type d’adresse secondaire est Professionnel, l’autre adresse.</help>
         <label>Adresse professionnelle</label>
         <name>Work_Address__c</name>
     </fields>
