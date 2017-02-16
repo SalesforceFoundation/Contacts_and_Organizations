@@ -3,7 +3,6 @@
     <fields>
         <fullName>AlternateEmail__c</fullName>
         <description>Alternate Email is an optional fourth email: Not personal, preferred, or work email.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>Alternate Email is an optional fourth email: Not personal, preferred, or work email.</inlineHelpText>
         <label>Alternate Email</label>
@@ -15,7 +14,6 @@
     <fields>
         <fullName>HomeEmail__c</fullName>
         <description>See Preferred Email field.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>See Preferred Email field.</inlineHelpText>
         <label>Personal Email</label>
@@ -27,7 +25,6 @@
     <fields>
         <fullName>Home_Address__c</fullName>
         <description>Formula: Uses primary address type field to determine Home Address from Mailing or Other address.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <formula>if(
   ISPICKVAL(Primary_Address_Type__c,&quot;Home&quot;),
@@ -56,7 +53,6 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Home&quot;),
     <fields>
         <fullName>Organization_Type__c</fullName>
         <description>Formula: In order of preference, the SYSTEM_AccountType field, the Account Type field, and &quot;Organization&quot;.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <formula>NULLVALUE(IF( Account.SYSTEM_AccountType__c==&quot;&quot;, TEXT(Account.Type),Account.SYSTEM_AccountType__c),&quot;Organization&quot; )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -69,7 +65,6 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Home&quot;),
     <fields>
         <fullName>Other_Address__c</fullName>
         <description>Formula: If the Primary Address Type is Other, the Mailing Address.  If the Secondary Address Type is Other, the Other Address.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <formula>if(
   ISPICKVAL(Primary_Address_Type__c,&quot;Other&quot;),
@@ -120,6 +115,7 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
@@ -144,6 +140,7 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
@@ -168,6 +165,7 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
@@ -202,6 +200,7 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
@@ -222,13 +221,13 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Type_of_Account__c</fullName>
         <description>Formula: &quot;Individual&quot; or &quot;Organization&quot; depending on Account setting.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <formula>IF(Account.SYSTEMIsIndividual__c,&quot;Individual&quot;,&quot;Organization&quot;)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -241,7 +240,6 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
     <fields>
         <fullName>WorkEmail__c</fullName>
         <description>See Preferred Email field.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>See Preferred Email field.</inlineHelpText>
         <label>Work Email</label>
@@ -253,7 +251,6 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
     <fields>
         <fullName>WorkPhone__c</fullName>
         <description>See &apos;Preferred Phone&apos; field.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>See &apos;Preferred Phone&apos; field.</inlineHelpText>
         <label>Work Phone</label>
@@ -264,7 +261,6 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
     <fields>
         <fullName>Work_Address__c</fullName>
         <description>Formula: If the Primary Address Type is Work, the Mailing Address.  If the Secondary Address Type is Work, the Other Address.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <formula>if(
   ISPICKVAL(Primary_Address_Type__c,&quot;Work&quot;),

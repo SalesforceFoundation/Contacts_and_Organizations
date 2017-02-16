@@ -7,7 +7,6 @@
         <fullName>Account_Processor__c</fullName>
         <defaultValue>&quot;Household Account&quot;</defaultValue>
         <description>Setting for the Account model. Should be &quot;Household Account&quot;, &quot;One-to-One&quot;, or &quot;Individual&quot;. Replaces the custom field Contact.SystemAccountProcessor__c.  &quot;Household Account&quot; is the recommended model.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>Setting for the Account model. Should be &quot;Household Account&quot;, &quot;One-to-One&quot;, or &quot;Individual&quot;. Replaces the custom field Contact.SystemAccountProcessor__c.  &quot;Household Account&quot; is the recommended model.</inlineHelpText>
         <label>Account Model</label>
@@ -100,7 +99,6 @@
     <fields>
         <fullName>HH_Account_RecordTypeID__c</fullName>
         <description>The ID of the Account Record Type to be used for Household Accounts. If none is selected, the Account will default to the user&apos;s default Account Record Type.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>The ID of the Account Record Type to be used for Household Accounts. If none is selected, the Account will default to the user&apos;s default Account Record Type.</inlineHelpText>
         <label>Household Account Record Type</label>
@@ -113,7 +111,6 @@
     <fields>
         <fullName>Has_Package_Update__c</fullName>
         <description>DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed.</inlineHelpText>
         <label>DEPRECATED-Has Package Update</label>
@@ -126,7 +123,6 @@
     <fields>
         <fullName>Last_Update_Check__c</fullName>
         <description>DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed.</inlineHelpText>
         <label>DEPRECATED-Last Update Check</label>
@@ -137,7 +133,6 @@
     <fields>
         <fullName>Max_Package_Version__c</fullName>
         <description>DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed.</inlineHelpText>
         <label>DEPRECATED-Max Package Version</label>
@@ -150,7 +145,6 @@
     <fields>
         <fullName>One_to_One_RecordTypeID__c</fullName>
         <description>The ID of the Account Record Type to be used for One-to-One Accounts.  If none is selected, the Account will default to the user&apos;s default Account Record Type.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>The ID of the Account Record Type to be used for One-to-One Accounts.  If none is selected, the Account will default to the user&apos;s default Account Record Type.</inlineHelpText>
         <label>One-to-One Record Type</label>
@@ -163,7 +157,6 @@
     <fields>
         <fullName>Opportunity_Contact_Role_Default_role__c</fullName>
         <description>The default Contact Role automatically assigned to the Primary Contact for the Opportunity.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>The default Contact Role automatically assigned to the Primary Contact for the Opportunity.</inlineHelpText>
         <label>Default Opportunity Contact Role</label>
@@ -176,7 +169,6 @@
     <fields>
         <fullName>Package_Update_URL__c</fullName>
         <description>DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed.</description>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed.</inlineHelpText>
         <label>DEPRECATED-Package Update URL</label>
