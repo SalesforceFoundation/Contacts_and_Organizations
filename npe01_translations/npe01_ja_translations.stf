@@ -1,0 +1,139 @@
+Language code: ja
+Type: Bilingual
+
+------------------TRANSLATED-------------------
+
+ButtonOrLink.OppPayment__c.Schedule_Payments	Schedule Payments	支払のスケジュール	-
+ButtonOrLink.OppPayment__c.Writeoff_Payments	Write Off Payments	支払の取消	-
+ButtonOrLink.CustomPageItem.Nonprofit_Edition_Reports	Nonprofit Edition Reports	NPO版レポート	-
+ButtonOrLink.Opportunity.Matching_Donation	Matching Donation	マッチングギフト	-
+ButtonOrLink.Opportunity.New_Contact_Donation	New Contact Donation	新しい個人支援(英版)	-
+ButtonOrLink.Opportunity.New_Organization_Donation	New Account Donation	新しい団体支援(英版)	-
+CustomField.OppPayment__c.Check_Reference_Number.FieldLabel	Check/Reference Number	確認参照番号	-
+CustomField.OppPayment__c.Custom_Payment_Field.FieldLabel	Custom Payment Field	カスタム支払項目	-
+CustomField.OppPayment__c.Opportunity.FieldLabel	Opportunity	支援	-
+CustomField.OppPayment__c.Opportunity.RelatedListLabel	Payments	支払	-
+CustomField.OppPayment__c.Paid.FieldLabel	Paid	支払済	-
+CustomField.OppPayment__c.Payment_Amount.FieldLabel	Payment Amount	支払金額	-
+CustomField.OppPayment__c.Payment_Date.FieldLabel	Payment Date	支払日	-
+CustomField.OppPayment__c.Payment_Method.FieldLabel	Payment Method	支払方法	-
+CustomField.OppPayment__c.Scheduled_Date.FieldLabel	Scheduled Date	支払予定日	-
+CustomField.OppPayment__c.Written_Off.FieldLabel	Written Off	取消	-
+CustomField.Contacts_And_Orgs_Settings__c.Account_Processor.FieldLabel	Account Model	団体モデル	-
+CustomField.Contacts_And_Orgs_Settings__c.Account_Processor.HelpText	Setting for the Account model. Should be "Household Account", "One-to-One", or "Individual". Replaces the custom field Contact.SystemAccountProcessor__c.  "Household Account" is the recommended model.	団体モデルの設定。「世帯団体」、「1 対 1」、「個人」のいずれかを指定します。カスタム項目 Contact.SystemAccountProcessor__c の代わりに使用されます。「世帯団体」が推奨モデルです。	-
+CustomField.Contacts_And_Orgs_Settings__c.Default_Opp_on_Convert.FieldLabel	Create Opportunity on Lead Convert	リード取引開始時に支援を作成	-
+CustomField.Contacts_And_Orgs_Settings__c.Default_Opp_on_Convert.HelpText	Specifies whether to create an Opportunity during Lead conversion.	リード取引開始時に支援を作成するかどうかを指定します。	-
+CustomField.Contacts_And_Orgs_Settings__c.Enable_Update_Check.FieldLabel	DEPRECATED-Enable Update Check	更新確認の有効化	-
+CustomField.Contacts_And_Orgs_Settings__c.HH_Account_RecordTypeID.FieldLabel	Household Account Record Type	世帯団体レコードタイプ	-
+CustomField.Contacts_And_Orgs_Settings__c.HH_Account_RecordTypeID.HelpText	The ID of the Account Record Type to be used for Household Accounts. If none is selected, the Account will default to the user's default Account Record Type.	世帯団体に使用される団体レコードタイプの ID。何も選択しない場合、団体にはユーザのデフォルト団体レコードタイプが設定されます。	-
+CustomField.Contacts_And_Orgs_Settings__c.Last_Update_Check.FieldLabel	DEPRECATED-Last Update Check	最終更新確認日時	-
+CustomField.Contacts_And_Orgs_Settings__c.One_to_One_RecordTypeID.FieldLabel	One-to-One Record Type	1 対 1 レコードタイプ	-
+CustomField.Contacts_And_Orgs_Settings__c.One_to_One_RecordTypeID.HelpText	The ID of the Account Record Type to be used for One-to-One Accounts.  If none is selected, the Account will default to the user's default Account Record Type.	1 対 1 団体で使用される団体レコードタイプの ID。何も選択しない場合、団体にはユーザのデフォルト団体レコードタイプが設定されます。	-
+CustomField.Contacts_And_Orgs_Settings__c.Opportunity_Contact_Role_Default_role.FieldLabel	Default Opportunity Contact Role	支援個人の役割のデフォルト役割	-
+CustomField.Contacts_And_Orgs_Settings__c.Opportunity_Contact_Role_Default_role.HelpText	The default role for the primary Opportunity Contact Role that gets automatically created.	自動的に作成される主支援個人の役割のデフォルト役割。	-
+CustomField.Contacts_And_Orgs_Settings__c.Payments_Enabled.FieldLabel	Automatic Payment Creation	支払の有効化	-
+CustomField.Contacts_And_Orgs_Settings__c.Payments_Enabled.HelpText	Enables automatic Payments created for new Opportunities/Donations.	新しい支援で作成される自動支払を有効にします。	-
+CustomField.Contacts_And_Orgs_Settings__c.Update_Check_Interval.FieldLabel	DEPRECATED-Update Check Interval	更新確認間隔	-
+CustomField.Payment_Field_Mapping_Settings__c.Opportunity_Field.FieldLabel	Opportunity Field	支援の項目	-
+CustomField.Payment_Field_Mapping_Settings__c.Payment_Field.FieldLabel	Payment Field	支払の項目	-
+CustomField.Account.One2OneContact.FieldLabel	Primary Contact	主個人	-
+CustomField.Account.One2OneContact.RelatedListLabel	Account	団体	-
+CustomField.Account.SYSTEM_AccountType.HelpText	System field: do not use or change.	システムフィールド：利用または変更することは禁止	*
+CustomField.Contact.AlternateEmail.FieldLabel	Alternate Email	その他メール	-
+CustomField.Contact.AlternateEmail.HelpText	Alternate Email is an optional fourth email: Not personal, preferred, or work email.	[その他のメール] は、個人メール、メール連絡先、勤務先メールに続く 4 番目の任意のメールです。	-
+CustomField.Contact.HomeEmail.FieldLabel	Personal Email	個人メール	-
+CustomField.Contact.HomeEmail.HelpText	See Preferred Email field.	[メール連絡先] 項目を参照してください。	-
+CustomField.Contact.Home_Address.FieldLabel	Home Address	自宅住所	-
+CustomField.Contact.Home_Address.HelpText	Formula: Uses primary address type field to determine Home Address from Mailing or Other address.	数式: [連絡先] 項目を使用して、[住所(郵送先)] または [住所(その他)] から自宅住所を決定します。	-
+CustomField.Contact.Organization_Type.FieldLabel	Organization Type	団体種別	-
+CustomField.Contact.Organization_Type.HelpText	Formula: In order of preference, the SYSTEM_AccountType field, the Account Type field, and "Organization".	数式: 設定の順序、[SYSTEM_AccountType] 項目、[団体種別] 項目、および「団体」。	-
+CustomField.Contact.Other_Address.FieldLabel	Other Address	その他住所	-
+CustomField.Contact.Other_Address.HelpText	Formula: If the Primary Address Type is Other, the Mailing Address.  If the Secondary Address Type is Other, the Other Address.	数式: [連絡先] が [その他] の場合は [住所(郵送先)]。数式: [連絡先(その他)] が [その他] の場合は [住所(その他)]。	-
+CustomField.Contact.PreferredPhone.FieldLabel	Preferred Phone	電話連絡先	-
+CustomField.Contact.PreferredPhone.HelpText	Which phone number should be used for most communications involving this Contact?	この個人に関連するほとんどのコミュニケーションで使用する電話番号は?	-
+CustomField.Contact.Preferred_Email.FieldLabel	Preferred Email	メール連絡先	-
+CustomField.Contact.Preferred_Email.HelpText	Which email should be used for most communications involving this Contact?	この個人に関連するほとんどのコミュニケーションで使用するメールは?	-
+CustomField.Contact.Primary_Address_Type.FieldLabel	Primary Address Type	連絡先	-
+CustomField.Contact.Primary_Address_Type.HelpText	Which type of address is the mailing address?	郵送先住所の住所種別。	-
+CustomField.Contact.Private.FieldLabel	Private	非公開	-
+CustomField.Contact.Private.HelpText	Excludes this Contact from One to One or Bucket account processing.	1 対 1 またはバケット団体の処理から個人を除外します。	-
+CustomField.Contact.Secondary_Address_Type.FieldLabel	Secondary Address Type	連絡先（その他）	-
+CustomField.Contact.Secondary_Address_Type.HelpText	What type of address is the other address?	その他住所の住所種別は?	-
+CustomField.Contact.SystemAccountProcessor.HelpText	Indicates which model drives Account relationship behavior: Individual (Bucket) or One-to-One	個人 (バケット) モデルと 1 対 1 モデルのどちらで団体リレーションが動作するかを示します	-
+CustomField.Contact.Type_of_Account.FieldLabel	Type of Account	団体種別	-
+CustomField.Contact.Type_of_Account.HelpText	Formula: "Individual" or "Organization" depending on Account setting.	この個人とつながっている「取引先」の種類を示します	-
+CustomField.Contact.WorkEmail.FieldLabel	Work Email	勤務先メール	-
+CustomField.Contact.WorkEmail.HelpText	See Preferred Email field.	[メール連絡先] 項目を参照してください。	-
+CustomField.Contact.WorkPhone.FieldLabel	Work Phone	勤務先電話	-
+CustomField.Contact.WorkPhone.HelpText	See 'Preferred Phone' field.	[電話連絡先] 項目を参照してください。	-
+CustomField.Contact.Work_Address.FieldLabel	Work Address	勤務先住所	-
+CustomField.Contact.Work_Address.HelpText	Formula: If the Primary Address Type is Work, the Mailing Address.  If the Secondary Address Type is Work, the Other Address.	数式: [第 1 住所] の [種別] が [勤務先] の場合は [住所(郵送先)]。[第 2 住所] の [種別] が [勤務先] の場合は [住所(その他)]。	-
+CustomField.Lead.Preferred_Email.FieldLabel	Preferred Email	メール連絡先	-
+CustomField.Lead.Preferred_Phone.FieldLabel	Preferred Phone	電話連絡先	-
+CustomField.Opportunity.Amount_Outstanding.FieldLabel	Remaining Balance	残高	-
+CustomField.Opportunity.Amount_Outstanding.HelpText	Formula: The Amount of this Opportunity minus the Payment Writeoff Amount and Payment Amount Received.	数式: この支援から取消支払金額と受取支払金額を差し引いた金額。	-
+CustomField.Opportunity.Amount_Written_Off.FieldLabel	Payment Writeoff Amount	取消支払金額	-
+CustomField.Opportunity.Amount_Written_Off.HelpText	Total value of the Payments marked as written-off or noncollectable for this Opportunity.	この支援で取消または回収不可とマークされた支払の合計値。	-
+CustomField.Opportunity.Contact_Id_for_Role.FieldLabel	Contact Id for Role	役割の個人 ID	-
+CustomField.Opportunity.Contact_Id_for_Role.HelpText	Hidden field for passing a Contact Id for Contact Role creation.	個人の役割の作成で個人 ID を渡すための非表示項目。	-
+CustomField.Opportunity.Do_Not_Automatically_Create_Payment.FieldLabel	Do Not Automatically Create Payment	支払を自動的に作成しない	-
+CustomField.Opportunity.Do_Not_Automatically_Create_Payment.HelpText	If payments are active, and if checked, a new payment will not be automatically created for this Opportunity.	支払が有効な場合にオンにすると、この支援の新しい支払は自動的に作成されません。	-
+CustomField.Opportunity.Is_Opp_From_Individual.FieldLabel	Is Opp From Individual	個人からの支援	-
+CustomField.Opportunity.Is_Opp_From_Individual.HelpText	Formula: Whether or not the related Account is defined as an individual (SYSTEMIsIndividual__c)	数式: 関連団体が個人として定義されているかどうか (SYSTEMIsIndividual__c)	-
+CustomField.Opportunity.Member_Level.FieldLabel	Member Level	会員レベル	-
+CustomField.Opportunity.Member_Level.HelpText	Determines the value on the Contact or Account of the Last Membership Level field.	最終会員レベル項目の個人または団体に基づいて値を決定します。	-
+CustomField.Opportunity.Membership_End_Date.FieldLabel	Membership End Date	会員終了日	-
+CustomField.Opportunity.Membership_End_Date.HelpText	Date membership period ends.	会員期間が終了する日付	-
+CustomField.Opportunity.Membership_Origin.FieldLabel	Membership Origin	会員状況	-
+CustomField.Opportunity.Membership_Origin.HelpText	Is this a renewal, a new membership, or a membership with someone who lapsed and has returned.	これは、更新、新規会員、または退会後に復帰した会員です。	-
+CustomField.Opportunity.Membership_Start_Date.FieldLabel	Membership Start Date	会員開始日	-
+CustomField.Opportunity.Membership_Start_Date.HelpText	Date when membership period starts	会員期間が開始する日付	-
+CustomField.Opportunity.Number_of_Payments.FieldLabel	Number of Payments	支払回数	-
+CustomField.Opportunity.Number_of_Payments.HelpText	Total number of payments for this Opportunity (Donation)	この「支援」に対する「支払」データの件数です。	-
+CustomField.Opportunity.Payments_Made.FieldLabel	Payment Amount Received	受取支払金額	-
+CustomField.Opportunity.Payments_Made.HelpText	The total value of Payments marked as paid for this Opportunity.	この「支援」に対する「支払」データの中で、既に支払われた金額です	-
+PicklistValue.OppPayment__c.Payment_Method.Cash	Cash	現金	-
+PicklistValue.OppPayment__c.Payment_Method.Check	Check	小切手	-
+PicklistValue.OppPayment__c.Payment_Method.Credit Card	Credit Card	クレジットカード	-
+PicklistValue.Contact.Primary_Address_Type.Home	Home	自宅	-
+PicklistValue.Contact.Primary_Address_Type.Other	Other	その他	-
+PicklistValue.Contact.Primary_Address_Type.Work	Work	勤務先	-
+PicklistValue.Contact.Secondary_Address_Type.Home	Home	自宅	-
+PicklistValue.Contact.Secondary_Address_Type.Other	Other	その他	-
+PicklistValue.Contact.Secondary_Address_Type.Work	Work	勤務先	-
+PicklistValue.Contact.SystemAccountProcessor.Individual	Individual	個人	-
+PicklistValue.Lead.Preferred_Email.Alternate	Alternate	その他	-
+PicklistValue.Lead.Preferred_Email.Personal	Personal	個人	-
+PicklistValue.Lead.Preferred_Email.Work	Work	勤務先	-
+PicklistValue.Lead.Preferred_Phone.Home	Home	自宅	-
+PicklistValue.Lead.Preferred_Phone.Mobile	Mobile	携帯	-
+PicklistValue.Lead.Preferred_Phone.Other	Other	その他	-
+PicklistValue.Lead.Preferred_Phone.Work	Work	勤務先	-
+PicklistValue.Opportunity.Member_Level.Bronze	Bronze	ブロンズ	-
+PicklistValue.Opportunity.Member_Level.Gold	Gold	ゴールド	-
+PicklistValue.Opportunity.Member_Level.Silver	Silver	シルバー	-
+PicklistValue.Opportunity.Membership_Origin.New	New	新規	-
+PicklistValue.Opportunity.Membership_Origin.Reacquire	Reacquire	再取得	-
+PicklistValue.Opportunity.Membership_Origin.Renewal	Renewal	更新	-
+WebTab.Contact_Merge	Contact Merge (OLD)	個人のマージ	-
+WebTab.Contacts_Settings	Contacts Settings	個人設定	-
+WebTab.Payment_Mapping	Payment Mapping	支払マッピング	-
+CustomLabel.Contact_Merge_Error_Confirm_Message	Merging Contacts is an irreversible process.	不正確な個人のマージを行うと、必要なデータが消失する場合があります。マージ後に残したい個人のレコードに、すべての必要なデータが含まれていることを確認してください。データが足りない場合は、個人のマージを行う前に、データをコピーしてください。	-
+CustomLabel.Contact_Merge_Error_Confirm_Message_Households	If you have the Household package, please note that the Households for merged Contacts are not affected during the merge. If you want to merge the Households, you should do that by hand, making sure the winning Contact is connected to the correct Household.	家族（Household）のパッケージを使用している場合、個人をマージしても、家族には影響しないことに注意してください。家族のマージは、手動で行う必要があります。マージ後の個人が適切な家族と結び付けられていることを確認し、家族を手動でマージしてください。	-
+CustomLabel.Contact_Merge_Error_Confirm_Message_Nothing_Found	No matching Contacts found, please search again.	該当する個人が見つかりませんでした。再検索してください。	-
+CustomLabel.Contact_Merge_Error_Contact_not_found	Failed to query contact information.	個人のデータの取得に失敗しました。	-
+CustomLabel.Contact_Merge_Error_Lock_failed	Failed to lock all the records for merging.	マージ対象のレコードをロックできませんでした。	-
+CustomLabel.Contact_Merge_Error_Merge_Failed	Failed to merge the contacts.	個人をマージできませんでした。	-
+CustomLabel.Contact_Merge_Error_No_Master	Please select a master record for merging.	マスターとなるレコードを選択してください。	-
+CustomLabel.Contact_Merge_Error_Query_Failed	Failed to query all the selected contacts.	選択した個人のデータの取得に失敗しました。	-
+CustomLabel.Contact_Merge_Error_Too_Few_Contacts	Please select at least 2 contacts to merge.	マージするレコードを少なくとも2つ選択してください。	-
+CustomLabel.Contact_Merge_Error_Too_Many_Contacts	You can only merge up to 3 contacts at a time.	一度にマージできるレコードは3つまでです。	-
+CustomLabel.Contact_Merge_Error_please_retry	Please retry from start.	最初からやり直してください。	-
+CustomLabel.Contact_Merge_Step1	Enter search text to find duplicate Contacts	重複した個人を検索する文字列を入力してください。	-
+CustomLabel.Contact_Merge_Step2	Pick up to 3 Contacts to Merge	マージするレコードを2つまたは3つ選択してください。	-
+CustomLabel.Contact_Merge_Step3	Pick the winning Contact	残すレコードを選択してください。	-
+CustomLabel.Contact_Merge_Step4	Merge the Contacts	個人をマージします。	-
+CustomLabel.Contacts_Settings_Account_Model_Help_Text	The Nonprofit Success Pack supports three different Account models: the Household Account model, the One-to-One Account model, and the Individual (or "Bucket") Account model. For more information on any of these models, see the <a href="https://powerofus.force.com/NPSP_Account_Model" target="_blank">NPSP Documentation</a>.\n<br/><br> \nFor those using NPSP3 and later, the Household Account model is recommended.	「Nonprofit Success Pack」では、2つの「団体モデル（Account Model）」が存在します。「個人」が、「1対1（One-to-One）」の「団体」をそれぞれ持つモデルと、「個人（Individual）」という1つの「団体」を共有して持つモデルの2つです。設定で切り替ることができ、標準は「1対1（One-to-One）」です。設定は使用開始前に行い、使用開始以降は、設定変更の影響を理解できない場合、設定変更しないことを推奨します。使用開始後に設定変更した場合、新しい「団体モデル」に合わせて、データを移行させることが必要になります。	-
+CustomLabel.Contacts_Settings_Contact_Roles_Help_Text	You can choose to have an Opportunity Contact Role automatically created when Opportunities are created. There is a field on Opportunity called "Contact Id for Role". If you import Opportunities with a valid Contact Id in that field, a Contact Role will be created according to the defaults set below. You can also turn the functionality off completely by modifying the Trigger Configuration.	「支援」の作成時に、自動的に作成される「個人の役割」を選択してください。「支援」には「Contact Id for Role」という項目があります。有効な「個人ID」を利用して、「支援」をインポートした場合、選択した「個人の役割」が自動的に作成されます。また、チェックボックスをOFFにして、この機能を使用しないことも可能です。	-
+CustomLabel.Matching_Donation_Record_Suffix	{3} Matching Donation {1}	{3} マッチングギフト {1}	-
+CustomLabel.Opportunity_Contact_Role_Error_Bad_Contact_Id	The Contact Id supplied in the Contact Id for Role field was invalid. Please use a valid Contact Id.	The Contact Id supplied in the Contact Id for Role field was invalid. Please use a valid Contact Id.	-

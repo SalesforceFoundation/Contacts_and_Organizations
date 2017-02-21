@@ -6,6 +6,7 @@
         <members>IndividualAccounts</members>
         <members>NPSPPkgVersionCheck</members>
         <members>Tests</members>
+        <members>UTIL_CustomLabel_TEST</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -109,7 +110,8 @@
         <name>CustomLabel</name>
     </types>
     <types>
-        <name>CustomLabel</name>
+        <members>CustomLabels</members>
+        <name>CustomLabels</name>
     </types>
     <types>
         <members>Account</members>
