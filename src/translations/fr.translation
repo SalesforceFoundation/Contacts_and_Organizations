@@ -73,7 +73,7 @@
         <name>DefaultContactTransactionCurrency</name>
     </customLabels>
     <customLabels>
-        <label><!-- Suffix added to the name of the original donation to form matching donation name --></label>
+        <label>{3} Don équivalent {1}</label>
         <name>Matching_Donation_Record_Suffix</name>
     </customLabels>
     <customLabels>
@@ -89,15 +89,15 @@
         <name>Nonprofit_Edition_Reports</name>
     </customPageWebLinks>
     <customTabs>
-        <label><!-- Contact Merge (OLD) --></label>
+        <label>Fusion de contact (OLD)</label>
         <name>Contact_Merge</name>
     </customTabs>
     <customTabs>
-        <label><!-- Contacts Settings --></label>
+        <label>Paramètres de contacts</label>
         <name>Contacts_Settings</name>
     </customTabs>
     <customTabs>
-        <label><!-- Payment Mapping --></label>
+        <label>Mappage de paiement</label>
         <name>Payment_Mapping</name>
     </customTabs>
 </Translations>
