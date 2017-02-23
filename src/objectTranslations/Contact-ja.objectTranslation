@@ -116,7 +116,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>この個人とつながっている「取引先」の種類を示します</help>
+        <help>この個人とつながっている「団体」の種類を示します。</help>
         <label>団体種別</label>
         <name>Type_of_Account__c</name>
     </fields>

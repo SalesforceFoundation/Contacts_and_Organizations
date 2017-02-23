@@ -69,7 +69,7 @@
         <name>Contacts_Settings_Contact_Roles_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>€</label>
+        <label>$</label>
         <name>DefaultContactTransactionCurrency</name>
     </customLabels>
     <customLabels>
