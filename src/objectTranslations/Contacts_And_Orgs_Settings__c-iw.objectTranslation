@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>None</article>
+        <plural>false</plural>
+        <value><!-- Contacts And Orgs Settings --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>false</plural>
+        <value><!-- הContacts And Orgs Settings --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>true</plural>
+        <value><!-- Contacts And Orgs Settings --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>true</plural>
+        <value><!-- הContacts And Orgs Settings --></value>
+    </caseValues>
+    <fields>
+        <help>הגדרה עבור מודל החשבון. צריך להיות &apos;חשבון משק בית&apos;, &apos;אחד לאחד&apos; או &apos;אישי&apos;. מחליף את השדה המותאם אישית Contact.SystemAccountProcessor__c.  המודל המומלץ הוא &apos;חשבון משק בית&apos;.</help>
+        <label>מודל חשבון</label>
+        <name>Account_Processor__c</name>
+    </fields>
+    <fields>
+        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
+        <label><!-- DEPRECATED-Disable_IndividualAcc_trigger --></label>
+        <name>DISABLE_IndividualAccounts_trigger__c</name>
+    </fields>
+    <fields>
+        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
+        <label><!-- DEPRECATED-Disable_OppAccount_trigger --></label>
+        <name>DISABLE_OpportunityAccount_trigger__c</name>
+    </fields>
+    <fields>
+        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
+        <label><!-- DEPRECATED-Disable_OCR_trigger --></label>
+        <name>DISABLE_OpportunityContactRoles_trigger__c</name>
+    </fields>
+    <fields>
+        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
+        <label><!-- DEPRECATED-Disable_OppPayments_trigger --></label>
+        <name>DISABLE_OpportunityPayments_trigger__c</name>
+    </fields>
+    <fields>
+        <help>מציין אם ליצור הזדמנות במהלך המרת הפניה.</help>
+        <label>צור תרומה בהמרת הפניה</label>
+        <name>Default_Opp_on_Convert__c</name>
+    </fields>
+    <fields>
+        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
+        <label><!-- DEPRECATED-Disable Account Model Trigger --></label>
+        <name>Disable_Account_Model_Trigger__c</name>
+    </fields>
+    <fields>
+        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
+        <label><!-- DEPRECATED-Enable OppContactRole Trigger --></label>
+        <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
+    </fields>
+    <fields>
+        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
+        <label><!-- DEPRECATED-Enable Update Check --></label>
+        <name>Enable_Update_Check__c</name>
+    </fields>
+    <fields>
+        <help>מזהה סוג רשומת החשבון שישמש עבור חשבונות של משקי בית. אם לא נבחר ערך, החשבון יוגדר לפי ברירת המחדל לסוג רשומת החשבון של המשתמש.</help>
+        <label>סוג רשומת חשבון משק בית</label>
+        <name>HH_Account_RecordTypeID__c</name>
+    </fields>
+    <fields>
+        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
+        <label><!-- DEPRECATED-Has Package Update --></label>
+        <name>Has_Package_Update__c</name>
+    </fields>
+    <fields>
+        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
+        <label><!-- DEPRECATED-Last Update Check --></label>
+        <name>Last_Update_Check__c</name>
+    </fields>
+    <fields>
+        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
+        <label><!-- DEPRECATED-Max Package Version --></label>
+        <name>Max_Package_Version__c</name>
+    </fields>
+    <fields>
+        <help>מזהה סוג רשומת החשבון שישמש עבור חשבונות מסוג &apos;אחד לאחד&apos;.  אם לא נבחר ערך, החשבון יוגדר לפי ברירת המחדל לסוג רשומת החשבון של המשתמש.</help>
+        <label>סוג רשומה אחד לאחד</label>
+        <name>One_to_One_RecordTypeID__c</name>
+    </fields>
+    <fields>
+        <help>ברירת המחדל לתפקיד של איש הקשר הראשי בהזדמנות, הנוצר באופן אוטומטי.</help>
+        <label>תפקיד ברירת מחדל של איש קשר בתרומה</label>
+        <name>Opportunity_Contact_Role_Default_role__c</name>
+    </fields>
+    <fields>
+        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
+        <label><!-- DEPRECATED-Package Update URL --></label>
+        <name>Package_Update_URL__c</name>
+    </fields>
+    <fields>
+        <help>מאפשר יצירת תשלומים אוטומטית עבור הזדמנויות/תרומות חדשות.</help>
+        <label>יצירת תשלומים אוטומטית</label>
+        <name>Payments_Enabled__c</name>
+    </fields>
+    <fields>
+        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
+        <label><!-- DEPRECATED-Update Check Interval --></label>
+        <name>Update_Check_Interval__c</name>
+    </fields>
+    <gender><!-- Masculine --></gender>
+</CustomObjectTranslation>
