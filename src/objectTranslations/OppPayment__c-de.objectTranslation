@@ -103,7 +103,7 @@
         <name>Schedule_Payments</name>
     </webLinks>
     <webLinks>
-        <label><!-- Writeoff_Payments --></label>
+        <label>Zahlungen abschreiben</label>
         <name>Writeoff_Payments</name>
     </webLinks>
 </CustomObjectTranslation>
