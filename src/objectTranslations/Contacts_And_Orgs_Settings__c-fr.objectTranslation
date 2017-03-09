@@ -9,8 +9,8 @@
         <value><!-- Contacts And Orgs Settings --></value>
     </caseValues>
     <fields>
-        <help><!-- Setting for the Account model. Should be &quot;Household Account&quot;, &quot;One-to-One&quot;, or &quot;Individual&quot;. Replaces the custom field Contact.SystemAccountProcessor__c.  &quot;Household Account&quot; is the recommended model. --></help>
-        <label><!-- Account Model --></label>
+        <help>Paramètre pour le modèle de compte. Doit normalement être soit « Compte de foyer », soit « Compte autocréé », soit « Individus ». Remplace le champ personnalisé Contact.SystemAccountProcessor__c.  « Compte de foyer » est le modèle recommandé.</help>
+        <label>Modèle de compte</label>
         <name>Account_Processor__c</name>
     </fields>
     <fields>
@@ -34,8 +34,8 @@
         <name>DISABLE_OpportunityPayments_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- Specifies whether to create an Opportunity during Lead conversion. --></help>
-        <label><!-- Create Opportunity on Lead Convert --></label>
+        <help>Indique si une opportunité doit être créée lors de la conversion d’une piste.</help>
+        <label>Créer opportunité en conversion de piste</label>
         <name>Default_Opp_on_Convert__c</name>
     </fields>
     <fields>
@@ -54,8 +54,8 @@
         <name>Enable_Update_Check__c</name>
     </fields>
     <fields>
-        <help><!-- The ID of the Account Record Type to be used for Household Accounts. If none is selected, the Account will default to the user&apos;s default Account Record Type. --></help>
-        <label><!-- Household Account Record Type --></label>
+        <help>L’ID du type d’enregistrement de compte à utiliser pour les comptes de foyers. Si aucun n’est sélectionné, le compte utilisera le type d’enregistrement de compte par défaut de l’utilisateur.</help>
+        <label>Type d’enregistrement de compte de foyer</label>
         <name>HH_Account_RecordTypeID__c</name>
     </fields>
     <fields>
@@ -74,13 +74,13 @@
         <name>Max_Package_Version__c</name>
     </fields>
     <fields>
-        <help><!-- The ID of the Account Record Type to be used for One-to-One Accounts.  If none is selected, the Account will default to the user&apos;s default Account Record Type. --></help>
-        <label><!-- One-to-One Record Type --></label>
+        <help>L’ID du type d’enregistrement de compte à utiliser pour les comptes autocréés.  Si aucun n’est sélectionné, le compte utilisera le type d’enregistrement de compte par défaut de l’utilisateur.</help>
+        <label>Type d’enregistrement de compte autocréé</label>
         <name>One_to_One_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help><!-- The default Contact Role automatically assigned to the Primary Contact for the Opportunity. --></help>
-        <label><!-- Default Opportunity Contact Role --></label>
+        <help>Le rôle par défaut pour le rôle de contact principal d’opportunité créé automatiquement.</help>
+        <label>Rôle par défaut de contact d’opportunité</label>
         <name>Opportunity_Contact_Role_Default_role__c</name>
     </fields>
     <fields>
@@ -89,8 +89,8 @@
         <name>Package_Update_URL__c</name>
     </fields>
     <fields>
-        <help><!-- If enabled, Salesforce automatically creates Payments for new Opportunities (Donations). --></help>
-        <label><!-- Automatic Payment Creation --></label>
+        <help>Active les paiements automatiques créés pour les nouvelles opportunités/dons.</help>
+        <label>Création automatique de paiement</label>
         <name>Payments_Enabled__c</name>
     </fields>
     <fields>
