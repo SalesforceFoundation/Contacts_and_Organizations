@@ -206,10 +206,10 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
     </fields>
     <fields>
         <fullName>SystemAccountProcessor__c</fullName>
-        <description>Hidden system field: do not change.  Updated by automatic processes.  See Contacts &amp; Organization settings.</description>
+        <description>NO LONGER USED - Hidden system field: do not change.  Updated by automatic processes.  See Contacts &amp; Organization settings.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Indicates which model drives Account relationship behavior: Individual (Bucket) or One-to-One</inlineHelpText>
-        <label>_SYSTEM: ACCOUNT PROCESSOR</label>
+        <inlineHelpText>NO LONGER USED - Indicates which model drives Account relationship behavior: Individual (Bucket) or One-to-One</inlineHelpText>
+        <label>DEPRECATED - _SYSTEM: ACCOUNT PROCESSOR</label>
         <picklist>
             <picklistValues>
                 <fullName>One-to-One</fullName>

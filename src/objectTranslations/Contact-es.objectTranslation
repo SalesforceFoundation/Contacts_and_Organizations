@@ -104,7 +104,7 @@
     </fields>
     <fields>
         <help>Indica que modelo define la relación con la cuenta: Individual o Uno-a-Uno</help>
-        <label><!-- _SYSTEM: ACCOUNT PROCESSOR --></label>
+        <label><!-- DEPRECATED - _SYSTEM: ACCOUNT PROCESSOR --></label>
         <name>SystemAccountProcessor__c</name>
         <picklistValues>
             <masterLabel>Individual</masterLabel>
