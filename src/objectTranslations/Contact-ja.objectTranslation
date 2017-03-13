@@ -104,7 +104,7 @@
     </fields>
     <fields>
         <help>個人 (バケット) モデルと 1 対 1 モデルのどちらで団体リレーションが動作するかを示します</help>
-        <label><!-- _SYSTEM: ACCOUNT PROCESSOR --></label>
+        <label><!-- DEPRECATED - _SYSTEM: ACCOUNT PROCESSOR --></label>
         <name>SystemAccountProcessor__c</name>
         <picklistValues>
             <masterLabel>Individual</masterLabel>

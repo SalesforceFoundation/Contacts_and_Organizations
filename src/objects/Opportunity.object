@@ -177,7 +177,7 @@
         <encodingKey>UTF-8</encodingKey>
         <height>600</height>
         <linkType>url</linkType>
-        <masterLabel>Matching Donation</masterLabel>
+        <masterLabel>DEPRECATED - Matching Donation</masterLabel>
         <openType>sidebar</openType>
         <protected>false</protected>
         <url>/apex/npsp__OPP_MatchingDonationsBTN?id={!Opportunity.Id}</url>
