@@ -6,6 +6,7 @@
         <members>IndividualAccounts</members>
         <members>NPSPPkgVersionCheck</members>
         <members>Tests</members>
+        <members>UTIL_CustomLabel_TEST</members>
         <name>ApexClass</name>
     </types>
     <types>
