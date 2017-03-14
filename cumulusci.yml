@@ -6,3 +6,9 @@ project:
         api_version: 37.0
     git:
         prefix_release: rel/
+
+flows:
+    ci_feature:
+        tasks:
+            5:
+                task: None
