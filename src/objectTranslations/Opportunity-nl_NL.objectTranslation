@@ -1,94 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help><!-- Formula: The Amount of this Opportunity minus the Payment Writeoff Amount and Payment Amount Received. --></help>
-        <label><!-- Remaining Balance --></label>
+        <help>Formule: Het Bedrag van deze Opportunity minus het betaling afschrijvingsbedrag en betaling ontvangen bedrag</help>
+        <label>Resterende Saldo</label>
         <name>Amount_Outstanding__c</name>
     </fields>
     <fields>
-        <help><!-- Total value of the Payments marked as written-off or noncollectable for this Opportunity. --></help>
-        <label><!-- Payment Writeoff Amount --></label>
+        <help>Totale Waarde van de betalingen die gemarkeerd zijn als afgeschreven of niet incasseerbaar voor deze opportunity.</help>
+        <label>Betaling af te schrijven Bedrag</label>
         <name>Amount_Written_Off__c</name>
     </fields>
     <fields>
-        <help><!-- Hidden field for passing a Contact Id for Contact Role creation. --></help>
-        <label><!-- Contact Id for Role --></label>
+        <help>Verborgen veld voor het aannemen van een contact Id voor Contact Rol creatie.</help>
+        <label>Contactpersoon ID voor Rol</label>
         <name>Contact_Id_for_Role__c</name>
     </fields>
     <fields>
-        <help><!-- If payments are active, and if checked, a new payment will not be automatically created for this Opportunity. --></help>
-        <label><!-- Do Not Automatically Create Payment --></label>
+        <help>Als betalingen actief zijn, en indien aangevinkt, een nieuwe betaling zal niet automatisch gemaakt worden voor deze opportunity.</help>
+        <label>Maak geen automatische betaling</label>
         <name>Do_Not_Automatically_Create_Payment__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: Whether or not the related Account is defined as an individual (SYSTEMIsIndividual__c) --></help>
-        <label><!-- Is Opp From Individual --></label>
+        <help>Formule: is de gerelateerde account gedefinieerd als een individu of niet.</help>
+        <label>Is Opp van Individu</label>
         <name>Is_Opp_From_Individual__c</name>
     </fields>
     <fields>
-        <help><!-- Determines the value on the Contact or Account of the Last Membership Level field. --></help>
-        <label><!-- Member Level --></label>
+        <help>Bepaalt de waarde op het Contact of Account van het Laaste Lidmaatschap Niveau Veld.</help>
+        <label>Lid Niveau</label>
         <name>Member_Level__c</name>
         <picklistValues>
             <masterLabel>Bronze</masterLabel>
-            <translation><!-- Bronze --></translation>
+            <translation>Brons</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gold</masterLabel>
-            <translation><!-- Gold --></translation>
+            <translation>Goud</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Silver</masterLabel>
-            <translation><!-- Silver --></translation>
+            <translation>Zilver</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Date membership period ends. --></help>
-        <label><!-- Membership End Date --></label>
+        <help>Datum lidmaatschap periode eindigt.</help>
+        <label>Lidmaatschap Eind Datum</label>
         <name>Membership_End_Date__c</name>
     </fields>
     <fields>
-        <help><!-- Is this a renewal, a new membership, or a membership with someone who lapsed and has returned. --></help>
-        <label><!-- Membership Origin --></label>
+        <help>Als dit een vernieuwing is, een nieuw lidmaatschap, of een lidmaatschap met iemand die weg was gegaan maar is terug gekomen.</help>
+        <label>Lidmaatschap Oorsprong</label>
         <name>Membership_Origin__c</name>
         <picklistValues>
             <masterLabel>New</masterLabel>
-            <translation><!-- New --></translation>
+            <translation>Nieuw</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Reacquire</masterLabel>
-            <translation><!-- Reacquire --></translation>
+            <translation>Terugkerend</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Renewal</masterLabel>
-            <translation><!-- Renewal --></translation>
+            <translation>Vernieuwend</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Date when membership period starts --></help>
-        <label><!-- Membership Start Date --></label>
+        <help>Datum wanneer lidmaatschap periode begint</help>
+        <label>Lidmaatschap Start Datum</label>
         <name>Membership_Start_Date__c</name>
     </fields>
     <fields>
-        <help><!-- Total number of payments for this Opportunity (Donation) --></help>
-        <label><!-- Number of Payments --></label>
+        <help>Totaal aantal betalingen voor deze opportunity (donatie)</help>
+        <label>Aantal Betalingen</label>
         <name>Number_of_Payments__c</name>
     </fields>
     <fields>
-        <help><!-- The total value of Payments marked as paid for this Opportunity. --></help>
-        <label><!-- Payment Amount Received --></label>
+        <help>De totale waarde van betalingen die gemarkeerd zijn als betaald voor deze opportunity.</help>
+        <label>Betalingsbedrag Ontvangen</label>
         <name>Payments_Made__c</name>
     </fields>
     <webLinks>
-        <label><!-- Matching_Donation --></label>
+        <label>Gematchte Donatie</label>
         <name>Matching_Donation</name>
     </webLinks>
     <webLinks>
-        <label><!-- New_Contact_Donation --></label>
+        <label>Nieuwe Contactpersoon Donatie</label>
         <name>New_Contact_Donation</name>
     </webLinks>
     <webLinks>
-        <label><!-- New_Organization_Donation --></label>
+        <label>Nieuwe Account Donatie</label>
         <name>New_Organization_Donation</name>
     </webLinks>
 </CustomObjectTranslation>

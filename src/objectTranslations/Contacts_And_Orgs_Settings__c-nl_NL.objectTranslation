@@ -9,93 +9,93 @@
         <value><!-- Contacts And Orgs Settings --></value>
     </caseValues>
     <fields>
-        <help><!-- Setting for the Account model. Should be &quot;Household Account&quot;, &quot;One-to-One&quot;, or &quot;Individual&quot;. Replaces the custom field Contact.SystemAccountProcessor__c.  &quot;Household Account&quot; is the recommended model. --></help>
+        <help>Instellingen voor het acoount model. Zouden moeten zijn &quot;Huishouden&quot; ,&quot;een-op-een&quot; of &quot;Individueel&quot;. Vervangt het aangepaste veld Contact.SystemAccountProcessor__c  Huishouden is het aanbevolen model.</help>
         <label><!-- Account Model --></label>
         <name>Account_Processor__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_IndividualAcc_trigger --></label>
+        <help>AFGEKEURD. Trigger gedrag nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
+        <label>AFGEKEURD-Disable_IndividueelAcc_trigger</label>
         <name>DISABLE_IndividualAccounts_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OppAccount_trigger --></label>
+        <help>AFGEKEURD. Trigger gedrag nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
+        <label>AFGEKEURD-Disable_OppAccount_Trigger</label>
         <name>DISABLE_OpportunityAccount_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OCR_trigger --></label>
+        <help>AFGEKEURD. Trigger gedrag nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
+        <label>AFGEKEURD-Uitschakelen_OCR_trigger</label>
         <name>DISABLE_OpportunityContactRoles_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OppPayments_trigger --></label>
+        <help>AFGEKEURD. Trigger gedrag nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
+        <label>AFGEKEURD-Disable_OppBetalingen_trigger</label>
         <name>DISABLE_OpportunityPayments_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- Specifies whether to create an Opportunity during Lead conversion. --></help>
-        <label><!-- Create Opportunity on Lead Convert --></label>
+        <help>Geeft aan of er een Opportunity aangemaakt moet worden bij het converteren van een Lead.</help>
+        <label>Opportunity Maken op Lead Converteren</label>
         <name>Default_Opp_on_Convert__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable Account Model Trigger --></label>
+        <help>AFGEKEURD. Trigger gedrag nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
+        <label>AFGEKEURD-Disable Account Model Trigger</label>
         <name>Disable_Account_Model_Trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Enable OppContactRole Trigger --></label>
+        <help>AFGEKEURD. Trigger gedrag nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
+        <label>AFGEKEURD-Enable OppContactRole Trigger</label>
         <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Enable Update Check --></label>
+        <help>Nieuwe versies van het Non-profit Starter Pakket worden automatisch geïnstalleerd.</help>
+        <label>AFGEKEURD-Inschakelen Update Check</label>
         <name>Enable_Update_Check__c</name>
     </fields>
     <fields>
-        <help><!-- The ID of the Account Record Type to be used for Household Accounts. If none is selected, the Account will default to the user&apos;s default Account Record Type. --></help>
-        <label><!-- Household Account Record Type --></label>
+        <help>Het ID van het Account Record Type wordt gebruikt voor het huishouden Account. Als er niks is geselecteerd, zal Het Account de standaard Record Type van de gebruiker hanteren.</help>
+        <label>Huishoud Account Record Type</label>
         <name>HH_Account_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Has Package Update --></label>
+        <help>Nieuwe versies van het Non-profit Starter Pakket worden automatisch geïnstalleerd.</help>
+        <label>AFGEKEURD-Heeft Pakket Update</label>
         <name>Has_Package_Update__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Last Update Check --></label>
+        <help>Nieuwe versies van het Non-profit Starter Pakket worden automatisch geïnstalleerd.</help>
+        <label>AFGEKEURD-Laatste Update Check</label>
         <name>Last_Update_Check__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Max Package Version --></label>
+        <help>Nieuwe versies van het Non-profit Starter Pakket worden automatisch geïnstalleerd.</help>
+        <label>AFGEKEURD-Max Pakket Versie</label>
         <name>Max_Package_Version__c</name>
     </fields>
     <fields>
-        <help><!-- The ID of the Account Record Type to be used for One-to-One Accounts.  If none is selected, the Account will default to the user&apos;s default Account Record Type. --></help>
-        <label><!-- One-to-One Record Type --></label>
+        <help>Het ID van het Account Record Type wordt gebruikt voor het een-op-een Accounts. Als er niks is geselecteerd, zal Het Account de standaard Record Type van de gebruiker hanteren.</help>
+        <label>Een-op-Een Record Type</label>
         <name>One_to_One_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help><!-- The default Contact Role automatically assigned to the Primary Contact for the Opportunity. --></help>
-        <label><!-- Default Opportunity Contact Role --></label>
+        <help>De standaard rol voor de Primaire Opportunity Contact Rol die automatisch worden aangemaakt</help>
+        <label>Standaard Opportunity Contactpersoon Rol</label>
         <name>Opportunity_Contact_Role_Default_role__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Package Update URL --></label>
+        <help>Nieuwe versies van het Non-profit Starter Pakket worden automatisch geïnstalleerd.</help>
+        <label>AFGEKEURD-Pakket Update URL</label>
         <name>Package_Update_URL__c</name>
     </fields>
     <fields>
-        <help><!-- If enabled, Salesforce automatically creates Payments for new Opportunities (Donations). --></help>
-        <label><!-- Automatic Payment Creation --></label>
+        <help>Schakelt automatisch Betalingen in gecreëerd voor nieuwe Kansen / Donaties</help>
+        <label>Automatische Betaling Maken</label>
         <name>Payments_Enabled__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Update Check Interval --></label>
+        <help>Nieuwe versies van het Non-profit Starter Pakket worden automatisch geïnstalleerd.</help>
+        <label>AFGEKEURD-Update Check Interval</label>
         <name>Update_Check_Interval__c</name>
     </fields>
     <gender><!-- Neuter --></gender>
