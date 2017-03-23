@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label><!-- Contact Merge Error - Confirm Message --></label>
+        <name>Contact_Merge_Error_Confirm_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Error Confirm Message Households --></label>
+        <name>Contact_Merge_Error_Confirm_Message_Households</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Error Confirm Message Nothing Found --></label>
+        <name>Contact_Merge_Error_Confirm_Message_Nothing_Found</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Error - Contact not found --></label>
+        <name>Contact_Merge_Error_Contact_not_found</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Error - Lock failed --></label>
+        <name>Contact_Merge_Error_Lock_failed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Error - Merge Failed --></label>
+        <name>Contact_Merge_Error_Merge_Failed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Error - No Master --></label>
+        <name>Contact_Merge_Error_No_Master</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Error - Query Failed --></label>
+        <name>Contact_Merge_Error_Query_Failed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Error - Too Few Contacts --></label>
+        <name>Contact_Merge_Error_Too_Few_Contacts</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Error - Too Many Contacts --></label>
+        <name>Contact_Merge_Error_Too_Many_Contacts</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Error - please retry --></label>
+        <name>Contact_Merge_Error_please_retry</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Step1 --></label>
+        <name>Contact_Merge_Step1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Step2 --></label>
+        <name>Contact_Merge_Step2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Step3 --></label>
+        <name>Contact_Merge_Step3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Merge Step4 --></label>
+        <name>Contact_Merge_Step4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contacts Settings Account Model Help Text --></label>
+        <name>Contacts_Settings_Account_Model_Help_Text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contacts Settings Contact Roles Help Text --></label>
+        <name>Contacts_Settings_Contact_Roles_Help_Text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DefaultContactTransactionCurrency --></label>
+        <name>DefaultContactTransactionCurrency</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Suffix added to the name of the original donation to form matching donation name --></label>
+        <name>Matching_Donation_Record_Suffix</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Record type for matching donation. Set to $Source to match the original donation --></label>
+        <name>Matching_Donation_Record_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Opportunity Contact Role Error - Bad Contact Id --></label>
+        <name>Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
+    </customLabels>
+    <customPageWebLinks>
+        <label><!-- Nonprofit Edition Reports --></label>
+        <name>Nonprofit_Edition_Reports</name>
+    </customPageWebLinks>
+    <customTabs>
+        <label><!-- Contact Merge (OLD) --></label>
+        <name>Contact_Merge</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Contacts Settings --></label>
+        <name>Contacts_Settings</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Payment Mapping --></label>
+        <name>Payment_Mapping</name>
+    </customTabs>
+</Translations>
