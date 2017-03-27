@@ -127,33 +127,40 @@
         <members>Account-es</members>
         <members>Account-fr</members>
         <members>Account-ja</members>
+        <members>Account-nl_NL</members>
         <members>Contact-de</members>
         <members>Contact-es</members>
         <members>Contact-fr</members>
         <members>Contact-ja</members>
+        <members>Contact-nl_NL</members>
         <members>Contacts_And_Orgs_Settings__c-de</members>
         <members>Contacts_And_Orgs_Settings__c-en_US</members>
         <members>Contacts_And_Orgs_Settings__c-es</members>
         <members>Contacts_And_Orgs_Settings__c-fr</members>
         <members>Contacts_And_Orgs_Settings__c-ja</members>
+        <members>Contacts_And_Orgs_Settings__c-nl_NL</members>
         <members>Lead-de</members>
         <members>Lead-es</members>
         <members>Lead-fr</members>
         <members>Lead-ja</members>
+        <members>Lead-nl_NL</members>
         <members>OppPayment__c-de</members>
         <members>OppPayment__c-en_US</members>
         <members>OppPayment__c-es</members>
         <members>OppPayment__c-fr</members>
         <members>OppPayment__c-ja</members>
+        <members>OppPayment__c-nl_NL</members>
         <members>Opportunity-de</members>
         <members>Opportunity-es</members>
         <members>Opportunity-fr</members>
         <members>Opportunity-ja</members>
+        <members>Opportunity-nl_NL</members>
         <members>Payment_Field_Mapping_Settings__c-de</members>
         <members>Payment_Field_Mapping_Settings__c-en_US</members>
         <members>Payment_Field_Mapping_Settings__c-es</members>
         <members>Payment_Field_Mapping_Settings__c-fr</members>
         <members>Payment_Field_Mapping_Settings__c-ja</members>
+        <members>Payment_Field_Mapping_Settings__c-nl_NL</members>
         <name>CustomObjectTranslation</name>
     </types>
     <types>
@@ -188,6 +195,7 @@
         <members>es</members>
         <members>fr</members>
         <members>ja</members>
+        <members>nl_NL</members>
         <name>Translations</name>
     </types>
     <types>
