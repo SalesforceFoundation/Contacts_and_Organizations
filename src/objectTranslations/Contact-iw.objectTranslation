@@ -104,7 +104,7 @@
     </fields>
     <fields>
         <help>מציין איזה מודל קובע את ההתנהגות של קשרי חשבונות: אישי (Bucket) או &apos;אחד לאחד&apos;</help>
-        <label><!-- _SYSTEM: ACCOUNT PROCESSOR --></label>
+        <label><!-- DEPRECATED - _SYSTEM: ACCOUNT PROCESSOR --></label>
         <name>SystemAccountProcessor__c</name>
         <picklistValues>
             <masterLabel>Individual</masterLabel>
