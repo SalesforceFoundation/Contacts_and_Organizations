@@ -172,9 +172,9 @@ if(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
     <fields>
         <fullName>Private__c</fullName>
         <defaultValue>false</defaultValue>
-        <description>Excludes this Contact from any Individual account processing. If account left blank, it will remain blank.</description>
+        <description>Excludes this Contact from any Individual Account processing. If you leave the Account field blank, it will remain blank.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Excludes this Contact from any Individual account processing. If account left blank, it will remain blank.</inlineHelpText>
+        <inlineHelpText>Excludes this Contact from any Individual Account processing. If you leave the Account field blank, it will remain blank.</inlineHelpText>
         <label>Private</label>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Checkbox</type>
