@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help>Formule: Het Bedrag van deze Opportunity minus het betaling afschrijvingsbedrag en betaling ontvangen bedrag</help>
+        <help>Formule: Het Bedrag van deze Opportunity minus het Betaling Afschrijvingsbedrag en Betaling Ontvangen Bedrag.</help>
         <label>Resterende Saldo</label>
         <name>Amount_Outstanding__c</name>
     </fields>
     <fields>
-        <help>Totale Waarde van de betalingen die gemarkeerd zijn als afgeschreven of niet incasseerbaar voor deze opportunity.</help>
-        <label>Betaling af te schrijven Bedrag</label>
+        <help>Totale waarde van de Betalingen die gemarkeerd zijn als afgeschreven of niet incasseerbaar voor deze Opportunity.</help>
+        <label>Betaling Afschrijvingsbedrag</label>
         <name>Amount_Written_Off__c</name>
     </fields>
     <fields>
-        <help>Verborgen veld voor het aannemen van een contact Id voor Contact Rol creatie.</help>
+        <help>Verborgen veld voor het aannemen van een Contactpersoon Id voor Contactpersoon Rol creatie.</help>
         <label>Contactpersoon ID voor Rol</label>
         <name>Contact_Id_for_Role__c</name>
     </fields>
     <fields>
         <help>Als betalingen actief zijn, en indien aangevinkt, een nieuwe betaling zal niet automatisch gemaakt worden voor deze opportunity.</help>
-        <label>Maak geen automatische betaling</label>
+        <label>Maak Geen Automatische Betaling</label>
         <name>Do_Not_Automatically_Create_Payment__c</name>
     </fields>
     <fields>
-        <help>Formule: is de gerelateerde account gedefinieerd als een individu of niet.</help>
-        <label>Is Opp van Individu</label>
+        <help>Formule: is de gerelateerde Account gedefinieerd als een individu of niet.</help>
+        <label>Is Opportunity van Individu</label>
         <name>Is_Opp_From_Individual__c</name>
     </fields>
     <fields>
-        <help>Bepaalt de waarde op het Contact of Account van het Laaste Lidmaatschap Niveau Veld.</help>
+        <help>Bepaalt de waarde op het Contactpersoon of Account van het Laaste Lidmaatschap Niveau Veld.</help>
         <label>Lid Niveau</label>
         <name>Member_Level__c</name>
         <picklistValues>
@@ -43,13 +43,13 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>Datum lidmaatschap periode eindigt.</help>
-        <label>Lidmaatschap Eind Datum</label>
+        <help>Datum waarop Lidmaatschap periode eindigt.</help>
+        <label>Lidmaatschap Einddatum</label>
         <name>Membership_End_Date__c</name>
     </fields>
     <fields>
-        <help>Als dit een vernieuwing is, een nieuw lidmaatschap, of een lidmaatschap met iemand die weg was gegaan maar is terug gekomen.</help>
-        <label>Lidmaatschap Oorsprong</label>
+        <help>Is dit een vernieuwing, een nieuw Lidmaatschap, of een verlopen Lidmaatschap met iemand die is teruggekomen.</help>
+        <label>Lidmaatschap Herkomst</label>
         <name>Membership_Origin__c</name>
         <picklistValues>
             <masterLabel>New</masterLabel>
@@ -65,30 +65,30 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>Datum wanneer lidmaatschap periode begint</help>
-        <label>Lidmaatschap Start Datum</label>
+        <help>Datum waarop Lidmaatschap periode begint</help>
+        <label>Lidmaatschap Startdatum</label>
         <name>Membership_Start_Date__c</name>
     </fields>
     <fields>
-        <help>Totaal aantal betalingen voor deze opportunity (donatie)</help>
+        <help>Totaal aantal Betalingen voor deze Opportunity (donatie)</help>
         <label>Aantal Betalingen</label>
         <name>Number_of_Payments__c</name>
     </fields>
     <fields>
-        <help>De totale waarde van betalingen die gemarkeerd zijn als betaald voor deze opportunity.</help>
-        <label>Betalingsbedrag Ontvangen</label>
+        <help>De totale waarde van Betalingen die gemarkeerd zijn als betaald voor deze Opportunity.</help>
+        <label>Betaling Bedrag Ontvangen</label>
         <name>Payments_Made__c</name>
     </fields>
     <webLinks>
-        <label>Gematchte Donatie</label>
+        <label>VEROUDERD - Matching Donation</label>
         <name>Matching_Donation</name>
     </webLinks>
     <webLinks>
-        <label>Nieuwe Contactpersoon Donatie</label>
+        <label>Nieuwe Donatie Contactpersoon</label>
         <name>New_Contact_Donation</name>
     </webLinks>
     <webLinks>
-        <label>Nieuwe Account Donatie</label>
+        <label>Nieuwe Donatie Account</label>
         <name>New_Organization_Donation</name>
     </webLinks>
 </CustomObjectTranslation>

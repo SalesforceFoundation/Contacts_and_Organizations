@@ -1,71 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label><!-- Contact Merge Error - Confirm Message --></label>
+        <label>Samenvoegen van Contactpersonen is een onomkeerbaar proces.</label>
         <name>Contact_Merge_Error_Confirm_Message</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Error Confirm Message Households --></label>
+        <label>Als je het Huishouden pakket hebt, let er dan op dan Huishoudens van samengevoegde Contactpersonen niet wijzigen gedurende het proces. Als je ook de Huishoudens wilt samenvoegen, doe dit dan handmatig en zorg dat de juiste Contactpersoon aan het juiste Huishouden gekoppeld is.</label>
         <name>Contact_Merge_Error_Confirm_Message_Households</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Error Confirm Message Nothing Found --></label>
+        <label>Geen matchende Contactpersonen gevonden, zoek opnieuw.</label>
         <name>Contact_Merge_Error_Confirm_Message_Nothing_Found</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Error - Contact not found --></label>
+        <label>Mislukt om de Contactpersoon Informatie op te vragen.</label>
         <name>Contact_Merge_Error_Contact_not_found</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Error - Lock failed --></label>
+        <label>Mislukt om alle records te vergrendelen voor het samenvoegen.</label>
         <name>Contact_Merge_Error_Lock_failed</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Error - Merge Failed --></label>
+        <label>Mislukt om de Contactpersonen samen te voegen.</label>
         <name>Contact_Merge_Error_Merge_Failed</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Error - No Master --></label>
+        <label>Selecteer het Hoofdrecord voor het samenvoegen.</label>
         <name>Contact_Merge_Error_No_Master</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Error - Query Failed --></label>
+        <label>Mislukt om alle geselecteerde Contactpersonen op te vragen.</label>
         <name>Contact_Merge_Error_Query_Failed</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Error - Too Few Contacts --></label>
+        <label>Selecteer minstens twee Contactpersonen om samen te voegen.</label>
         <name>Contact_Merge_Error_Too_Few_Contacts</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Error - Too Many Contacts --></label>
+        <label>U kunt maximaal drie Contactpersonen tegelijk samenvoegen.</label>
         <name>Contact_Merge_Error_Too_Many_Contacts</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Error - please retry --></label>
+        <label>Probeer opnieuw vanaf het begin.</label>
         <name>Contact_Merge_Error_please_retry</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Step1 --></label>
+        <label>Voer zoektekst in om dubbele Contactpersonen te vinden.</label>
         <name>Contact_Merge_Step1</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Step2 --></label>
+        <label>Kies drie Contactpersonen om samen te voegen.</label>
         <name>Contact_Merge_Step2</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Step3 --></label>
+        <label>Kies de winnende Contactpersoon.</label>
         <name>Contact_Merge_Step3</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact Merge Step4 --></label>
+        <label>Voeg de Contactpersonen samen.</label>
         <name>Contact_Merge_Step4</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contacts Settings Account Model Help Text --></label>
+        <label>Het Nonprofit Success Pack ondersteunt drie verschillende Account Modellen: het Huishouden Account Model, het Eén-op-Eén Account Model en het Individu (of &quot;Bucket&quot;) Account Model. Voor meer informatie over deze Modellen, zie de  &lt;a href=&quot;https://powerofus.force.com/NPSP_Account_Model&quot; target=&quot;_blank&quot;&gt;NPSP Documentatie&lt;/a&gt;.
+&lt;br/&gt;&lt;br&gt; 
+</label>
         <name>Contacts_Settings_Account_Model_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contacts Settings Contact Roles Help Text --></label>
+        <label>Het is mogelijk om een Opportunity Contactpersoon Rol automatisch aan te maken bij het creëeren van Opportunities. Er is een veld op Opportunity genaamd &quot;Contactpersoon Id voor Rol&quot;. Wanneer Opportunities geïmporteerd met een geldig Contactpersoon Id in dat veld, zal een Contactpersoon Rol gemaakt worden volgens de configuratie hieronder. Deze functionaliteit kan volledig uitgeschakeld worden door het wijzigen van de Trigger Configuratie.</label>
         <name>Contacts_Settings_Contact_Roles_Help_Text</name>
     </customLabels>
     <customLabels>
@@ -73,15 +75,15 @@
         <name>DefaultContactTransactionCurrency</name>
     </customLabels>
     <customLabels>
-        <label><!-- Suffix added to the name of the original donation to form matching donation name --></label>
+        <label>{3} Matching Donatie {1}</label>
         <name>Matching_Donation_Record_Suffix</name>
     </customLabels>
     <customLabels>
-        <label><!-- Record type for matching donation. Set to $Source to match the original donation --></label>
+        <label>$Bron</label>
         <name>Matching_Donation_Record_Type</name>
     </customLabels>
     <customLabels>
-        <label><!-- Opportunity Contact Role Error - Bad Contact Id --></label>
+        <label>Het Contactpersoon Id meegegeven in de Contactpersoon Id voor Rol was ongeldig. Vul een geldig Contactpersoon Id in.</label>
         <name>Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
     </customLabels>
     <customPageWebLinks>
@@ -97,7 +99,7 @@
         <name>Contacts_Settings</name>
     </customTabs>
     <customTabs>
-        <label>Betaling Groeperen</label>
+        <label>Betaling Mapping</label>
         <name>Payment_Mapping</name>
     </customTabs>
 </Translations>

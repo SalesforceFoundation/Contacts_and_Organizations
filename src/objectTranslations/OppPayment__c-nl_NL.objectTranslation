@@ -9,11 +9,11 @@
         <value><!-- Payment --></value>
     </caseValues>
     <fields>
-        <label>Check/Referentie Nummer</label>
+        <label>Cheque/Referentie Nummer</label>
         <name>Check_Reference_Number__c</name>
     </fields>
     <fields>
-        <label>Aangepast Betaling Veld</label>
+        <label>Aangepast Betalingsveld</label>
         <name>Custom_Payment_Field__c</name>
     </fields>
     <fields>
@@ -61,13 +61,13 @@
     <layouts>
         <layout>Payment Layout</layout>
         <sections>
-            <label><!-- Custom Links --></label>
+            <label>Aangepaste Koppelingen</label>
             <section>Custom Links</section>
         </sections>
     </layouts>
     <nameFieldLabel><!-- Payment Number --></nameFieldLabel>
     <webLinks>
-        <label>Maak Schema Betalingen</label>
+        <label>Plan Betalingen</label>
         <name>Schedule_Payments</name>
     </webLinks>
     <webLinks>
