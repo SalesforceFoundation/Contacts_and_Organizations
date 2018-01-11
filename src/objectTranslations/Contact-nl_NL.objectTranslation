@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help>Alternatieve E-mail is een optionele vierde E-mail: Niet persoonlijk, voorkeur, of werk E-mail</help>
-        <label>Alternatieve E-mail</label>
+        <help>Een Alternatief E-mailadres is een optioneel vierde e-mailadres: Niet persoonlijk, voorkeur, of werk e-mailadres.</help>
+        <label>Alternatief E-mailadres</label>
         <name>AlternateEmail__c</name>
     </fields>
     <fields>
-        <help>Zie Voorkeur E-mail veld.</help>
-        <label>Persoonlijke E-mail</label>
+        <help>Zie Voorkeur E-mailadres veld.</help>
+        <label>Persoonlijk E-mailadres</label>
         <name>HomeEmail__c</name>
     </fields>
     <fields>
-        <help>Formule: Gebruik het primaire adres type veld om het Thuis Adres van Verzenden of Anders Adres te bepalen.</help>
-        <label>Thuis Adres</label>
+        <help>Formule: Gebruik het Primaire Adrestype veld om het Huisadres van Postadres of Ander Adres te bepalen.</help>
+        <label>Huisadres</label>
         <name>Home_Address__c</name>
     </fields>
     <fields>
@@ -21,12 +21,12 @@
         <name>Organization_Type__c</name>
     </fields>
     <fields>
-        <help>Formule: Als het Primaire Adres gelijk is aan Anders, het Verzendadres. Als het Secundaire Adres type gelijk is aan Anders, het Anders Adres.</help>
+        <help>Formule: Als het Primaire Adres gelijk is aan Anders, het Postadres. Als het Secundaire Adrestype gelijk is aan Anders, het Anders Adres.</help>
         <label>Ander Adres</label>
         <name>Other_Address__c</name>
     </fields>
     <fields>
-        <help>Welk telefoonnummer moet er gebruikt worden met betrekking tot dit contactpersoon?</help>
+        <help>Welk telefoonnummer moet er gebruikt worden in de communicatie met deze Contactpersoon?</help>
         <label>Voorkeur Telefoon</label>
         <name>PreferredPhone__c</name>
         <picklistValues>
@@ -47,8 +47,8 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>Welk E-mailadres moet er gebruikt worden met betrekking tot dit contactpersoon?</help>
-        <label>Voorkeur E-mail</label>
+        <help>Welk e-mailadres moet er gebruikt worden in de communicatie met deze Contactpersoon?</help>
+        <label>Voorkeur E-mailadres</label>
         <name>Preferred_Email__c</name>
         <picklistValues>
             <masterLabel>Alternate</masterLabel>
@@ -65,11 +65,11 @@
     </fields>
     <fields>
         <help>Welk type adres is het postadres?</help>
-        <label>Primair Adres Type</label>
+        <label>Primair Adrestype</label>
         <name>Primary_Address_Type__c</name>
         <picklistValues>
             <masterLabel>Home</masterLabel>
-            <translation>Thuis</translation>
+            <translation>Huis</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other</masterLabel>
@@ -81,17 +81,17 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>Maakt één-op-één of bucket account processing niet mogelijk voor deze contactpersoon.</help>
+        <help>Sluit deze Contactpersoon uit van Eén-op-Eén of Bucket Account verwerking.</help>
         <label>Privé</label>
         <name>Private__c</name>
     </fields>
     <fields>
         <help>Welk type adres is het andere adres?</help>
-        <label>Secundair Adres Type</label>
+        <label>Secundair Adrestype</label>
         <name>Secondary_Address_Type__c</name>
         <picklistValues>
             <masterLabel>Home</masterLabel>
-            <translation>Thuis</translation>
+            <translation>Huis</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other</masterLabel>
@@ -103,12 +103,12 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>Geeft aan welk model zorgt voor Account relatie gedrag. Individueel (Bucket) of één-op-één</help>
+        <help>VEROUDERD - Geeft aan welk model zorgt voor Account Relatiegedrag. Individu (Bucket) of Eén-op-Eén.</help>
         <label>_SYSTEEM: ACCOUNT PROCESSOR</label>
         <name>SystemAccountProcessor__c</name>
         <picklistValues>
             <masterLabel>Individual</masterLabel>
-            <translation>Individueel</translation>
+            <translation>Individu</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>One-to-One</masterLabel>
@@ -116,13 +116,13 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>Formule: &quot;Individueel&quot; of &quot;Organisatie&quot; hangt af van Account instellingen.</help>
+        <help>Formule: &quot;Individueel&quot; of &quot;Organisatie&quot; afhankelijk van Account instellingen.</help>
         <label>Type Account</label>
         <name>Type_of_Account__c</name>
     </fields>
     <fields>
-        <help>Zie Voorkeur E-mail veld.</help>
-        <label>Werk E-mail</label>
+        <help>Zie Voorkeur E-mailadres veld.</help>
+        <label>Werk E-mailadres</label>
         <name>WorkEmail__c</name>
     </fields>
     <fields>
@@ -131,8 +131,8 @@
         <name>WorkPhone__c</name>
     </fields>
     <fields>
-        <help>Formule: Als het Primaire Adres type gelijk is aan Werk, het Verzendadres. Als het Secundaire Adres type gelijk is aan Werk, het Anders Adres.</help>
-        <label>Werk Adres</label>
+        <help>Formule: Als het Primaire Adrestype gelijk is aan Werk, het Postadres. Als het Secundaire Adres type gelijk is aan Werk, het Ander Adres.</help>
+        <label>Werkadres</label>
         <name>Work_Address__c</name>
     </fields>
 </CustomObjectTranslation>

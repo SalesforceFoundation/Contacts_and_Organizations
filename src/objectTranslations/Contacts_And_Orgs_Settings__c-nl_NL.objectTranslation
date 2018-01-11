@@ -9,68 +9,68 @@
         <value><!-- Contacts And Orgs Settings --></value>
     </caseValues>
     <fields>
-        <help>Instellingen voor het acoount model. Zouden moeten zijn &quot;Huishouden&quot; ,&quot;een-op-een&quot; of &quot;Individueel&quot;. Vervangt het aangepaste veld Contact.SystemAccountProcessor__c  Huishouden is het aanbevolen model.</help>
+        <help>Instellingen voor het account model. Opties zijn &quot;Huishouden&quot; ,&quot;Een-op-Een&quot; of &quot;Individueel&quot;. Vervangt het aangepaste veld Contact.SystemAccountProcessor__c  Huishouden is het aanbevolen model.</help>
         <label><!-- Account Model --></label>
         <name>Account_Processor__c</name>
     </fields>
     <fields>
-        <help>AFGEKEURD. Trigger gedrag nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
-        <label>AFGEKEURD-Disable_IndividueelAcc_trigger</label>
+        <help>VEROUDERD. Trigger gedrag wordt nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
+        <label>VEROUDERD-Disable_IndividualAcc_trigger</label>
         <name>DISABLE_IndividualAccounts_trigger__c</name>
     </fields>
     <fields>
-        <help>AFGEKEURD. Trigger gedrag nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
-        <label>AFGEKEURD-Disable_OppAccount_Trigger</label>
+        <help>VEROUDERD. Trigger gedrag wordt nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
+        <label>VEROUDERD-Disable_OppAccount_trigger</label>
         <name>DISABLE_OpportunityAccount_trigger__c</name>
     </fields>
     <fields>
-        <help>AFGEKEURD. Trigger gedrag nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
-        <label>AFGEKEURD-Uitschakelen_OCR_trigger</label>
+        <help>VEROUDERD. Trigger gedrag wordt nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
+        <label>VEROUDERD-Disable_OCR_trigger</label>
         <name>DISABLE_OpportunityContactRoles_trigger__c</name>
     </fields>
     <fields>
-        <help>AFGEKEURD. Trigger gedrag nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
-        <label>AFGEKEURD-Disable_OppBetalingen_trigger</label>
+        <help>VEROUDERD. Trigger gedrag wordt nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
+        <label>VEROUDERD-Disable_OppPayments_trigger</label>
         <name>DISABLE_OpportunityPayments_trigger__c</name>
     </fields>
     <fields>
         <help>Geeft aan of er een Opportunity aangemaakt moet worden bij het converteren van een Lead.</help>
-        <label>Opportunity Maken op Lead Converteren</label>
+        <label>Creëer Opportunity bij Lead Conversie</label>
         <name>Default_Opp_on_Convert__c</name>
     </fields>
     <fields>
-        <help>AFGEKEURD. Trigger gedrag nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
-        <label>AFGEKEURD-Disable Account Model Trigger</label>
+        <help>VEROUDERD. Trigger gedrag wordt nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
+        <label>VEROUDERD-Disable Account Model Trigger</label>
         <name>Disable_Account_Model_Trigger__c</name>
     </fields>
     <fields>
-        <help>AFGEKEURD. Trigger gedrag nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
-        <label>AFGEKEURD-Enable OppContactRole Trigger</label>
+        <help>VEROUDERD. Trigger gedrag wordt nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
+        <label>VEROUDERD-Enable OppContactRole Trigger</label>
         <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
     </fields>
     <fields>
-        <help>Nieuwe versies van het Non-profit Starter Pakket worden automatisch geïnstalleerd.</help>
-        <label>AFGEKEURD-Inschakelen Update Check</label>
+        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+        <label>VEROUDERD-Enable Update Check</label>
         <name>Enable_Update_Check__c</name>
     </fields>
     <fields>
-        <help>Het ID van het Account Record Type wordt gebruikt voor het huishouden Account. Als er niks is geselecteerd, zal Het Account de standaard Record Type van de gebruiker hanteren.</help>
-        <label>Huishoud Account Record Type</label>
+        <help>Het ID van het Account Record Type dat gebruikt wordt voor het Huishouden Account. Wanneer er niets geselecteerd is, zal het Account het standaard Recordtype van de gebruiker hanteren.</help>
+        <label>Huishouden Account Record Type</label>
         <name>HH_Account_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help>Nieuwe versies van het Non-profit Starter Pakket worden automatisch geïnstalleerd.</help>
-        <label>AFGEKEURD-Heeft Pakket Update</label>
+        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+        <label>VEROUDERD-Has Package Update</label>
         <name>Has_Package_Update__c</name>
     </fields>
     <fields>
-        <help>Nieuwe versies van het Non-profit Starter Pakket worden automatisch geïnstalleerd.</help>
-        <label>AFGEKEURD-Laatste Update Check</label>
+        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+        <label>VEROUDERD-Last Update Check</label>
         <name>Last_Update_Check__c</name>
     </fields>
     <fields>
-        <help>Nieuwe versies van het Non-profit Starter Pakket worden automatisch geïnstalleerd.</help>
-        <label>AFGEKEURD-Max Pakket Versie</label>
+        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+        <label>VEROUDERD-Max Package Version</label>
         <name>Max_Package_Version__c</name>
     </fields>
     <fields>
@@ -79,23 +79,23 @@
         <name>One_to_One_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help>De standaard rol voor de Primaire Opportunity Contact Rol die automatisch worden aangemaakt</help>
+        <help>De standaard Contactpersoon Rol die automatisch wordt toegewezen aan de Primaire Contactpersoon voor de Opportunity.</help>
         <label>Standaard Opportunity Contactpersoon Rol</label>
         <name>Opportunity_Contact_Role_Default_role__c</name>
     </fields>
     <fields>
-        <help>Nieuwe versies van het Non-profit Starter Pakket worden automatisch geïnstalleerd.</help>
-        <label>AFGEKEURD-Pakket Update URL</label>
+        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+        <label>VEROUDERD-Package Update URL</label>
         <name>Package_Update_URL__c</name>
     </fields>
     <fields>
-        <help>Schakelt automatisch Betalingen in gecreëerd voor nieuwe Kansen / Donaties</help>
-        <label>Automatische Betaling Maken</label>
+        <help>Bij inschakeling worden Betalingen automatisch aangemaakt voor Opportunities (Donaties).</help>
+        <label>Creëer Automatische Betaling</label>
         <name>Payments_Enabled__c</name>
     </fields>
     <fields>
-        <help>Nieuwe versies van het Non-profit Starter Pakket worden automatisch geïnstalleerd.</help>
-        <label>AFGEKEURD-Update Check Interval</label>
+        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+        <label>VEROUDERD-Update Check Interval</label>
         <name>Update_Check_Interval__c</name>
     </fields>
     <gender><!-- Neuter --></gender>
