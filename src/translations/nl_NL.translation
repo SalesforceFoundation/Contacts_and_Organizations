@@ -79,7 +79,7 @@
         <name>Matching_Donation_Record_Suffix</name>
     </customLabels>
     <customLabels>
-        <label>$Bron</label>
+        <label><!-- Record type for matching donation. Set to $Source to match the original donation --></label>
         <name>Matching_Donation_Record_Type</name>
     </customLabels>
     <customLabels>

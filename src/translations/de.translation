@@ -77,7 +77,7 @@
         <name>Matching_Donation_Record_Suffix</name>
     </customLabels>
     <customLabels>
-        <label>$Quelle</label>
+        <label>$Source</label>
         <name>Matching_Donation_Record_Type</name>
     </customLabels>
     <customLabels>
