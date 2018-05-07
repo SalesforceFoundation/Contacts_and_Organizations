@@ -156,10 +156,10 @@
     </fields>
     <fields>
         <fullName>Opportunity_Contact_Role_Default_role__c</fullName>
-        <description>The default Contact Role automatically assigned to the Primary Contact when the Opportunity Account is a Household, One-to-One, or Individual Account.</description>
+        <description>The default Contact Role automatically assigned to the Opportunity's Primary Contact when the Opportunity's Account is a Household, One-to-One, or Individual Account.</description>
         <externalId>false</externalId>
-        <inlineHelpText>The default Contact Role automatically assigned to the Primary Contact when the Opportunity Account is a Household, One-to-One, or Individual Account.</inlineHelpText>
-        <label>Default Individual Contact Role</label>
+        <inlineHelpText>The default Contact Role automatically assigned to the Opportunity's Primary Contact when the Opportunity's Account is a Household, One-to-One, or Individual Account..</inlineHelpText>
+        <label>Contact Role for Individual Opps</label>
         <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
