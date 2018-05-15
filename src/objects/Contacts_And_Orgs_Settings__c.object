@@ -159,7 +159,7 @@
         <description>The default Contact Role automatically assigned to the Opportunity&apos;s Primary Contact when the Opportunity&apos;s Account is a Household, One-to-One, or Individual Account.</description>
         <encrypted>false</encrypted>
         <externalId>false</externalId>
-        <inlineHelpText>The default Contact Role automatically assigned to the Opportunity&apos;s Primary Contact when the Opportunity&apos;s Account is a Household, One-to-One, or Individual Account..</inlineHelpText>
+        <inlineHelpText>The default Contact Role automatically assigned to the Opportunity&apos;s Primary Contact when the Opportunity&apos;s Account is a Household, One-to-One, or Individual Account.</inlineHelpText>
         <label>Contact Role for Individual Opps</label>
         <length>255</length>
         <required>false</required>
