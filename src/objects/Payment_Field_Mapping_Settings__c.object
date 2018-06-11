@@ -26,5 +26,11 @@
         <unique>false</unique>
     </fields>
     <label>Payment Field Mapping Settings</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <visibility>Public</visibility>
 </CustomObject>

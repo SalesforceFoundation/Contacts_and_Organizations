@@ -189,6 +189,10 @@
         <name>Layout</name>
     </types>
     <types>
+        <members>Payment_Field_Mapping_Settings__c.All</members>
+        <name>ListView</name>
+    </types>
+    <types>
         <members>Salesforce_Foundation</members>
         <name>RemoteSiteSetting</name>
     </types>
