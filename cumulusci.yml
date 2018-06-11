@@ -8,7 +8,7 @@ project:
         prefix_release: rel/
 
 flows:
-    ci_feature:
-        tasks:
-            5:
+    deploy_unmanaged:
+        steps:
+            4:
                 task: None
