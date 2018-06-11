@@ -12,3 +12,7 @@ flows:
         steps:
             4:
                 task: None
+    deploy_packaging:
+        steps:
+            6:
+                task: None
