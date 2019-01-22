@@ -80,10 +80,6 @@
         <name>Payments_Made__c</name>
     </fields>
     <webLinks>
-        <label>VEROUDERD - Matching Donation</label>
-        <name>Matching_Donation</name>
-    </webLinks>
-    <webLinks>
         <label>Nieuwe Donatie Contactpersoon</label>
         <name>New_Contact_Donation</name>
     </webLinks>
