@@ -209,7 +209,6 @@
     <types>
         <members>OppPayment__c.Schedule_Payments</members>
         <members>OppPayment__c.Writeoff_Payments</members>
-        <members>Opportunity.Matching_Donation</members>
         <members>Opportunity.New_Contact_Donation</members>
         <members>Opportunity.New_Organization_Donation</members>
         <name>WebLink</name>

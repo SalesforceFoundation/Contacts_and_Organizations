@@ -80,10 +80,6 @@
         <name>Payments_Made__c</name>
     </fields>
     <webLinks>
-        <label>Übereinstimmende Spende</label>
-        <name>Matching_Donation</name>
-    </webLinks>
-    <webLinks>
         <label>Spende eines neuen Kontakts</label>
         <name>New_Contact_Donation</name>
     </webLinks>

@@ -80,10 +80,6 @@
         <name>Payments_Made__c</name>
     </fields>
     <webLinks>
-        <label>Don équivalent</label>
-        <name>Matching_Donation</name>
-    </webLinks>
-    <webLinks>
         <label>Nouveau don</label>
         <name>New_Contact_Donation</name>
     </webLinks>

@@ -80,10 +80,6 @@
         <name>Payments_Made__c</name>
     </fields>
     <webLinks>
-        <label>マッチングギフト</label>
-        <name>Matching_Donation</name>
-    </webLinks>
-    <webLinks>
         <label>新しい個人支援(英版)</label>
         <name>New_Contact_Donation</name>
     </webLinks>
