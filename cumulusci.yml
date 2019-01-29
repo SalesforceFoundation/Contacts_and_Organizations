@@ -7,12 +7,9 @@ project:
     git:
         prefix_release: rel/
 
-flows:
-    deploy_unmanaged:
-        steps:
-            4:
-                task: None
-    deploy_packaging:
-        steps:
-            6:
-                task: None
+tasks:
+    uninstall_packaged_incremental:
+        options:
+            ignore:
+                ListView:
+                    Payment_Field_Mapping_Settings__c.All
