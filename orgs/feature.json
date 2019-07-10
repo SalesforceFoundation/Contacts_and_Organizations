@@ -1,11 +1,11 @@
 {
   "edition": "Developer", 
   "orgName": "CO - Feature Test Org", 
-  "orgPreferences": {
-    "enabled": [
-      "ChatterEnabled", 
-      "Translation", 
-      "S1DesktopEnabled"
-    ]
+  "settings": {
+    "orgPreferenceSettings": {
+      "chatterEnabled": true,
+      "s1DesktopEnabled": true,
+      "translation": true
+    }
   }
 }
