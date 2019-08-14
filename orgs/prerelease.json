@@ -1,6 +1,6 @@
 {
   "edition": "Developer", 
-  "orgName": "CO - Feature Test Org",
+  "orgName": "CO - Prerelease Feature Test Org",
   "instance": "cs46",
   "settings": {
     "orgPreferenceSettings": {
