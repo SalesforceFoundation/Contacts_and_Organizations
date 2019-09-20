@@ -2,7 +2,7 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Payment --></value>
+        <value>支払</value>
     </caseValues>
     <fields>
         <label>確認参照番号</label>

@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Payment --></value>
+        <value>Pago</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Payment --></value>
+        <value>Pagos</value>
     </caseValues>
     <fields>
         <label>N° de comprobante/referencia</label>
