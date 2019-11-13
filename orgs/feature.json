@@ -1,11 +1,15 @@
 {
-  "edition": "Developer", 
-  "orgName": "CO - Feature Test Org", 
+  "edition": "Developer",
+  "orgName": "CO - Feature Test Org",
   "settings": {
-    "orgPreferenceSettings": {
-      "chatterEnabled": true,
-      "s1DesktopEnabled": true,
-      "translation": true
+    "chatterSettings": {
+      "enableChatter": true
+    },
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "languageSettings": {
+      "enableTranslationWorkbench": true
     }
   }
 }
