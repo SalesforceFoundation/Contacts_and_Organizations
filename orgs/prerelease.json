@@ -10,7 +10,9 @@
       "lightningExperienceSettings": {
         "enableS1DesktopEnabled": true
       },
-      "translation": true
+      "languageSettings": {
+        "enableTranslationWorkbench": true
+      }
     }
   }
 }
