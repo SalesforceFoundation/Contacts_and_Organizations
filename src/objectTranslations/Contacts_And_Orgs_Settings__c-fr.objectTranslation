@@ -1,103 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <caseValues>
-        <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <fields>
-        <help>Paramètre pour le modèle de compte. Doit normalement être soit « Compte de foyer », soit « Compte autocréé », soit « Individus ». Remplace le champ personnalisé Contact.SystemAccountProcessor__c.  « Compte de foyer » est le modèle recommandé.</help>
-        <label>Modèle de compte</label>
-        <name>Account_Processor__c</name>
-    </fields>
-    <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_IndividualAcc_trigger --></label>
-        <name>DISABLE_IndividualAccounts_trigger__c</name>
-    </fields>
-    <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OppAccount_trigger --></label>
-        <name>DISABLE_OpportunityAccount_trigger__c</name>
-    </fields>
-    <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OCR_trigger --></label>
-        <name>DISABLE_OpportunityContactRoles_trigger__c</name>
-    </fields>
-    <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OppPayments_trigger --></label>
-        <name>DISABLE_OpportunityPayments_trigger__c</name>
-    </fields>
-    <fields>
-        <help>Indique si une opportunité doit être créée lors de la conversion d’une piste.</help>
-        <label>Créer opportunité en conversion de piste</label>
-        <name>Default_Opp_on_Convert__c</name>
-    </fields>
-    <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable Account Model Trigger --></label>
-        <name>Disable_Account_Model_Trigger__c</name>
-    </fields>
-    <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Enable OppContactRole Trigger --></label>
-        <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
-    </fields>
-    <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Enable Update Check --></label>
-        <name>Enable_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>L’ID du type d’enregistrement de compte à utiliser pour les comptes de foyers. Si aucun n’est sélectionné, le compte utilisera le type d’enregistrement de compte par défaut de l’utilisateur.</help>
-        <label>Type d’enregistrement de compte de foyer</label>
-        <name>HH_Account_RecordTypeID__c</name>
-    </fields>
-    <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Has Package Update --></label>
-        <name>Has_Package_Update__c</name>
-    </fields>
-    <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Last Update Check --></label>
-        <name>Last_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Max Package Version --></label>
-        <name>Max_Package_Version__c</name>
-    </fields>
-    <fields>
-        <help>L’ID du type d’enregistrement de compte à utiliser pour les comptes autocréés.  Si aucun n’est sélectionné, le compte utilisera le type d’enregistrement de compte par défaut de l’utilisateur.</help>
-        <label>Type d’enregistrement de compte autocréé</label>
-        <name>One_to_One_RecordTypeID__c</name>
-    </fields>
-    <fields>
-        <help>Le rôle par défaut pour le rôle de contact principal d’opportunité créé automatiquement.</help>
-        <label>Rôle par défaut de contact d’opportunité</label>
-        <name>Opportunity_Contact_Role_Default_role__c</name>
-    </fields>
-    <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Package Update URL --></label>
-        <name>Package_Update_URL__c</name>
-    </fields>
-    <fields>
-        <help>Active les paiements automatiques créés pour les nouvelles opportunités/dons.</help>
-        <label>Création automatique de paiement</label>
-        <name>Payments_Enabled__c</name>
-    </fields>
-    <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Update Check Interval --></label>
-        <name>Update_Check_Interval__c</name>
-    </fields>
-    <gender><!-- Masculine --></gender>
-    <startsWith><!-- Consonant --></startsWith>
+  <fields>
+    <name>Account_Processor__c</name>
+    <help>Paramètre pour le modèle de compte. Doit normalement être soit « Compte de foyer », soit « Compte un-à-un », soit « Individuel ». Remplace le champ personnalisé Contact.SystemAccountProcessor__c. « Compte de foyer » est le modèle recommandé.</help>
+    <label>Modèle de compte</label>
+  </fields>
+  <fields>
+    <name>DISABLE_IndividualAccounts_trigger__c</name>
+    <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
+    <label>DEPRECATED-Disable_IndividualAcc_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityAccount_trigger__c</name>
+    <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
+    <label>DEPRECATED-Disable_OppAccount_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityContactRoles_trigger__c</name>
+    <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
+    <label>DEPRECATED-Disable_OCR_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityPayments_trigger__c</name>
+    <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
+    <label>DEPRECATED-Disable_OppPayments_trigger</label>
+  </fields>
+  <fields>
+    <name>Default_Opp_on_Convert__c</name>
+    <help>Indique si une opportunité doit être créée lors de la conversion d’une piste.</help>
+    <label>Créer opportunité en conversion de piste</label>
+  </fields>
+  <fields>
+    <name>Disable_Account_Model_Trigger__c</name>
+    <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
+    <label>DEPRECATED-Disable Account Model Trigger</label>
+  </fields>
+  <fields>
+    <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
+    <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
+    <label>DEPRECATED-Enable OppContactRole Trigger</label>
+  </fields>
+  <fields>
+    <name>Enable_Update_Check__c</name>
+    <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
+    <label>DÉPRÉCIÉ-Activer vérif. de mise à jour</label>
+  </fields>
+  <fields>
+    <name>HH_Account_RecordTypeID__c</name>
+    <help>L’ID du type d’enregistrement de compte à utiliser pour les comptes de foyers. Si aucun n’est sélectionné, le compte utilisera le type d’enregistrement de compte par défaut de l’utilisateur.</help>
+    <label>Type d’enregistrement de compte de foyer</label>
+  </fields>
+  <fields>
+    <name>Has_Package_Update__c</name>
+    <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
+    <label>DÉPRÉCIÉ-Mise à jour du package incluse</label>
+  </fields>
+  <fields>
+    <name>Last_Update_Check__c</name>
+    <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
+    <label>DÉPRÉCIÉ-Dernière vérif. de mise à jour</label>
+  </fields>
+  <fields>
+    <name>Max_Package_Version__c</name>
+    <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
+    <label>DÉPRÉCIÉ-Version max du package</label>
+  </fields>
+  <fields>
+    <name>One_to_One_RecordTypeID__c</name>
+    <help>L’ID du type d’enregistrement de compte à utiliser pour les comptes un-à-un. Si aucun n’est sélectionné, le compte utilisera le type d’enregistrement de compte par défaut de l’utilisateur.</help>
+    <label>Type d’enregistrement de compte un-à-un</label>
+  </fields>
+  <fields>
+    <name>Opportunity_Contact_Role_Default_role__c</name>
+    <help>Le rôle contact par défaut attribué automatiquement au contact principal de l’opportunité lorsque le compte de l’opportunité est un compte foyer, un-à-un, ou individuel.</help>
+    <label>Rôle contact pour opp. individuelles</label>
+  </fields>
+  <fields>
+    <name>Package_Update_URL__c</name>
+    <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
+    <label>DÉPRÉCIÉ-URL de mise à jour du package</label>
+  </fields>
+  <fields>
+    <name>Payments_Enabled__c</name>
+    <help>Active les paiements automatiques créés pour les nouvelles opportunités/dons.</help>
+    <label>Création automatique de paiement</label>
+  </fields>
+  <fields>
+    <name>Update_Check_Interval__c</name>
+    <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
+    <label>DÉPRÉCIÉ-Mettre à jour intervalle vérif.</label>
+  </fields>
 </CustomObjectTranslation>

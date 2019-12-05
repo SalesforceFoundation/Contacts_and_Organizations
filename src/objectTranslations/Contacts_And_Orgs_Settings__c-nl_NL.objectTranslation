@@ -1,102 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <caseValues>
-        <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <fields>
-        <help>Instellingen voor het account model. Opties zijn &quot;Huishouden&quot; ,&quot;Een-op-Een&quot; of &quot;Individueel&quot;. Vervangt het aangepaste veld Contact.SystemAccountProcessor__c  Huishouden is het aanbevolen model.</help>
-        <label><!-- Account Model --></label>
-        <name>Account_Processor__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Trigger gedrag wordt nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
-        <label>VEROUDERD-Disable_IndividualAcc_trigger</label>
-        <name>DISABLE_IndividualAccounts_trigger__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Trigger gedrag wordt nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
-        <label>VEROUDERD-Disable_OppAccount_trigger</label>
-        <name>DISABLE_OpportunityAccount_trigger__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Trigger gedrag wordt nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
-        <label>VEROUDERD-Disable_OCR_trigger</label>
-        <name>DISABLE_OpportunityContactRoles_trigger__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Trigger gedrag wordt nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
-        <label>VEROUDERD-Disable_OppPayments_trigger</label>
-        <name>DISABLE_OpportunityPayments_trigger__c</name>
-    </fields>
-    <fields>
-        <help>Geeft aan of er een Opportunity aangemaakt moet worden bij het converteren van een Lead.</help>
-        <label>Creëer Opportunity bij Lead Conversie</label>
-        <name>Default_Opp_on_Convert__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Trigger gedrag wordt nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
-        <label>VEROUDERD-Disable Account Model Trigger</label>
-        <name>Disable_Account_Model_Trigger__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Trigger gedrag wordt nu gecontroleerd in de Trigger Configuratiepagina van NPSP Instellingen</help>
-        <label>VEROUDERD-Enable OppContactRole Trigger</label>
-        <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
-        <label>VEROUDERD-Enable Update Check</label>
-        <name>Enable_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>Het ID van het Account Record Type dat gebruikt wordt voor het Huishouden Account. Wanneer er niets geselecteerd is, zal het Account het standaard Recordtype van de gebruiker hanteren.</help>
-        <label>Huishouden Account Record Type</label>
-        <name>HH_Account_RecordTypeID__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
-        <label>VEROUDERD-Has Package Update</label>
-        <name>Has_Package_Update__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
-        <label>VEROUDERD-Last Update Check</label>
-        <name>Last_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
-        <label>VEROUDERD-Max Package Version</label>
-        <name>Max_Package_Version__c</name>
-    </fields>
-    <fields>
-        <help>Het ID van het Account Record Type wordt gebruikt voor het een-op-een Accounts. Als er niks is geselecteerd, zal Het Account de standaard Record Type van de gebruiker hanteren.</help>
-        <label>Een-op-Een Record Type</label>
-        <name>One_to_One_RecordTypeID__c</name>
-    </fields>
-    <fields>
-        <help>De standaard Contactpersoon Rol die automatisch wordt toegewezen aan de Primaire Contactpersoon voor de Opportunity.</help>
-        <label>Standaard Opportunity Contactpersoon Rol</label>
-        <name>Opportunity_Contact_Role_Default_role__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
-        <label>VEROUDERD-Package Update URL</label>
-        <name>Package_Update_URL__c</name>
-    </fields>
-    <fields>
-        <help>Bij inschakeling worden Betalingen automatisch aangemaakt voor Opportunities (Donaties).</help>
-        <label>Creëer Automatische Betaling</label>
-        <name>Payments_Enabled__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
-        <label>VEROUDERD-Update Check Interval</label>
-        <name>Update_Check_Interval__c</name>
-    </fields>
-    <gender><!-- Neuter --></gender>
+  <fields>
+    <name>Account_Processor__c</name>
+    <help>Instelling voor het model Account. Moet "Huishouden" ,"Eén-op-één" of "Individu" zijn. Vervangt het aangepaste veld Contact.SystemAccountProcessor__c. "Account voor huishouden" is het aanbevolen model.</help>
+    <label>Model Account</label>
+  </fields>
+  <fields>
+    <name>DISABLE_IndividualAccounts_trigger__c</name>
+    <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
+    <label>VEROUDERD-Disable_IndividualAcc_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityAccount_trigger__c</name>
+    <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
+    <label>VEROUDERD-Disable_OppAccount_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityContactRoles_trigger__c</name>
+    <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
+    <label>VEROUDERD-Disable_OCR_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityPayments_trigger__c</name>
+    <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
+    <label>VEROUDERD-Disable_OppPayments_trigger</label>
+  </fields>
+  <fields>
+    <name>Default_Opp_on_Convert__c</name>
+    <help>Geeft aan of er een opportunity aangemaakt tijdens leadconversie.</help>
+    <label>Opportunity maken voor leadconversie</label>
+  </fields>
+  <fields>
+    <name>Disable_Account_Model_Trigger__c</name>
+    <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
+    <label>VEROUDERD-Disable Account Model Trigger</label>
+  </fields>
+  <fields>
+    <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
+    <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
+    <label>VEROUDERD-Trigger OppContactRole insch.</label>
+  </fields>
+  <fields>
+    <name>Enable_Update_Check__c</name>
+    <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+    <label>VEROUDERD-Updatecontrole inschakelen</label>
+  </fields>
+  <fields>
+    <name>HH_Account_RecordTypeID__c</name>
+    <help>De ID van Type accountrecord wordt gebruikt voor accounts voor Huishouden. Als er niets is geselecteerd, wordt de account standaard het Recordtype Account van de gebruiker.</help>
+    <label>Recordtype Account voor huishouden</label>
+  </fields>
+  <fields>
+    <name>Has_Package_Update__c</name>
+    <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+    <label>VEROUDERD-Heeft pakketupdate</label>
+  </fields>
+  <fields>
+    <name>Last_Update_Check__c</name>
+    <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+    <label>VEROUDERD-Laatste updatecontrole</label>
+  </fields>
+  <fields>
+    <name>Max_Package_Version__c</name>
+    <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+    <label>VEROUDERD-Max. pakketversie</label>
+  </fields>
+  <fields>
+    <name>One_to_One_RecordTypeID__c</name>
+    <help>De ID van Type accountrecord wordt gebruikt voor accounts voor Eén-op-één. Als er niets is geselecteerd, wordt de account standaard het Recordtype Account van de gebruiker.</help>
+    <label>Recordtype Eén-op-één</label>
+  </fields>
+  <fields>
+    <name>Opportunity_Contact_Role_Default_role__c</name>
+    <help>De standaard contactpersoonsrol die automatisch wordt toegewezen aan Primaire contactpersoon voor de opportunity wanneer de account van de opportunity een account Huishouden, Eén-op-één of Individu is.</help>
+    <label>Contactpersoonsrol afz. opportunities</label>
+  </fields>
+  <fields>
+    <name>Package_Update_URL__c</name>
+    <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+    <label>VEROUDERD-URL van pakketupdate</label>
+  </fields>
+  <fields>
+    <name>Payments_Enabled__c</name>
+    <help>Bij inschakeling maakt Salesforce Betalingen automatisch Betalingen voor nieuwe opportunities (Donaties).</help>
+    <label>Maken van automatische betaling</label>
+  </fields>
+  <fields>
+    <name>Update_Check_Interval__c</name>
+    <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+    <label>VEROUDERD-Interval voor updatecontroles</label>
+  </fields>
 </CustomObjectTranslation>
