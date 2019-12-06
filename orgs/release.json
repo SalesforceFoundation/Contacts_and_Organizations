@@ -1,10 +1,12 @@
 {
-  "edition": "Developer", 
-  "orgName": "CO - Release Test Org", 
+  "edition": "Developer",
+  "orgName": "CO - Release Test Org",
   "settings": {
-    "orgPreferenceSettings": {
-      "chatterEnabled": true,
-      "s1DesktopEnabled": true
+    "chatterSettings": {
+      "enableChatter": true
+    },
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
     }
   }
 }

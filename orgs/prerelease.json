@@ -1,12 +1,18 @@
 {
-  "edition": "Developer", 
+  "edition": "Developer",
   "orgName": "CO - Prerelease Feature Test Org",
   "instance": "cs46",
   "settings": {
     "orgPreferenceSettings": {
-      "chatterEnabled": true,
-      "s1DesktopEnabled": true,
-      "translation": true
+      "chatterSettings": {
+        "enableChatter": true
+      },
+      "lightningExperienceSettings": {
+        "enableS1DesktopEnabled": true
+      },
+      "languageSettings": {
+        "enableTranslationWorkbench": true
+      }
     }
   }
 }
