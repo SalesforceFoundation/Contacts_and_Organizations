@@ -1,90 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>Amount_Outstanding__c</name>
-    <help>Formule : Le montant de cette opportunité moins le montant de déduction de paiement et le montant de paiement reçu.</help>
-    <label>Crédit restant</label>
-  </fields>
-  <fields>
-    <name>Amount_Written_Off__c</name>
-    <help>Valeur totale des paiements marqués comme déduits ou non percevables pour cette opportunité.</help>
-    <label>Montant de déduction de paiement</label>
-  </fields>
-  <fields>
-    <name>Contact_Id_for_Role__c</name>
-    <help>Champ masqué permettant de transmettre un ID de contact pour la création de rôle de contact.</help>
-    <label>ID de contact pour le rôle</label>
-  </fields>
-  <fields>
-    <name>Do_Not_Automatically_Create_Payment__c</name>
-    <help>Si coché et si les paiements sont actifs, un nouveau paiement ne sera pas créé automatiquement pour cette opportunité.</help>
-    <label>Ne pas créer automatiquement de paiement</label>
-  </fields>
-  <fields>
-    <name>Is_Opp_From_Individual__c</name>
-    <help>Formule : Si le compte associé est défini comme individuel (SYSTEMIsIndividual__c)</help>
-    <label>Opportunité provenant d’un individu</label>
-  </fields>
-  <fields>
-    <name>Member_Level__c</name>
-    <help>Détermine la valeur du contact ou ducompte du champ de dernier niveau d’adhésion.</help>
-    <label>Niveau de membre</label>
-    <picklistValues>
-      <masterLabel>Gold</masterLabel>
-      <translation>Or</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Silver</masterLabel>
-      <translation>Argent</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Bronze</masterLabel>
-      <translation>Bronze</translation>
-    </picklistValues>
-  </fields>
-  <fields>
-    <name>Membership_End_Date__c</name>
-    <help>Date à laquelle la période d’adhésion se termine.</help>
-    <label>Date de fin d’adhésion</label>
-  </fields>
-  <fields>
-    <name>Membership_Origin__c</name>
-    <help>S’agit-il d’un renouvellement, d’une nouvelle adhésion, ou du retour d’un membre après un départ.</help>
-    <label>Origine de l’adhésion</label>
-    <picklistValues>
-      <masterLabel>New</masterLabel>
-      <translation>Nouveau</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Renewal</masterLabel>
-      <translation>Renouvellement</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Reacquire</masterLabel>
-      <translation>Réacquisition</translation>
-    </picklistValues>
-  </fields>
-  <fields>
-    <name>Membership_Start_Date__c</name>
-    <help>Date à laquelle la période d’adhésion débute</help>
-    <label>Date de début de l’adhésion</label>
-  </fields>
-  <fields>
-    <name>Number_of_Payments__c</name>
-    <help>Nombre total de paiements pour cette opportunité (don)</help>
-    <label>Nombre de paiements</label>
-  </fields>
-  <fields>
-    <name>Payments_Made__c</name>
-    <help>La valeur totale des paiements marqués comme reçus pour cette opportunité.</help>
-    <label>Montant de paiement reçu</label>
-  </fields>
-  <webLinks>
-    <name>New_Contact_Donation</name>
-    <label>Don de nouveau contact</label>
-  </webLinks>
-  <webLinks>
-    <name>New_Organization_Donation</name>
-    <label>Don de nouveau compte</label>
-  </webLinks>
+    <fields>
+        <help>Formule : Le montant de cette opportunité moins le montant de déduction de paiement et le montant de paiement reçu.</help>
+        <label>Crédit restant</label>
+        <name>Amount_Outstanding__c</name>
+    </fields>
+    <fields>
+        <help>Valeur totale des paiements marqués comme déduits ou non percevables pour cette opportunité.</help>
+        <label>Montant de déduction de paiement</label>
+        <name>Amount_Written_Off__c</name>
+    </fields>
+    <fields>
+        <help>Champ masqué permettant de transmettre un ID de contact pour la création de rôle de contact.</help>
+        <label>ID de contact pour le rôle</label>
+        <name>Contact_Id_for_Role__c</name>
+    </fields>
+    <fields>
+        <help>Si coché et si les paiements sont actifs, un nouveau paiement ne sera pas créé automatiquement pour cette opportunité.</help>
+        <label>Ne pas créer automatiquement de paiement</label>
+        <name>Do_Not_Automatically_Create_Payment__c</name>
+    </fields>
+    <fields>
+        <help>Formule : Si le compte associé est défini comme individuel (SYSTEMIsIndividual__c)</help>
+        <label>Opportunité provenant d’un individu</label>
+        <name>Is_Opp_From_Individual__c</name>
+    </fields>
+    <fields>
+        <help>Détermine la valeur du contact ou ducompte du champ de dernier niveau d’adhésion.</help>
+        <label>Niveau de membre</label>
+        <name>Member_Level__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation>Bronze</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation>Or</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation>Argent</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Date à laquelle la période d’adhésion se termine.</help>
+        <label>Date de fin d’adhésion</label>
+        <name>Membership_End_Date__c</name>
+    </fields>
+    <fields>
+        <help>S’agit-il d’un renouvellement, d’une nouvelle adhésion, ou du retour d’un membre après un départ.</help>
+        <label>Origine de l’adhésion</label>
+        <name>Membership_Origin__c</name>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation>Nouveau</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reacquire</masterLabel>
+            <translation>Réacquisition</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation>Renouvellement</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Date à laquelle la période d’adhésion débute</help>
+        <label>Date de début de l’adhésion</label>
+        <name>Membership_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help>Nombre total de paiements pour cette opportunité (don)</help>
+        <label>Nombre de paiements</label>
+        <name>Number_of_Payments__c</name>
+    </fields>
+    <fields>
+        <help>La valeur totale des paiements marqués comme reçus pour cette opportunité.</help>
+        <label>Montant de paiement reçu</label>
+        <name>Payments_Made__c</name>
+    </fields>
+    <webLinks>
+        <label>Don de nouveau contact</label>
+        <name>New_Contact_Donation</name>
+    </webLinks>
+    <webLinks>
+        <label>Don de nouveau compte</label>
+        <name>New_Organization_Donation</name>
+    </webLinks>
 </CustomObjectTranslation>
