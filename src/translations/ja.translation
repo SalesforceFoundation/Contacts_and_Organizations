@@ -5,7 +5,7 @@
         <name>Contact_Merge_Error_Confirm_Message</name>
     </customLabels>
     <customLabels>
-        <label>家族（Household）のパッケージを使用している場合、個人をマージしても、家族には影響しないことに注意してください。家族のマージは、手動で行う必要があります。マージ後の個人が適切な家族と結び付けられていることを確認し、家族を手動でマージしてください。</label>
+        <label>[世帯] パッケージを使用している場合、個人をマージしても、世帯には影響しないことに注意してください。世帯のマージは、手動で行う必要があります。マージ後の個人が適切な世帯と結び付けられていることを確認し、世帯を手動でマージしてください。</label>
         <name>Contact_Merge_Error_Confirm_Message_Households</name>
     </customLabels>
     <customLabels>
@@ -33,11 +33,11 @@
         <name>Contact_Merge_Error_Query_Failed</name>
     </customLabels>
     <customLabels>
-        <label>マージするレコードを少なくとも2つ選択してください。</label>
+        <label>マージする個人を少なくとも 2 つ選択してください。</label>
         <name>Contact_Merge_Error_Too_Few_Contacts</name>
     </customLabels>
     <customLabels>
-        <label>一度にマージできるレコードは3つまでです。</label>
+        <label>一度にマージできる個人は 3 つまでです。</label>
         <name>Contact_Merge_Error_Too_Many_Contacts</name>
     </customLabels>
     <customLabels>
@@ -49,11 +49,11 @@
         <name>Contact_Merge_Step1</name>
     </customLabels>
     <customLabels>
-        <label>マージするレコードを2つまたは3つ選択してください。</label>
+        <label>3 つまでのマージする個人を選択してください。</label>
         <name>Contact_Merge_Step2</name>
     </customLabels>
     <customLabels>
-        <label>残すレコードを選択してください。</label>
+        <label>残す個人を選択してください。</label>
         <name>Contact_Merge_Step3</name>
     </customLabels>
     <customLabels>
@@ -61,35 +61,37 @@
         <name>Contact_Merge_Step4</name>
     </customLabels>
     <customLabels>
-        <label>「Nonprofit Success Pack」では、2つの「団体モデル（Account Model）」が存在します。「個人」が、「1対1（One-to-One）」の「団体」をそれぞれ持つモデルと、「個人（Individual）」という1つの「団体」を共有して持つモデルの2つです。設定で切り替ることができ、標準は「1対1（One-to-One）」です。設定は使用開始前に行い、使用開始以降は、設定変更の影響を理解できない場合、設定変更しないことを推奨します。使用開始後に設定変更した場合、新しい「団体モデル」に合わせて、データを移行させることが必要になります。</label>
+        <label>「Nonprofit Success Pack」では、世帯団体モデル、1 対 1 団体モデル、個人 (バケット) 団体モデルの 3 つの団体モデルがサポートされます。これらのモデルの詳細は、&lt;a href=&quot;https://powerofus.force.com/NPSP_Account_Model&quot; target=&quot;_blank&quot;&gt;NPSP ドキュメント&lt;/a&gt;を参照してください。
+&lt;br/&gt;&lt;br&gt;
+NPSP3 以降を使用する場合、世帯団体モデルをお勧めします。</label>
         <name>Contacts_Settings_Account_Model_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>「支援」の作成時に、自動的に作成される「個人の役割」を選択してください。「支援」には「Contact Id for Role」という項目があります。有効な「個人ID」を利用して、「支援」をインポートした場合、選択した「個人の役割」が自動的に作成されます。また、チェックボックスをOFFにして、この機能を使用しないことも可能です。</label>
+        <label>支援を作成するときに自動的に支援個人の役割が作成されるように設定できます。[支援] に [役割の個人 ID] という項目があります。その項目に有効な「個人 ID」を入力して支援をインポートすると、以下で設定するデフォルト値に従って「個人の役割」が作成されます。[トリガ設定] を変更して、この機能を無効にすることもできます。</label>
         <name>Contacts_Settings_Contact_Roles_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label><!-- DefaultContactTransactionCurrency --></label>
+        <label>￥</label>
         <name>DefaultContactTransactionCurrency</name>
     </customLabels>
     <customLabels>
-        <label>{3} マッチングギフト {1}</label>
+        <label>{3} 一致する支援 {1}</label>
         <name>Matching_Donation_Record_Suffix</name>
     </customLabels>
     <customLabels>
-        <label><!-- Record type for matching donation. Set to $Source to match the original donation --></label>
+        <label>$Source</label>
         <name>Matching_Donation_Record_Type</name>
     </customLabels>
     <customLabels>
-        <label>The Contact Id supplied in the Contact Id for Role field was invalid. Please use a valid Contact Id.</label>
+        <label>役割の個人 ID で入力された個人 ID は無効です。有効な個人 ID を使用してください。</label>
         <name>Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
     </customLabels>
     <customPageWebLinks>
-        <label>NPO版レポート</label>
+        <label><!-- Nonprofit Edition Reports --></label>
         <name>Nonprofit_Edition_Reports</name>
     </customPageWebLinks>
     <customTabs>
-        <label>個人のマージ</label>
+        <label>個人のマージ (旧)</label>
         <name>Contact_Merge</name>
     </customTabs>
     <customTabs>

@@ -11,35 +11,35 @@
         <name>Amount_Written_Off__c</name>
     </fields>
     <fields>
-        <help>Champ masqué pour passer un ID de contact pour la création de rôle de contact.</help>
+        <help>Champ masqué permettant de transmettre un ID de contact pour la création de rôle de contact.</help>
         <label>ID de contact pour le rôle</label>
         <name>Contact_Id_for_Role__c</name>
     </fields>
     <fields>
         <help>Si coché et si les paiements sont actifs, un nouveau paiement ne sera pas créé automatiquement pour cette opportunité.</help>
-        <label>Ne pas créer de paiement automatiquement</label>
+        <label>Ne pas créer automatiquement de paiement</label>
         <name>Do_Not_Automatically_Create_Payment__c</name>
     </fields>
     <fields>
-        <help>Formule : Si le compte associé est défini comme individu (SYSTEMIsIndividual__c)</help>
+        <help>Formule : Si le compte associé est défini comme individuel (SYSTEMIsIndividual__c)</help>
         <label>Opportunité provenant d’un individu</label>
         <name>Is_Opp_From_Individual__c</name>
     </fields>
     <fields>
-        <help>Détermine la valeur du contact ou compte du champ de dernier niveau d’adhésion.</help>
+        <help>Détermine la valeur du contact ou ducompte du champ de dernier niveau d’adhésion.</help>
         <label>Niveau de membre</label>
         <name>Member_Level__c</name>
         <picklistValues>
             <masterLabel>Bronze</masterLabel>
-            <translation><!-- Bronze --></translation>
+            <translation>Bronze</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gold</masterLabel>
-            <translation><!-- Gold --></translation>
+            <translation>Or</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Silver</masterLabel>
-            <translation><!-- Silver --></translation>
+            <translation>Argent</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -49,7 +49,7 @@
     </fields>
     <fields>
         <help>S’agit-il d’un renouvellement, d’une nouvelle adhésion, ou du retour d’un membre après un départ.</help>
-        <label>Origine d’adhésion</label>
+        <label>Origine de l’adhésion</label>
         <name>Membership_Origin__c</name>
         <picklistValues>
             <masterLabel>New</masterLabel>
@@ -66,7 +66,7 @@
     </fields>
     <fields>
         <help>Date à laquelle la période d’adhésion débute</help>
-        <label>Date de début d’adhésion</label>
+        <label>Date de début de l’adhésion</label>
         <name>Membership_Start_Date__c</name>
     </fields>
     <fields>
@@ -80,11 +80,11 @@
         <name>Payments_Made__c</name>
     </fields>
     <webLinks>
-        <label>Nouveau don</label>
+        <label>Don de nouveau contact</label>
         <name>New_Contact_Donation</name>
     </webLinks>
     <webLinks>
-        <label>Nouveau don</label>
+        <label>Don de nouveau compte</label>
         <name>New_Organization_Donation</name>
     </webLinks>
 </CustomObjectTranslation>

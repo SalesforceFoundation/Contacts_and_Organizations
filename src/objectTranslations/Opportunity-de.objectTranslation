@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help>Formel: Der Betrag dieser Opportunity minus des Betrags der Zahlungsabschreibung und des empfangenen Zahlungsbetrags</help>
+        <help>Formel: Der Betrag dieser Opportunity abzgl. des Betrags der Zahlungsabschreibung und des empfangenen Zahlungsbetrags.</help>
         <label>Verbleibender Saldo</label>
         <name>Amount_Outstanding__c</name>
     </fields>
     <fields>
-        <help>Gesamtwert der Zahlungen, die für diese Opportunity als abgeschrieben oder nicht eintreibbar gekennzeichnet sind</help>
+        <help>Gesamtwert der Zahlungen, die für diese Opportunity als abgeschrieben oder nicht eintreibbar gekennzeichnet sind.</help>
         <label>Betrag der Zahlungsabschreibung</label>
         <name>Amount_Written_Off__c</name>
     </fields>
     <fields>
-        <help>Abgeblendetes Feld zum Weiterleiten einer Kontaktkennung für die Erstellung der Kontaktrolle</help>
+        <help>Ausgeblendetes Feld zum Weiterleiten einer Kontaktkennung für die Erstellung der Kontaktrolle.</help>
         <label>Kontaktkennung für Rolle</label>
         <name>Contact_Id_for_Role__c</name>
     </fields>
@@ -26,16 +26,16 @@
         <name>Is_Opp_From_Individual__c</name>
     </fields>
     <fields>
-        <help>Ermittelt den Wert des Kontakts oder Accounts des Felds &quot;Ebene der letzten Mitgliedschaft&quot;</help>
+        <help>Legt den Wert des Kontakts oder Accounts des Felds &quot;Ebene der letzten Mitgliedschaft&quot; fest.</help>
         <label>Mitgliederebene</label>
         <name>Member_Level__c</name>
         <picklistValues>
             <masterLabel>Bronze</masterLabel>
-            <translation><!-- Bronze --></translation>
+            <translation>Bronze</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gold</masterLabel>
-            <translation><!-- Gold --></translation>
+            <translation>Gold</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Silver</masterLabel>
@@ -43,12 +43,12 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>Datum, an dem der Mitgliedschaftszeitraum endet</help>
+        <help>Datum, an dem der Mitgliedschaftszeitraum endet.</help>
         <label>Enddatum der Mitgliedschaft</label>
         <name>Membership_End_Date__c</name>
     </fields>
     <fields>
-        <help>Ist dies eine Erneuerung, eine neue Mitgliedschaft oder eine Mitgliedschaft von jemandem, der ausgesetzt hat und zurückgekehrt ist?</help>
+        <help>Ist dies eine Verlängerung, eine neue Mitgliedschaft oder eine Mitgliedschaft von jemandem, der ausgesetzt hat und zurückgekehrt ist?</help>
         <label>Ursprung der Mitgliedschaft</label>
         <name>Membership_Origin__c</name>
         <picklistValues>
@@ -61,11 +61,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Renewal</masterLabel>
-            <translation>Erneuerung</translation>
+            <translation>Verlängerung</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help>Datum, an dem der Mitgliedschaftszeitraum begonnen hat</help>
+        <help>Datum, an dem der Mitgliedschaftszeitraum beginnt</help>
         <label>Startdatum der Mitgliedschaft</label>
         <name>Membership_Start_Date__c</name>
     </fields>
@@ -75,7 +75,7 @@
         <name>Number_of_Payments__c</name>
     </fields>
     <fields>
-        <help>Der Gesamtwert der Zahlungen, die für diese Opportunity als bezahlt gekennzeichnet wurden</help>
+        <help>Der Gesamtwert der Zahlungen, die für diese Opportunity als bezahlt gekennzeichnet wurden.</help>
         <label>Erhaltener Zahlungsbetrag</label>
         <name>Payments_Made__c</name>
     </fields>

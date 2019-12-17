@@ -2,18 +2,18 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Payment --></value>
+        <value>Paiement</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Payment --></value>
+        <value>Paiements</value>
     </caseValues>
     <fields>
-        <label>Numéro de chèque / de référence</label>
+        <label>Numéro de chèque/référence</label>
         <name>Check_Reference_Number__c</name>
     </fields>
     <fields>
-        <label>Champ personnalisé de paiement</label>
+        <label>Champ de paiement personnalisé</label>
         <name>Custom_Payment_Field__c</name>
     </fields>
     <fields>
@@ -57,16 +57,16 @@
         <label>Déduit</label>
         <name>Written_Off__c</name>
     </fields>
-    <gender><!-- Masculine --></gender>
+    <gender>Masculine</gender>
     <layouts>
         <layout>Payment Layout</layout>
         <sections>
-            <label><!-- Custom Links --></label>
+            <label>Liens personnalisés</label>
             <section>Custom Links</section>
         </sections>
     </layouts>
-    <nameFieldLabel><!-- Payment Number --></nameFieldLabel>
-    <startsWith><!-- Consonant --></startsWith>
+    <nameFieldLabel>Numéro de paiement</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
     <webLinks>
         <label>Planifier des paiements</label>
         <name>Schedule_Payments</name>

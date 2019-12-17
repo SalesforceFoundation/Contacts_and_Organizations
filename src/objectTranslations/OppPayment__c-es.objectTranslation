@@ -2,18 +2,18 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Payment --></value>
+        <value>Pago</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Payment --></value>
+        <value>Pagos</value>
     </caseValues>
     <fields>
-        <label>N° de comprobante/referencia</label>
+        <label>N° de cheque/referencia</label>
         <name>Check_Reference_Number__c</name>
     </fields>
     <fields>
-        <label>Campo de pagos personalizado</label>
+        <label>Campo de pago personalizado</label>
         <name>Custom_Payment_Field__c</name>
     </fields>
     <fields>
@@ -26,7 +26,7 @@
         <name>Paid__c</name>
     </fields>
     <fields>
-        <label>Monto del pago</label>
+        <label>Importe del pago</label>
         <name>Payment_Amount__c</name>
     </fields>
     <fields>
@@ -54,10 +54,10 @@
         <name>Scheduled_Date__c</name>
     </fields>
     <fields>
-        <label>Cancelada</label>
+        <label>Amortizado</label>
         <name>Written_Off__c</name>
     </fields>
-    <gender><!-- Feminine --></gender>
+    <gender>Masculine</gender>
     <layouts>
         <layout>Payment Layout</layout>
         <sections>
@@ -65,13 +65,13 @@
             <section>Custom Links</section>
         </sections>
     </layouts>
-    <nameFieldLabel><!-- Payment Number --></nameFieldLabel>
+    <nameFieldLabel>Número de pago</nameFieldLabel>
     <webLinks>
         <label>Programar pagos</label>
         <name>Schedule_Payments</name>
     </webLinks>
     <webLinks>
-        <label>Cancelar pagos</label>
+        <label>Amortizar pagos</label>
         <name>Writeoff_Payments</name>
     </webLinks>
 </CustomObjectTranslation>

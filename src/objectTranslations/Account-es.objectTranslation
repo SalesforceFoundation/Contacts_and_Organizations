@@ -7,13 +7,13 @@
         <relationshipLabel>Cuenta</relationshipLabel>
     </fields>
     <fields>
-        <help>Indica si la cuenta es o no una cuenta especial para contactos (Familia, Uno-a-Uno, Individual) vs una cuenta normal.</help>
-        <label><!-- _SYSTEM: IsIndividual --></label>
+        <help>Indica si la cuenta es o no una cuenta especial para contactos (Hogar, Uno-a-Uno, Individuo) frente a una cuenta normal.</help>
+        <label>_SYSTEM: IsIndividual</label>
         <name>SYSTEMIsIndividual__c</name>
     </fields>
     <fields>
-        <help>Indica el modelo de cuenta: Familia, Uno-a-Uno o Individual.</help>
-        <label><!-- _SYSTEM: AccountType --></label>
+        <help>Indica para qué modelo está destinado la cuenta: Hogar, Uno-a-Uno o Individuo.</help>
+        <label>_SYSTEM: AccountType</label>
         <name>SYSTEM_AccountType__c</name>
     </fields>
 </CustomObjectTranslation>

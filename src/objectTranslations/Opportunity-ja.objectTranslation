@@ -80,11 +80,11 @@
         <name>Payments_Made__c</name>
     </fields>
     <webLinks>
-        <label>新しい個人支援(英版)</label>
+        <label>新しい個人支援</label>
         <name>New_Contact_Donation</name>
     </webLinks>
     <webLinks>
-        <label>新しい団体支援(英版)</label>
+        <label>新しい団体支援</label>
         <name>New_Organization_Donation</name>
     </webLinks>
 </CustomObjectTranslation>

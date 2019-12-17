@@ -9,28 +9,28 @@
         <value><!-- Contacts And Orgs Settings --></value>
     </caseValues>
     <fields>
-        <help>Configuración del modelo de cuenta. Debe ser Cuenta Familia, Uno-a-Uno o Individual. Cuenta Familia es la opción recomendada.</help>
+        <help>Configuración del modelo de cuenta. Debe ser cuenta Hogar, Uno-a-Uno o Individuo. Sustituye el campo personalizado Contact.SystemAccountProcessor__c. La cuenta Hogar es la opción recomendada.</help>
         <label>Modelo de cuenta</label>
         <name>Account_Processor__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_IndividualAcc_trigger --></label>
+        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+        <label>DESUSADO-Disable_IndividualAcc_trigger</label>
         <name>DISABLE_IndividualAccounts_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OppAccount_trigger --></label>
+        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+        <label>DESUSADO-Disable_OppAccount_trigger</label>
         <name>DISABLE_OpportunityAccount_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OCR_trigger --></label>
+        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+        <label>DESUSADO-Disable_OCR_trigger</label>
         <name>DISABLE_OpportunityContactRoles_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OppPayments_trigger --></label>
+        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+        <label>DESUSADO-Disable_OppPayments_trigger</label>
         <name>DISABLE_OpportunityPayments_trigger__c</name>
     </fields>
     <fields>
@@ -39,63 +39,63 @@
         <name>Default_Opp_on_Convert__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable Account Model Trigger --></label>
+        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+        <label>DESUSADO-Desactivar desenc modelo cuenta</label>
         <name>Disable_Account_Model_Trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Enable OppContactRole Trigger --></label>
+        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+        <label>DESUSADO-Activar desenc. OppContactRole</label>
         <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Enable Update Check --></label>
+        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+        <label>DESUSADO-Activar comprob. actualización</label>
         <name>Enable_Update_Check__c</name>
     </fields>
     <fields>
-        <help>El ID del tipo de registro de cuenta que se usa para Cuentas Familias. Si no se selecciona uno, se utilizará el tipo de registro por defecto en el usuario.</help>
-        <label>Tipo de registro para Cuenta Familia</label>
+        <help>El Id. del tipo de registro de cuenta que se usa para Cuentas Hogar. Si no se selecciona uno, la cuenta tomará el tipo de registro predeterminado del usuario.</help>
+        <label>Tipo de registro para cuenta Hogar</label>
         <name>HH_Account_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Has Package Update --></label>
+        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+        <label>DESUSADO-Tiene actualización de paquete</label>
         <name>Has_Package_Update__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Last Update Check --></label>
+        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+        <label>DESUSADO-Última comprob. actualización</label>
         <name>Last_Update_Check__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Max Package Version --></label>
+        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+        <label>DESUSADO-Versión de paquete máxima</label>
         <name>Max_Package_Version__c</name>
     </fields>
     <fields>
-        <help>El ID del tipo de registro de cuenta que se usa para Cuentas Uno-a-Uno. Si no se selecciona uno, se utilizará el tipo de registro por defecto en el usuario.</help>
+        <help>El Id. del tipo de registro de cuenta que se usa para Cuentas Uno-a-Uno. Si no se selecciona uno, la cuenta tomará el tipo de registro predeterminado del usuario.</help>
         <label>Tipo de registro para Uno a Uno</label>
         <name>One_to_One_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help>La función por defecto para las funciones de contacto en oportunidades que se generan automáticamente.</help>
-        <label>F. de contacto en op. por defecto</label>
+        <help>La función del contacto predeterminada asignada automáticamente al contacto principal de la oportunidad cuando la cuenta de la oportunidad es una cuenta Hogar, Uno-a-Uno o Individuo.</help>
+        <label>Función contacto operac. individuales</label>
         <name>Opportunity_Contact_Role_Default_role__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Package Update URL --></label>
+        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+        <label>DESUSADO-URL de actualización de paquete</label>
         <name>Package_Update_URL__c</name>
     </fields>
     <fields>
-        <help>Habilita la creación automática de pagos para nuevas oportunidades/donaciones.</help>
-        <label>Habilitar pagos</label>
+        <help>Si se activa, Salesforce crea automáticamente pagos para nuevas oportunidades (Donaciones).</help>
+        <label>Creación automática de pagos</label>
         <name>Payments_Enabled__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Update Check Interval --></label>
+        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+        <label>DESUSADO-Actualizar intervalo comprobac.</label>
         <name>Update_Check_Interval__c</name>
     </fields>
     <gender><!-- Feminine --></gender>

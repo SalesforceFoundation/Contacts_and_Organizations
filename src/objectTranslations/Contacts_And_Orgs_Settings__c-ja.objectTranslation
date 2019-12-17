@@ -10,23 +10,23 @@
         <name>Account_Processor__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_IndividualAcc_trigger --></label>
+        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+        <label>廃止-Disable_IndividualAcc_trigger</label>
         <name>DISABLE_IndividualAccounts_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OppAccount_trigger --></label>
+        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+        <label>廃止-Disable_OppAccount_trigger</label>
         <name>DISABLE_OpportunityAccount_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OCR_trigger --></label>
+        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+        <label>廃止-Disable_OCR_trigger</label>
         <name>DISABLE_OpportunityContactRoles_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OppPayments_trigger --></label>
+        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+        <label>廃止-Disable_OppPayments_trigger</label>
         <name>DISABLE_OpportunityPayments_trigger__c</name>
     </fields>
     <fields>
@@ -35,18 +35,18 @@
         <name>Default_Opp_on_Convert__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable Account Model Trigger --></label>
+        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+        <label>廃止-団体モデルトリガの無効化</label>
         <name>Disable_Account_Model_Trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Enable OppContactRole Trigger --></label>
+        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+        <label>廃止-OppContactRole トリガの有効化</label>
         <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label>更新確認の有効化</label>
+        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+        <label>廃止-更新確認の有効化</label>
         <name>Enable_Update_Check__c</name>
     </fields>
     <fields>
@@ -55,18 +55,18 @@
         <name>HH_Account_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Has Package Update --></label>
+        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+        <label>廃止-パッケージを更新可能</label>
         <name>Has_Package_Update__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label>最終更新確認日時</label>
+        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+        <label>廃止-最終更新確認日時</label>
         <name>Last_Update_Check__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Max Package Version --></label>
+        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+        <label>廃止-最大パッケージバージョン</label>
         <name>Max_Package_Version__c</name>
     </fields>
     <fields>
@@ -75,23 +75,23 @@
         <name>One_to_One_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help>自動的に作成される主支援個人の役割のデフォルト役割。</help>
-        <label>支援個人の役割のデフォルト役割</label>
+        <help>支援の団体が世帯、1 対 1、または個人の団体でない場合に、支援の主個人に自動的に割り当てられるデフォルトの個人の役割。</help>
+        <label>個人支援の個人の役割</label>
         <name>Opportunity_Contact_Role_Default_role__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Package Update URL --></label>
+        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+        <label>廃止-パッケージ更新 URL</label>
         <name>Package_Update_URL__c</name>
     </fields>
     <fields>
-        <help>新しい支援で作成される自動支払を有効にします。</help>
-        <label>支払の有効化</label>
+        <help>有効な場合、新しい支援の支払が自動的に作成されます。</help>
+        <label>自動支払作成</label>
         <name>Payments_Enabled__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label>更新確認間隔</label>
+        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+        <label>廃止-更新確認間隔</label>
         <name>Update_Check_Interval__c</name>
     </fields>
 </CustomObjectTranslation>

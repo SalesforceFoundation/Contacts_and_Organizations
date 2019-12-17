@@ -2,22 +2,22 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Payment --></value>
+        <value>Betaling</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Payment --></value>
+        <value>Betalingen</value>
     </caseValues>
     <fields>
-        <label>Cheque/Referentie Nummer</label>
+        <label>Cheque/referentienummer</label>
         <name>Check_Reference_Number__c</name>
     </fields>
     <fields>
-        <label>Aangepast Betalingsveld</label>
+        <label>Aangepaste-betalingsveld</label>
         <name>Custom_Payment_Field__c</name>
     </fields>
     <fields>
-        <label><!-- Opportunity --></label>
+        <label>Opportunity</label>
         <name>Opportunity__c</name>
         <relationshipLabel>Betalingen</relationshipLabel>
     </fields>
@@ -34,7 +34,7 @@
         <name>Payment_Date__c</name>
     </fields>
     <fields>
-        <label>Betalingsmethode</label>
+        <label>Betalingswijze</label>
         <name>Payment_Method__c</name>
         <picklistValues>
             <masterLabel>Cash</masterLabel>
@@ -46,32 +46,32 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Credit Card</masterLabel>
-            <translation>Creditkaart</translation>
+            <translation>Creditcard</translation>
         </picklistValues>
     </fields>
     <fields>
-        <label>Geplande Datum</label>
+        <label>Geplande datum</label>
         <name>Scheduled_Date__c</name>
     </fields>
     <fields>
         <label>Afgeschreven</label>
         <name>Written_Off__c</name>
     </fields>
-    <gender><!-- Neuter --></gender>
+    <gender>Feminine</gender>
     <layouts>
         <layout>Payment Layout</layout>
         <sections>
-            <label>Aangepaste Koppelingen</label>
+            <label>Aangepaste koppelingen</label>
             <section>Custom Links</section>
         </sections>
     </layouts>
-    <nameFieldLabel><!-- Payment Number --></nameFieldLabel>
+    <nameFieldLabel>Betalingsnummer</nameFieldLabel>
     <webLinks>
-        <label>Plan Betalingen</label>
+        <label>Betalingen plannen</label>
         <name>Schedule_Payments</name>
     </webLinks>
     <webLinks>
-        <label>Afschrijven Betalingen</label>
+        <label>Betalingen afschrijven</label>
         <name>Writeoff_Payments</name>
     </webLinks>
 </CustomObjectTranslation>

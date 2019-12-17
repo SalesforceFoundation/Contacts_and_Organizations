@@ -79,8 +79,8 @@
         <name>One_to_One_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help><!-- The default Contact Role automatically assigned to the Primary Contact for the Opportunity. --></help>
-        <label><!-- Default Opportunity Contact Role --></label>
+        <help><!-- The default Contact Role automatically assigned to the Opportunity&apos;s Primary Contact when the Opportunity&apos;s Account is a Household, One-to-One, or Individual Account. --></help>
+        <label><!-- Contact Role for Individual Opps --></label>
         <name>Opportunity_Contact_Role_Default_role__c</name>
     </fields>
     <fields>

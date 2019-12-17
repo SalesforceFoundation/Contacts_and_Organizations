@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help>Formule: Het Bedrag van deze Opportunity minus het Betaling Afschrijvingsbedrag en Betaling Ontvangen Bedrag.</help>
-        <label>Resterende Saldo</label>
+        <help>Formule: het bedrag van deze opportunity minus Afschrijvingsbedrag van betaling en Ontvangen bedrag van betaling.</help>
+        <label>Resterend saldo</label>
         <name>Amount_Outstanding__c</name>
     </fields>
     <fields>
-        <help>Totale waarde van de Betalingen die gemarkeerd zijn als afgeschreven of niet incasseerbaar voor deze Opportunity.</help>
-        <label>Betaling Afschrijvingsbedrag</label>
+        <help>Totale waarde van de betalingen gemarkeerd als afgeschreven of niet incasseerbaar voor deze opportunity.</help>
+        <label>Afschrijvingsbedrag van betaling</label>
         <name>Amount_Written_Off__c</name>
     </fields>
     <fields>
-        <help>Verborgen veld voor het aannemen van een Contactpersoon Id voor Contactpersoon Rol creatie.</help>
-        <label>Contactpersoon ID voor Rol</label>
+        <help>Verborgen veld voor het doorgeven van een contactpersoons-ID voor het maken van een rol voor contactpersoon.</help>
+        <label>Contactpersoons-ID voor rol</label>
         <name>Contact_Id_for_Role__c</name>
     </fields>
     <fields>
-        <help>Als betalingen actief zijn, en indien aangevinkt, een nieuwe betaling zal niet automatisch gemaakt worden voor deze opportunity.</help>
-        <label>Maak Geen Automatische Betaling</label>
+        <help>Als betalingen actief zijn, en indien aangevinkt, wordt er niet automatisch een nieuwe betaling gemaakt voor deze opportunity.</help>
+        <label>Niet automatisch betaling maken</label>
         <name>Do_Not_Automatically_Create_Payment__c</name>
     </fields>
     <fields>
-        <help>Formule: is de gerelateerde Account gedefinieerd als een individu of niet.</help>
-        <label>Is Opportunity van Individu</label>
+        <help>Formule: of de gerelateerde account al dan niet is gedefinieerd als individu (SYSTEMIsIndividual__c)</help>
+        <label>Is opportunity van Individu</label>
         <name>Is_Opp_From_Individual__c</name>
     </fields>
     <fields>
-        <help>Bepaalt de waarde op het Contactpersoon of Account van het Laaste Lidmaatschap Niveau Veld.</help>
-        <label>Lid Niveau</label>
+        <help>Bepaalt de waarde voor Contactpersoon of Account van het veld Laatste lidmaatschapsniveau.</help>
+        <label>Niveau van lid</label>
         <name>Member_Level__c</name>
         <picklistValues>
             <masterLabel>Bronze</masterLabel>
-            <translation>Brons</translation>
+            <translation>Bronze</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gold</masterLabel>
-            <translation>Goud</translation>
+            <translation>Gold</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Silver</masterLabel>
-            <translation>Zilver</translation>
+            <translation>Silver</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help>Datum waarop Lidmaatschap periode eindigt.</help>
-        <label>Lidmaatschap Einddatum</label>
+        <help>Datum waarop periode van lidmaatschap eindigt.</help>
+        <label>Einddatum van lidmaatschap</label>
         <name>Membership_End_Date__c</name>
     </fields>
     <fields>
-        <help>Is dit een vernieuwing, een nieuw Lidmaatschap, of een verlopen Lidmaatschap met iemand die is teruggekomen.</help>
-        <label>Lidmaatschap Herkomst</label>
+        <help>Als dit een verlenging, een nieuw lidmaatschap, of een lidmaatschap is van iemand die na opzegging is teruggekomen.</help>
+        <label>Herkomst van lidmaatschap</label>
         <name>Membership_Origin__c</name>
         <picklistValues>
             <masterLabel>New</masterLabel>
@@ -57,34 +57,34 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Reacquire</masterLabel>
-            <translation>Terugkerend</translation>
+            <translation>Opnieuw verwerven</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Renewal</masterLabel>
-            <translation>Vernieuwend</translation>
+            <translation>Verlenging</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help>Datum waarop Lidmaatschap periode begint</help>
-        <label>Lidmaatschap Startdatum</label>
+        <help>Datum waarop de lidmaatschapsperiode begint</help>
+        <label>Begindatum van lidmaatschap</label>
         <name>Membership_Start_Date__c</name>
     </fields>
     <fields>
-        <help>Totaal aantal Betalingen voor deze Opportunity (donatie)</help>
-        <label>Aantal Betalingen</label>
+        <help>Totale aantal betalingen voor deze opportunity (donatie)</help>
+        <label>Aantal betalingen</label>
         <name>Number_of_Payments__c</name>
     </fields>
     <fields>
-        <help>De totale waarde van Betalingen die gemarkeerd zijn als betaald voor deze Opportunity.</help>
-        <label>Betaling Bedrag Ontvangen</label>
+        <help>De totale waarde van betalingen die gemarkeerd zijn als betaald voor deze opportunity.</help>
+        <label>Ontvangen bedrag van betaling</label>
         <name>Payments_Made__c</name>
     </fields>
     <webLinks>
-        <label>Nieuwe Donatie Contactpersoon</label>
+        <label>Nieuwe contactpersoon voor donatie</label>
         <name>New_Contact_Donation</name>
     </webLinks>
     <webLinks>
-        <label>Nieuwe Donatie Account</label>
+        <label>Nieuwe account voor donatie</label>
         <name>New_Organization_Donation</name>
     </webLinks>
 </CustomObjectTranslation>

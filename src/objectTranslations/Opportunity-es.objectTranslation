@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help>Fórmula: El importe de esta oportunidad menos el Monto de pagos cancelados y el Monto de pagos recibidos.</help>
-        <label>Balance restante</label>
+        <help>Fórmula: El importe de esta oportunidad menos el importe de los pagos amortizados y el importe de los pagos recibidos.</help>
+        <label>Saldo restante</label>
         <name>Amount_Outstanding__c</name>
     </fields>
     <fields>
-        <help>Valor total de los pagos marcados como cancelados o imposibles de cobrar para esta oportunidad.</help>
-        <label>Monto de pagos cancelados</label>
+        <help>Valor total de los pagos marcados como amortizados o imposibles de cobrar para esta oportunidad.</help>
+        <label>Importe de pagos amortizados</label>
         <name>Amount_Written_Off__c</name>
     </fields>
     <fields>
-        <help>Campo oculto para pasar el Id del contacto para la creación de una Función de Contacto</help>
-        <label>Id del contacto para la función</label>
+        <help>Campo oculto para pasar un Id. de contacto para la creación de una función de contacto.</help>
+        <label>Id. del contacto para la función</label>
         <name>Contact_Id_for_Role__c</name>
     </fields>
     <fields>
-        <help>Si pagos esta activado, y este campo seleccionado, un nuevo pago NO será automáticamente creado para esta oportunidad.</help>
-        <label>No crear automáticamente pagos</label>
+        <help>Si los pagos están activos y este campo está seleccionado, no se creará un nuevo pago automáticamente para esta oportunidad.</help>
+        <label>No crear pago automáticamente pago</label>
         <name>Do_Not_Automatically_Create_Payment__c</name>
     </fields>
     <fields>
-        <help>Fórmula: Si la cuenta relacionada esta o no definida como un individuo (SYSTEMIsIndividual__c)</help>
-        <label>Es una op. de un individuo</label>
+        <help>Fórmula: Si la cuenta relacionada está o no definida como un individuo (SYSTEMIsIndividual__c)</help>
+        <label>Es oportunidad procedente de individuo</label>
         <name>Is_Opp_From_Individual__c</name>
     </fields>
     <fields>
-        <help>Determina el valor del nivel de la última membresía en un contacto o una cuenta</help>
+        <help>Determina el valor del contacto o la cuenta del campo Último nivel de afiliación.</help>
         <label>Nivel de miembro</label>
         <name>Member_Level__c</name>
         <picklistValues>
@@ -43,21 +43,21 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>Fecha en la que la membresía termina.</help>
-        <label>Fecha de fin de la membresía</label>
+        <help>Fecha en la que termina el periodo de afiliación.</help>
+        <label>Fecha de finalización de afiliación</label>
         <name>Membership_End_Date__c</name>
     </fields>
     <fields>
-        <help>Es esta una renovación, una nueva membresía o una membresía de alguien que se fue y ahora retorna.</help>
-        <label>Origen de la membresía</label>
+        <help>Es esta una renovación, una nueva afiliación o una afiliación de alguien que se fue y ha vuelto.</help>
+        <label>Origen de la afiliación</label>
         <name>Membership_Origin__c</name>
         <picklistValues>
             <masterLabel>New</masterLabel>
-            <translation>Nueva</translation>
+            <translation>Nuevo</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Reacquire</masterLabel>
-            <translation>Re-adquirida</translation>
+            <translation>Reobtenida</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Renewal</masterLabel>
@@ -65,18 +65,18 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>Fecha en el que el período de la membresía inicia</help>
-        <label>Fecha de inicio de la membresía</label>
+        <help>Fecha en el que se inicia el periodo de afiliación</help>
+        <label>Fecha de inicio de afiliación</label>
         <name>Membership_Start_Date__c</name>
     </fields>
     <fields>
-        <help>Cantidad total de pagos para esta oportunidad.</help>
-        <label>Cantidad de pagos</label>
+        <help>Número total de pagos para esta oportunidad (Donación)</help>
+        <label>Número de pagos</label>
         <name>Number_of_Payments__c</name>
     </fields>
     <fields>
         <help>El valor total de los pagos marcados como recibidos para esta oportunidad.</help>
-        <label>Monto de pagos recibidos</label>
+        <label>Importe de pagos recibidos</label>
         <name>Payments_Made__c</name>
     </fields>
     <webLinks>

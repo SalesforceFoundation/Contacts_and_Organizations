@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label>Fusionar Contactos puede resultar en la pérdida de datos. Asegúrese de que el Contacto que seleccione como ganador tenga todos los datos que desea. Quizás necesite copiar datos de un Contacto a otro, antes de fusionar los registros.</label>
+        <label>La combinación de contactos es un proceso irreversible.</label>
         <name>Contact_Merge_Error_Confirm_Message</name>
     </customLabels>
     <customLabels>
-        <label>Si usted tiene un Paquete de Casa, por favor, note que las Casas para los Contactos fusionados no se ven afectadas durante la fusión. Si usted desea fusionar Casas, debería hacerlo en forma manual, asegurándose de que el Contacto ganador esté conectado con la Casa correcta.</label>
+        <label>Si usted tiene el paquete Hogar, tenga en cuenta que los hogares para los contactos combinados no se ven afectados durante la combinación. Si desea combinar los hogares, deberá hacerlo manualmente, asegurándose que el contacto prevalente esté conectado con el hogar correcto.</label>
         <name>Contact_Merge_Error_Confirm_Message_Households</name>
     </customLabels>
     <customLabels>
-        <label>No se encontraron Contactos que coincidieran, por favor, busque nuevamente.</label>
+        <label>No se encontraron contactos coincidentes, realice la búsqueda de nuevo.</label>
         <name>Contact_Merge_Error_Confirm_Message_Nothing_Found</name>
     </customLabels>
     <customLabels>
-        <label>Falló la búsqueda de la información de contacto.</label>
+        <label>Falló la consulta de la información de contacto.</label>
         <name>Contact_Merge_Error_Contact_not_found</name>
     </customLabels>
     <customLabels>
-        <label>Falló el bloqueo de todo los registros para su combinación.</label>
+        <label>Falló el bloqueo de todos los registros para su combinación.</label>
         <name>Contact_Merge_Error_Lock_failed</name>
     </customLabels>
     <customLabels>
@@ -25,7 +25,7 @@
         <name>Contact_Merge_Error_Merge_Failed</name>
     </customLabels>
     <customLabels>
-        <label>Seleccionar un registro principal para combinar.</label>
+        <label>Seleccione un registro principal para combinar.</label>
         <name>Contact_Merge_Error_No_Master</name>
     </customLabels>
     <customLabels>
@@ -33,11 +33,11 @@
         <name>Contact_Merge_Error_Query_Failed</name>
     </customLabels>
     <customLabels>
-        <label>Seleccionar al menos 2 contactos para combinar.</label>
+        <label>Seleccione al menos 2 contactos para combinar.</label>
         <name>Contact_Merge_Error_Too_Few_Contacts</name>
     </customLabels>
     <customLabels>
-        <label>Puede combinar hasta 3 contactos a la vez.</label>
+        <label>Solo puede combinar 3 contactos al mismo tiempo.</label>
         <name>Contact_Merge_Error_Too_Many_Contacts</name>
     </customLabels>
     <customLabels>
@@ -45,27 +45,29 @@
         <name>Contact_Merge_Error_please_retry</name>
     </customLabels>
     <customLabels>
-        <label>Ingrese un texto para encontrar Contactos duplicados.</label>
+        <label>Introduzca texto para encontrar contactos duplicados.</label>
         <name>Contact_Merge_Step1</name>
     </customLabels>
     <customLabels>
-        <label>Seleccione 3 Contactos para Combinar.</label>
+        <label>Seleccione un máximo de 3 contactos para combinar</label>
         <name>Contact_Merge_Step2</name>
     </customLabels>
     <customLabels>
-        <label>Seleccione el Contacto ganador.</label>
+        <label>Seleccione el contacto prevalente</label>
         <name>Contact_Merge_Step3</name>
     </customLabels>
     <customLabels>
-        <label>Combine los Contactos.</label>
+        <label>Combinar los contactos.</label>
         <name>Contact_Merge_Step4</name>
     </customLabels>
     <customLabels>
-        <label>El Modelo de Cuentas del NPSP determina si cada Contacto tiene su propia Cuenta &quot;Una a Una&quot;, Cuenta &quot;Familia&quot;, o si están todos relacionados a una Cuenta &quot;Individual&quot;. Este debe ser definido antes de comenzar a usar el sistema y no debe der cambiado a menos que se entienda como afecta el cambio. Si se cambia el Modelo de Cuentas con información real, va a ser necesario migrar toda la información al nuevo modelo. Para organizaciones nuevas, se recomienda el modelo de Cuenta &quot;Familia&quot;.</label>
+        <label>Nonprofit Success Pack admite tres modelos de cuentas diferentes: el modelo de cuenta Hogar, el modelo de cuenta Uno-a-Uno y el modelo de cuenta Individuo (o &quot;Depósito&quot;) . Para obtener más información sobre cualquiera de estos modelos, consulte la &lt;a href=&quot;https://powerofus.force.com/NPSP_Account_Model&quot; target=&quot;_blank&quot;&gt;Documentación de NPSP&lt;/a&gt;.
+&lt;br/&gt;&lt;br&gt; 
+Para aquellos que utilizan NPSP3 y versiones posteriores, se recomienda el modelo de cuenta Hogar.</label>
         <name>Contacts_Settings_Account_Model_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>Puede seleccionar tener una Función de Contacto en la oportunidad creada automáticamente al momento de crear una Oportunidad. Existe un campo en la Oportunidad llamado &quot;Id de contacto para función&quot;. Si se importan Oportunidades con un ID de Contacto válido, se va a crear una Función de Contacto según los valores predefinidos abajo. También se puede desactivar la funcionalidad modificando la configuración del trigger.</label>
+        <label>Puede seleccionar que se cree una Función de contacto de oportunidad automáticamente cuando se crean las oportunidades. Existe un campo en Oportunidad denominado &quot;Id. de contacto para función&quot;. Si se importan oportunidades con un Id. de contacto válido en ese campo, se creará una Función de contacto según los valores predeterminados establecidos a continuación. También puede desactivar la función completamente modificando la configuración del desencadenador.</label>
         <name>Contacts_Settings_Contact_Roles_Help_Text</name>
     </customLabels>
     <customLabels>
@@ -81,23 +83,23 @@
         <name>Matching_Donation_Record_Type</name>
     </customLabels>
     <customLabels>
-        <label>El Id de contacto suministrado para el Id de contacto para el campo de Función es invalido. Por favor, utilice un Id de contacto válido.</label>
+        <label>El Id. de contacto suministrado en el Id. del contacto para el campo Función no es válido. Utilice un Id. de contacto válido.</label>
         <name>Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
     </customLabels>
     <customPageWebLinks>
-        <label>Reportes de la Edición Nonprofit</label>
+        <label><!-- Nonprofit Edition Reports --></label>
         <name>Nonprofit_Edition_Reports</name>
     </customPageWebLinks>
     <customTabs>
-        <label><!-- Contact Merge (OLD) --></label>
+        <label>Combinación de contactos (Obsoleto)</label>
         <name>Contact_Merge</name>
     </customTabs>
     <customTabs>
-        <label>Configuración de Contactos</label>
+        <label>Configuración de contactos</label>
         <name>Contacts_Settings</name>
     </customTabs>
     <customTabs>
-        <label>Mapeo en pagos</label>
+        <label>Asignación de pagos</label>
         <name>Payment_Mapping</name>
     </customTabs>
 </Translations>

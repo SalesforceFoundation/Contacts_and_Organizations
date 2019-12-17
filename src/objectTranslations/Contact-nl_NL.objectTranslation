@@ -1,79 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help>Een Alternatief E-mailadres is een optioneel vierde e-mailadres: Niet persoonlijk, voorkeur, of werk e-mailadres.</help>
-        <label>Alternatief E-mailadres</label>
+        <help>Alternatief e-mailadres is een optioneel vierde e-mailadres: niet het persoonlijke e-mailadres, het voorkeuradres of het e-mailadres voor werk.</help>
+        <label>Alternatief e-mailadres</label>
         <name>AlternateEmail__c</name>
     </fields>
     <fields>
-        <help>Zie Voorkeur E-mailadres veld.</help>
-        <label>Persoonlijk E-mailadres</label>
+        <help>Zie het veld Voorkeur-e-mailadres.</help>
+        <label>Persoonlijk e-mailadres</label>
         <name>HomeEmail__c</name>
     </fields>
     <fields>
-        <help>Formule: Gebruik het Primaire Adrestype veld om het Huisadres van Postadres of Ander Adres te bepalen.</help>
-        <label>Huisadres</label>
+        <help>Formule: gebruikt het primaire veld voor adrestype om Thuisadres te bepalen op basis van Postadres of Ander adres.</help>
+        <label>Thuisadres</label>
         <name>Home_Address__c</name>
     </fields>
     <fields>
-        <help>Formule: In volgorde van voorkeur, het SYSTEEM_AccountType veld, het Account Type veld, en &quot;Organisatie&quot;.</help>
-        <label>Organisatie Type</label>
+        <help>Formule: in volgorde van voorkeur, het veld SYSTEM_AccountType, het veld Accounttype en &quot;Organisatie&quot;.</help>
+        <label>Organisatietype</label>
         <name>Organization_Type__c</name>
     </fields>
     <fields>
-        <help>Formule: Als het Primaire Adres gelijk is aan Anders, het Postadres. Als het Secundaire Adrestype gelijk is aan Anders, het Anders Adres.</help>
-        <label>Ander Adres</label>
+        <help>Formule: als het type Primaire adres gelijk is aan Overig, het Postadres. Als het type Secundair adres gelijk is aan Overig, het Andere adres.</help>
+        <label>Ander adres</label>
         <name>Other_Address__c</name>
     </fields>
     <fields>
-        <help>Welk telefoonnummer moet er gebruikt worden in de communicatie met deze Contactpersoon?</help>
-        <label>Voorkeur Telefoon</label>
+        <help>Welk telefoonnummer moet er worden gebruikt voor de meeste communicatie met betrekking tot deze contactpersoon?</help>
+        <label>Voorkeurtelefoon</label>
         <name>PreferredPhone__c</name>
         <picklistValues>
             <masterLabel>Home</masterLabel>
-            <translation><!-- Home --></translation>
+            <translation>Thuis</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mobile</masterLabel>
-            <translation><!-- Mobile --></translation>
+            <translation>Mobiel</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Work</masterLabel>
-            <translation><!-- Work --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>Welk e-mailadres moet er gebruikt worden in de communicatie met deze Contactpersoon?</help>
-        <label>Voorkeur E-mailadres</label>
-        <name>Preferred_Email__c</name>
-        <picklistValues>
-            <masterLabel>Alternate</masterLabel>
-            <translation><!-- Alternate --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Personal</masterLabel>
-            <translation><!-- Personal --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Work</masterLabel>
-            <translation><!-- Work --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>Welk type adres is het postadres?</help>
-        <label>Primair Adrestype</label>
-        <name>Primary_Address_Type__c</name>
-        <picklistValues>
-            <masterLabel>Home</masterLabel>
-            <translation>Huis</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Other</masterLabel>
-            <translation>Anders</translation>
+            <translation>Overig</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Work</masterLabel>
@@ -81,21 +47,55 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>Sluit deze Contactpersoon uit van Eén-op-Eén of Bucket Account verwerking.</help>
+        <help>Welk e-mailadres moet er worden gebruikt voor de meeste communicatie met betrekking tot deze contactpersoon?</help>
+        <label>Voorkeur-e-mailadres</label>
+        <name>Preferred_Email__c</name>
+        <picklistValues>
+            <masterLabel>Alternate</masterLabel>
+            <translation>Alternatief</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal</masterLabel>
+            <translation>Persoonlijk</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Werk</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Welk type adres is het postadres?</help>
+        <label>Type Primair adres</label>
+        <name>Primary_Address_Type__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation>Thuis</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Overig</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Werk</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Sluit deze contactpersoon uit van elke verwerking van Account voor individu. Als u het veld Account blanco laat, blijft dit blanco.</help>
         <label>Privé</label>
         <name>Private__c</name>
     </fields>
     <fields>
         <help>Welk type adres is het andere adres?</help>
-        <label>Secundair Adrestype</label>
+        <label>Type Secundair adres</label>
         <name>Secondary_Address_Type__c</name>
         <picklistValues>
             <masterLabel>Home</masterLabel>
-            <translation>Huis</translation>
+            <translation>Thuis</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other</masterLabel>
-            <translation>Anders</translation>
+            <translation>Overig</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Work</masterLabel>
@@ -103,8 +103,8 @@
         </picklistValues>
     </fields>
     <fields>
-        <help>VEROUDERD - Geeft aan welk model zorgt voor Account Relatiegedrag. Individu (Bucket) of Eén-op-Eén.</help>
-        <label>_SYSTEEM: ACCOUNT PROCESSOR</label>
+        <help>NIET LANGER GEBRUIKT - Geeft aan welk model de werking van de relatie Account aanstuurt: Individu (Bucket) of Eén-op-één.</help>
+        <label>DEPRECATED - _SYSTEM: ACCOUNT PROCESSOR</label>
         <name>SystemAccountProcessor__c</name>
         <picklistValues>
             <masterLabel>Individual</masterLabel>
@@ -112,26 +112,26 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>One-to-One</masterLabel>
-            <translation><!-- One-to-One --></translation>
+            <translation>Eén-op-één</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help>Formule: &quot;Individueel&quot; of &quot;Organisatie&quot; afhankelijk van Account instellingen.</help>
-        <label>Type Account</label>
+        <help>Formule: &quot;Individu&quot; of &quot;Organisatie&quot;, afhankelijk van de instelling voor Account.</help>
+        <label>Type account</label>
         <name>Type_of_Account__c</name>
     </fields>
     <fields>
-        <help>Zie Voorkeur E-mailadres veld.</help>
-        <label>Werk E-mailadres</label>
+        <help>Zie het veld Voorkeur-e-mailadres.</help>
+        <label>E-mail werk</label>
         <name>WorkEmail__c</name>
     </fields>
     <fields>
-        <help>Zie &apos;Voorkeur Telefoon&apos; veld.</help>
-        <label>Werk Telefoon</label>
+        <help>Zie het veld &apos;Voorkeurtelefoon&apos;.</help>
+        <label>Telefoon werk</label>
         <name>WorkPhone__c</name>
     </fields>
     <fields>
-        <help>Formule: Als het Primaire Adrestype gelijk is aan Werk, het Postadres. Als het Secundaire Adres type gelijk is aan Werk, het Ander Adres.</help>
+        <help>Formule: als het type Primair adres Werk is, het Postadres. Als het type Secundair adres gelijk is aan Overig, het Andere adres.</help>
         <label>Werkadres</label>
         <name>Work_Address__c</name>
     </fields>

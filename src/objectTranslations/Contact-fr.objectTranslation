@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help>L’e-mail secondaire est un quatrième e-mail optionnel : en plus du personnel, préféré ou professionnel.</help>
-        <label>E-mail secondaire</label>
+        <help>Autre e-mail est un quatrième e-mail facultatif : en plus du personnel, préféré ou professionnel.</help>
+        <label>Autre e-mail</label>
         <name>AlternateEmail__c</name>
     </fields>
     <fields>
-        <help>Voir le champ d’e-mail préféré.</help>
+        <help>Voir le champ E-mail préféré.</help>
         <label>E-mail personnel</label>
         <name>HomeEmail__c</name>
     </fields>
@@ -16,12 +16,12 @@
         <name>Home_Address__c</name>
     </fields>
     <fields>
-        <help>Formule : Par ordre de préférence, le champ SYSTEM_AccountType, le champ type de compte, et « Organisation ».</help>
+        <help>Formule : Par ordre de préférence, le champ SYSTEM_AccountType, le champ Type de compte, et « Organisation ».</help>
         <label>Type d&apos;organisation</label>
         <name>Organization_Type__c</name>
     </fields>
     <fields>
-        <help>Formule : Si le type d’adresse principale est Autre, l’adresse postale.  Si le type d’adresse secondaire est Autre, l’autre adresse.</help>
+        <help>Formule : Si le type d’adresse principale est Autre, l’adresse postale. Si le type d’adresse secondaire est Autre, l’autre adresse.</help>
         <label>Autre adresse</label>
         <name>Other_Address__c</name>
     </fields>
@@ -31,19 +31,19 @@
         <name>PreferredPhone__c</name>
         <picklistValues>
             <masterLabel>Home</masterLabel>
-            <translation><!-- Home --></translation>
+            <translation>Domicile</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mobile</masterLabel>
-            <translation><!-- Mobile --></translation>
+            <translation>Mobile</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
+            <translation>Autre</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Work</masterLabel>
-            <translation><!-- Work --></translation>
+            <translation>Professionnel</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -52,15 +52,15 @@
         <name>Preferred_Email__c</name>
         <picklistValues>
             <masterLabel>Alternate</masterLabel>
-            <translation><!-- Alternate --></translation>
+            <translation>Autre</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Personal</masterLabel>
-            <translation><!-- Personal --></translation>
+            <translation>Personnel</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Work</masterLabel>
-            <translation><!-- Work --></translation>
+            <translation>Professionnel</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -77,11 +77,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Work</masterLabel>
-            <translation>Travail</translation>
+            <translation>Professionnel</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help>Exclut ce contact du traitement de comptes autocréés ou de comptes de panier.</help>
+        <help>Exclut ce contact de tout traitement de compte individuel. Si vous laissez le champ Compte vide, il restera vide.</help>
         <label>Privé(e)</label>
         <name>Private__c</name>
     </fields>
@@ -99,39 +99,39 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Work</masterLabel>
-            <translation>Travail</translation>
+            <translation>Professionnel</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help>Indique le modèle qui définit la relation du compte : Individus (panier) ou autocréé</help>
+        <help>N&apos;EST PLUS UTILISÉ - Indique le modèle qui définit le comportement de la relation du compte : Individuel (à compartiments) ou un-à-un</help>
         <label>_SYSTEME: PROCESSEUR COMPTE</label>
         <name>SystemAccountProcessor__c</name>
         <picklistValues>
             <masterLabel>Individual</masterLabel>
-            <translation>Individu</translation>
+            <translation>Individuel</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>One-to-One</masterLabel>
-            <translation><!-- One-to-One --></translation>
+            <translation>Un-à-un</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help>Indique le type de compte dont ce contact dépend.</help>
+        <help>Formule : « Individuel » ou « Organisation » en fonction du paramètre du compte.</help>
         <label>Type de Compte</label>
         <name>Type_of_Account__c</name>
     </fields>
     <fields>
-        <help>Voir le champ d’e-mail préféré.</help>
+        <help>Voir le champ E-mail préféré.</help>
         <label>E-mail professionnel</label>
         <name>WorkEmail__c</name>
     </fields>
     <fields>
-        <help>Voir le champ de téléphone préféré.</help>
-        <label>Téléphone profesionnel</label>
+        <help>Voir le champ Téléphone préféré.</help>
+        <label>Téléphone professionnel</label>
         <name>WorkPhone__c</name>
     </fields>
     <fields>
-        <help>Formule : Si le type d’adresse principale est Professionnel, l’adresse postale.  Si le type d’adresse secondaire est Professionnel, l’autre adresse.</help>
+        <help>Formule : L&apos;adresse postale si le Type d’adresse principale est Professionnel, l&apos;autre adresse si le Type d’adresse secondaire est Professionnel.</help>
         <label>Adresse professionnelle</label>
         <name>Work_Address__c</name>
     </fields>

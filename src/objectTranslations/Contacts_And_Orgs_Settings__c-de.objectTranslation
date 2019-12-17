@@ -41,93 +41,93 @@
         <value><!-- Contacts And Orgs Settings --></value>
     </caseValues>
     <fields>
-        <help>Einstellung für das Account-Modell Sollte &quot;Haushalt-Account&quot;, &quot;Eins-zu-Eins“ oder &quot;Einzelperson&quot; sein Ersetzt das benutzerdefinierte Feld &quot;Contact.SystemAccountProcessor__c&quot;  &quot;Haushalt-Account&quot; ist das empfohlene Modell.</help>
-        <label>Account-Modell</label>
+        <help>Einstellung für das Accountmodell. Sollte &quot;Haushalt-Account&quot;, &quot;Eins-zu-Eins“ oder &quot;Einzelperson&quot; sein. Ersetzt das benutzerdefinierte Feld &quot;Contact.SystemAccountProcessor__c&quot; &quot;Haushalt-Account&quot; ist das empfohlene Modell.</help>
+        <label>Accountmodell</label>
         <name>Account_Processor__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_IndividualAcc_trigger --></label>
+        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
+        <label>DEPRECATED-Disable_IndividualAcc_trigger</label>
         <name>DISABLE_IndividualAccounts_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OppAccount_trigger --></label>
+        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
+        <label>DEPRECATED-Disable_OppAccount_trigger</label>
         <name>DISABLE_OpportunityAccount_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OCR_trigger --></label>
+        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
+        <label>DEPRECATED-Disable_OCR_trigger</label>
         <name>DISABLE_OpportunityContactRoles_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OppPayments_trigger --></label>
+        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
+        <label>DEPRECATED-Disable_OppPayments_trigger</label>
         <name>DISABLE_OpportunityPayments_trigger__c</name>
     </fields>
     <fields>
-        <help>Gibt an, ob bei der Lead-Konvertierung eine Opportunity erstellt werden soll</help>
-        <label>Opport. bei Lead-Konvertierung erstellen</label>
+        <help>Gibt an, ob bei der Lead-Konvertierung eine Opportunity erstellt werden soll.</help>
+        <label>Opp. bei Lead-Konvertierung erstellen</label>
         <name>Default_Opp_on_Convert__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable Account Model Trigger --></label>
+        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
+        <label>ERSETZT-Accountmodellauslöser deaktivieren</label>
         <name>Disable_Account_Model_Trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Enable OppContactRole Trigger --></label>
+        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
+        <label>ERSETZT-OppContactRole-Auslöser aktivieren</label>
         <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Enable Update Check --></label>
+        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+        <label>ERSETZT-Update-Check aktivieren</label>
         <name>Enable_Update_Check__c</name>
     </fields>
     <fields>
-        <help>Die Kennung des Account-Datensatztyps für Haushalt-Accounts Wenn keine Auswahl getroffen wurde, wird der Account standardmäßig auf den Standarddatensatztyp des Benutzer-Accounts festgelegt.</help>
+        <help>Die Kennung des Account-Datensatztyps für Haushalt-Accounts. Wenn keine Auswahl getroffen wurde, wird der Account standardmäßig auf den Standard-Accountdatensatztyp des Benutzers festgelegt.</help>
         <label>Datensatztyp für Haushalt-Accounts</label>
         <name>HH_Account_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Has Package Update --></label>
+        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+        <label>ERSETZT-Paket-Update vorhanden</label>
         <name>Has_Package_Update__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Last Update Check --></label>
+        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+        <label>ERSETZT-Letzter Update-Check</label>
         <name>Last_Update_Check__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Max Package Version --></label>
+        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+        <label>ERSETZT-Max Paketversion</label>
         <name>Max_Package_Version__c</name>
     </fields>
     <fields>
-        <help>Die Kennung des Account-Datensatztyps für Eins-zu-Eins-Accounts  Wenn keine Auswahl getroffen wurde, wird der Account standardmäßig auf den Standarddatensatztyp des Benutzer-Accounts festgelegt.</help>
+        <help>Die Kennung des Account-Datensatztyps für Eins-zu-Eins-Accounts. Wenn keine Auswahl getroffen wurde, wird der Account standardmäßig auf den Standard-Accountdatensatztyp des Benutzers festgelegt.</help>
         <label>Eins-zu-Eins-Datensatztyp</label>
         <name>One_to_One_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help>Die Standardrolle für die primäre Opportunity-Kontaktrolle, die automatisch erstellt wird</help>
-        <label>Standardrolle für Opport.-Kontaktrolle</label>
+        <help>Die Standardkontaktrolle, die automatisch dem primären Kontakt der Opportunity zugewiesen wird, wenn der Account der Opportunity ein Haushalt, ein Ein-zu-Eins-Account oder ein Einzelperson-Account ist.</help>
+        <label>Kontaktrolle für Einzelpersonen-Opps</label>
         <name>Opportunity_Contact_Role_Default_role__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Package Update URL --></label>
+        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+        <label>ERSETZT-Paket-Update-URL</label>
         <name>Package_Update_URL__c</name>
     </fields>
     <fields>
         <help>Aktiviert automatische Zahlungen, die für neue Opportunities/Spenden erstellt wurden.</help>
-        <label>Zahlungen aktiviert</label>
+        <label>Autom. Zahlungserstellung</label>
         <name>Payments_Enabled__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED.  New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Update Check Interval --></label>
+        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+        <label>ERSETZT-Update-Check-Intervall</label>
         <name>Update_Check_Interval__c</name>
     </fields>
     <gender><!-- Neuter --></gender>

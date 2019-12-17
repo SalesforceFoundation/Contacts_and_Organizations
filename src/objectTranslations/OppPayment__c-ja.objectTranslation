@@ -2,7 +2,7 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Payment --></value>
+        <value>支払</value>
     </caseValues>
     <fields>
         <label>確認参照番号</label>
@@ -60,7 +60,7 @@
             <section>Custom Links</section>
         </sections>
     </layouts>
-    <nameFieldLabel><!-- Payment Number --></nameFieldLabel>
+    <nameFieldLabel>支払番号</nameFieldLabel>
     <webLinks>
         <label>支払のスケジュール</label>
         <name>Schedule_Payments</name>

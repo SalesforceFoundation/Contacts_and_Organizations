@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help><!-- The primary contact for the Account, or the One2One contact for a One2One account. --></help>
-        <label>_SYSTEME: CompteContact1à1</label>
+        <help>Le contact principal pour le compte, ou le contact un-à-un pour un compte un-à-un.</help>
+        <label>Contact principal</label>
         <name>One2OneContact__c</name>
         <relationshipLabel>Compte</relationshipLabel>
     </fields>
     <fields>
-        <help><!-- Indicates whether or not this Account is special for Contacts (Household, One-to-One, Individual) vs a normal Account. --></help>
-        <label>_SYSTEME: EstIndividu</label>
+        <help>Indique si ce compte est spécial pour les contacts (foyer, un-à-un, individuel) par rapport à un compte normal.</help>
+        <label>_SYSTEM: IsIndividual</label>
         <name>SYSTEMIsIndividual__c</name>
     </fields>
     <fields>
-        <help>Champ système: ne pas utiliser ou changer.</help>
-        <label>_SYSTEME: TypeCompte</label>
+        <help>Indique le modèle de compte auquelce compte est destiné : foyer, un-à-un ou individuel (à compartiments).</help>
+        <label>_SYSTEM: IsIndividual</label>
         <name>SYSTEM_AccountType__c</name>
     </fields>
 </CustomObjectTranslation>
