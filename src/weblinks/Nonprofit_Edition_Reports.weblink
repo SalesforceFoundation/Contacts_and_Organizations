@@ -3,7 +3,7 @@
     <availability>online</availability>
     <displayType>link</displayType>
     <linkType>javascript</linkType>
-    <masterLabel>Nonprofit Edition Reports</masterLabel>
+    <masterLabel>DEPRECATED: Nonprofit Edition Reports</masterLabel>
     <openType>onClickJavaScript</openType>
     <protected>false</protected>
     <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)}
