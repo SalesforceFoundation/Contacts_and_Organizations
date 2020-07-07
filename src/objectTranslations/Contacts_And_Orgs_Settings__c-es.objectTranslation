@@ -1,102 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <caseValues>
-        <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <fields>
-        <help>Configuración del modelo de cuenta. Debe ser cuenta Hogar, Uno-a-Uno o Individuo. Sustituye el campo personalizado Contact.SystemAccountProcessor__c. La cuenta Hogar es la opción recomendada.</help>
-        <label>Modelo de cuenta</label>
-        <name>Account_Processor__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
-        <label>DESUSADO-Disable_IndividualAcc_trigger</label>
-        <name>DISABLE_IndividualAccounts_trigger__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
-        <label>DESUSADO-Disable_OppAccount_trigger</label>
-        <name>DISABLE_OpportunityAccount_trigger__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
-        <label>DESUSADO-Disable_OCR_trigger</label>
-        <name>DISABLE_OpportunityContactRoles_trigger__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
-        <label>DESUSADO-Disable_OppPayments_trigger</label>
-        <name>DISABLE_OpportunityPayments_trigger__c</name>
-    </fields>
-    <fields>
-        <help>Define si se crea una oportunidad al convertir un candidato.</help>
-        <label>Crear oportunidad al convertir candidato</label>
-        <name>Default_Opp_on_Convert__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
-        <label>DESUSADO-Desactivar desenc modelo cuenta</label>
-        <name>Disable_Account_Model_Trigger__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
-        <label>DESUSADO-Activar desenc. OppContactRole</label>
-        <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
-        <label>DESUSADO-Activar comprob. actualización</label>
-        <name>Enable_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>El Id. del tipo de registro de cuenta que se usa para Cuentas Hogar. Si no se selecciona uno, la cuenta tomará el tipo de registro predeterminado del usuario.</help>
-        <label>Tipo de registro para cuenta Hogar</label>
-        <name>HH_Account_RecordTypeID__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
-        <label>DESUSADO-Tiene actualización de paquete</label>
-        <name>Has_Package_Update__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
-        <label>DESUSADO-Última comprob. actualización</label>
-        <name>Last_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
-        <label>DESUSADO-Versión de paquete máxima</label>
-        <name>Max_Package_Version__c</name>
-    </fields>
-    <fields>
-        <help>El Id. del tipo de registro de cuenta que se usa para Cuentas Uno-a-Uno. Si no se selecciona uno, la cuenta tomará el tipo de registro predeterminado del usuario.</help>
-        <label>Tipo de registro para Uno a Uno</label>
-        <name>One_to_One_RecordTypeID__c</name>
-    </fields>
-    <fields>
-        <help>La función del contacto predeterminada asignada automáticamente al contacto principal de la oportunidad cuando la cuenta de la oportunidad es una cuenta Hogar, Uno-a-Uno o Individuo.</help>
-        <label>Función contacto operac. individuales</label>
-        <name>Opportunity_Contact_Role_Default_role__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
-        <label>DESUSADO-URL de actualización de paquete</label>
-        <name>Package_Update_URL__c</name>
-    </fields>
-    <fields>
-        <help>Si se activa, Salesforce crea automáticamente pagos para nuevas oportunidades (Donaciones).</help>
-        <label>Creación automática de pagos</label>
-        <name>Payments_Enabled__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
-        <label>DESUSADO-Actualizar intervalo comprobac.</label>
-        <name>Update_Check_Interval__c</name>
-    </fields>
-    <gender><!-- Feminine --></gender>
+  <fields>
+    <name>Account_Processor__c</name>
+    <help>Configuración del modelo de cuenta. Debe ser cuenta Hogar, Uno-a-Uno o Individuo. Sustituye el campo personalizado Contact.SystemAccountProcessor__c. La cuenta Hogar es la opción recomendada.</help>
+    <label>Modelo de cuenta</label>
+  </fields>
+  <fields>
+    <name>DISABLE_IndividualAccounts_trigger__c</name>
+    <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+    <label>DESUSADO-Disable_IndividualAcc_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityAccount_trigger__c</name>
+    <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+    <label>DESUSADO-Disable_OppAccount_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityContactRoles_trigger__c</name>
+    <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+    <label>DESUSADO-Disable_OCR_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityPayments_trigger__c</name>
+    <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+    <label>DESUSADO-Disable_OppPayments_trigger</label>
+  </fields>
+  <fields>
+    <name>Default_Opp_on_Convert__c</name>
+    <help>Define si se crea una oportunidad al convertir un candidato.</help>
+    <label>Crear oportunidad al convertir candidato</label>
+  </fields>
+  <fields>
+    <name>Disable_Account_Model_Trigger__c</name>
+    <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+    <label>DESUSADO-Desactivar desenc modelo cuenta</label>
+  </fields>
+  <fields>
+    <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
+    <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+    <label>DESUSADO-Activar desenc. OppContactRole</label>
+  </fields>
+  <fields>
+    <name>Enable_Update_Check__c</name>
+    <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+    <label>DESUSADO-Activar comprob. actualización</label>
+  </fields>
+  <fields>
+    <name>HH_Account_RecordTypeID__c</name>
+    <help>El Id. del tipo de registro de cuenta que se usa para Cuentas Hogar. Si no se selecciona uno, la cuenta tomará el tipo de registro predeterminado del usuario.</help>
+    <label>Tipo de registro para cuenta Hogar</label>
+  </fields>
+  <fields>
+    <name>Has_Package_Update__c</name>
+    <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+    <label>DESUSADO-Tiene actualización de paquete</label>
+  </fields>
+  <fields>
+    <name>Last_Update_Check__c</name>
+    <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+    <label>DESUSADO-Última comprob. actualización</label>
+  </fields>
+  <fields>
+    <name>Max_Package_Version__c</name>
+    <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+    <label>DESUSADO-Versión de paquete máxima</label>
+  </fields>
+  <fields>
+    <name>One_to_One_RecordTypeID__c</name>
+    <help>El Id. del tipo de registro de cuenta que se usa para Cuentas Uno-a-Uno. Si no se selecciona uno, la cuenta tomará el tipo de registro predeterminado del usuario.</help>
+    <label>Tipo de registro para Uno a Uno</label>
+  </fields>
+  <fields>
+    <name>Opportunity_Contact_Role_Default_role__c</name>
+    <help>La función del contacto predeterminada asignada automáticamente al contacto principal de la oportunidad cuando la cuenta de la oportunidad es una cuenta Hogar, Uno-a-Uno o Individuo.</help>
+    <label>Función contacto operac. individuales</label>
+  </fields>
+  <fields>
+    <name>Package_Update_URL__c</name>
+    <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+    <label>DESUSADO-URL de actualización de paquete</label>
+  </fields>
+  <fields>
+    <name>Payments_Enabled__c</name>
+    <help>Si se activa, Salesforce crea automáticamente pagos para nuevas oportunidades (Donaciones).</help>
+    <label>Creación automática de pagos</label>
+  </fields>
+  <fields>
+    <name>Update_Check_Interval__c</name>
+    <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+    <label>DESUSADO-Actualizar intervalo comprobac.</label>
+  </fields>
 </CustomObjectTranslation>

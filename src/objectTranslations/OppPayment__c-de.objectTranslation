@@ -1,109 +1,83 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <caseType>Nominative</caseType>
-        <plural>false</plural>
-        <value>Zahlung</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Nominative</caseType>
-        <plural>true</plural>
-        <value>Zahlungen</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value>Zahlung</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>true</plural>
-        <value>Zahlungen</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value>Zahlung</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>true</plural>
-        <value>Zahlungen</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value>Zahlung</value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>true</plural>
-        <value>Zahlungen</value>
-    </caseValues>
-    <fields>
-        <label>Prüfungs-/Referenznummer</label>
-        <name>Check_Reference_Number__c</name>
-    </fields>
-    <fields>
-        <label>Benutzerdefiniertes Zahlungsfeld</label>
-        <name>Custom_Payment_Field__c</name>
-    </fields>
-    <fields>
-        <label>Opportunity</label>
-        <name>Opportunity__c</name>
-        <relationshipLabel>Zahlungen</relationshipLabel>
-    </fields>
-    <fields>
-        <label>Bezahlt</label>
-        <name>Paid__c</name>
-    </fields>
-    <fields>
-        <label>Zahlungsbetrag</label>
-        <name>Payment_Amount__c</name>
-    </fields>
-    <fields>
-        <label>Zahlungsdatum</label>
-        <name>Payment_Date__c</name>
-    </fields>
-    <fields>
-        <label>Zahlungsmethode</label>
-        <name>Payment_Method__c</name>
-        <picklistValues>
-            <masterLabel>Cash</masterLabel>
-            <translation>Bar</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Check</masterLabel>
-            <translation>Scheck</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Credit Card</masterLabel>
-            <translation>Kreditkarte</translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label>Geplantes Datum</label>
-        <name>Scheduled_Date__c</name>
-    </fields>
-    <fields>
-        <label>Abgeschrieben</label>
-        <name>Written_Off__c</name>
-    </fields>
-    <gender>Feminine</gender>
-    <layouts>
-        <layout>Payment Layout</layout>
-        <sections>
-            <label>Benutzerdefinierte Links</label>
-            <section>Custom Links</section>
-        </sections>
-    </layouts>
-    <nameFieldLabel>Zahlungsnummer</nameFieldLabel>
-    <webLinks>
-        <label>Zahlungen planen</label>
-        <name>Schedule_Payments</name>
-    </webLinks>
-    <webLinks>
-        <label>Zahlungen abschreiben</label>
-        <name>Writeoff_Payments</name>
-    </webLinks>
+  <fields>
+    <name>Check_Reference_Number__c</name>
+    <label>[Check/Reference Number]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>Custom_Payment_Field__c</name>
+    <label>[Custom Payment Field]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>Opportunity__c</name>
+    <relationshipLabel>[Payments]o'介]</relationshipLabel>
+    <label>[Opportunity]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Paid__c</name>
+    <label>[Paid]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Payment_Amount__c</name>
+    <label>[Payment Amount]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Payment_Date__c</name>
+    <label>[Payment Date]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Payment_Method__c</name>
+    <label>[Payment Method]o'介引]</label>
+    <picklistValues>
+      <masterLabel>Cash</masterLabel>
+      <translation>[Cash]o'介引]</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Check</masterLabel>
+      <translation>[Check]o'介引户]</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Credit Card</masterLabel>
+      <translation>[Credit Card]o'介引]</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Scheduled_Date__c</name>
+    <label>[Scheduled Date]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Written_Off__c</name>
+    <label>[Written Off]o'介引]</label>
+  </fields>
+  <webLinks>
+    <name>Schedule_Payments</name>
+    <label>[Schedule Payments]o'介引户]</label>
+  </webLinks>
+  <webLinks>
+    <name>Writeoff_Payments</name>
+    <label>[Write Off Payments]o'介引户]</label>
+  </webLinks>
+  <layouts>
+    <layout>Payment Layout</layout>
+    <sections>
+      <label>[Custom Links]o'介引]</label>
+      <section>Custom Links</section>
+    </sections>
+  </layouts>
+  <nameFieldLabel>[Payment Number]o'介引]</nameFieldLabel>
+  <standardFields>
+    <name>Name</name>
+    <label>[Payment Number]o'介引]</label>
+  </standardFields>
+  <gender>Neuter</gender>
+  <caseValues>
+    <plural>false</plural>
+    <caseType>Nominative</caseType>
+    <value>[Payment]gr'']</value>
+  </caseValues>
+  <caseValues>
+    <plural>true</plural>
+    <caseType>Nominative</caseType>
+    <value>[Payments]gr''介]</value>
+  </caseValues>
 </CustomObjectTranslation>

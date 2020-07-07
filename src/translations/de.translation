@@ -1,105 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label>Die Zusammenführung von Kontakten kann nicht rückgängig gemacht werden.</label>
         <name>Contact_Merge_Error_Confirm_Message</name>
+        <label>[Merging Contacts is an irreversible process.]l'介引户הаí先ร简аน]</label>
     </customLabels>
     <customLabels>
-        <label>Wenn Sie über das Haushalt-Paket verfügen, müssen Sie beachten, dass die Haushalte für zusammengeführte Kontakte von der Zusammenführung nicht betroffen sind. Wenn Sie die Haushalte zusammenführen möchten, sollten Sie dies manuell ausführen und dabei sicherstellen, dass der Gewinner-Kontakt mit dem richtigen Haushalt verbunden ist.</label>
         <name>Contact_Merge_Error_Confirm_Message_Households</name>
+        <label>[If you have the Household package, please note that the Households for merged Contacts are not affected during the merge. If you want to merge the Households, you should do that by hand, making sure the winning Contact is connected to the correct Household.]l'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذะяřт紹소иЗ介นşрωtبčنごд]</label>
     </customLabels>
     <customLabels>
-        <label>Keine übereinstimmenden Kontakte gefunden. Führen Sie die Suche erneut durch.</label>
         <name>Contact_Merge_Error_Confirm_Message_Nothing_Found</name>
+        <label>[No matching Contacts found, please search again.]l'介引户הаí先ร简аน取]</label>
     </customLabels>
     <customLabels>
-        <label>Die Kontaktinformationen konnten nicht abgerufen werden.</label>
         <name>Contact_Merge_Error_Contact_not_found</name>
+        <label>[Failed to query contact information.]l'介引户הаí先ร]</label>
     </customLabels>
     <customLabels>
-        <label>Es konnten nicht alle Datensätze für die Zusammenführung gesperrt werden.</label>
         <name>Contact_Merge_Error_Lock_failed</name>
+        <label>[Failed to lock all the records for merging.]l'介引户הаí先ร简а]</label>
     </customLabels>
     <customLabels>
-        <label>Die Kontakte konnten nicht zusammengeführt werden.</label>
         <name>Contact_Merge_Error_Merge_Failed</name>
+        <label>[Failed to merge the contacts.]l'介引户הаí]</label>
     </customLabels>
     <customLabels>
-        <label>Wählen Sie einen Master-Datensatz für die Zusammenführung aus.</label>
         <name>Contact_Merge_Error_No_Master</name>
+        <label>[Please select a master record for merging.]l'介引户הаí先ร简а]</label>
     </customLabels>
     <customLabels>
-        <label>Es konnten nicht alle ausgewählten Haushalte abgefragt werden.</label>
         <name>Contact_Merge_Error_Query_Failed</name>
+        <label>[Failed to query all the selected contacts.]l'介引户הаí先ร简а]</label>
     </customLabels>
     <customLabels>
-        <label>Wählen Sie mindestens 2 Kontakte für die Zusammenführung aus.</label>
         <name>Contact_Merge_Error_Too_Few_Contacts</name>
+        <label>[Please select at least 2 contacts to merge.]l'介引户הаí先ร简а]</label>
     </customLabels>
     <customLabels>
-        <label>Sie können maximal 3 Kontakte gleichzeitig zusammenführen.</label>
         <name>Contact_Merge_Error_Too_Many_Contacts</name>
+        <label>[You can only merge up to 3 contacts at a time.]l'介引户הаí先ร简аน]</label>
     </customLabels>
     <customLabels>
-        <label>Versuchen Sie, den Vorgang von Anfang an erneut auszuführen.</label>
         <name>Contact_Merge_Error_please_retry</name>
+        <label>[Please retry from start.]l'介引户הа]</label>
     </customLabels>
     <customLabels>
-        <label>Suchtext zum Suchen doppelter Kontakte eingeben</label>
         <name>Contact_Merge_Step1</name>
+        <label>[Enter search text to find duplicate Contacts]l'介引户הаí先ร简аน]</label>
     </customLabels>
     <customLabels>
-        <label>Bis zu 3 Kontakte für die Zusammenführung auswählen</label>
         <name>Contact_Merge_Step2</name>
+        <label>[Pick up to 3 Contacts to Merge]l'介引户הаí先]</label>
     </customLabels>
     <customLabels>
-        <label>Gewinner-Kontakt auswählen</label>
         <name>Contact_Merge_Step3</name>
+        <label>[Pick the winning Contact]l'介引户הа]</label>
     </customLabels>
     <customLabels>
-        <label>Kontakte zusammenführen</label>
         <name>Contact_Merge_Step4</name>
+        <label>[Merge the Contacts]l'介引户]</label>
     </customLabels>
     <customLabels>
-        <label>Das Nonprofit Success Pack unterstützt drei verschiedene Accountmodelle: Das Haushalt-Accountmodell, das Ein-zu-Eins-Accountmodell und das Einzelperson- oder &quot;Bucket&quot;-Accountmodell. Weitere Informationen zu diesen Modellen finden Sie in der &lt;a href=&quot;https://powerofus.force.com/NPSP_Account_Model&quot; target=&quot;_blank&quot;&gt;NPSP Dokumentation&lt;/a&gt;.
-&lt;br/&gt;&lt;br&gt;
-Wenn Sie NPSP3 und höher verwenden, wird das Haushalt-Accountmodell empfohlen.</label>
         <name>Contacts_Settings_Account_Model_Help_Text</name>
+        <label>[The Nonprofit Success Pack supports three different Account models: the Household Account model, the One-to-One Account model, and the Individual (or "Bucket") Account model. For more information on any of these models, see the &lt;a href="https://powerofus.force.com/NPSP_Account_Model" target="_blank"&gt;NPSP Documentation&lt;/a&gt;.
+&lt;br/&gt;&lt;br&gt; 
+For those using NPSP3 and later, the Household Account model is recommended.]l'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذะяřт紹소иЗ介นşрωtبčنごдčש帳าаůсחое簡üγกвцΕ戶н客иез개介引户הаí先]</label>
     </customLabels>
     <customLabels>
-        <label>Sie können wählen, dass eine Opportunity-Kontaktrolle automatisch bei Erstellung der Opportunities erstellt wird. Bei der Opportunity ist ein Feld mit der Bezeichnung &quot;Kontaktkennung für Rolle&quot; verfügbar. Wenn Sie Opportunities mit einer gültigen Kontaktkennung in dieses Feld importieren, wird eine Kontaktrolle gemäß den unten festgelegten Standardeinstellungen erstellt. Sie können diese Funktion auch komplett ausschalten, indem Sie die Auslöserkonfiguration ändern.</label>
         <name>Contacts_Settings_Contact_Roles_Help_Text</name>
+        <label>[You can choose to have an Opportunity Contact Role automatically created when Opportunities are created. There is a field on Opportunity called "Contact Id for Role". If you import Opportunities with a valid Contact Id in that field, a Contact Role will be created according to the defaults set below. You can also turn the functionality off completely by modifying the Trigger Configuration.]l'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذะяřт紹소иЗ介นşрωtبčنごдčש帳าаůсחое簡üγกвцΕ戶н客иез개介引户]</label>
     </customLabels>
     <customLabels>
-        <label>$</label>
         <name>DefaultContactTransactionCurrency</name>
+        <label>[$]l]</label>
     </customLabels>
     <customLabels>
-        <label>{3} Übereinstimmende Spende {1}</label>
         <name>Matching_Donation_Record_Suffix</name>
+        <label>[{3} Matching Donation {1}]l'介引户הа]</label>
     </customLabels>
     <customLabels>
-        <label>$Source</label>
         <name>Matching_Donation_Record_Type</name>
+        <label>[$Source]l']</label>
     </customLabels>
     <customLabels>
-        <label>Die Kontaktkennung, die im Feld &quot;Kontaktkennung für Rolle&quot; angegeben wurde, war ungültig. Verwenden Sie eine gültige Kontaktkennung.</label>
         <name>Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
+        <label>[The Contact Id supplied in the Contact Id for Role field was invalid. Please use a valid Contact Id.]l'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй]</label>
     </customLabels>
-    <customPageWebLinks>
-        <label><!-- Nonprofit Edition Reports --></label>
-        <name>Nonprofit_Edition_Reports</name>
-    </customPageWebLinks>
     <customTabs>
-        <label>Kontaktzusammenführung (ALT)</label>
         <name>Contact_Merge</name>
+        <label>[Contact Merge (OLD)]l'介引户]</label>
     </customTabs>
     <customTabs>
-        <label>Kontakteinstellungen</label>
-        <name>Contacts_Settings</name>
-    </customTabs>
-    <customTabs>
-        <label>Zahlungszuordnung</label>
         <name>Payment_Mapping</name>
+        <label>[Payment Mapping]l'介引]</label>
+    </customTabs>
+    <customTabs>
+        <name>Contacts_Settings</name>
+        <label>[Contacts Settings]l'介引户]</label>
     </customTabs>
 </Translations>

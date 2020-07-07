@@ -1,97 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <fields>
-        <help>団体モデルの設定。「世帯団体」、「1 対 1」、「個人」のいずれかを指定します。カスタム項目 Contact.SystemAccountProcessor__c の代わりに使用されます。「世帯団体」が推奨モデルです。</help>
-        <label>団体モデル</label>
-        <name>Account_Processor__c</name>
-    </fields>
-    <fields>
-        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
-        <label>廃止-Disable_IndividualAcc_trigger</label>
-        <name>DISABLE_IndividualAccounts_trigger__c</name>
-    </fields>
-    <fields>
-        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
-        <label>廃止-Disable_OppAccount_trigger</label>
-        <name>DISABLE_OpportunityAccount_trigger__c</name>
-    </fields>
-    <fields>
-        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
-        <label>廃止-Disable_OCR_trigger</label>
-        <name>DISABLE_OpportunityContactRoles_trigger__c</name>
-    </fields>
-    <fields>
-        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
-        <label>廃止-Disable_OppPayments_trigger</label>
-        <name>DISABLE_OpportunityPayments_trigger__c</name>
-    </fields>
-    <fields>
-        <help>リード取引開始時に支援を作成するかどうかを指定します。</help>
-        <label>リード取引開始時に支援を作成</label>
-        <name>Default_Opp_on_Convert__c</name>
-    </fields>
-    <fields>
-        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
-        <label>廃止-団体モデルトリガの無効化</label>
-        <name>Disable_Account_Model_Trigger__c</name>
-    </fields>
-    <fields>
-        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
-        <label>廃止-OppContactRole トリガの有効化</label>
-        <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
-    </fields>
-    <fields>
-        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
-        <label>廃止-更新確認の有効化</label>
-        <name>Enable_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>世帯団体に使用される団体レコードタイプの ID。何も選択しない場合、団体にはユーザのデフォルト団体レコードタイプが設定されます。</help>
-        <label>世帯団体レコードタイプ</label>
-        <name>HH_Account_RecordTypeID__c</name>
-    </fields>
-    <fields>
-        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
-        <label>廃止-パッケージを更新可能</label>
-        <name>Has_Package_Update__c</name>
-    </fields>
-    <fields>
-        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
-        <label>廃止-最終更新確認日時</label>
-        <name>Last_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
-        <label>廃止-最大パッケージバージョン</label>
-        <name>Max_Package_Version__c</name>
-    </fields>
-    <fields>
-        <help>1 対 1 団体で使用される団体レコードタイプの ID。何も選択しない場合、団体にはユーザのデフォルト団体レコードタイプが設定されます。</help>
-        <label>1 対 1 レコードタイプ</label>
-        <name>One_to_One_RecordTypeID__c</name>
-    </fields>
-    <fields>
-        <help>支援の団体が世帯、1 対 1、または個人の団体でない場合に、支援の主個人に自動的に割り当てられるデフォルトの個人の役割。</help>
-        <label>個人支援の個人の役割</label>
-        <name>Opportunity_Contact_Role_Default_role__c</name>
-    </fields>
-    <fields>
-        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
-        <label>廃止-パッケージ更新 URL</label>
-        <name>Package_Update_URL__c</name>
-    </fields>
-    <fields>
-        <help>有効な場合、新しい支援の支払が自動的に作成されます。</help>
-        <label>自動支払作成</label>
-        <name>Payments_Enabled__c</name>
-    </fields>
-    <fields>
-        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
-        <label>廃止-更新確認間隔</label>
-        <name>Update_Check_Interval__c</name>
-    </fields>
+  <fields>
+    <name>Account_Processor__c</name>
+    <help>団体モデルの設定。「世帯団体」、「1 対 1」、「個人」のいずれかを指定します。カスタム項目 Contact.SystemAccountProcessor__c の代わりに使用されます。「世帯団体」が推奨モデルです。</help>
+    <label>団体モデル</label>
+  </fields>
+  <fields>
+    <name>DISABLE_IndividualAccounts_trigger__c</name>
+    <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+    <label>廃止-Disable_IndividualAcc_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityAccount_trigger__c</name>
+    <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+    <label>廃止-Disable_OppAccount_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityContactRoles_trigger__c</name>
+    <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+    <label>廃止-Disable_OCR_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityPayments_trigger__c</name>
+    <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+    <label>廃止-Disable_OppPayments_trigger</label>
+  </fields>
+  <fields>
+    <name>Default_Opp_on_Convert__c</name>
+    <help>リード取引開始時に支援を作成するかどうかを指定します。</help>
+    <label>リード取引開始時に支援を作成</label>
+  </fields>
+  <fields>
+    <name>Disable_Account_Model_Trigger__c</name>
+    <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+    <label>廃止-団体モデルトリガの無効化</label>
+  </fields>
+  <fields>
+    <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
+    <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+    <label>廃止-OppContactRole トリガの有効化</label>
+  </fields>
+  <fields>
+    <name>Enable_Update_Check__c</name>
+    <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+    <label>廃止-更新確認の有効化</label>
+  </fields>
+  <fields>
+    <name>HH_Account_RecordTypeID__c</name>
+    <help>世帯団体に使用される団体レコードタイプの ID。何も選択しない場合、団体にはユーザのデフォルト団体レコードタイプが設定されます。</help>
+    <label>世帯団体レコードタイプ</label>
+  </fields>
+  <fields>
+    <name>Has_Package_Update__c</name>
+    <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+    <label>廃止-パッケージを更新可能</label>
+  </fields>
+  <fields>
+    <name>Last_Update_Check__c</name>
+    <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+    <label>廃止-最終更新確認日時</label>
+  </fields>
+  <fields>
+    <name>Max_Package_Version__c</name>
+    <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+    <label>廃止-最大パッケージバージョン</label>
+  </fields>
+  <fields>
+    <name>One_to_One_RecordTypeID__c</name>
+    <help>1 対 1 団体で使用される団体レコードタイプの ID。何も選択しない場合、団体にはユーザのデフォルト団体レコードタイプが設定されます。</help>
+    <label>1 対 1 レコードタイプ</label>
+  </fields>
+  <fields>
+    <name>Opportunity_Contact_Role_Default_role__c</name>
+    <help>支援の団体が世帯、1 対 1、または個人の団体でない場合に、支援の主個人に自動的に割り当てられるデフォルトの個人の役割。</help>
+    <label>個人支援の個人の役割</label>
+  </fields>
+  <fields>
+    <name>Package_Update_URL__c</name>
+    <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+    <label>廃止-パッケージ更新 URL</label>
+  </fields>
+  <fields>
+    <name>Payments_Enabled__c</name>
+    <help>有効な場合、新しい支援の支払が自動的に作成されます。</help>
+    <label>自動支払作成</label>
+  </fields>
+  <fields>
+    <name>Update_Check_Interval__c</name>
+    <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+    <label>廃止-更新確認間隔</label>
+  </fields>
 </CustomObjectTranslation>
