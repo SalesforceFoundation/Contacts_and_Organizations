@@ -1,3 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata"/>
-
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help>נוסחה: הסכום של הזדמנות זו פחות סכום מחיקת התשלום וסכום התשלום שהתקבל.</help>
+        <label>יתרה שנותרה</label>
+        <name>Amount_Outstanding__c</name>
+    </fields>
+    <fields>
+        <help>הערך הכולל של תשלומים שסומנו כמחוקים או בלתי ניתנים לגבייה עבור הזדמנות זו.</help>
+        <label>סכום מחיקת תשלום</label>
+        <name>Amount_Written_Off__c</name>
+    </fields>
+    <fields>
+        <help>שדה מוסתר המשמש להעברת מזהה איש קשר לצורך יצירת תפקיד איש קשר.</help>
+        <label>מזהה איש קשר עבור תפקיד</label>
+        <name>Contact_Id_for_Role__c</name>
+    </fields>
+    <fields>
+        <help>אם התשלומים פעילים, ואם אפשרות זו מסומנת, תשלום חדש לא ייווצר באופן אוטומטי עבור הזדמנות זו.</help>
+        <label>אל תיצור תשלום באופן אוטומטי</label>
+        <name>Do_Not_Automatically_Create_Payment__c</name>
+    </fields>
+    <fields>
+        <help>נוסחה: האם החשבון הקשור מוגדר כאישי (SYSTEMIsIndividual__c)</help>
+        <label>תרומה מאדם פרטי</label>
+        <name>Is_Opp_From_Individual__c</name>
+    </fields>
+    <fields>
+        <help>קובעת את הערך של איש הקשר או החשבון בשדה &apos;רמת חברות אחרונה&apos;.</help>
+        <label>רמת חבר</label>
+        <name>Member_Level__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation><!-- Bronze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>תאריך סיום תקופת החברות.</help>
+        <label>תאריך סיום חברות</label>
+        <name>Membership_End_Date__c</name>
+    </fields>
+    <fields>
+        <help>אם מדובר בחידוש, חברות חדשה או חברות של מישהו שעזב או חזר.</help>
+        <label>מקור חברות</label>
+        <name>Membership_Origin__c</name>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation>חדש</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reacquire</masterLabel>
+            <translation>רכוש מחדש</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation>חידוש</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>תאריך ההתחלה של תקופת החברות</help>
+        <label>תאריך התחלת חברות</label>
+        <name>Membership_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help>מספר התשלומים הכולל עבור הזדמנות (תרומה) זו</help>
+        <label>מספר תשלומים</label>
+        <name>Number_of_Payments__c</name>
+    </fields>
+    <fields>
+        <help>הערך הכולל של התשלומים המסומנים כתשלומים ששולמו עבור הזדמנות זו.</help>
+        <label>סכום תשלום שהתקבל</label>
+        <name>Payments_Made__c</name>
+    </fields>
+    <webLinks>
+        <label>תרומת איש קשר חדשה</label>
+        <name>New_Contact_Donation</name>
+    </webLinks>
+    <webLinks>
+        <label>תרומת חשבון חדשה</label>
+        <name>New_Organization_Donation</name>
+    </webLinks>
+</CustomObjectTranslation>
