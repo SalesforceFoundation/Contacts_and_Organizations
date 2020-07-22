@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>One2OneContact__c</name>
-    <help>Der Hauptansprechpartner für einen Haushalt-Account, oder der Eins-zu-Eins-Kontakt für einen Eins-zu-Eins-Account.</help>
-    <relationshipLabel>Account</relationshipLabel>
-    <label>Hauptansprechpartner</label>
-  </fields>
-  <fields>
-    <name>SYSTEMIsIndividual__c</name>
-    <help>Gibt an, ob dieser Account speziell für Kontakte (Haushalt, Eins-zu-Eins, Einzelperson) vorgesehen oder ein normaler Account ist.</help>
-    <label>_SYSTEM: IsIndividual</label>
-  </fields>
-  <fields>
-    <name>SYSTEM_AccountType__c</name>
-    <help>Gibt an, für welches Accountmodell dieser Account steht: Haushalt, Eins-zu-Eins oder Einzelperson (Bucket).</help>
-    <label>_SYSTEM: AccountType</label>
-  </fields>
+    <fields>
+        <help>Der Hauptansprechpartner für einen Haushalt-Account, oder der Eins-zu-Eins-Kontakt für einen Eins-zu-Eins-Account.</help>
+        <label>Hauptansprechpartner</label>
+        <name>One2OneContact__c</name>
+        <relationshipLabel>Account</relationshipLabel>
+    </fields>
+    <fields>
+        <help>Gibt an, ob dieser Account speziell für Kontakte (Haushalt, Eins-zu-Eins, Einzelperson) vorgesehen oder ein normaler Account ist.</help>
+        <label>_SYSTEM: IsIndividual</label>
+        <name>SYSTEMIsIndividual__c</name>
+    </fields>
+    <fields>
+        <help>Gibt an, für welches Accountmodell dieser Account steht: Haushalt, Eins-zu-Eins oder Einzelperson (Bucket).</help>
+        <label>_SYSTEM: AccountType</label>
+        <name>SYSTEM_AccountType__c</name>
+    </fields>
 </CustomObjectTranslation>

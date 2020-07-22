@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>Opportunity_Field__c</name>
-    <label>Campo de oportunidad</label>
-  </fields>
-  <fields>
-    <name>Payment_Field__c</name>
-    <label>Campo de pago</label>
-  </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Payment Field Mapping Settings --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Payment Field Mapping Settings --></value>
+    </caseValues>
+    <fields>
+        <label>Campo de oportunidad</label>
+        <name>Opportunity_Field__c</name>
+    </fields>
+    <fields>
+        <label>Campo de pago</label>
+        <name>Payment_Field__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
 </CustomObjectTranslation>
