@@ -18,6 +18,8 @@ tasks:
                   xpath: //ns:customLabels[ns:name='Matching_Donation_Record_Suffix']
                 - path: src/translations/**.translation
                   xpath: //ns:quickActions
+                - path: src/translations/**.translation
+                  xpath: //ns:reportTypes[ns:name='screen_flows_prebuilt_crt']
 
     uninstall_packaged_incremental:
         options:
