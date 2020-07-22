@@ -75,6 +75,10 @@ Wenn Sie NPSP3 und höher verwenden, wird das Haushalt-Accountmodell empfohlen.<
         <name>DefaultContactTransactionCurrency</name>
     </customLabels>
     <customLabels>
+        <label>{3} Übereinstimmende Spende {1}</label>
+        <name>Matching_Donation_Record_Suffix</name>
+    </customLabels>
+    <customLabels>
         <label>$Source</label>
         <name>Matching_Donation_Record_Type</name>
     </customLabels>
