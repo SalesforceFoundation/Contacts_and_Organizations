@@ -75,6 +75,10 @@
         <name>DefaultContactTransactionCurrency</name>
     </customLabels>
     <customLabels>
+        <label>{3} תרומה מתאימה {1}</label>
+        <name>Matching_Donation_Record_Suffix</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Record type for matching donation. Set to $Source to match the original donation --></label>
         <name>Matching_Donation_Record_Type</name>
     </customLabels>

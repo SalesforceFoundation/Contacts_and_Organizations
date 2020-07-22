@@ -1,3 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata"/>
-
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fields>
+    <name>AlternateEmail__c</name>
+    <help>Autre e-mail est un quatrième e-mail facultatif : en plus du personnel, préféré ou professionnel.</help>
+    <label>Autre e-mail</label>
+  </fields>
+  <fields>
+    <name>HomeEmail__c</name>
+    <help>Voir le champ E-mail préféré.</help>
+    <label>E-mail personnel</label>
+  </fields>
+  <fields>
+    <name>Home_Address__c</name>
+    <help>Formule : Utilise le champ de type d’adresse principale pour déterminer l’adresse de domicile à partir de l’adresse postale ou d’une autre adresse.</help>
+    <label>Adresse du domicile</label>
+  </fields>
+  <fields>
+    <name>Organization_Type__c</name>
+    <help>Formule : Par ordre de préférence, le champ SYSTEM_AccountType, le champ Type de compte, et « Organisation ».</help>
+    <label>Type d'organisation</label>
+  </fields>
+  <fields>
+    <name>Other_Address__c</name>
+    <help>Formule : Si le type d’adresse principale est Autre, l’adresse postale. Si le type d’adresse secondaire est Autre, l’autre adresse.</help>
+    <label>Autre adresse</label>
+  </fields>
+  <fields>
+    <name>PreferredPhone__c</name>
+    <help>Quel numéro de téléphone doit être utilisé pour la plupart des communications impliquant ce contact ?</help>
+    <label>Téléphone préféré</label>
+    <picklistValues>
+      <masterLabel>Home</masterLabel>
+      <translation>Domicile</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Work</masterLabel>
+      <translation>Professionnel</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Mobile</masterLabel>
+      <translation>Mobile</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Other</masterLabel>
+      <translation>Autre</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Preferred_Email__c</name>
+    <help>Quel e-mail doit être utilisé pour la plupart des communications impliquant ce contact ?</help>
+    <label>E-mail préféré</label>
+    <picklistValues>
+      <masterLabel>Personal</masterLabel>
+      <translation>Personnel</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Work</masterLabel>
+      <translation>Professionnel</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Alternate</masterLabel>
+      <translation>Autre</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Primary_Address_Type__c</name>
+    <help>Quel est le type de l’adresse postale ?</help>
+    <label>Type d'adresse principale</label>
+    <picklistValues>
+      <masterLabel>Home</masterLabel>
+      <translation>Domicile</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Work</masterLabel>
+      <translation>Professionnel</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Other</masterLabel>
+      <translation>Autre</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Private__c</name>
+    <help>Exclut ce contact de tout traitement de compte individuel. Si vous laissez le champ Compte vide, il restera vide.</help>
+    <label>Privé(e)</label>
+  </fields>
+  <fields>
+    <name>Secondary_Address_Type__c</name>
+    <help>Quel est le type de l’autre adresse ?</help>
+    <label>Type d'adresse secondaire</label>
+    <picklistValues>
+      <masterLabel>Home</masterLabel>
+      <translation>Domicile</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Work</masterLabel>
+      <translation>Professionnel</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Other</masterLabel>
+      <translation>Autre</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>SystemAccountProcessor__c</name>
+    <help>N'EST PLUS UTILISÉ - Indique le modèle qui définit le comportement de la relation du compte : Individuel (à compartiments) ou un-à-un</help>
+    <label>_SYSTEME: PROCESSEUR COMPTE</label>
+    <picklistValues>
+      <masterLabel>One-to-One</masterLabel>
+      <translation>Un-à-un</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Individual</masterLabel>
+      <translation>Individuel</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Type_of_Account__c</name>
+    <help>Formule : « Individuel » ou « Organisation » en fonction du paramètre du compte.</help>
+    <label>Type de Compte</label>
+  </fields>
+  <fields>
+    <name>WorkEmail__c</name>
+    <help>Voir le champ E-mail préféré.</help>
+    <label>E-mail professionnel</label>
+  </fields>
+  <fields>
+    <name>WorkPhone__c</name>
+    <help>Voir le champ Téléphone préféré.</help>
+    <label>Téléphone professionnel</label>
+  </fields>
+  <fields>
+    <name>Work_Address__c</name>
+    <help>Formule : L'adresse postale si le Type d’adresse principale est Professionnel, l'autre adresse si le Type d’adresse secondaire est Professionnel.</help>
+    <label>Adresse professionnelle</label>
+  </fields>
+</CustomObjectTranslation>
