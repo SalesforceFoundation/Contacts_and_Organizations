@@ -1,90 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fields>
-        <help><!-- Formula: The Amount of this Opportunity minus the Payment Writeoff Amount and Payment Amount Received. --></help>
-        <label><!-- Remaining Balance --></label>
-        <name>Amount_Outstanding__c</name>
-    </fields>
-    <fields>
-        <help><!-- Total value of the Payments marked as written-off or noncollectable for this Opportunity. --></help>
-        <label><!-- Payment Writeoff Amount --></label>
-        <name>Amount_Written_Off__c</name>
-    </fields>
-    <fields>
-        <help><!-- Hidden field for passing a Contact Id for Contact Role creation. --></help>
-        <label><!-- Contact Id for Role --></label>
-        <name>Contact_Id_for_Role__c</name>
-    </fields>
-    <fields>
-        <help><!-- If payments are active, and if checked, a new payment will not be automatically created for this Opportunity. --></help>
-        <label><!-- Do Not Automatically Create Payment --></label>
-        <name>Do_Not_Automatically_Create_Payment__c</name>
-    </fields>
-    <fields>
-        <help><!-- Formula: Whether or not the related Account is defined as an individual (SYSTEMIsIndividual__c) --></help>
-        <label><!-- Is Opp From Individual --></label>
-        <name>Is_Opp_From_Individual__c</name>
-    </fields>
-    <fields>
-        <help><!-- Determines the value on the Contact or Account of the Last Membership Level field. --></help>
-        <label><!-- Member Level --></label>
-        <name>Member_Level__c</name>
-        <picklistValues>
-            <masterLabel>Bronze</masterLabel>
-            <translation><!-- Bronze --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Gold</masterLabel>
-            <translation><!-- Gold --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Silver</masterLabel>
-            <translation><!-- Silver --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help><!-- Date membership period ends. --></help>
-        <label><!-- Membership End Date --></label>
-        <name>Membership_End_Date__c</name>
-    </fields>
-    <fields>
-        <help><!-- Is this a renewal, a new membership, or a membership with someone who lapsed and has returned. --></help>
-        <label><!-- Membership Origin --></label>
-        <name>Membership_Origin__c</name>
-        <picklistValues>
-            <masterLabel>New</masterLabel>
-            <translation><!-- New --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Reacquire</masterLabel>
-            <translation><!-- Reacquire --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Renewal</masterLabel>
-            <translation><!-- Renewal --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help><!-- Date when membership period starts --></help>
-        <label><!-- Membership Start Date --></label>
-        <name>Membership_Start_Date__c</name>
-    </fields>
-    <fields>
-        <help><!-- Total number of payments for this Opportunity (Donation) --></help>
-        <label><!-- Number of Payments --></label>
-        <name>Number_of_Payments__c</name>
-    </fields>
-    <fields>
-        <help><!-- The total value of Payments marked as paid for this Opportunity. --></help>
-        <label><!-- Payment Amount Received --></label>
-        <name>Payments_Made__c</name>
-    </fields>
-    <webLinks>
-        <label><!-- New_Contact_Donation --></label>
-        <name>New_Contact_Donation</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- New_Organization_Donation --></label>
-        <name>New_Organization_Donation</name>
-    </webLinks>
+  <fields>
+    <name>Amount_Outstanding__c</name>
+    <help>Fórmula: El importe de esta oportunidad menos el importe de los pagos amortizados y el importe de los pagos recibidos.</help>
+    <label>Saldo restante</label>
+  </fields>
+  <fields>
+    <name>Amount_Written_Off__c</name>
+    <help>Valor total de los pagos marcados como amortizados o imposibles de cobrar para esta oportunidad.</help>
+    <label>Importe de pagos amortizados</label>
+  </fields>
+  <fields>
+    <name>Contact_Id_for_Role__c</name>
+    <help>Campo oculto para pasar un Id. de contacto para la creación de una función de contacto.</help>
+    <label>Id. del contacto para la función</label>
+  </fields>
+  <fields>
+    <name>Do_Not_Automatically_Create_Payment__c</name>
+    <help>Si los pagos están activos y este campo está seleccionado, no se creará un nuevo pago automáticamente para esta oportunidad.</help>
+    <label>No crear pago automáticamente</label>
+  </fields>
+  <fields>
+    <name>Is_Opp_From_Individual__c</name>
+    <help>Fórmula: Si la cuenta relacionada está o no definida como un individuo (SYSTEMIsIndividual__c)</help>
+    <label>Es oportunidad procedente de individuo</label>
+  </fields>
+  <fields>
+    <name>Member_Level__c</name>
+    <help>Determina el valor del contacto o la cuenta del campo Último nivel de afiliación.</help>
+    <label>Nivel de miembro</label>
+    <picklistValues>
+      <masterLabel>Gold</masterLabel>
+      <translation>Oro</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Silver</masterLabel>
+      <translation>Plata</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Bronze</masterLabel>
+      <translation>Bronce</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Membership_End_Date__c</name>
+    <help>Fecha en la que termina el periodo de afiliación.</help>
+    <label>Fecha de finalización de afiliación</label>
+  </fields>
+  <fields>
+    <name>Membership_Origin__c</name>
+    <help>Es esta una renovación, una nueva afiliación o una afiliación de alguien que se fue y ha vuelto.</help>
+    <label>Origen de la afiliación</label>
+    <picklistValues>
+      <masterLabel>New</masterLabel>
+      <translation>Nuevo</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Renewal</masterLabel>
+      <translation>Renovación</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Reacquire</masterLabel>
+      <translation>Reobtenida</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Membership_Start_Date__c</name>
+    <help>Fecha en el que se inicia el periodo de afiliación</help>
+    <label>Fecha de inicio de afiliación</label>
+  </fields>
+  <fields>
+    <name>Number_of_Payments__c</name>
+    <help>Número total de pagos para esta oportunidad (Donación)</help>
+    <label>Número de pagos</label>
+  </fields>
+  <fields>
+    <name>Payments_Made__c</name>
+    <help>El valor total de los pagos marcados como recibidos para esta oportunidad.</help>
+    <label>Importe de pagos recibidos</label>
+  </fields>
+  <webLinks>
+    <name>New_Contact_Donation</name>
+    <label>Nueva donación de contacto</label>
+  </webLinks>
+  <webLinks>
+    <name>New_Organization_Donation</name>
+    <label>Nueva donación de cuenta</label>
+  </webLinks>
 </CustomObjectTranslation>

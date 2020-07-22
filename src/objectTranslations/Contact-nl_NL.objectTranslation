@@ -1,138 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fields>
-        <help><!-- Alternate Email is an optional fourth email: Not personal, preferred, or work email. --></help>
-        <label><!-- Alternate Email --></label>
-        <name>AlternateEmail__c</name>
-    </fields>
-    <fields>
-        <help><!-- See Preferred Email field. --></help>
-        <label><!-- Personal Email --></label>
-        <name>HomeEmail__c</name>
-    </fields>
-    <fields>
-        <help><!-- Formula: Uses primary address type field to determine Home Address from Mailing or Other address. --></help>
-        <label><!-- Home Address --></label>
-        <name>Home_Address__c</name>
-    </fields>
-    <fields>
-        <help><!-- Formula: In order of preference, the SYSTEM_AccountType field, the Account Type field, and &quot;Organization&quot;. --></help>
-        <label><!-- Organization Type --></label>
-        <name>Organization_Type__c</name>
-    </fields>
-    <fields>
-        <help><!-- Formula: If the Primary Address Type is Other, the Mailing Address.  If the Secondary Address Type is Other, the Other Address. --></help>
-        <label><!-- Other Address --></label>
-        <name>Other_Address__c</name>
-    </fields>
-    <fields>
-        <help><!-- Which phone number should be used for most communications involving this Contact? --></help>
-        <label><!-- Preferred Phone --></label>
-        <name>PreferredPhone__c</name>
-        <picklistValues>
-            <masterLabel>Home</masterLabel>
-            <translation><!-- Home --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Mobile</masterLabel>
-            <translation><!-- Mobile --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Work</masterLabel>
-            <translation><!-- Work --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help><!-- Which email should be used for most communications involving this Contact? --></help>
-        <label><!-- Preferred Email --></label>
-        <name>Preferred_Email__c</name>
-        <picklistValues>
-            <masterLabel>Alternate</masterLabel>
-            <translation><!-- Alternate --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Personal</masterLabel>
-            <translation><!-- Personal --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Work</masterLabel>
-            <translation><!-- Work --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help><!-- Which type of address is the mailing address? --></help>
-        <label><!-- Primary Address Type --></label>
-        <name>Primary_Address_Type__c</name>
-        <picklistValues>
-            <masterLabel>Home</masterLabel>
-            <translation><!-- Home --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Work</masterLabel>
-            <translation><!-- Work --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help><!-- Excludes this Contact from any Individual Account processing. If you leave the Account field blank, it will remain blank. --></help>
-        <label><!-- Private --></label>
-        <name>Private__c</name>
-    </fields>
-    <fields>
-        <help><!-- What type of address is the other address? --></help>
-        <label><!-- Secondary Address Type --></label>
-        <name>Secondary_Address_Type__c</name>
-        <picklistValues>
-            <masterLabel>Home</masterLabel>
-            <translation><!-- Home --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Work</masterLabel>
-            <translation><!-- Work --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help><!-- NO LONGER USED - Indicates which model drives Account relationship behavior: Individual (Bucket) or One-to-One --></help>
-        <label><!-- DEPRECATED - _SYSTEM: ACCOUNT PROCESSOR --></label>
-        <name>SystemAccountProcessor__c</name>
-        <picklistValues>
-            <masterLabel>Individual</masterLabel>
-            <translation><!-- Individual --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>One-to-One</masterLabel>
-            <translation><!-- One-to-One --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help><!-- Formula: &quot;Individual&quot; or &quot;Organization&quot; depending on Account setting. --></help>
-        <label><!-- Type of Account --></label>
-        <name>Type_of_Account__c</name>
-    </fields>
-    <fields>
-        <help><!-- See Preferred Email field. --></help>
-        <label><!-- Work Email --></label>
-        <name>WorkEmail__c</name>
-    </fields>
-    <fields>
-        <help><!-- See &apos;Preferred Phone&apos; field. --></help>
-        <label><!-- Work Phone --></label>
-        <name>WorkPhone__c</name>
-    </fields>
-    <fields>
-        <help><!-- Formula: If the Primary Address Type is Work, the Mailing Address.  If the Secondary Address Type is Work, the Other Address. --></help>
-        <label><!-- Work Address --></label>
-        <name>Work_Address__c</name>
-    </fields>
+  <fields>
+    <name>AlternateEmail__c</name>
+    <help>Alternatief e-mailadres is een optioneel vierde e-mailadres: niet het persoonlijke e-mailadres, het voorkeuradres of het e-mailadres voor werk.</help>
+    <label>Alternatief e-mailadres</label>
+  </fields>
+  <fields>
+    <name>HomeEmail__c</name>
+    <help>Zie het veld Voorkeur-e-mailadres.</help>
+    <label>Persoonlijk e-mailadres</label>
+  </fields>
+  <fields>
+    <name>Home_Address__c</name>
+    <help>Formule: gebruikt het primaire veld voor adrestype om Thuisadres te bepalen op basis van Postadres of Ander adres.</help>
+    <label>Thuisadres</label>
+  </fields>
+  <fields>
+    <name>Organization_Type__c</name>
+    <help>Formule: in volgorde van voorkeur, het veld SYSTEM_AccountType, het veld Accounttype en "Organisatie".</help>
+    <label>Organisatietype</label>
+  </fields>
+  <fields>
+    <name>Other_Address__c</name>
+    <help>Formule: als het type Primaire adres gelijk is aan Overig, het Postadres. Als het type Secundair adres gelijk is aan Overig, het Andere adres.</help>
+    <label>Ander adres</label>
+  </fields>
+  <fields>
+    <name>PreferredPhone__c</name>
+    <help>Welk telefoonnummer moet er worden gebruikt voor de meeste communicatie met betrekking tot deze contactpersoon?</help>
+    <label>Voorkeurtelefoon</label>
+    <picklistValues>
+      <masterLabel>Home</masterLabel>
+      <translation>Thuis</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Work</masterLabel>
+      <translation>Werk</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Mobile</masterLabel>
+      <translation>Mobiel</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Other</masterLabel>
+      <translation>Overig</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Preferred_Email__c</name>
+    <help>Welk e-mailadres moet er worden gebruikt voor de meeste communicatie met betrekking tot deze contactpersoon?</help>
+    <label>Voorkeur-e-mailadres</label>
+    <picklistValues>
+      <masterLabel>Personal</masterLabel>
+      <translation>Persoonlijk</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Work</masterLabel>
+      <translation>Werk</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Alternate</masterLabel>
+      <translation>Alternatief</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Primary_Address_Type__c</name>
+    <help>Welk type adres is het postadres?</help>
+    <label>Type Primair adres</label>
+    <picklistValues>
+      <masterLabel>Home</masterLabel>
+      <translation>Thuis</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Work</masterLabel>
+      <translation>Werk</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Other</masterLabel>
+      <translation>Overig</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Private__c</name>
+    <help>Sluit deze contactpersoon uit van elke verwerking van Account voor individu. Als u het veld Account blanco laat, blijft dit blanco.</help>
+    <label>Privé</label>
+  </fields>
+  <fields>
+    <name>Secondary_Address_Type__c</name>
+    <help>Welk type adres is het andere adres?</help>
+    <label>Type Secundair adres</label>
+    <picklistValues>
+      <masterLabel>Home</masterLabel>
+      <translation>Thuis</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Work</masterLabel>
+      <translation>Werk</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Other</masterLabel>
+      <translation>Overig</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>SystemAccountProcessor__c</name>
+    <help>NIET LANGER GEBRUIKT - Geeft aan welk model de werking van de relatie Account aanstuurt: Individu (Bucket) of Eén-op-één.</help>
+    <label>DEPRECATED - _SYSTEM: ACCOUNT PROCESSOR</label>
+    <picklistValues>
+      <masterLabel>One-to-One</masterLabel>
+      <translation>Eén-op-één</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Individual</masterLabel>
+      <translation>Individu</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Type_of_Account__c</name>
+    <help>Formule: "Individu" of "Organisatie", afhankelijk van de instelling voor Account.</help>
+    <label>Type account</label>
+  </fields>
+  <fields>
+    <name>WorkEmail__c</name>
+    <help>Zie het veld Voorkeur-e-mailadres.</help>
+    <label>E-mail werk</label>
+  </fields>
+  <fields>
+    <name>WorkPhone__c</name>
+    <help>Zie het veld 'Voorkeurtelefoon'.</help>
+    <label>Telefoon werk</label>
+  </fields>
+  <fields>
+    <name>Work_Address__c</name>
+    <help>Formule: als het type Primair adres Werk is, het Postadres. Als het type Secundair adres gelijk is aan Overig, het Andere adres.</help>
+    <label>Werkadres</label>
+  </fields>
 </CustomObjectTranslation>

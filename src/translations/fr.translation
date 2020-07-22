@@ -1,114 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label>La fusion des contacts est un processus irréversible.</label>
         <name>Contact_Merge_Error_Confirm_Message</name>
+        <label>La fusion des contacts est un processus irréversible.</label>
     </customLabels>
     <customLabels>
-        <label>Si vous possédez le package Foyer, veuillez noter que les foyers pour les contacts fusionnés ne sont pas affectés lors de la fusion. Si vous souhaitez fusionner les foyers, vous devez le faire manuellement, en vous assurant que le contact gagnant est connecté au foyer approprié.</label>
         <name>Contact_Merge_Error_Confirm_Message_Households</name>
+        <label>Si vous possédez le package Foyer, veuillez noter que les foyers pour les contacts fusionnés ne sont pas affectés lors de la fusion. Si vous souhaitez fusionner les foyers, vous devez le faire manuellement, en vous assurant que le contact gagnant est connecté au foyer approprié.</label>
     </customLabels>
     <customLabels>
-        <label>Aucun contact trouvé, veuillez réessayer.</label>
         <name>Contact_Merge_Error_Confirm_Message_Nothing_Found</name>
+        <label>Aucun contact trouvé, veuillez réessayer.</label>
     </customLabels>
     <customLabels>
-        <label>Échec de l’interrogation des informations de contact.</label>
         <name>Contact_Merge_Error_Contact_not_found</name>
+        <label>Échec de l’interrogation des informations de contact.</label>
     </customLabels>
     <customLabels>
-        <label>Échec de verrouillage de tous les enregistrements pour la fusion.</label>
         <name>Contact_Merge_Error_Lock_failed</name>
+        <label>Échec de verrouillage de tous les enregistrements pour la fusion.</label>
     </customLabels>
     <customLabels>
-        <label>Échec de fusion des contacts.</label>
         <name>Contact_Merge_Error_Merge_Failed</name>
+        <label>Échec de fusion des contacts.</label>
     </customLabels>
     <customLabels>
-        <label>Sélectionnez un enregistrement principal pour la fusion.</label>
         <name>Contact_Merge_Error_No_Master</name>
+        <label>Sélectionnez un enregistrement principal pour la fusion.</label>
     </customLabels>
     <customLabels>
-        <label>Échec de l’interrogation de tous les contacts sélectionnés.</label>
         <name>Contact_Merge_Error_Query_Failed</name>
+        <label>Échec de l’interrogation de tous les contacts sélectionnés.</label>
     </customLabels>
     <customLabels>
-        <label>Sélectionnez au moins 2 contacts à fusionner.</label>
         <name>Contact_Merge_Error_Too_Few_Contacts</name>
+        <label>Sélectionnez au moins 2 contacts à fusionner.</label>
     </customLabels>
     <customLabels>
-        <label>Vous ne pouvez pas fusionner plus de 3 contacts à la fois.</label>
         <name>Contact_Merge_Error_Too_Many_Contacts</name>
+        <label>Vous ne pouvez pas fusionner plus de 3 contacts à la fois.</label>
     </customLabels>
     <customLabels>
-        <label>Veuillez réessayer à partir du début.</label>
         <name>Contact_Merge_Error_please_retry</name>
+        <label>Veuillez réessayer à partir du début.</label>
     </customLabels>
     <customLabels>
-        <label>Saisissez un texte afin de chercher des doublons</label>
         <name>Contact_Merge_Step1</name>
+        <label>Saisissez un texte afin de chercher des doublons</label>
     </customLabels>
     <customLabels>
-        <label>Sélectionnez jusqu&apos;à 3 contacts à fusionner</label>
         <name>Contact_Merge_Step2</name>
+        <label>Sélectionnez jusqu'à 3 contacts à fusionner</label>
     </customLabels>
     <customLabels>
-        <label>Sélectionnez le contact gagnant</label>
         <name>Contact_Merge_Step3</name>
+        <label>Sélectionnez le contact gagnant</label>
     </customLabels>
     <customLabels>
-        <label>Fusionnez les contacts</label>
         <name>Contact_Merge_Step4</name>
+        <label>Fusionnez les contacts</label>
     </customLabels>
     <customLabels>
-        <label>Le Nonprofit Success Pack prend en charge trois modèles de compte différents : le modèle de compte foyer, le modèle de compte un-à-un, et le modèle de compte individuel (« à compartiments »). Pour plus d’informations sur l’un de ces modèles, consultez la &lt;a href=&quot;https://powerofus.force.com/NPSP_Account_Model&quot; target=&quot;_blank&quot;&gt;Documentation NPSP&lt;/a&gt;.
+        <name>Contacts_Settings_Account_Model_Help_Text</name>
+        <label>Le Nonprofit Success Pack prend en charge trois modèles de compte différents : le modèle de compte foyer, le modèle de compte un-à-un, et le modèle de compte individuel (« à compartiments »). Pour plus d’informations sur l’un de ces modèles, consultez la &lt;a href="https://powerofus.force.com/NPSP_Account_Model" target="_blank"&gt;Documentation NPSP&lt;/a&gt;.
 &lt;br/&gt;&lt;br&gt; 
 Pour ceux qui utilisent NPSP3 et versions ultérieures, le modèle de compte foyer est recommandé.</label>
-        <name>Contacts_Settings_Account_Model_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>Vous pouvez choisir de créer un rôle de contact d’opportunité créé automatiquement lorsque des opportunités sont créées. Il existe un champ sur l’opportunité appelé « ID de contact pour le rôle ». Si vous importez des opportunités avec un ID de contact valide dans ce champ, un rôle de contact sera créé en fonction des paramètres par défaut définis ci-dessous. Vous pouvez également désactiver complètement la fonctionnalité en modifiant la configuration du déclencheur.</label>
         <name>Contacts_Settings_Contact_Roles_Help_Text</name>
+        <label>Vous pouvez choisir de créer un rôle de contact d’opportunité créé automatiquement lorsque des opportunités sont créées. Il existe un champ sur l’opportunité appelé « ID de contact pour le rôle ». Si vous importez des opportunités avec un ID de contact valide dans ce champ, un rôle de contact sera créé en fonction des paramètres par défaut définis ci-dessous. Vous pouvez également désactiver complètement la fonctionnalité en modifiant la configuration du déclencheur.</label>
     </customLabels>
     <customLabels>
-        <label>€</label>
         <name>DefaultContactTransactionCurrency</name>
+        <label>€</label>
     </customLabels>
     <customLabels>
-        <label>$Source</label>
+        <name>Matching_Donation_Record_Suffix</name>
+        <label>{3} Don équivalent {1}</label>
+    </customLabels>
+    <customLabels>
         <name>Matching_Donation_Record_Type</name>
+        <label>$Source</label>
     </customLabels>
     <customLabels>
-        <label>L’identifiant de contact fourni dans le champ ID de contact pour le rôle n’est pas valide. Veuillez utiliser un identifiant de contact valide.</label>
         <name>Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
+        <label>L’identifiant de contact fourni dans le champ ID de contact pour le rôle n’est pas valide. Veuillez utiliser un identifiant de contact valide.</label>
     </customLabels>
-    <customPageWebLinks>
-        <label><!-- DEPRECATED: Nonprofit Edition Reports --></label>
-        <name>Nonprofit_Edition_Reports</name>
-    </customPageWebLinks>
     <customTabs>
-        <label>Fusion de contact (OLD)</label>
         <name>Contact_Merge</name>
+        <label>Fusion de contact (OLD)</label>
     </customTabs>
     <customTabs>
-        <label>Paramètres de contacts</label>
-        <name>Contacts_Settings</name>
-    </customTabs>
-    <customTabs>
-        <label>Mappage de paiement</label>
         <name>Payment_Mapping</name>
+        <label>Mappage de paiement</label>
     </customTabs>
-    <reportTypes>
-        <description><!-- Screen Flows --></description>
-        <label><!-- Screen Flows --></label>
-        <name>screen_flows_prebuilt_crt</name>
-        <sections>
-            <label><!-- Flow Interview Log Entries --></label>
-            <name>Flow Interview Log Entries</name>
-        </sections>
-        <sections>
-            <label><!-- Flow Interview Logs --></label>
-            <name>Flow Interview Logs</name>
-        </sections>
-    </reportTypes>
+    <customTabs>
+        <name>Contacts_Settings</name>
+        <label>Paramètres de contacts</label>
+    </customTabs>
 </Translations>

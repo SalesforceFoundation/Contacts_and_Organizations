@@ -19,6 +19,7 @@ tasks:
                 - path: src/translations/**.translation
                   xpath: //ns:quickActions
 
+tasks:
     uninstall_packaged_incremental:
         options:
             ignore:
