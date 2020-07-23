@@ -5,8 +5,8 @@
         <value><!-- Contacts And Orgs Settings --></value>
     </caseValues>
     <fields>
-        <help>団体モデルの設定。「世帯団体」、「1 対 1」、「個人」のいずれかを指定します。カスタム項目 Contact.SystemAccountProcessor__c の代わりに使用されます。「世帯団体」が推奨モデルです。</help>
-        <label>団体モデル</label>
+        <help>取引先モデルの設定。「世帯取引先」、「1 対 1」、「個人」のいずれかを指定します。カスタム項目 Contact.SystemAccountProcessor__c の代わりに使用されます。「世帯取引先」が推奨モデルです。</help>
+        <label>取引先モデル</label>
         <name>Account_Processor__c</name>
     </fields>
     <fields>
@@ -30,13 +30,13 @@
         <name>DISABLE_OpportunityPayments_trigger__c</name>
     </fields>
     <fields>
-        <help>リード取引開始時に支援を作成するかどうかを指定します。</help>
-        <label>リード取引開始時に支援を作成</label>
+        <help>リード取引開始時に商談を作成するかどうかを指定します。</help>
+        <label>リード取引開始時に商談を作成</label>
         <name>Default_Opp_on_Convert__c</name>
     </fields>
     <fields>
         <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
-        <label>廃止-団体モデルトリガの無効化</label>
+        <label>廃止-取引先モデルトリガの無効化</label>
         <name>Disable_Account_Model_Trigger__c</name>
     </fields>
     <fields>
@@ -50,8 +50,8 @@
         <name>Enable_Update_Check__c</name>
     </fields>
     <fields>
-        <help>世帯団体に使用される団体レコードタイプの ID。何も選択しない場合、団体にはユーザのデフォルト団体レコードタイプが設定されます。</help>
-        <label>世帯団体レコードタイプ</label>
+        <help>世帯取引先に使用される取引先レコードタイプの ID。何も選択しない場合、取引先にはユーザのデフォルト取引先レコードタイプが設定されます。</help>
+        <label>世帯取引先レコードタイプ</label>
         <name>HH_Account_RecordTypeID__c</name>
     </fields>
     <fields>
@@ -70,13 +70,13 @@
         <name>Max_Package_Version__c</name>
     </fields>
     <fields>
-        <help>1 対 1 団体で使用される団体レコードタイプの ID。何も選択しない場合、団体にはユーザのデフォルト団体レコードタイプが設定されます。</help>
+        <help>1 対 1  取引先で使用される取引先レコードタイプの ID。何も選択しない場合、取引先にはユーザのデフォルト取引先レコードタイプが設定されます。</help>
         <label>1 対 1 レコードタイプ</label>
         <name>One_to_One_RecordTypeID__c</name>
     </fields>
     <fields>
-        <help>支援の団体が世帯、1 対 1、または個人の団体でない場合に、支援の主個人に自動的に割り当てられるデフォルトの個人の役割。</help>
-        <label>個人支援の個人の役割</label>
+        <help>商談の取引先が世帯、1 対 1、または個人の取引先でない場合に、商談の主取引先責任者に自動的に割り当てられるデフォルトの取引先責任者の役割。</help>
+        <label>個人支援の取引先責任者の役割</label>
         <name>Opportunity_Contact_Role_Default_role__c</name>
     </fields>
     <fields>
@@ -85,7 +85,7 @@
         <name>Package_Update_URL__c</name>
     </fields>
     <fields>
-        <help>有効な場合、新しい支援の支払が自動的に作成されます。</help>
+        <help>有効な場合、新しい商談 (支援) の支払が自動的に作成されます。</help>
         <label>自動支払作成</label>
         <name>Payments_Enabled__c</name>
     </fields>

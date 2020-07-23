@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help>団体の主個人、または 1 対 1 団体の 1 対 1 個人。</help>
-        <label>主個人</label>
+        <help>取引先の主取引先責任者、または 1 対 1 取引先の 1 対 1 取引先責任者。</help>
+        <label>主取引先責任者</label>
         <name>One2OneContact__c</name>
-        <relationshipLabel>団体</relationshipLabel>
+        <relationshipLabel>取引先</relationshipLabel>
     </fields>
     <fields>
-        <help>この団体が通常の団体ではなく個人の特殊な団体 (世帯、1 対 1、個人) であるかを示します。</help>
+        <help>この取引先が通常の取引先ではなく取引先責任者の特殊な取引先 (世帯、1 対 1、個人) であるかを示します。</help>
         <label>_SYSTEM: IsIndividual</label>
         <name>SYSTEMIsIndividual__c</name>
     </fields>
     <fields>
-        <help>この団体が、世帯団体、1 対 1、個人 (バケット) のうち、どの団体モデルのものであるかを示します。</help>
+        <help>この取引先が、世帯取引先、1 対 1、個人 (バケット) のうち、どの取引先モデルのものであるかを示します。</help>
         <label>_SYSTEM: AccountType</label>
         <name>SYSTEM_AccountType__c</name>
     </fields>

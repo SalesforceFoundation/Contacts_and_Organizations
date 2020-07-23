@@ -72,12 +72,12 @@
     </fields>
     <fields>
         <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
-        <label>ERSETZT-Accountmodellauslöser deaktivieren</label>
+        <label>ERSETZT-Accountmodellauslöser deaktiv.</label>
         <name>Disable_Account_Model_Trigger__c</name>
     </fields>
     <fields>
         <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
-        <label>ERSETZT-OppContactRole-Auslöser aktivieren</label>
+        <label>ERSETZT-OppContactRole-Auslöser aktiv.</label>
         <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
     </fields>
     <fields>

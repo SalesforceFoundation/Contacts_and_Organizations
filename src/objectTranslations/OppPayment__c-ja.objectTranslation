@@ -13,7 +13,7 @@
         <name>Custom_Payment_Field__c</name>
     </fields>
     <fields>
-        <label>支援</label>
+        <label>商談</label>
         <name>Opportunity__c</name>
         <relationshipLabel>支払</relationshipLabel>
     </fields>

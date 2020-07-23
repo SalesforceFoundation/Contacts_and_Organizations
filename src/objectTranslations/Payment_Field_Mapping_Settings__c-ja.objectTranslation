@@ -5,7 +5,7 @@
         <value><!-- Payment Field Mapping Settings --></value>
     </caseValues>
     <fields>
-        <label>支援の項目</label>
+        <label>商談の項目</label>
         <name>Opportunity_Field__c</name>
     </fields>
     <fields>
