@@ -1,6 +1,7 @@
 {
   "edition": "Developer",
   "orgName": "CO - Feature Test Org",
+  "hasSampleData": false,
   "settings": {
     "chatterSettings": {
       "enableChatter": true
