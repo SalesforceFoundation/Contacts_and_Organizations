@@ -6,8 +6,8 @@
         <name>Amount_Outstanding__c</name>
     </fields>
     <fields>
-        <help>Valeur totale des paiements marqués comme déduits ou non percevables pour cette opportunité.</help>
-        <label>Montant de déduction de paiement</label>
+        <help>Valeur totale des paiements marqués comme déduits ou non recouvrables pour cette opportunité.</help>
+        <label>Montant de la déduction du paiement</label>
         <name>Amount_Written_Off__c</name>
     </fields>
     <fields>
@@ -76,7 +76,7 @@
     </fields>
     <fields>
         <help>La valeur totale des paiements marqués comme reçus pour cette opportunité.</help>
-        <label>Montant de paiement reçu</label>
+        <label>Montant du paiement reçu</label>
         <name>Payments_Made__c</name>
     </fields>
     <webLinks>

@@ -17,7 +17,7 @@
     </fields>
     <fields>
         <help>Si los pagos están activos y este campo está seleccionado, no se creará un nuevo pago automáticamente para esta oportunidad.</help>
-        <label>No crear pago automáticamente pago</label>
+        <label>No crear pago automáticamente</label>
         <name>Do_Not_Automatically_Create_Payment__c</name>
     </fields>
     <fields>
