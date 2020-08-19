@@ -1,5 +1,3 @@
-[![Build Status](http://ec2-23-20-64-21.compute-1.amazonaws.com/job/npe01_master/badge/icon)](http://ec2-23-20-64-21.compute-1.amazonaws.com/job/npe01_master/)
-
 Nonprofit Success Pack - Contacts & Organizations
 =================================================
 
