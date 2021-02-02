@@ -1,134 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <caseType>Nominative</caseType>
-        <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Nominative</caseType>
-        <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
-    </caseValues>
-    <fields>
-        <help>Einstellung für das Accountmodell. Sollte &quot;Haushalt-Account&quot;, &quot;Eins-zu-Eins“ oder &quot;Einzelperson&quot; sein. Ersetzt das benutzerdefinierte Feld &quot;Contact.SystemAccountProcessor__c&quot; &quot;Haushalt-Account&quot; ist das empfohlene Modell.</help>
-        <label>Accountmodell</label>
-        <name>Account_Processor__c</name>
-    </fields>
-    <fields>
-        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
-        <label>DEPRECATED-Disable_IndividualAcc_trigger</label>
-        <name>DISABLE_IndividualAccounts_trigger__c</name>
-    </fields>
-    <fields>
-        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
-        <label>DEPRECATED-Disable_OppAccount_trigger</label>
-        <name>DISABLE_OpportunityAccount_trigger__c</name>
-    </fields>
-    <fields>
-        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
-        <label>DEPRECATED-Disable_OCR_trigger</label>
-        <name>DISABLE_OpportunityContactRoles_trigger__c</name>
-    </fields>
-    <fields>
-        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
-        <label>DEPRECATED-Disable_OppPayments_trigger</label>
-        <name>DISABLE_OpportunityPayments_trigger__c</name>
-    </fields>
-    <fields>
-        <help>Gibt an, ob bei der Lead-Konvertierung eine Opportunity erstellt werden soll.</help>
-        <label>Opp. bei Lead-Konvertierung erstellen</label>
-        <name>Default_Opp_on_Convert__c</name>
-    </fields>
-    <fields>
-        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
-        <label>ERSETZT-Accountmodellauslöser deaktiv.</label>
-        <name>Disable_Account_Model_Trigger__c</name>
-    </fields>
-    <fields>
-        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
-        <label>ERSETZT-OppContactRole-Auslöser aktiv.</label>
-        <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
-    </fields>
-    <fields>
-        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
-        <label>ERSETZT-Update-Check aktivieren</label>
-        <name>Enable_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>Die Kennung des Account-Datensatztyps für Haushalt-Accounts. Wenn keine Auswahl getroffen wurde, wird der Account standardmäßig auf den Standard-Accountdatensatztyp des Benutzers festgelegt.</help>
-        <label>Datensatztyp für Haushalt-Accounts</label>
-        <name>HH_Account_RecordTypeID__c</name>
-    </fields>
-    <fields>
-        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
-        <label>ERSETZT-Paket-Update vorhanden</label>
-        <name>Has_Package_Update__c</name>
-    </fields>
-    <fields>
-        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
-        <label>ERSETZT-Letzter Update-Check</label>
-        <name>Last_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
-        <label>ERSETZT-Max Paketversion</label>
-        <name>Max_Package_Version__c</name>
-    </fields>
-    <fields>
-        <help>Die Kennung des Account-Datensatztyps für Eins-zu-Eins-Accounts. Wenn keine Auswahl getroffen wurde, wird der Account standardmäßig auf den Standard-Accountdatensatztyp des Benutzers festgelegt.</help>
-        <label>Eins-zu-Eins-Datensatztyp</label>
-        <name>One_to_One_RecordTypeID__c</name>
-    </fields>
-    <fields>
-        <help>Die Standardkontaktrolle, die automatisch dem primären Kontakt der Opportunity zugewiesen wird, wenn der Account der Opportunity ein Haushalt, ein Ein-zu-Eins-Account oder ein Einzelperson-Account ist.</help>
-        <label>Kontaktrolle für Einzelpersonen-Opps</label>
-        <name>Opportunity_Contact_Role_Default_role__c</name>
-    </fields>
-    <fields>
-        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
-        <label>ERSETZT-Paket-Update-URL</label>
-        <name>Package_Update_URL__c</name>
-    </fields>
-    <fields>
-        <help>Aktiviert automatische Zahlungen, die für neue Opportunities/Spenden erstellt wurden.</help>
-        <label>Autom. Zahlungserstellung</label>
-        <name>Payments_Enabled__c</name>
-    </fields>
-    <fields>
-        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
-        <label>ERSETZT-Update-Check-Intervall</label>
-        <name>Update_Check_Interval__c</name>
-    </fields>
-    <gender><!-- Neuter --></gender>
+  <fields>
+    <name>Account_Processor__c</name>
+    <help>Einstellung für das Accountmodell. Sollte "Haushalt-Account", "Eins-zu-Eins“ oder "Einzelperson" sein. Ersetzt das benutzerdefinierte Feld "Contact.SystemAccountProcessor__c" "Haushalt-Account" ist das empfohlene Modell.</help>
+    <label>Accountmodell</label>
+  </fields>
+  <fields>
+    <name>DISABLE_IndividualAccounts_trigger__c</name>
+    <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite "Auslöserkonfiguration" in den NPSP-Einstellungen gesteuert.</help>
+    <label>DEPRECATED-Disable_IndividualAcc_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityAccount_trigger__c</name>
+    <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite "Auslöserkonfiguration" in den NPSP-Einstellungen gesteuert.</help>
+    <label>DEPRECATED-Disable_OppAccount_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityContactRoles_trigger__c</name>
+    <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite "Auslöserkonfiguration" in den NPSP-Einstellungen gesteuert.</help>
+    <label>DEPRECATED-Disable_OCR_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityPayments_trigger__c</name>
+    <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite "Auslöserkonfiguration" in den NPSP-Einstellungen gesteuert.</help>
+    <label>DEPRECATED-Disable_OppPayments_trigger</label>
+  </fields>
+  <fields>
+    <name>Default_Opp_on_Convert__c</name>
+    <help>Gibt an, ob bei der Lead-Konvertierung eine Opportunity erstellt werden soll.</help>
+    <label>Opp. bei Lead-Konvertierung erstellen</label>
+  </fields>
+  <fields>
+    <name>Disable_Account_Model_Trigger__c</name>
+    <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite "Auslöserkonfiguration" in den NPSP-Einstellungen gesteuert.</help>
+    <label>ERSETZT-Accountmodellauslöser deaktiv.</label>
+  </fields>
+  <fields>
+    <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
+    <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite "Auslöserkonfiguration" in den NPSP-Einstellungen gesteuert.</help>
+    <label>ERSETZT-OppContactRole-Auslöser aktiv.</label>
+  </fields>
+  <fields>
+    <name>Enable_Update_Check__c</name>
+    <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+    <label>ERSETZT-Update-Check aktivieren</label>
+  </fields>
+  <fields>
+    <name>HH_Account_RecordTypeID__c</name>
+    <help>Die Kennung des Account-Datensatztyps für Haushalt-Accounts. Wenn keine Auswahl getroffen wurde, wird der Account standardmäßig auf den Standard-Accountdatensatztyp des Benutzers festgelegt.</help>
+    <label>Datensatztyp für Haushalt-Accounts</label>
+  </fields>
+  <fields>
+    <name>Has_Package_Update__c</name>
+    <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+    <label>ERSETZT-Paket-Update vorhanden</label>
+  </fields>
+  <fields>
+    <name>Last_Update_Check__c</name>
+    <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+    <label>ERSETZT-Letzter Update-Check</label>
+  </fields>
+  <fields>
+    <name>Max_Package_Version__c</name>
+    <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+    <label>ERSETZT-Max Paketversion</label>
+  </fields>
+  <fields>
+    <name>One_to_One_RecordTypeID__c</name>
+    <help>Die Kennung des Account-Datensatztyps für Eins-zu-Eins-Accounts. Wenn keine Auswahl getroffen wurde, wird der Account standardmäßig auf den Standard-Accountdatensatztyp des Benutzers festgelegt.</help>
+    <label>Eins-zu-Eins-Datensatztyp</label>
+  </fields>
+  <fields>
+    <name>Opportunity_Contact_Role_Default_role__c</name>
+    <help>Die Standardkontaktrolle, die automatisch dem primären Kontakt der Opportunity zugewiesen wird, wenn der Account der Opportunity ein Haushalt, ein Ein-zu-Eins-Account oder ein Einzelperson-Account ist.</help>
+    <label>Kontaktrolle für Einzelpersonen-Opps</label>
+  </fields>
+  <fields>
+    <name>Package_Update_URL__c</name>
+    <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+    <label>ERSETZT-Paket-Update-URL</label>
+  </fields>
+  <fields>
+    <name>Payments_Enabled__c</name>
+    <help>Aktiviert automatische Zahlungen, die für neue Opportunities/Spenden erstellt wurden.</help>
+    <label>Autom. Zahlungserstellung</label>
+  </fields>
+  <fields>
+    <name>Update_Check_Interval__c</name>
+    <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+    <label>ERSETZT-Update-Check-Intervall</label>
+  </fields>
 </CustomObjectTranslation>

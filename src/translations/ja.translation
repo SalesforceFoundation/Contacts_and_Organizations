@@ -1,105 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label>不正確な取引先責任者のマージを行うと、必要なデータが消失する場合があります。マージ後に残したい取引先責任者のレコードに、すべての必要なデータが含まれていることを確認してください。データが足りない場合は、取引先責任者のマージを行う前に、データをコピーしてください。</label>
         <name>Contact_Merge_Error_Confirm_Message</name>
+        <label>不正確な取引先責任者のマージを行うと、必要なデータが消失する場合があります。マージ後に残したい取引先責任者のレコードに、すべての必要なデータが含まれていることを確認してください。データが足りない場合は、取引先責任者のマージを行う前に、データをコピーしてください。</label>
     </customLabels>
     <customLabels>
-        <label>[世帯] パッケージを使用している場合、取引先責任者をマージしても、世帯には影響しないことに注意してください。世帯のマージは、手動で行う必要があります。マージ後の取引先責任者が適切な世帯と結び付けられていることを確認し、世帯を手動でマージしてください。</label>
         <name>Contact_Merge_Error_Confirm_Message_Households</name>
+        <label>[世帯] パッケージを使用している場合、取引先責任者をマージしても、世帯には影響しないことに注意してください。世帯のマージは、手動で行う必要があります。マージ後の取引先責任者が適切な世帯と結び付けられていることを確認し、世帯を手動でマージしてください。</label>
     </customLabels>
     <customLabels>
-        <label>該当する取引先責任者が見つかりませんでした。再検索してください。</label>
         <name>Contact_Merge_Error_Confirm_Message_Nothing_Found</name>
+        <label>該当する取引先責任者が見つかりませんでした。再検索してください。</label>
     </customLabels>
     <customLabels>
-        <label>取引先責任者のデータの取得に失敗しました。</label>
         <name>Contact_Merge_Error_Contact_not_found</name>
+        <label>取引先責任者のデータの取得に失敗しました。</label>
     </customLabels>
     <customLabels>
-        <label>マージ対象のレコードをロックできませんでした。</label>
         <name>Contact_Merge_Error_Lock_failed</name>
+        <label>マージ対象のレコードをロックできませんでした。</label>
     </customLabels>
     <customLabels>
-        <label>取引先責任者をマージできませんでした。</label>
         <name>Contact_Merge_Error_Merge_Failed</name>
+        <label>取引先責任者をマージできませんでした。</label>
     </customLabels>
     <customLabels>
-        <label>マスターとなるレコードを選択してください。</label>
         <name>Contact_Merge_Error_No_Master</name>
+        <label>マスターとなるレコードを選択してください。</label>
     </customLabels>
     <customLabels>
-        <label>選択した取引先責任者のデータの取得に失敗しました。</label>
         <name>Contact_Merge_Error_Query_Failed</name>
+        <label>選択した取引先責任者のデータの取得に失敗しました。</label>
     </customLabels>
     <customLabels>
-        <label>マージする取引先責任者を少なくとも 2 つ選択してください。</label>
         <name>Contact_Merge_Error_Too_Few_Contacts</name>
+        <label>マージする取引先責任者を少なくとも 2 つ選択してください。</label>
     </customLabels>
     <customLabels>
-        <label>一度にマージできる取引先責任者は 3 つまでです。</label>
         <name>Contact_Merge_Error_Too_Many_Contacts</name>
+        <label>一度にマージできる取引先責任者は 3 つまでです。</label>
     </customLabels>
     <customLabels>
-        <label>最初からやり直してください。</label>
         <name>Contact_Merge_Error_please_retry</name>
+        <label>最初からやり直してください。</label>
     </customLabels>
     <customLabels>
-        <label>重複した取引先責任者を検索する文字列を入力してください。</label>
         <name>Contact_Merge_Step1</name>
+        <label>重複した取引先責任者を検索する文字列を入力してください。</label>
     </customLabels>
     <customLabels>
-        <label>3 つまでのマージする取引先責任者を選択してください。</label>
         <name>Contact_Merge_Step2</name>
+        <label>3 つまでのマージする取引先責任者を選択してください。</label>
     </customLabels>
     <customLabels>
-        <label>残す取引先責任者を選択してください。</label>
         <name>Contact_Merge_Step3</name>
+        <label>残す取引先責任者を選択してください。</label>
     </customLabels>
     <customLabels>
-        <label>取引先責任者をマージします。</label>
         <name>Contact_Merge_Step4</name>
+        <label>取引先責任者をマージします。</label>
     </customLabels>
     <customLabels>
-        <label>「Nonprofit Success Pack」では、世帯取引先モデル、1 対 1 取引先モデル、個人 (バケット) 取引先モデルの 3 つの取引先モデルがサポートされます。これらのモデルの詳細は、&lt;a href=&quot;https://powerofus.force.com/NPSP_Account_Model&quot; target=&quot;_blank&quot;&gt;NPSP ドキュメント&lt;/a&gt;を参照してください。
+        <name>Contacts_Settings_Account_Model_Help_Text</name>
+        <label>「Nonprofit Success Pack」では、世帯取引先モデル、1 対 1 取引先モデル、個人 (バケット) 取引先モデルの 3 つの取引先モデルがサポートされます。これらのモデルの詳細は、&lt;a href="https://powerofus.force.com/NPSP_Account_Model" target="_blank"&gt;NPSP ドキュメント&lt;/a&gt;を参照してください。
 &lt;br/&gt;&lt;br&gt;
 NPSP3 以降を使用する場合、世帯取引先モデルをお勧めします。</label>
-        <name>Contacts_Settings_Account_Model_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>商談を作成するときに自動的に商談取引先責任者の役割が作成されるように設定できます。[商談] に [役割の取引先責任者 ID] という項目があります。その項目に有効な「取引先責任者 ID」を入力して商談をインポートすると、以下で設定するデフォルト値に従って「取引先責任者の役割」が作成されます。[トリガ設定] を変更して、この機能を無効にすることもできます。</label>
         <name>Contacts_Settings_Contact_Roles_Help_Text</name>
+        <label>商談を作成するときに自動的に商談取引先責任者の役割が作成されるように設定できます。[商談] に [役割の取引先責任者 ID] という項目があります。その項目に有効な「取引先責任者 ID」を入力して商談をインポートすると、以下で設定するデフォルト値に従って「取引先責任者の役割」が作成されます。[トリガ設定] を変更して、この機能を無効にすることもできます。</label>
     </customLabels>
     <customLabels>
-        <label>￥</label>
         <name>DefaultContactTransactionCurrency</name>
+        <label>￥</label>
     </customLabels>
     <customLabels>
-        <label>{3} 一致する支援 {1}</label>
         <name>Matching_Donation_Record_Suffix</name>
+        <label>{3} マッチング支援 {1}</label>
     </customLabels>
     <customLabels>
-        <label>$Source</label>
         <name>Matching_Donation_Record_Type</name>
+        <label>$Source</label>
     </customLabels>
     <customLabels>
-        <label>役割の取引先責任者 ID で入力された取引先責任者 ID は無効です。有効な取引先責任者 ID を使用してください。</label>
         <name>Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
+        <label>役割の取引先責任者 ID で入力された取引先責任者 ID は無効です。有効な取引先責任者 ID を使用してください。</label>
     </customLabels>
-    <customPageWebLinks>
-        <label><!-- DEPRECATED: Nonprofit Edition Reports --></label>
-        <name>Nonprofit_Edition_Reports</name>
-    </customPageWebLinks>
     <customTabs>
-        <label>取引先責任者のマージ (旧)</label>
         <name>Contact_Merge</name>
+        <label>取引先責任者のマージ (旧)</label>
     </customTabs>
     <customTabs>
-        <label>取引先責任者設定</label>
-        <name>Contacts_Settings</name>
-    </customTabs>
-    <customTabs>
-        <label>支払マッピング</label>
         <name>Payment_Mapping</name>
+        <label>支払マッピング</label>
     </customTabs>
-    </Translations>
+    <customTabs>
+        <name>Contacts_Settings</name>
+        <label>取引先責任者設定</label>
+    </customTabs>
+</Translations>
