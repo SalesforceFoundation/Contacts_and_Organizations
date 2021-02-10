@@ -69,6 +69,10 @@
         <label>Zahlungsmethode</label>
         <name>Payment_Method__c</name>
         <picklistValues>
+            <masterLabel>ACH</masterLabel>
+            <translation><!-- ACH --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Cash</masterLabel>
             <translation>Bar</translation>
         </picklistValues>

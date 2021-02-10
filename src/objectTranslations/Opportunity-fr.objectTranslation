@@ -26,7 +26,7 @@
         <name>Is_Opp_From_Individual__c</name>
     </fields>
     <fields>
-        <help>Détermine la valeur du contact ou ducompte du champ de dernier niveau d’adhésion.</help>
+        <help>Détermine la valeur du contact ou du compte du champ Dernier niveau d’adhésion.</help>
         <label>Niveau de membre</label>
         <name>Member_Level__c</name>
         <picklistValues>
