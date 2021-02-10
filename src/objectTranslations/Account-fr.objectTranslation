@@ -12,7 +12,7 @@
         <name>SYSTEMIsIndividual__c</name>
     </fields>
     <fields>
-        <help>Indique le modèle de compte auquelce compte est destiné : foyer, un-à-un ou individuel (à compartiments).</help>
+        <help>Indique le modèle de compte auquel ce compte est destiné : foyer, un-à-un ou individuel (à compartiments).</help>
         <label>_SYSTEM: IsIndividual</label>
         <name>SYSTEM_AccountType__c</name>
     </fields>
