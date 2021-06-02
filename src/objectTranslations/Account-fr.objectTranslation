@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fields>
-        <help>Le contact principal pour le compte, ou le contact un-à-un pour un compte un-à-un.</help>
-        <label>Contact principal</label>
-        <name>One2OneContact__c</name>
-        <relationshipLabel>Compte</relationshipLabel>
-    </fields>
-    <fields>
-        <help>Indique si ce compte est spécial pour les contacts (foyer, un-à-un, individuel) par rapport à un compte normal.</help>
-        <label>_SYSTEM: IsIndividual</label>
-        <name>SYSTEMIsIndividual__c</name>
-    </fields>
-    <fields>
-        <help>Indique le modèle de compte auquel ce compte est destiné : foyer, un-à-un ou individuel (à compartiments).</help>
-        <label>_SYSTEM: IsIndividual</label>
-        <name>SYSTEM_AccountType__c</name>
-    </fields>
+  <fields>
+    <name>One2OneContact__c</name>
+    <help>Le contact principal pour le compte, ou le contact un-à-un pour un compte un-à-un.</help>
+    <relationshipLabel>Compte</relationshipLabel>
+    <label>Contact principal</label>
+  </fields>
+  <fields>
+    <name>SYSTEMIsIndividual__c</name>
+    <help>Indique si ce compte est spécial pour les contacts (foyer, un-à-un, individuel) par rapport à un compte normal.</help>
+    <label>_SYSTEM: IsIndividual</label>
+  </fields>
+  <fields>
+    <name>SYSTEM_AccountType__c</name>
+    <help>Indique le modèle de compte auquel ce compte est destiné : foyer, un-à-un ou individuel (à compartiments).</help>
+    <label>_SYSTEM: IsIndividual</label>
+  </fields>
 </CustomObjectTranslation>

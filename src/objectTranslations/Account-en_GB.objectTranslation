@@ -2,18 +2,18 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
   <fields>
     <name>One2OneContact__c</name>
-    <help>Der Hauptansprechpartner für einen Haushalt-Account, oder der Eins-zu-Eins-Kontakt für einen Eins-zu-Eins-Account.</help>
+    <help>The primary contact for the Account, or the One2One contact for a One2One account.</help>
     <relationshipLabel>Account</relationshipLabel>
-    <label>Hauptansprechpartner</label>
+    <label>Primary Contact</label>
   </fields>
   <fields>
     <name>SYSTEMIsIndividual__c</name>
-    <help>Gibt an, ob dieser Account speziell für Kontakte (Haushalt, Eins-zu-Eins, Einzelperson) vorgesehen oder ein normaler Account ist.</help>
+    <help>Indicates whether or not this Account is special for Contacts (Household, One-to-One, Individual) vs a normal Account.</help>
     <label>_SYSTEM: IsIndividual</label>
   </fields>
   <fields>
     <name>SYSTEM_AccountType__c</name>
-    <help>Gibt an, für welches Accountmodell dieser Account steht: Haushalt, Eins-zu-Eins oder Einzelperson (Bucket).</help>
+    <help>Indicates which Account Model this account is for: Household Account, One-to-One, or Individual (bucket).</help>
     <label>_SYSTEM: AccountType</label>
   </fields>
 </CustomObjectTranslation>

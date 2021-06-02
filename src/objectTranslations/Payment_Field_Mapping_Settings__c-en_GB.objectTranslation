@@ -2,19 +2,19 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
   <fields>
     <name>Opportunity_Field__c</name>
-    <label>Veld Opportunity</label>
+    <label>Opportunity Field</label>
   </fields>
   <fields>
     <name>Payment_Field__c</name>
-    <label>Veld Betaling</label>
+    <label>Payment Field</label>
   </fields>
-  <gender>Feminine</gender>
+  <startsWith>Consonant</startsWith>
   <caseValues>
     <plural>false</plural>
-    <value>Toewijzingsinstelling voor betalingsveld</value>
+    <value>Payment Field Mapping Settings</value>
   </caseValues>
   <caseValues>
     <plural>true</plural>
-    <value>Toewijzingsinstellingen voor betalingsveld</value>
+    <value>Payment Field Mapping Settings</value>
   </caseValues>
 </CustomObjectTranslation>
