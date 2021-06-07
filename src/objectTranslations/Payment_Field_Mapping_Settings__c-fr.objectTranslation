@@ -1,21 +1,21 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>Opportunity_Field__c</name>
-    <label>Champ Opportunité</label>
-  </fields>
-  <fields>
-    <name>Payment_Field__c</name>
-    <label>Champ Paiement</label>
-  </fields>
-  <gender>Masculine</gender>
-  <startsWith>Consonant</startsWith>
-  <caseValues>
-    <plural>false</plural>
-    <value>Paramètre de mappage de champs de paiement</value>
-  </caseValues>
-  <caseValues>
-    <plural>true</plural>
-    <value>Paramètres de mappage de champs de paiement</value>
-  </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <value>Paramètre de mappage de champs de paiement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Paramètres de mappage de champs de paiement</value>
+    </caseValues>
+    <fields>
+        <label>Champ Opportunité</label>
+        <name>Opportunity_Field__c</name>
+    </fields>
+    <fields>
+        <label>Champ Paiement</label>
+        <name>Payment_Field__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>
