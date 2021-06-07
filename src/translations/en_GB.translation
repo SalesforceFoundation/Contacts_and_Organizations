@@ -62,13 +62,13 @@
     </customLabels>
     <customLabels>
         <name>Contacts_Settings_Account_Model_Help_Text</name>
-        <label>The Nonprofit Success Pack supports three different Account models: the Household Account model, the One-to-One Account model, and the Individual (or "Bucket") Account model. For more information on any of these models, see the &lt;a href="https://powerofus.force.com/NPSP_Account_Model" target="_blank"&gt;NPSP Documentation&lt;/a&gt;.
+        <label>The Nonprofit Success Pack supports three different Account models: the Household Account model, the One-to-One Account model, and the Individual (or &quot;Bucket&quot;) Account model. For more information on any of these models, see the &lt;a href=&quot;https://powerofus.force.com/NPSP_Account_Model&quot; target=&quot;_blank&quot;&gt;NPSP Documentation&lt;/a&gt;.
 &lt;br/&gt;&lt;br&gt; 
 For those using NPSP3 and later, the Household Account model is recommended.</label>
     </customLabels>
     <customLabels>
         <name>Contacts_Settings_Contact_Roles_Help_Text</name>
-        <label>You can choose to have an Opportunity Contact Role automatically created when Opportunities are created. There is a field on Opportunity called "Contact Id for Role". If you import Opportunities with a valid Contact Id in that field, a Contact Role will be created according to the defaults set below. You can also turn the functionality off completely by modifying the Trigger Configuration.</label>
+        <label>You can choose to have an Opportunity Contact Role automatically created when Opportunities are created. There is a field on Opportunity called &quot;Contact Id for Role&quot;. If you import Opportunities with a valid Contact Id in that field, a Contact Role will be created according to the defaults set below. You can also turn the functionality off completely by modifying the Trigger Configuration.</label>
     </customLabels>
     <customLabels>
         <name>DefaultContactTransactionCurrency</name>
