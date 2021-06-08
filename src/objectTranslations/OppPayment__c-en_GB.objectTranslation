@@ -1,85 +1,81 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>Check_Reference_Number__c</name>
-    <label>Check/Reference Number</label>
-  </fields>
-  <fields>
-    <name>Custom_Payment_Field__c</name>
-    <label>Custom Payment Field</label>
-  </fields>
-  <fields>
-    <name>Opportunity__c</name>
-    <relationshipLabel>Payments</relationshipLabel>
-    <label>Opportunity</label>
-  </fields>
-  <fields>
-    <name>Paid__c</name>
-    <label>Paid</label>
-  </fields>
-  <fields>
-    <name>Payment_Amount__c</name>
-    <label>Payment Amount</label>
-  </fields>
-  <fields>
-    <name>Payment_Date__c</name>
-    <label>Payment Date</label>
-  </fields>
-  <fields>
-    <name>Payment_Method__c</name>
-    <label>Payment Method</label>
-    <picklistValues>
-      <masterLabel>Cash</masterLabel>
-      <translation>Cash</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Check</masterLabel>
-      <translation>Check</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Credit Card</masterLabel>
-      <translation>Credit Card</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>ACH</masterLabel>
-      <translation>ACH</translation>
-    </picklistValues>
-  </fields>
-  <fields>
-    <name>Scheduled_Date__c</name>
-    <label>Scheduled Date</label>
-  </fields>
-  <fields>
-    <name>Written_Off__c</name>
-    <label>Written Off</label>
-  </fields>
-  <webLinks>
-    <name>Schedule_Payments</name>
-    <label>Schedule Payments</label>
-  </webLinks>
-  <webLinks>
-    <name>Writeoff_Payments</name>
-    <label>Write Off Payments</label>
-  </webLinks>
-  <layouts>
-    <layout>Payment Layout</layout>
-    <sections>
-      <label>Custom Links</label>
-      <section>Custom Links</section>
-    </sections>
-  </layouts>
-  <nameFieldLabel>Payment Number</nameFieldLabel>
-  <standardFields>
-    <name>Name</name>
-    <label>Payment Number</label>
-  </standardFields>
-  <startsWith>Consonant</startsWith>
-  <caseValues>
-    <plural>false</plural>
-    <value>Payment</value>
-  </caseValues>
-  <caseValues>
-    <plural>true</plural>
-    <value>Payments</value>
-  </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <value>Payment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Payments</value>
+    </caseValues>
+    <fields>
+        <label>Check/Reference Number</label>
+        <name>Check_Reference_Number__c</name>
+    </fields>
+    <fields>
+        <label>Custom Payment Field</label>
+        <name>Custom_Payment_Field__c</name>
+    </fields>
+    <fields>
+        <label>Opportunity</label>
+        <name>Opportunity__c</name>
+        <relationshipLabel>Payments</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Paid</label>
+        <name>Paid__c</name>
+    </fields>
+    <fields>
+        <label>Payment Amount</label>
+        <name>Payment_Amount__c</name>
+    </fields>
+    <fields>
+        <label>Payment Date</label>
+        <name>Payment_Date__c</name>
+    </fields>
+    <fields>
+        <label>Payment Method</label>
+        <name>Payment_Method__c</name>
+        <picklistValues>
+            <masterLabel>ACH</masterLabel>
+            <translation>ACH</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash</masterLabel>
+            <translation>Cash</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Check</masterLabel>
+            <translation>Check</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Card</masterLabel>
+            <translation>Credit Card</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Scheduled Date</label>
+        <name>Scheduled_Date__c</name>
+    </fields>
+    <fields>
+        <label>Written Off</label>
+        <name>Written_Off__c</name>
+    </fields>
+    <layouts>
+        <layout>Payment Layout</layout>
+        <sections>
+            <label>Custom Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Payment Number</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label>Schedule Payments</label>
+        <name>Schedule_Payments</name>
+    </webLinks>
+    <webLinks>
+        <label>Write Off Payments</label>
+        <name>Writeoff_Payments</name>
+    </webLinks>
 </CustomObjectTranslation>
