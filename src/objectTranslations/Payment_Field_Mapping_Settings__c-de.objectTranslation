@@ -3,42 +3,42 @@
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>false</plural>
-        <value><!-- Payment Field Mapping Settings --></value>
+        <value>Einstellung für Zahlungsfeldzuordnungen</value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
-        <value><!-- Payment Field Mapping Settings --></value>
+        <value>Einstellungen für Zahlungsfeldzuordnungen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
-        <value><!-- Payment Field Mapping Settings --></value>
+        <value>Einstellung für Zahlungsfeldzuordnungen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Payment Field Mapping Settings --></value>
+        <value>Einstellungen für Zahlungsfeldzuordnungen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
-        <value><!-- Payment Field Mapping Settings --></value>
+        <value>Einstellung für Zahlungsfeldzuordnungen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Payment Field Mapping Settings --></value>
+        <value>Einstellungen für Zahlungsfeldzuordnungen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
-        <value><!-- Payment Field Mapping Settings --></value>
+        <value>Einstellung für Zahlungsfeldzuordnungen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Payment Field Mapping Settings --></value>
+        <value>Einstellungen für Zahlungsfeldzuordnungen</value>
     </caseValues>
     <fields>
         <label>Opportunity-Feld</label>
@@ -48,5 +48,5 @@
         <label>Zahlungsfeld</label>
         <name>Payment_Field__c</name>
     </fields>
-    <gender><!-- Neuter --></gender>
+    <gender>Feminine</gender>
 </CustomObjectTranslation>

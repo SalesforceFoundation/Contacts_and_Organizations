@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help>Alternate Email is an optional fourth email: Not personal, preferred, or work email.</help>
+        <label>Alternate Email</label>
+        <name>AlternateEmail__c</name>
+    </fields>
+    <fields>
+        <help>See Preferred Email field.</help>
+        <label>Personal Email</label>
+        <name>HomeEmail__c</name>
+    </fields>
+    <fields>
+        <help>Formula: Uses primary address type field to determine Home Address from Mailing or Other address.</help>
+        <label>Home Address</label>
+        <name>Home_Address__c</name>
+    </fields>
+    <fields>
+        <help>Formula: In order of preference, the SYSTEM_AccountType field, the Account Type field, and &quot;Organisation&quot;.</help>
+        <label>Organisation Type</label>
+        <name>Organization_Type__c</name>
+    </fields>
+    <fields>
+        <help>Formula: If the Primary Address Type is Other, the Mailing Address.  If the Secondary Address Type is Other, the Other Address.</help>
+        <label>Other Address</label>
+        <name>Other_Address__c</name>
+    </fields>
+    <fields>
+        <help>Which phone number should be used for most communications involving this Contact?</help>
+        <label>Preferred Phone</label>
+        <name>PreferredPhone__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation>Home</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile</masterLabel>
+            <translation>Mobile</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Other</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Work</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Which email should be used for most communications involving this Contact?</help>
+        <label>Preferred Email</label>
+        <name>Preferred_Email__c</name>
+        <picklistValues>
+            <masterLabel>Alternate</masterLabel>
+            <translation>Alternate</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal</masterLabel>
+            <translation>Personal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Work</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Which type of address is the mailing address?</help>
+        <label>Primary Address Type</label>
+        <name>Primary_Address_Type__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation>Home</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Other</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Work</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Excludes this Contact from any Individual Account processing. If you leave the Account field blank, it will remain blank.</help>
+        <label>Private</label>
+        <name>Private__c</name>
+    </fields>
+    <fields>
+        <help>What type of address is the other address?</help>
+        <label>Secondary Address Type</label>
+        <name>Secondary_Address_Type__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation>Home</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Other</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Work</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>NO LONGER USED - Indicates which model drives Account relationship behavior: Individual (Bucket) or One-to-One</help>
+        <label>DEPRECATED - _SYSTEM: ACCOUNT PROCESSOR</label>
+        <name>SystemAccountProcessor__c</name>
+        <picklistValues>
+            <masterLabel>Individual</masterLabel>
+            <translation>Individual</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>One-to-One</masterLabel>
+            <translation>One-to-One</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Formula: &quot;Individual&quot; or &quot;Organisation&quot; depending on Account setting.</help>
+        <label>Type of Account</label>
+        <name>Type_of_Account__c</name>
+    </fields>
+    <fields>
+        <help>See Preferred Email field.</help>
+        <label>Work Email</label>
+        <name>WorkEmail__c</name>
+    </fields>
+    <fields>
+        <help>See &apos;Preferred Phone&apos; field.</help>
+        <label>Work Phone</label>
+        <name>WorkPhone__c</name>
+    </fields>
+    <fields>
+        <help>Formula: If the Primary Address Type is Work, the Postal Address.  If the Secondary Address Type is Work, the Other Address.</help>
+        <label>Work Address</label>
+        <name>Work_Address__c</name>
+    </fields>
+</CustomObjectTranslation>

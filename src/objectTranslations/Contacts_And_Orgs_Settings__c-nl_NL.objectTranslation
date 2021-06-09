@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Instelling voor contactpersonen en organisaties</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Instellingen voor contactpersonen en organisaties</value>
     </caseValues>
     <fields>
         <help>Instelling voor het model Account. Moet &quot;Huishouden&quot; ,&quot;Eén-op-één&quot; of &quot;Individu&quot; zijn. Vervangt het aangepaste veld Contact.SystemAccountProcessor__c. &quot;Account voor huishouden&quot; is het aanbevolen model.</help>
@@ -98,5 +98,5 @@
         <label>VEROUDERD-Interval voor updatecontroles</label>
         <name>Update_Check_Interval__c</name>
     </fields>
-    <gender><!-- Neuter --></gender>
+    <gender>Feminine</gender>
 </CustomObjectTranslation>
