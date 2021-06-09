@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Paramètre de contacts et d’organisations</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Paramètres de contacts et d’organisations</value>
     </caseValues>
     <fields>
         <help>Paramètre pour le modèle de compte. Doit normalement être soit « Compte de foyer », soit « Compte un-à-un », soit « Individuel ». Remplace le champ personnalisé Contact.SystemAccountProcessor__c. « Compte de foyer » est le modèle recommandé.</help>
@@ -98,6 +98,6 @@
         <label>DÉPRÉCIÉ-Mettre à jour intervalle vérif.</label>
         <name>Update_Check_Interval__c</name>
     </fields>
-    <gender><!-- Masculine --></gender>
-    <startsWith><!-- Consonant --></startsWith>
+    <gender>Masculine</gender>
+    <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

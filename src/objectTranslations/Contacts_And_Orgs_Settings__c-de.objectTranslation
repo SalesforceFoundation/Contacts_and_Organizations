@@ -3,42 +3,42 @@
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Einstellung für Kontakte und Organisationen</value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Einstellungen für Kontakte und Organisationen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Einstellung für Kontakte und Organisationen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Einstellungen für Kontakte und Organisationen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Einstellung für Kontakte und Organisationen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Einstellungen für Kontakte und Organisationen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Einstellung für Kontakte und Organisationen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Einstellungen für Kontakte und Organisationen</value>
     </caseValues>
     <fields>
         <help>Einstellung für das Accountmodell. Sollte &quot;Haushalt-Account&quot;, &quot;Eins-zu-Eins“ oder &quot;Einzelperson&quot; sein. Ersetzt das benutzerdefinierte Feld &quot;Contact.SystemAccountProcessor__c&quot; &quot;Haushalt-Account&quot; ist das empfohlene Modell.</help>
@@ -130,5 +130,5 @@
         <label>ERSETZT-Update-Check-Intervall</label>
         <name>Update_Check_Interval__c</name>
     </fields>
-    <gender><!-- Neuter --></gender>
+    <gender>Feminine</gender>
 </CustomObjectTranslation>

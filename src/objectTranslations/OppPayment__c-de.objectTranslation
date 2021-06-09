@@ -70,7 +70,7 @@
         <name>Payment_Method__c</name>
         <picklistValues>
             <masterLabel>ACH</masterLabel>
-            <translation><!-- ACH --></translation>
+            <translation>Clearing-Zentrale</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Cash</masterLabel>

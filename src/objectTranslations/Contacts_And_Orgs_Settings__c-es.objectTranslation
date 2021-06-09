@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Configuración de contactos y organizaciones</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Contacts And Orgs Settings --></value>
+        <value>Configuraciones de contactos y organizaciones</value>
     </caseValues>
     <fields>
         <help>Configuración del modelo de cuenta. Debe ser cuenta Hogar, Uno-a-Uno o Individuo. Sustituye el campo personalizado Contact.SystemAccountProcessor__c. La cuenta Hogar es la opción recomendada.</help>
@@ -98,5 +98,5 @@
         <label>DESUSADO-Actualizar intervalo comprobac.</label>
         <name>Update_Check_Interval__c</name>
     </fields>
-    <gender><!-- Feminine --></gender>
+    <gender>Feminine</gender>
 </CustomObjectTranslation>
