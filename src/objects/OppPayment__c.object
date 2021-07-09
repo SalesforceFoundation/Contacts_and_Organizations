@@ -137,7 +137,7 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Paypal</fullName>
+                <fullName>PayPal</fullName>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
