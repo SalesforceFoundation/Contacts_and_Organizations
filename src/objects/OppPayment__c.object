@@ -136,6 +136,10 @@
                 <fullName>ACH</fullName>
                 <default>false</default>
             </picklistValues>
+            <picklistValues>
+                <fullName>PayPal</fullName>
+                <default>false</default>
+            </picklistValues>
             <sorted>false</sorted>
         </picklist>
         <required>false</required>
