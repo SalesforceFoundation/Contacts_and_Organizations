@@ -4,21 +4,23 @@
         <fullName>Preferred_Email__c</fullName>
         <externalId>false</externalId>
         <label>Preferred Email</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Personal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Work</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Alternate</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Personal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Work</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Alternate</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
@@ -27,25 +29,27 @@
         <fullName>Preferred_Phone__c</fullName>
         <externalId>false</externalId>
         <label>Preferred Phone</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Home</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Work</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Mobile</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Home</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Work</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mobile</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
