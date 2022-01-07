@@ -96,25 +96,27 @@ IF(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
         <externalId>false</externalId>
         <inlineHelpText>Which phone number should be used for most communications involving this Contact?</inlineHelpText>
         <label>Preferred Phone</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Home</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Work</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Mobile</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Home</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Work</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mobile</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
@@ -125,21 +127,23 @@ IF(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
         <externalId>false</externalId>
         <inlineHelpText>Which email should be used for most communications involving this Contact?</inlineHelpText>
         <label>Preferred Email</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Personal</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Work</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Alternate</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Personal</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Work</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Alternate</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
@@ -150,21 +154,23 @@ IF(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
         <externalId>false</externalId>
         <inlineHelpText>Which type of address is the mailing address?</inlineHelpText>
         <label>Primary Address Type</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Home</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Work</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Home</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Work</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
@@ -185,21 +191,23 @@ IF(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
         <externalId>false</externalId>
         <inlineHelpText>What type of address is the other address?</inlineHelpText>
         <label>Secondary Address Type</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Home</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Work</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Home</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Work</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
@@ -210,17 +218,19 @@ IF(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
         <externalId>false</externalId>
         <inlineHelpText>NO LONGER USED - Indicates which model drives Account relationship behavior: Individual (Bucket) or One-to-One</inlineHelpText>
         <label>DEPRECATED - _SYSTEM: ACCOUNT PROCESSOR</label>
-        <picklist>
-            <picklistValues>
-                <fullName>One-to-One</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Individual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>One-to-One</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Individual</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
