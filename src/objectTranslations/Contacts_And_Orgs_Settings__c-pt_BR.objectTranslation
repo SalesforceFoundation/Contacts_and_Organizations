@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fields>
+    <name>Account_Processor__c</name>
+    <help>Configuração para o modelo Conta. Deve ser "Conta de família", "Um para um" ou "Individual". Substitui o campo personalizado Contact.SystemAccountProcessor__c. "Conta de família" é o modelo recomendado.</help>
+    <label>Modelo de conta</label>
+  </fields>
+  <fields>
+    <name>DISABLE_IndividualAccounts_trigger__c</name>
+    <help>OBSOLETO. O comportamento do acionador agora controlado na página Configuração de acionador das Configurações do NPSP.</help>
+    <label>OBSOLETO-Disable_IndividualAcc_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityAccount_trigger__c</name>
+    <help>OBSOLETO. O comportamento do acionador agora controlado na página Configuração de acionador das Configurações do NPSP.</help>
+    <label>OBSOLETO-Disable_OppAccount_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityContactRoles_trigger__c</name>
+    <help>OBSOLETO. O comportamento do acionador agora controlado na página Configuração de acionador das Configurações do NPSP.</help>
+    <label>OBSOLETO-Disable_OCR_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityPayments_trigger__c</name>
+    <help>OBSOLETO. O comportamento do acionador agora controlado na página Configuração de acionador das Configurações do NPSP.</help>
+    <label>OBSOLETO-Disable_OppPayments_trigger</label>
+  </fields>
+  <fields>
+    <name>Default_Opp_on_Convert__c</name>
+    <help>Especifica se deve criar uma oportunidade durante a conversão do lead.</help>
+    <label>Criar oport. na conversão de lead</label>
+  </fields>
+  <fields>
+    <name>Disable_Account_Model_Trigger__c</name>
+    <help>OBSOLETO. O comportamento do acionador agora controlado na página Configuração de acionador das Configurações do NPSP.</help>
+    <label>OBSOLETO-Desat. acion. modelo conta</label>
+  </fields>
+  <fields>
+    <name>Enable_Opportunity_Contact_Role_Trigger__c</name>
+    <help>OBSOLETO. O comportamento do acionador agora controlado na página Configuração de acionador das Configurações do NPSP.</help>
+    <label>OBSOLETO-Ativar acionador OppContactRole</label>
+  </fields>
+  <fields>
+    <name>Enable_Update_Check__c</name>
+    <help>OBSOLETO. Novas versões do Pacote de Sucesso para organizações sem fins lucrativos serão instaladas automaticamente.</help>
+    <label>OBSOLETO-Ativar verif. de atualização</label>
+  </fields>
+  <fields>
+    <name>HH_Account_RecordTypeID__c</name>
+    <help>O ID do tipo de registro de conta a ser usado para contas de família. Se nenhum for selecionado, a Conta usará como padrão o tipo de registro de conta padrão do usuário.</help>
+    <label>Tipo de registro da conta de família</label>
+  </fields>
+  <fields>
+    <name>Has_Package_Update__c</name>
+    <help>OBSOLETO. Novas versões do Pacote de Sucesso para organizações sem fins lucrativos serão instaladas automaticamente.</help>
+    <label>OBSOLETO-Tem atualização de pacote</label>
+  </fields>
+  <fields>
+    <name>Last_Update_Check__c</name>
+    <help>OBSOLETO. Novas versões do Pacote de Sucesso para organizações sem fins lucrativos serão instaladas automaticamente.</help>
+    <label>OBSOLETO-Verifi. de última atualização</label>
+  </fields>
+  <fields>
+    <name>Max_Package_Version__c</name>
+    <help>OBSOLETO. Novas versões do Pacote de Sucesso para organizações sem fins lucrativos serão instaladas automaticamente.</help>
+    <label>OBSOLETO-Versão de pacote máx.</label>
+  </fields>
+  <fields>
+    <name>One_to_One_RecordTypeID__c</name>
+    <help>O ID do tipo de registro de conta a ser usado para contas de um para um. Se nenhum for selecionado, a Conta usará como padrão o tipo de registro de conta padrão do usuário.</help>
+    <label>Tipo de registro Um para um</label>
+  </fields>
+  <fields>
+    <name>Opportunity_Contact_Role_Default_role__c</name>
+    <help>A Função de contato padrão atribuída automaticamente ao Contato primário da oportunidade quando a Conta de oportunidade é uma Conta de família, individual ou um para um.</help>
+    <label>Função de cont. para Op. individuais</label>
+  </fields>
+  <fields>
+    <name>Package_Update_URL__c</name>
+    <help>OBSOLETO. Novas versões do Pacote de Sucesso para organizações sem fins lucrativos serão instaladas automaticamente.</help>
+    <label>OBSOLETO-URL de atualização de pacote</label>
+  </fields>
+  <fields>
+    <name>Payments_Enabled__c</name>
+    <help>Se habilitado, o Salesforce cria automaticamente Pagamentos para novas Oportunidades (Doações).</help>
+    <label>Criação automática de pagamentos</label>
+  </fields>
+  <fields>
+    <name>Update_Check_Interval__c</name>
+    <help>OBSOLETO. Novas versões do Pacote de Sucesso para organizações sem fins lucrativos serão instaladas automaticamente.</help>
+    <label>OBSOLETO-Intervalo de verif. de atualiz.</label>
+  </fields>
+  <gender>Feminine</gender>
+  <caseValues>
+    <plural>false</plural>
+    <value>Configuração de contatos e organizações</value>
+  </caseValues>
+  <caseValues>
+    <plural>true</plural>
+    <value>Configurações de contatos e organizações</value>
+  </caseValues>
+</CustomObjectTranslation>
