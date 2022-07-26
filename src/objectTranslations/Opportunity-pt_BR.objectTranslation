@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fields>
+    <name>Amount_Outstanding__c</name>
+    <help>Fórmula: o valor desta oportunidade menos o valor de abatimento e o valor de pagamento recebido.</help>
+    <label>Saldo restante</label>
+  </fields>
+  <fields>
+    <name>Amount_Written_Off__c</name>
+    <help>Valor total dos Pagamentos marcado como amortizados ou não cobráveis para esta Oportunidade.</help>
+    <label>Valor de abatimento de pagamento</label>
+  </fields>
+  <fields>
+    <name>Contact_Id_for_Role__c</name>
+    <help>Campo oculto para transmitir um ID de contato a fim de criar uma função de contato.</help>
+    <label>ID do contato para a função</label>
+  </fields>
+  <fields>
+    <name>Do_Not_Automatically_Create_Payment__c</name>
+    <help>Se os pagamentos estão ativos e a opção está marcada, nenhum novo pagamento é criado automaticamente para esta oportunidade.</help>
+    <label>Não criar pagamento automaticamente</label>
+  </fields>
+  <fields>
+    <name>Is_Opp_From_Individual__c</name>
+    <help>Fórmula: se a conta relacionada é ou não definida como um indivíduo (SYSTEMIsIndividual__c)</help>
+    <label>Oportunidade é de indivíduo</label>
+  </fields>
+  <fields>
+    <name>Member_Level__c</name>
+    <help>Determina o valor de Contato ou Conta do campo Último nível de associação.</help>
+    <label>Nível do membro</label>
+    <picklistValues>
+      <masterLabel>Gold</masterLabel>
+      <translation>Ouro</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Silver</masterLabel>
+      <translation>Prata</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Bronze</masterLabel>
+      <translation>Bronze</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Membership_End_Date__c</name>
+    <help>A data em que o período de associação termina.</help>
+    <label>Data de término da associação</label>
+  </fields>
+  <fields>
+    <name>Membership_Origin__c</name>
+    <help>Isso é uma renovação, uma nova associação ou uma associação com alguém que teve status vencido e voltou.</help>
+    <label>Origem da associação</label>
+    <picklistValues>
+      <masterLabel>New</masterLabel>
+      <translation>Novo</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Renewal</masterLabel>
+      <translation>Renovação</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Reacquire</masterLabel>
+      <translation>Reaquisição</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Membership_Start_Date__c</name>
+    <help>A data em que o período de adesão começa</help>
+    <label>Data de início da associação</label>
+  </fields>
+  <fields>
+    <name>Number_of_Payments__c</name>
+    <help>Número total de pagamentos para esta oportunidade (doação)</help>
+    <label>Número de pagamentos</label>
+  </fields>
+  <fields>
+    <name>Payments_Made__c</name>
+    <help>O valor total dos pagamentos marcados como realizados para esta oportunidade.</help>
+    <label>Valor do pagamento recebido</label>
+  </fields>
+  <webLinks>
+    <name>New_Contact_Donation</name>
+    <label>Nova doação de contato</label>
+  </webLinks>
+  <webLinks>
+    <name>New_Organization_Donation</name>
+    <label>Nova doação de conta</label>
+  </webLinks>
+</CustomObjectTranslation>
