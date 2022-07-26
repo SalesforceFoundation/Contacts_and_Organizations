@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fields>
+    <name>Check_Reference_Number__c</name>
+    <label>Verificação/número de referência</label>
+  </fields>
+  <fields>
+    <name>Custom_Payment_Field__c</name>
+    <label>Campo de pagamento personalizado</label>
+  </fields>
+  <fields>
+    <name>Opportunity__c</name>
+    <relationshipLabel>Pagamentos</relationshipLabel>
+    <label>Oportunidade</label>
+  </fields>
+  <fields>
+    <name>Paid__c</name>
+    <label>Pago</label>
+  </fields>
+  <fields>
+    <name>Payment_Amount__c</name>
+    <label>Valor do pagamento</label>
+  </fields>
+  <fields>
+    <name>Payment_Date__c</name>
+    <label>Data de pagamento</label>
+  </fields>
+  <fields>
+    <name>Payment_Method__c</name>
+    <label>Método de pagamento</label>
+    <picklistValues>
+      <masterLabel>Cash</masterLabel>
+      <translation>Dinheiro</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Check</masterLabel>
+      <translation>Cheque</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Credit Card</masterLabel>
+      <translation>Cartão de crédito</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>ACH</masterLabel>
+      <translation>ACH</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>PayPal</masterLabel>
+      <translation>PayPal</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Scheduled_Date__c</name>
+    <label>Data agendada</label>
+  </fields>
+  <fields>
+    <name>Written_Off__c</name>
+    <label>Abatido</label>
+  </fields>
+  <webLinks>
+    <name>Schedule_Payments</name>
+    <label>Agendar pagamentos</label>
+  </webLinks>
+  <webLinks>
+    <name>Writeoff_Payments</name>
+    <label>Abater pagamentos</label>
+  </webLinks>
+  <layouts>
+    <layout>Payment Layout</layout>
+    <sections>
+      <label>Links personalizados</label>
+      <section>Custom Links</section>
+    </sections>
+  </layouts>
+  <nameFieldLabel>Número do pagamento</nameFieldLabel>
+  <standardFields>
+    <name>Name</name>
+    <label>Número do pagamento</label>
+  </standardFields>
+  <gender>Masculine</gender>
+  <caseValues>
+    <plural>false</plural>
+    <value>Pagamento</value>
+  </caseValues>
+  <caseValues>
+    <plural>true</plural>
+    <value>Pagamentos</value>
+  </caseValues>
+</CustomObjectTranslation>

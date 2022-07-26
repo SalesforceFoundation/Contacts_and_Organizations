@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fields>
+    <name>AlternateEmail__c</name>
+    <help>O Email alternativo é um quarto email opcional: não é o email pessoal, preferido ou comercial.</help>
+    <label>Email alternativo</label>
+  </fields>
+  <fields>
+    <name>HomeEmail__c</name>
+    <help>Consulte o campo de email preferido.</help>
+    <label>Email pessoal</label>
+  </fields>
+  <fields>
+    <name>Home_Address__c</name>
+    <help>Fórmula: usa o campo de tipo de endereço principal para determinar o endereço residencial do endereço de correspondência ou outro.</help>
+    <label>Endereço residencial</label>
+  </fields>
+  <fields>
+    <name>Organization_Type__c</name>
+    <help>Fórmula: por ordem de preferência, o campo SYSTEM_AccountType, o campo Tipo de conta e "Organização".</help>
+    <label>Tipo de organização</label>
+  </fields>
+  <fields>
+    <name>Other_Address__c</name>
+    <help>Fórmula: se o tipo de endereço principal for outro, o endereço de email. Se o tipo de endereço secundário for Outro, o Outro endereço.</help>
+    <label>Outro endereço</label>
+  </fields>
+  <fields>
+    <name>PreferredPhone__c</name>
+    <help>Qual número de telefone deve ser usado na maioria das comunicações envolvendo este Contato?</help>
+    <label>Telefone preferido</label>
+    <picklistValues>
+      <masterLabel>Home</masterLabel>
+      <translation>Início</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Work</masterLabel>
+      <translation>Comercial</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Mobile</masterLabel>
+      <translation>Celular</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Other</masterLabel>
+      <translation>Outro</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Preferred_Email__c</name>
+    <help>Qual email deve ser usado para a maioria das comunicações envolvendo este Contato?</help>
+    <label>Email preferido</label>
+    <picklistValues>
+      <masterLabel>Personal</masterLabel>
+      <translation>Pessoal</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Work</masterLabel>
+      <translation>Comercial</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Alternate</masterLabel>
+      <translation>Alternativo</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Primary_Address_Type__c</name>
+    <help>Que tipo de endereço é o endereço para correspondência?</help>
+    <label>Tipo de endereço principal</label>
+    <picklistValues>
+      <masterLabel>Home</masterLabel>
+      <translation>Início</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Work</masterLabel>
+      <translation>Comercial</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Other</masterLabel>
+      <translation>Outro</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Private__c</name>
+    <help>Exclui este contato de qualquer processamento de Conta individual. Se você deixar o campo Conta em branco, ele permanecerá em branco.</help>
+    <label>Privado</label>
+  </fields>
+  <fields>
+    <name>Secondary_Address_Type__c</name>
+    <help>Que tipo de endereço é o outro endereço?</help>
+    <label>Tipo de endereço secundário</label>
+    <picklistValues>
+      <masterLabel>Home</masterLabel>
+      <translation>Início</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Work</masterLabel>
+      <translation>Comercial</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Other</masterLabel>
+      <translation>Outro</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>SystemAccountProcessor__c</name>
+    <help>NÃO MAIS USADO - Indica qual modelo gera o comportamento de relacionamento da conta: Individual (Bucket) ou Um para um</help>
+    <label>OBSOLETO- _SYSTEM: ACCOUNT PROCESSOR</label>
+    <picklistValues>
+      <masterLabel>One-to-One</masterLabel>
+      <translation>Um para um</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Individual</masterLabel>
+      <translation>Individual</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>Type_of_Account__c</name>
+    <help>Fórmula: "Individual" ou "Organização", dependendo da configuração da conta.</help>
+    <label>Tipo de conta</label>
+  </fields>
+  <fields>
+    <name>WorkEmail__c</name>
+    <help>Consulte o campo de email preferido.</help>
+    <label>Email profissional</label>
+  </fields>
+  <fields>
+    <name>WorkPhone__c</name>
+    <help>Consulte o campo de telefone preferido.</help>
+    <label>Telefone do trabalho</label>
+  </fields>
+  <fields>
+    <name>Work_Address__c</name>
+    <help>Fórmula: se o tipo de endereço principal for Comercial/Profissional, o endereço de email. Se o tipo de endereço secundário for Comercial, o Outro endereço.</help>
+    <label>Endereço comercial</label>
+  </fields>
+</CustomObjectTranslation>
