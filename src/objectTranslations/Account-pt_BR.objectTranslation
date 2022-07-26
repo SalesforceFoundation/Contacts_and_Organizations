@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fields>
+    <name>One2OneContact__c</name>
+    <help>O contato primário da conta ou o contato One2One para uma conta One2One.</help>
+    <relationshipLabel>Conta</relationshipLabel>
+    <label>Contato primário</label>
+  </fields>
+  <fields>
+    <name>SYSTEMIsIndividual__c</name>
+    <help>Indica se esta conta é ou não especial para contatos (Família, Um para um, Individual) comparada com uma conta normal.</help>
+    <label>_SYSTEM: IsIndividual</label>
+  </fields>
+  <fields>
+    <name>SYSTEM_AccountType__c</name>
+    <help>Indica para qual modelo de conta esta conta serve: conta de família, um para um ou individual (bucket).</help>
+    <label>_SYSTEM: AccountType</label>
+  </fields>
+</CustomObjectTranslation>
