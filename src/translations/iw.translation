@@ -61,7 +61,7 @@
         <name>Contact_Merge_Step4</name>
     </customLabels>
     <customLabels>
-        <label>&apos;ערכת ההצלחה למלכ&quot;רים&apos; תומכת בשלושה מודלים שונים של חשבון: מודל חשבון משק הבית, מודל חשבון &apos;אחד לאחד&apos; ומודל החשבון האישי (או Bucket)
+        <label>&apos;ערכת ההצלחה למלכ&quot;רים&apos; תומכת בשלושה מודלים שונים של חשבון: מודל חשבון משק הבית, מודל חשבון &apos;אחד לאחד&apos; ומודל החשבון האישי (או Bucket).
 &lt;br/&gt;&lt;br&gt; 
 עבור משתמשי NPSP3 ואילך, מודל חשבון משק הבית הוא האפשרות המומלצת.</label>
         <name>Contacts_Settings_Account_Model_Help_Text</name>
