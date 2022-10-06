@@ -61,7 +61,7 @@
         <name>Contact_Merge_Step4</name>
     </customLabels>
     <customLabels>
-        <label>Le Nonprofit Success Pack prend en charge trois modèles de compte différents : le modèle de compte foyer, le modèle de compte un-à-un, et le modèle de compte individuel (« à compartiments »). Pour plus d’informations sur l’un de ces modèles, consultez la &lt;a href=&quot;https://powerofus.force.com/NPSP_Account_Model&quot; target=&quot;_blank&quot;&gt;Documentation NPSP&lt;/a&gt;.
+        <label>Le Nonprofit Success Pack prend en charge trois modèles de compte différents : le modèle de compte foyer, le modèle de compte un-à-un, et le modèle de compte individuel (« à compartiments »).
 &lt;br/&gt;&lt;br&gt; 
 Pour ceux qui utilisent NPSP3 et versions ultérieures, le modèle de compte foyer est recommandé.</label>
         <name>Contacts_Settings_Account_Model_Help_Text</name>
