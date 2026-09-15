@@ -32,7 +32,64 @@ private class Tests {
     
     static testMethod void TestIndividualAccounts() {
     	system.assertEquals(0, IndividualAccounts.getContactDonationHistory(null));
-        system.assertEquals('', IndividualAccounts.getContactLastDonation(null));    	
+        try {
+            IndividualAccounts.getContactLastDonation(null);
+            system.assert(false, 'getContactLastDonation is disabled and must always throw');
+        } catch (System.NoAccessException e) {
+            // expected: method is stubbed to refuse all callers
+        }
     }
-    
+
+    // getContactDonationHistory must not disclose Opportunity.Amount to a caller
+    // without FLS read access to that field.
+    static testMethod void TestIndividualAccountsEnforcesFLS() {
+        // Setup-object DML (User, PermissionSetAssignment) and non-setup-object DML
+        // (Contact, Opportunity) cannot mix in one transaction. Isolating the setup-object
+        // DML inside its own System.runAs boundary (even as the current user) avoids
+        // MIXED_DML_OPERATION when this test method also inserts Contact/Opportunity records.
+        Profile restrictedProfile = [SELECT Id FROM Profile WHERE Name = 'Minimum Access - Salesforce'];
+        User restrictedUser = new User(
+            ProfileId = restrictedProfile.Id,
+            LastName = 'Restricted',
+            FirstName = 'FLS',
+            Email = 'fls.test.user@example.com',
+            Username = 'fls.test.user' + DateTime.now().getTime() + '@example.com',
+            Alias = 'flstst',
+            TimeZoneSidKey = 'America/Los_Angeles',
+            LocaleSidKey = 'en_US',
+            EmailEncodingKey = 'UTF-8',
+            LanguageLocaleKey = 'en_US'
+        );
+
+        System.runAs(new User(Id = UserInfo.getUserId())) {
+            insert restrictedUser;
+
+            PermissionSet ps = [SELECT Id FROM PermissionSet WHERE Name = 'FLS_Test_No_Opportunity_Amount'];
+            insert new PermissionSetAssignment(AssigneeId = restrictedUser.Id, PermissionSetId = ps.Id);
+        }
+
+        Contact c = new Contact(LastName = 'FLSTest');
+        insert c;
+
+        Opportunity o = new Opportunity(
+            Name = 'FLS Test Opp',
+            AccountId = [SELECT AccountId FROM Contact WHERE Id = :c.Id].AccountId,
+            StageName = 'Closed Won',
+            CloseDate = Date.today(),
+            Amount = 100
+        );
+        insert o;
+        insert new OpportunityContactRole(ContactId = c.Id, OpportunityId = o.Id);
+
+        System.runAs(restrictedUser) {
+            Boolean blockedDonationHistory = false;
+            try {
+                IndividualAccounts.getContactDonationHistory(c.Id);
+            } catch (System.QueryException qe) {
+                blockedDonationHistory = true;
+            }
+            system.assert(blockedDonationHistory, 'Expected getContactDonationHistory to enforce FLS and block a user without read access to Opportunity.Amount');
+        }
+    }
+
 }
