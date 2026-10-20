@@ -64,7 +64,19 @@ private class Tests {
         System.runAs(new User(Id = UserInfo.getUserId())) {
             insert restrictedUser;
 
-            PermissionSet ps = [SELECT Id FROM PermissionSet WHERE Name = 'FLS_Test_No_Opportunity_Amount'];
+            // Built at runtime so no test-only permission set has to ship in the package.
+            // Grants read on Contact/Opportunity but deliberately no field access to
+            // Opportunity.Amount. OpportunityContactRole and Opportunity.IsWon are not
+            // independently permissionable, so they need no explicit grant.
+            PermissionSet ps = new PermissionSet(Name = 'FLS_Test_No_Opportunity_Amount', Label = 'FLS Test No Opportunity Amount');
+            insert ps;
+
+            List<ObjectPermissions> objectPerms = new List<ObjectPermissions>();
+            for (String objectName : new List<String>{ 'Contact', 'Opportunity' }) {
+                objectPerms.add(new ObjectPermissions(ParentId = ps.Id, SobjectType = objectName, PermissionsRead = true));
+            }
+            insert objectPerms;
+
             insert new PermissionSetAssignment(AssigneeId = restrictedUser.Id, PermissionSetId = ps.Id);
         }
 
