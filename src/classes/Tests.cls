@@ -64,7 +64,6 @@ private class Tests {
         System.runAs(new User(Id = UserInfo.getUserId())) {
             insert restrictedUser;
 
-            // Built at runtime so no test-only permission set has to ship in the package.
             // Grants read on Contact/Opportunity but deliberately no field access to
             // Opportunity.Amount. OpportunityContactRole and Opportunity.IsWon are not
             // independently permissionable, so they need no explicit grant.
