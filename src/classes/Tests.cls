@@ -67,7 +67,12 @@ private class Tests {
             // Grants read on Contact/Opportunity but deliberately no field access to
             // Opportunity.Amount. OpportunityContactRole and Opportunity.IsWon are not
             // independently permissionable, so they need no explicit grant.
-            PermissionSet ps = new PermissionSet(Name = 'FLS_Test_No_Opportunity_Amount', Label = 'FLS Test No Opportunity Amount');
+            // The name is unique per run so it cannot collide with a same-named permission set
+            // that already exists in the org (setup objects are visible to tests).
+            PermissionSet ps = new PermissionSet(
+                Name = 'FLS_Test_No_Opp_Amount_' + DateTime.now().getTime(),
+                Label = 'FLS Test No Opportunity Amount'
+            );
             insert ps;
 
             List<ObjectPermissions> objectPerms = new List<ObjectPermissions>();
