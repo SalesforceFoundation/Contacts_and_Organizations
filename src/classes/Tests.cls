@@ -32,7 +32,86 @@ private class Tests {
     
     static testMethod void TestIndividualAccounts() {
     	system.assertEquals(0, IndividualAccounts.getContactDonationHistory(null));
-        system.assertEquals('', IndividualAccounts.getContactLastDonation(null));    	
+        try {
+            IndividualAccounts.getContactLastDonation(null);
+            system.assert(false, 'getContactLastDonation is disabled and must always throw');
+        } catch (System.NoAccessException e) {
+            // expected: method is stubbed to refuse all callers
+        }
     }
-    
+
+    // getContactDonationHistory must not disclose Opportunity.Amount to a caller
+    // without FLS read access to that field.
+    static testMethod void TestIndividualAccountsEnforcesFLS() {
+        // Setup-object DML (User, PermissionSetAssignment) and non-setup-object DML
+        // (Contact, Opportunity) cannot mix in one transaction. Isolating the setup-object
+        // DML inside its own System.runAs boundary (even as the current user) avoids
+        // MIXED_DML_OPERATION when this test method also inserts Contact/Opportunity records.
+        // Minimum Access - Salesforce is the only standard profile without Opportunity.Amount
+        // FLS, and it is not available in every org (e.g. the packaging org), so skip if absent.
+        List<Profile> restrictedProfiles = [SELECT Id FROM Profile WHERE Name = 'Minimum Access - Salesforce'];
+        if (restrictedProfiles.isEmpty()) {
+            System.debug('Skipping TestIndividualAccountsEnforcesFLS: Minimum Access - Salesforce profile not found');
+            return;
+        }
+        User restrictedUser = new User(
+            ProfileId = restrictedProfiles[0].Id,
+            LastName = 'Restricted',
+            FirstName = 'FLS',
+            Email = 'fls.test.user@example.com',
+            Username = 'fls.test.user' + DateTime.now().getTime() + '@example.com',
+            Alias = 'flstst',
+            TimeZoneSidKey = 'America/Los_Angeles',
+            LocaleSidKey = 'en_US',
+            EmailEncodingKey = 'UTF-8',
+            LanguageLocaleKey = 'en_US'
+        );
+
+        System.runAs(new User(Id = UserInfo.getUserId())) {
+            insert restrictedUser;
+
+            // Grants read on Contact/Opportunity but deliberately no field access to
+            // Opportunity.Amount. OpportunityContactRole and Opportunity.IsWon are not
+            // independently permissionable, so they need no explicit grant.
+            // The name is unique per run so it cannot collide with a same-named permission set
+            // that already exists in the org (setup objects are visible to tests).
+            PermissionSet ps = new PermissionSet(
+                Name = 'FLS_Test_No_Opp_Amount_' + DateTime.now().getTime(),
+                Label = 'FLS Test No Opportunity Amount'
+            );
+            insert ps;
+
+            List<ObjectPermissions> objectPerms = new List<ObjectPermissions>();
+            for (String objectName : new List<String>{ 'Contact', 'Opportunity' }) {
+                objectPerms.add(new ObjectPermissions(ParentId = ps.Id, SobjectType = objectName, PermissionsRead = true));
+            }
+            insert objectPerms;
+
+            insert new PermissionSetAssignment(AssigneeId = restrictedUser.Id, PermissionSetId = ps.Id);
+        }
+
+        Contact c = new Contact(LastName = 'FLSTest');
+        insert c;
+
+        Opportunity o = new Opportunity(
+            Name = 'FLS Test Opp',
+            AccountId = [SELECT AccountId FROM Contact WHERE Id = :c.Id].AccountId,
+            StageName = 'Closed Won',
+            CloseDate = Date.today(),
+            Amount = 100
+        );
+        insert o;
+        insert new OpportunityContactRole(ContactId = c.Id, OpportunityId = o.Id);
+
+        System.runAs(restrictedUser) {
+            Boolean blockedDonationHistory = false;
+            try {
+                IndividualAccounts.getContactDonationHistory(c.Id);
+            } catch (System.QueryException qe) {
+                blockedDonationHistory = true;
+            }
+            system.assert(blockedDonationHistory, 'Expected getContactDonationHistory to enforce FLS and block a user without read access to Opportunity.Amount');
+        }
+    }
+
 }
