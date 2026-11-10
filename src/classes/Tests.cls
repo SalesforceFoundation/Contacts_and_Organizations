@@ -47,9 +47,15 @@ private class Tests {
         // (Contact, Opportunity) cannot mix in one transaction. Isolating the setup-object
         // DML inside its own System.runAs boundary (even as the current user) avoids
         // MIXED_DML_OPERATION when this test method also inserts Contact/Opportunity records.
-        Profile restrictedProfile = [SELECT Id FROM Profile WHERE Name = 'Minimum Access - Salesforce'];
+        // Minimum Access - Salesforce is the only standard profile without Opportunity.Amount
+        // FLS, and it is not available in every org (e.g. the packaging org), so skip if absent.
+        List<Profile> restrictedProfiles = [SELECT Id FROM Profile WHERE Name = 'Minimum Access - Salesforce'];
+        if (restrictedProfiles.isEmpty()) {
+            System.debug('Skipping TestIndividualAccountsEnforcesFLS: Minimum Access - Salesforce profile not found');
+            return;
+        }
         User restrictedUser = new User(
-            ProfileId = restrictedProfile.Id,
+            ProfileId = restrictedProfiles[0].Id,
             LastName = 'Restricted',
             FirstName = 'FLS',
             Email = 'fls.test.user@example.com',
