@@ -127,6 +127,7 @@
         <members>Account-iw</members>
         <members>Account-ja</members>
         <members>Account-nl_NL</members>
+        <members>Account-pt_BR</members>
         <members>Contact-de</members>
         <members>Contact-en_GB</members>
         <members>Contact-es</members>
@@ -134,6 +135,7 @@
         <members>Contact-iw</members>
         <members>Contact-ja</members>
         <members>Contact-nl_NL</members>
+        <members>Contact-pt_BR</members>
         <members>Contacts_And_Orgs_Settings__c-de</members>
         <members>Contacts_And_Orgs_Settings__c-en_GB</members>
         <members>Contacts_And_Orgs_Settings__c-en_US</members>
@@ -142,6 +144,7 @@
         <members>Contacts_And_Orgs_Settings__c-iw</members>
         <members>Contacts_And_Orgs_Settings__c-ja</members>
         <members>Contacts_And_Orgs_Settings__c-nl_NL</members>
+        <members>Contacts_And_Orgs_Settings__c-pt_BR</members>
         <members>Lead-de</members>
         <members>Lead-en_GB</members>
         <members>Lead-es</members>
@@ -149,6 +152,7 @@
         <members>Lead-iw</members>
         <members>Lead-ja</members>
         <members>Lead-nl_NL</members>
+        <members>Lead-pt_BR</members>
         <members>OppPayment__c-de</members>
         <members>OppPayment__c-en_GB</members>
         <members>OppPayment__c-en_US</members>
@@ -157,6 +161,7 @@
         <members>OppPayment__c-iw</members>
         <members>OppPayment__c-ja</members>
         <members>OppPayment__c-nl_NL</members>
+        <members>OppPayment__c-pt_BR</members>
         <members>Opportunity-de</members>
         <members>Opportunity-en_GB</members>
         <members>Opportunity-es</members>
@@ -164,6 +169,7 @@
         <members>Opportunity-iw</members>
         <members>Opportunity-ja</members>
         <members>Opportunity-nl_NL</members>
+        <members>Opportunity-pt_BR</members>
         <members>Payment_Field_Mapping_Settings__c-de</members>
         <members>Payment_Field_Mapping_Settings__c-en_GB</members>
         <members>Payment_Field_Mapping_Settings__c-en_US</members>
@@ -172,6 +178,7 @@
         <members>Payment_Field_Mapping_Settings__c-iw</members>
         <members>Payment_Field_Mapping_Settings__c-ja</members>
         <members>Payment_Field_Mapping_Settings__c-nl_NL</members>
+        <members>Payment_Field_Mapping_Settings__c-pt_BR</members>
         <name>CustomObjectTranslation</name>
     </types>
     <types>
@@ -209,6 +216,7 @@
         <members>iw</members>
         <members>ja</members>
         <members>nl_NL</members>
+        <members>pt_BR</members>
         <name>Translations</name>
     </types>
     <types>

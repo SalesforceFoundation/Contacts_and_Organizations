@@ -39,7 +39,7 @@ global with sharing class IndividualAccounts
     /// <summary> Called by sControl to display total giving amount </summary>
     webservice static decimal getContactDonationHistory(Id contactId){
         Decimal sum = 0;
-        for (OpportunityContactRole o : [Select Opportunity.Amount, OpportunityId From OpportunityContactRole where Opportunity.IsWon = true and Opportunity.Amount != null and ContactId = :contactId]) 
+        for (OpportunityContactRole o : [Select Opportunity.Amount, OpportunityId From OpportunityContactRole where Opportunity.IsWon = true and Opportunity.Amount != null and ContactId = :contactId WITH SECURITY_ENFORCED])
         {
             sum += o.Opportunity.Amount;
         }
@@ -48,15 +48,12 @@ global with sharing class IndividualAccounts
 
 
     /// <name> getContactLastDonation </name>
-    /// <summary> Called by sControl to display last donation date </summary>
+    /// <summary> Disabled: Opportunity.CloseDate is a non-permissionable required field, so
+    /// field-level security can never restrict it, meaning WITH SECURITY_ENFORCED cannot
+    /// prevent this method from leaking Opportunity data to any caller with SOAP access
+    /// to this class. Stubbed to refuse rather than silently disclose it. </summary>
     webservice static String getContactLastDonation(Id contactId){
-        Date lastDonation = null;
-        List<OpportunityContactRole> ocr = [Select Opportunity.CloseDate, OpportunityId From OpportunityContactRole where Opportunity.IsWon = true and Opportunity.Amount != null and ContactId = :contactId ORDER BY Opportunity.CloseDate DESC Limit 100]; 
-        if ( ocr.size() > 0) {
-            return String.ValueOf(ocr[0].Opportunity.CloseDate);
-        } else {
-            return '';
-        }
+        throw new System.NoAccessException();
     }
 
 }
